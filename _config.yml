@@ -1,0 +1,5 @@
+paginate: 5
+pygments: true
+permalink: /blog/:year/:month/:day/:title.html
+auto: true
+server: true

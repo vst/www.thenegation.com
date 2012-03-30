@@ -1,8 +1,32 @@
-<html>
-  <body>
-    <pre>Hello World.
+---
+layout: default
+title: "Homepage"
+---
 
--- 
-vst</pre>
-  </body>
-</html>
+<section>
+  <h1>Posts</h1>
+
+  <ul>
+    {% for post in paginator.posts %}
+    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <span class="previous">
+      {% if paginator.previous_page == 1 %}
+      <a href="/" title="Previous Page">&laquo; Previous</a>
+      {% else %}
+      <a href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Previous</a>
+      {% endif %}
+    </span> |
+    {% endif %}
+    Page {{ paginator.page }} of {{ paginator.total_pages }}
+    {% if paginator.next_page %}
+    | <span class="next">
+      <a href="/page{{ paginator.next_page }}/" title="Next Page">Next &raquo;</a>
+    </span>
+    {% endif %}
+  </div>
+</section>

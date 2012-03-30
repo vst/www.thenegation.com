@@ -1,0 +1,44 @@
+---
+layout: posts
+title: "R Startup Profiles"
+tags: [R, technical]
+---
+
+<p>
+  It is a useful practice to customize the initialization
+  of <a href="http://www.r-project.org">R</a>. This is achieved
+  through <code>R_PROFILE</code> (system wide)
+  and <code>R_PROFILE_USER</code> (user specific) files which are both
+  simple R scripts.
+</p>
+
+<p>
+  <code>R_PROFILE</code> is an environment variable, and by default,
+  set to <code>${R_HOME}/etc/Rprofile.site</code>. If such a file
+  exists, it is evaluated in the global environment of your R session.
+</p>
+
+<p>
+  Per-user customization is achieved through
+  the <code>R_PROFILE_USER</code> environment
+  variable. After <code>R_PROFILE</code> has been evaluated, the file
+  which is pointed by <code>R_PROFILE_USER</code> is
+  evaluated. If <code>R_PROFILE_USER</code> is not set, a file
+  named <code>.Rprofile</code> is searched first in the current
+  directory, then in the user home directory. If found, it is
+  evaluated in the global environment of your R session.
+</p>
+
+<p>
+  R documentation gives quite a good overview of the entire
+  initialization process of an R session. It is recommended to read
+  this (through <code>?.Rprofile</code>) since it gives some useful
+  hints and warnings as well.
+</p>
+
+<p>
+  I am keeping my own <code>.Rprofile</code> in my home
+  directory. Here is the gist of it:
+</p>
+
+<script src="https://gist.github.com/1765907.js?file=Rprofile.R"></script>
