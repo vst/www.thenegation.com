@@ -1,5 +1,6 @@
-paginate: 5
+name: The Negation of Negation
+markdown: redcarpet
 pygments: true
+paginate: 5
 permalink: /blog/:year/:month/:day/:title.html
-auto: true
-server: true
+excerpt_separator: <!-- more -->
