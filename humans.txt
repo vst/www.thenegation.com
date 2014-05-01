@@ -1,9 +1,9 @@
 /* TEAM */
   Himself: Vehbi Sinan Tunalioglu
-  Site: http://thenegation.com
+  Site: http://www.thenegation.com
   Contact: vst [AT] vsthost [DOT] com
   Twitter: @vehbisinan
-  From: Singapore and somewhere else
+  From: Singapore and elsewhere
 
 /* THANKS */
   Advisory Board Member: Can Burak Cilingir
@@ -12,5 +12,5 @@
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery, less
-  Software: Emacs, Jekyll, Git(hub)
+  Components: jQuery, Bootstrap, Font-Awesome
+  Software: Emacs, Jekyll
