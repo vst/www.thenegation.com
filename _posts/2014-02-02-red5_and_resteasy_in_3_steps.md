@@ -5,27 +5,14 @@ tags: computing
 layout: post
 ---
 
-Red5 is a media streaming server which is implemented using Java and
-bundled in a Tomcat application container. Decoupling it from Tomcat
-is a bit troublesome. If you want to add a bit of HTTP REST flavour to
-your application without the hassle of decoupling it from Tomcat, you
-can use RESTEasy. Here is how I did it.
+Red5 is a media streaming server which is implemented using Java and bundled in a Tomcat application container. Decoupling it from Tomcat is a bit troublesome. If you want to add a bit of HTTP REST flavour to your application without the hassle of decoupling it from Tomcat, you can use RESTEasy. Here is how I did it.
 
-<!-- more -->
-
-[Red5](http://www.red5.org/) runs on Tomcat and is not really actively
-developed. I needed to add some lightweight HTTP API functionality to
-our Red5 application and decided to use
-[RESTEasy](http://www.jboss.org/resteasy) which is a fully certified
-and portable implementation of the JAX-RS specification. It is also
-included in the latest [Wildfly](http://wildfly.org/).
+[Red5](http://www.red5.org/) runs on Tomcat and is not really actively developed. I needed to add some lightweight HTTP API functionality to our Red5 application and decided to use [RESTEasy](http://www.jboss.org/resteasy) which is a fully certified and portable implementation of the JAX-RS specification. It is also included in the latest [Wildfly](http://wildfly.org/).
 
 It was not that difficult:
 
-1. [Download latest RESTEasy](http://www.jboss.org/resteasy) and
-unpack the `lib/` folder contents into the `lib/` folder of Red5 (or
-in other words, Tomcat).
-2. Add a JAX-RS annotated class and method, like:
+1. [Download latest RESTEasy](http://www.jboss.org/resteasy) and unpack the `lib/` folder contents into the `lib/` folder of Red5 (or in other words, Tomcat).
+2. Add a JAX-RS annotated class and method, like::
         package com.example.red5.application.api
 
         import java.util.HashMap;
