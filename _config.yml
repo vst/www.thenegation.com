@@ -2,7 +2,7 @@ name: The Negation of Negation
 url: http://www.thenegation.com
 author: Vehbi Sinan Tunalioglu
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 paginate: 5
 permalink: /blog/:year/:month/:day/:title.html
 excerpt_separator: <!-- more -->
