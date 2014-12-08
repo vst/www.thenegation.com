@@ -5,8 +5,10 @@ tags: computing
 layout: post
 ---
 
-Here is a quick figure of how cardinality (or Multiplicity as it is
+Here is a quick diagram of how cardinality (or Multiplicity as it is
 called in UML) idea is used in data modeling. Please ignore the
 real-life rarities and exceptions of the example used.
+
+<!-- more -->
 
 [![Cardinality](https://dl.dropboxusercontent.com/u/14420846/blog/posts/Multiplicity.png)](https://dl.dropboxusercontent.com/u/14420846/blog/posts/Multiplicity.pdf)

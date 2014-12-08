@@ -1,8 +1,17 @@
+---
+title: Redefining the Ontology of Accounting
+date: 2012-01-15 08:03:01
+tags: computing
+layout: post
+---
+
 The human-kind has been performing <em>accounting</em> for more than 7,000 years. This discipline does not only give us the arithmetic means to plan, execute and assess business transactions, but also the universal language of business.
 
 In particular, we have been using the <em>double-entry bookkeeping</em> system for about the last 5 centuries as a framework to record transactions. Furthermore, with the help of the concept of <em>ledger</em>s, we have been consolidating transactions and reporting summaries of them through standardized documents such as balance sheets, income statements etc.
 
 So far, so good... But is it all good? I have some doubts. In the following, I will briefly explain two concerns of mine. By the end, a recent ontological movement follows which really excites me.
+
+<!-- more -->
 
 Before proceeding, please note that the person who expresses his ideas here is a <em>poor</em> programmer, not an accountant.
 

@@ -7,7 +7,9 @@ layout: post
 
 I recently compiled a list of online courses which seem relevant to my ongoing PhD studies and thought that it would be good to put it online. Some of them are too much *introductory*, but just in case...
 
-<table>
+<!-- more -->
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Course</th>
