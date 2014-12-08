@@ -16,11 +16,10 @@ footer#page {
     height: 40px;
     font-size: 80%;
     padding: 12px 0px;
-    border-top: 1px solid #666;
+    background-color: #4e5d6c;
 }
 
-article > header {
-    border-bottom: 1px solid #666;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+.main-content {
+    max-width: 780px;
+    margin: 0px auto;
 }
