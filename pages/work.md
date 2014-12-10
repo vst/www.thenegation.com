@@ -4,11 +4,12 @@ date: 2014-12-06 20:11:00
 layout: page
 ---
 
-Here is a quick summary of my ongoing work, projects and affiliations.
+Here is a quick summary of my ongoing work, projects and affiliations. In no particular order.
 
 ## Free and Open Source Projects
 
-- [jaxmml](https://bitbucket.org/vehbisinan/jaxmml): A Java library and command line application to parse, manipulate and generate [XMML](flame.ac.uk) files
+- [d3plotxts](https://github.com/vst/d3plotxts/): A d3-based Javascript library to plot multiple time series data
+- [jaxmml](https://github.com/vst/jaxmml): A Java library and command line application to parse, manipulate and generate [XMML](flame.ac.uk) files
 - [mgarch](https://github.com/vst/mgarch): An MGARCH (BEKK Specification) simulation estimation and estimation package
 - [REpochX](https://github.com/vst/REpochX): A grammatical evolution application based on R and EpochX
 - [agentgui](https://github.com/vst/agentgui): A GUI Editor for X-Machines Markup Language
