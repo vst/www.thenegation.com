@@ -8,6 +8,7 @@ Here is a quick summary of my ongoing work, projects and affiliations. In no par
 
 ## Free and Open Source Projects
 
+- [callfest](https://github.com/vst/callfest) An R Package for calling functions over a combination of arguments
 - [d3plotxts](https://github.com/vst/d3plotxts/): A d3-based Javascript library to plot multiple time series data
 - [jaxmml](https://github.com/vst/jaxmml): A Java library and command line application to parse, manipulate and generate [XMML](flame.ac.uk) files
 - [mgarch](https://github.com/vst/mgarch): An MGARCH (BEKK Specification) simulation estimation and estimation package
