@@ -10,7 +10,7 @@ title: Homepage
 <ul class="list-unstyled">
   {% for post in paginator.posts %}
   <li>
-    <a href="{{ post.url }}" class="lead">{{ post.title }}</a> <span class="label">({{ post.date | date_to_long_string }})</span>
+    <a href="{{ post.url }}" class="lead">{{ post.title }}</a> <small><span class="label label-default">({{ post.date | date_to_long_string }})</span></small>
     {% if post.content contains site.excerpt_separator %}
     <p>{{ post.excerpt }}</p>
     {% else %}

@@ -9,7 +9,7 @@ I recently compiled a list of online courses which seem relevant to my ongoing P
 
 <!-- more -->
 
-<table class="table table-striped">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Course</th>
