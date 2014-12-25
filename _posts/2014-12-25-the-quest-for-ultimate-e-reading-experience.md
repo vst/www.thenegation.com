@@ -11,10 +11,10 @@ direction.
 
 <!-- more -->
 
-## The Past and Our Betreyal
+## The Past and Our Betrayal
 
-Our ancestors have been travelling for months just to be able to read
-a book or a few pages remaning from it. To Alexandria, Baghdat,
+Our ancestors have been traveling for months just to be able to read
+a book or a few pages remaining from it. To Alexandria, Baghdad,
 Samarkand... From all around the known world then. Now, looking in
 what has 21st century technology has brought to us, I feel that we are
 betraying our ancestors by proving how we read lesser and lesser
@@ -28,7 +28,7 @@ objective.
 
 ## My Sources for E-books
 
-Let me summarise first where I obtain my e-books from:
+Let me summarize first where I obtain my e-books from:
 
 0. [Amazon Kindle](www.amazon.com/Kindle-Store/b?node=133140011)
 0. [O'Reilly](http://shop.oreilly.com/category/ebooks.do)
@@ -77,7 +77,7 @@ seems to be illegal), and use the open-source e-book management and
 reading software [Calibre](http://calibre-ebook.com/), it is
 definitely not convenient as it sounds:
 
-1. How to synchronise across different devices
+1. How to synchronize across different devices
 2. How to bear with the ugly interface (Reading is impossible)
 3. Time spent for importing/exporting (and De-DRMing if it were not illegal)
 
@@ -88,21 +88,21 @@ definitely not convenient as it sounds:
 1. All publishers would provide both print and e-book versions of the books,
 2. DRM would be abolished,
 3. No e-shop would introduce any further restrictions on how we manage and read our books,
-4. All free and open source software would look and opereate nicely as most Apple software,
+4. All free and open source software would look and operate nicely as most Apple software,
 5. I could put my e-book library to a cloud storage system,
 6. I could use my Macbook, iPad, iPhone, Kindle, Raspberry Pi and Ubuntu Machine to access my e-book library,
 7. I could choose the book which I want to read from my e-book library and open it,
-8. My e-book would be visualised nicely with good typography which I can fine-tune according to my physical condition and my tase,
-9. All annotations and my reading history would be synchronised back to my library in the cloud, and most importantly,
+8. My e-book would be visualized nicely with good typography which I can fine-tune according to my physical condition and my taste,
+9. All annotations and my reading history would be synchronized back to my library in the cloud, and most importantly,
 9. I would enjoy reading!
 
 ## Current situation
 
 I am currently using Calibre to manage my e-book library. Books which
 are not in my Kindle device but I want to read are sent to my Kindle
-or synchronised to iBooks (for my iPad and iPhone), all manually. All
+or synchronized to iBooks (for my iPad and iPhone), all manually. All
 reading experience is encapsulated in the device which I am reading
-the content from, ie. it is not synchronised.
+the content from, ie. it is not synchronized.
 
 ## Future
 
@@ -112,6 +112,6 @@ retailer).
 
 Until anything changes, I will stick to Calibre to manage my e-book
 library and use multiple devices with multiple software for reading
-the books which I will manually keep synching. Hope that iCloud helps.
+the books which I will manually keep syncing. Hope that iCloud helps.
 
 Will keep you updated.
