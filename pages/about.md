@@ -29,12 +29,10 @@ of any kind and degree.
 Last but not least, I do not have any facebook account, but still have
 friends. Very good ones, indeed...
 
-
-<ul class="list-inline">
-<li><em>Further links:</em></li>
-<li><a href="mailto:vst@vsthost.com"><i class="fa fa-envelope"></i> email</a></li>
-<li><a href="https://github.com/vst"><i class="fa fa-github"></i> github</a></li>
-<li><a href="https://bitbucket.com/vehbisinan"><i class="fa fa-bitbucket"></i> bitbucket</a></li>
-<li><a href="http://sg.linkedin.com/in/vehbisinan/"><i class="fa fa-linkedin-square"></i> linkedin</a></li>
-<li><a href="https://twitter.com/vehbisinan/"><i class="fa fa-twitter"></i> twitter</a></li>
+<ul class="list-reset">
+  <li class="inline-block mt1"><a href="mailto:vst@vsthost.com" class="button-gray button-small p1"><i class="fa fa-envelope"></i> email</a></li>
+  <li class="inline-block mt1"><a href="https://github.com/vst" class="button-gray button-small p1"><i class="fa fa-github"></i> github</a></li>
+  <li class="inline-block mt1"><a href="https://bitbucket.com/vehbisinan" class="button-gray button-small p1"><i class="fa fa-bitbucket"></i> bitbucket</a></li>
+  <li class="inline-block mt1"><a href="http://sg.linkedin.com/in/vehbisinan/" class="button-gray button-small p1"><i class="fa fa-linkedin-square"></i> linkedin</a></li>
+  <li class="inline-block mt1"><a href="https://twitter.com/vehbisinan/" class="button-gray button-small p1"><i class="fa fa-twitter"></i> twitter</a></li>
 </ul>

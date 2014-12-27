@@ -4,24 +4,18 @@ html {
 }
 
 body {
-    margin: 0px auto;
-    padding-top: 40px;
-    margin-bottom: 50px;
-    font-size: 13pt;
-    line-height: 20pt;
+    margin-bottom: 70px;
 }
 
-footer#page {
+body > footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 40px;
-    font-size: 8pt;
-    padding: 12px 0px;
-    margin-top: 20px;
 }
 
-.main-content {
-    max-width: 780px;
-    margin: 0px auto;
+@media (min-width:48em) {
+    .md-static { position: static }
+}
+
+code {
+    padding: 4px;
 }

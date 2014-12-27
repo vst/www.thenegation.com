@@ -4,7 +4,7 @@ date: 2014-12-06 20:11:00
 layout: page
 ---
 
-Here is a quick summary of my ongoing work, projects and affiliations. In no particular order.
+Here is a quick summary of my ongoing work, projects and affiliations, in no particular order.
 
 ## Free and Open Source Projects
 
