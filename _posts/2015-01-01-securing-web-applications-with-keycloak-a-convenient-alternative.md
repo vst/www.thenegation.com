@@ -42,7 +42,7 @@ which you are using. You can use Google Authenticator for TOTP, too!
 
 Here is how you can start and see yourself:
 
-1. Watch the [introductory videos](http://keycloak.jboss.org/docs) and take a glance to the [Keycloak documentation](http://keycloak.jboss.org/docs).
+1. Watch the [introductory videos](http://keycloak.jboss.org/docs) and take a glance at the [Keycloak documentation](http://keycloak.jboss.org/docs).
 2. Get yourself a [Wildfly](http://wildfly.org/).
 3. [Setup Keycloak](http://docs.jboss.org/keycloak/docs/1.1.0.Beta2/userguide/html/server-installation.html#WAR_distribution_installation) in your Wildfly.
 4. Play with the examples which come along with the Keycloak distribution.
