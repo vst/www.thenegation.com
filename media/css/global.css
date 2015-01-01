@@ -13,7 +13,9 @@ body > footer {
 }
 
 @media (min-width:48em) {
-    .md-static { position: static }
+    .md-static {
+        position: static
+    }
 }
 
 code {
