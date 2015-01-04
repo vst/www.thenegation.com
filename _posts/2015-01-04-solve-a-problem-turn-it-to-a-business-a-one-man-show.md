@@ -1,5 +1,5 @@
 ---
-title: "Solve a Problem, Turn it to a Business: A One Man Show"
+title: "Solve a Problem, Turn it into a Business: A One Man Show"
 date: 2015-01-04
 tags: business IT
 layout: post
