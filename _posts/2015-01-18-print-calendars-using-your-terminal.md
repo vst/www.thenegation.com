@@ -1,5 +1,5 @@
 ---
-title: Print Calendars Using your Terminal
+title: Print Calendars Using Your Terminal
 date: 2015-01-18
 tags: lifehack
 layout: post
