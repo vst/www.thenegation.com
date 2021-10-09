@@ -1,0 +1,3 @@
+Made by vst (Vehbi Sinan Tunalioglu) using Zola and pico.css.
+
+Contact vst [AT] vsthost [DOT] com.

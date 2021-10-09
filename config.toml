@@ -1,0 +1,13 @@
+base_url = "https://thenegation.com"
+compile_sass = true
+build_search_index = false
+
+[markdown]
+
+highlight_code = true
+highlight_themes_css = [
+  { theme = "base16-ocean-dark", filename = "syntax-theme-dark.css" },
+  { theme = "base16-ocean-light", filename = "syntax-theme-light.css" },
+]
+
+[extra]

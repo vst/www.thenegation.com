@@ -1,0 +1,30 @@
+{% macro page_summary(page) %}
+<article>
+  <a href="{{ page.permalink }}"><h2>{{ page.title }}</h2></a>
+
+  <div class="meta">
+    Published on {{ page.date | date(format="%d-%m-%Y")}}
+  </div>
+
+  <div>{{ page.summary | safe }}</div>
+
+  <div>
+    <a href="{{ page.permalink }}">Read more...</a>
+  </div>
+</article>
+{% endmacro input %}
+
+
+{% macro page(page) %}
+<article>
+  <a href="{{ page.permalink }}"><h2>{{ page.title }}</h2></a>
+
+  {% if page.date %}
+  <div class="meta">
+    Published on {{ page.date | date(format="%d-%m-%Y")}}
+  </div>
+  {% endif %}
+
+  <div>{{ page.content | safe }}</div>
+</article>
+{% endmacro input %}

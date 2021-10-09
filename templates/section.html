@@ -1,0 +1,22 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+
+{% block pagetitle %}{{ section.title }}{% endblock pagetitle %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+
+{{ section.content | safe }}
+
+{% for page in paginator.pages %}
+{{ macros::page_summary(page=page) }}
+{% endfor %}
+
+<nav class="pagination">
+  {% if paginator.previous %}
+  <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+  {% endif %} {% if paginator.next %}
+  <a class="next" href="{{ paginator.next }}">Next ›</a>
+  {% endif %}
+</nav>
+{% endblock content %}

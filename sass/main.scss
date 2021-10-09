@@ -1,0 +1,90 @@
+// Enable <header>, <main>, <footer> inside <body> as a container
+$enable-semantic-container: false !default;
+
+// Enable .container and .container-fluid
+$enable-class-container: true !default;
+
+// Enable a centered viewport for <header>, <main>, <footer> inside <body>
+// Fluid layout if disabled
+$enable-viewport: true !default;
+
+// Enable responsive spacings for <header>, <main>, <footer>, <section>, <article>
+// Fixed spacings if disabled
+$enable-responsive-spacings: true !default;
+
+// Enable responsive typography
+// Fixed root element size if disabled
+$enable-responsive-typography: true !default;
+
+// Enable .classes
+// .classless version if disabled
+$enable-classes: true !default;
+
+// Enable transitions
+$enable-transitions: true !default;
+
+// Enable overriding with !important
+$enable-important: true !default;
+
+
+// Responsive
+// ––––––––––––––––––––
+
+// xs: Extra small (portrait phones)
+// sm: Small(landscape phones)
+// md: Medium(tablets)
+// lg: Large(desktops)
+// xl: Extra large (large desktops)
+
+// NOTE:
+// To provide an easy and fine styling on each breakpoint
+// we didn't use @each, @mixin or @include.
+// That means you need to edit each CSS selector file to add a breakpoint
+
+// Breakpoints
+// 'null' disable the breakpoint
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: null, //992px,
+  xl: null, //1200px
+) !default;
+
+// Viewports
+$viewports: (
+// 'null' disable the viewport on a breakpoint
+  sm: 510px,
+  md: 700px,
+  lg: null, //920px,
+  xl: null, //1130px
+) !default;
+
+
+@import "pico/pico";
+
+footer {
+  font-size: 14px !important;
+  color: #888888;
+}
+
+article > div.meta {
+  margin-top: calc(var(--block-spacing-vertical) * -1);
+  margin-bottom: calc(var(--block-spacing-vertical) * 0.5);
+  margin-right: calc(var(--block-spacing-horizontal) * -1);
+  margin-left: calc(var(--block-spacing-horizontal) * -1);
+  padding: calc(var(--block-spacing-vertical) * 0.4) var(--block-spacing-horizontal);
+  background-color: var(--card-sectionning-background-color);
+  color: var(--muted-color);
+  font-style: italic;
+  font-size: 80%;
+}
+
+article > pre {
+  margin-top: var(--block-spacing-vertical);
+  margin-bottom: var(--block-spacing-vertical);
+  border-top: var(--border-width) solid var(--card-border-color);
+}
+
+@import url("syntax-theme-dark.css") (prefers-color-scheme: dark);
+@import url("syntax-theme-light.css") (prefers-color-scheme: light);
