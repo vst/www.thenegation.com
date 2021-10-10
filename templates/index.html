@@ -1,17 +1,19 @@
-{% import "macros.html" as macros %}
-{% extends "base.html" %}
+{% import "macros.html" as macros %} {% extends "base.html" %} {% block pagetitle %}{{ section.title }}{% endblock
+pagetitle %} {% block content %}
 
-{% block pagetitle %}{{ section.title }}{% endblock pagetitle %}
+<article>
+  <h1>Latest Posts</h1>
 
+  {% set posts_section = get_section(path="posts/_index.md") %}
+  <ul>
+    {% for post in posts_section.pages | slice(start=0, end=5) %}
+    <li>
+      <a href="{{ post.permalink }}">{{ post.title }}</a>
+      <small class="text-muted">({{ post.date | date(format="%d-%m-%Y")}})</small>
+    </li>
+    {% endfor %}
+  </ul>
 
-{% block content %}
-
-<h1>Latest Posts</h1>
-
-{% set posts_section = get_section(path="posts/_index.md") %}
-{% for post in posts_section.pages | slice(start=0, end=4) %}
-  {{ macros::page_summary(page=post) }}
-{% endfor %}
-
-
+  <div style="text-align: right;"><a href="/posts">See all &raquo;</a></div>
+</article>
 {% endblock content %}

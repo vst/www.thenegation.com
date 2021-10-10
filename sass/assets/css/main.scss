@@ -63,6 +63,10 @@ $viewports: (
 
 @import "pico/pico";
 
+.text-muted {
+  color: #888888;
+}
+
 footer {
   font-size: 14px !important;
   color: #888888;

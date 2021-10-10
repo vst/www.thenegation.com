@@ -12,11 +12,16 @@
 {{ macros::page_summary(page=page) }}
 {% endfor %}
 
-<nav class="pagination">
-  {% if paginator.previous %}
-  <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
-  {% endif %} {% if paginator.next %}
-  <a class="next" href="{{ paginator.next }}">Next ›</a>
-  {% endif %}
+<nav>
+  <ul>
+    {% if paginator.previous %}
+    <li><a class="previous" href="{{ paginator.previous }}">&laquo; Newer</a></li>
+    {% endif %}
+  </ul>
+  <ul>
+    {% if paginator.next %}
+    <li><a class="next" href="{{ paginator.next }}">Older &raquo;</a></li>
+    {% endif %}
+  </ul>
 </nav>
 {% endblock content %}
