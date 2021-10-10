@@ -63,6 +63,10 @@ $viewports: (
 
 @import "pico/pico";
 
+.text-muted {
+  color: #888888;
+}
+
 footer {
   font-size: 14px !important;
   color: #888888;
@@ -86,5 +90,12 @@ article > pre {
   border-top: var(--border-width) solid var(--card-border-color);
 }
 
-@import url("syntax-theme-dark.css") (prefers-color-scheme: dark);
-@import url("syntax-theme-light.css") (prefers-color-scheme: light);
+article.danger {
+  color: var(--del-color);
+  font-size: 120%;
+  border: 1px solid var(--del-color);
+}
+
+.gist table tr {
+  background-color: #eee !important;
+}
