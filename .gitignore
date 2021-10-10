@@ -1,2 +1,4 @@
-_site/
 *~
+public
+static/syntax-theme-dark.css
+static/syntax-theme-light.css

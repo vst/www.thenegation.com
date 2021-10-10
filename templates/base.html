@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en_GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Negation of Negation - {% block pagetitle %}{% endblock pagetitle %}</title>
+    <meta name="description" content="Personal Website of Vehbi Sinan Tunalioglu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="/"><strong>vst's Homepages</strong></a>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="/pages/about">About</a></li>
+          <li><a href="/posts">Posts</a></li>
+        </ul>
+      </nav>
+
+      {% block content %}{% endblock content %}
+
+      <footer>
+        <div>Copyright &copy; 2012-{{ now() | date(format="%Y") }} Vehbi Sinan Tunalioglu.</div>
+
+        <div>
+          This work is licensed under a
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class="secondary">
+            Creative Commons Attribution-ShareAlike 4.0 International License.
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-28191408-1", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>

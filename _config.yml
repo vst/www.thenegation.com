@@ -1,8 +1,0 @@
-name: The Negation of Negation
-url: http://www.thenegation.com
-author: Vehbi Sinan Tunalioglu
-markdown: redcarpet
-highlighter: pygments
-paginate: 20
-permalink: /blog/:year/:month/:day/:title.html
-excerpt_separator: <!-- more -->
