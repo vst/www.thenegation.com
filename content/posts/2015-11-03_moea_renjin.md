@@ -25,16 +25,18 @@ Nevermind... Below is a simple Java program which demonstrates the idea of using
 
 Don't forget to add the following to your `pom.xml`:
 
-    <dependency>
-      <groupId>org.moeaframework</groupId>
-      <artifactId>moeaframework</artifactId>
-      <version>2.6</version>
-    </dependency>
+```xml
+  <dependency>
+    <groupId>org.moeaframework</groupId>
+    <artifactId>moeaframework</artifactId>
+    <version>2.6</version>
+  </dependency>
 
-    <dependency>
-      <groupId>org.renjin</groupId>
-      <artifactId>renjin-script-engine</artifactId>
-      <version>0.7.0-RC7</version>
-    </dependency>
+  <dependency>
+    <groupId>org.renjin</groupId>
+    <artifactId>renjin-script-engine</artifactId>
+    <version>0.7.0-RC7</version>
+  </dependency>
+```
 
 <script src="https://gist.github.com/vst/a2c6d4599ad0f965ef03.js"></script>

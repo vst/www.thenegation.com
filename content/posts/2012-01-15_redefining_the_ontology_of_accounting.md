@@ -41,7 +41,7 @@ However, for about one and a half year ago, we met a different approach: REA (Re
 
 <a href="http://en.wikipedia.org/wiki/Resources,_Events,_Agents">Wikipedia article</a> gives a relatively good overview on REA. However, I'd suggest to get a copy of <a href="http://reatechnology.com/">"Model-Driven Design Using Business Patterns"</a> by Hruby et. all.
 
-![REA Entity Diagram](/media/REA_entity_diagram.png "REA Entity Diagram")
+![REA Entity Diagram](/assets/media/posts/REA_entity_diagram.png "REA Entity Diagram")
 
 Basically, REA defines an ontology of business <em>events</em> occuring among <em>agents</em> as <em>resources</em> are being exchanged during a business transaction or converted during a manufacturing process. Besides these entities, the core of the ontology also includes commitments of agents to events. Furthermore, "Model-Driven Design Using Business Patterns" shows how the REA ontology can be extended through policies and other patterns to incorporate various complex business processes. In short, REA is relatively more able to capture the micro-economics of business transactions, and has the capacity of incorporating business processes into accounting process.
 

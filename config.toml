@@ -5,9 +5,6 @@ build_search_index = false
 [markdown]
 
 highlight_code = true
-highlight_themes_css = [
-  { theme = "base16-ocean-dark", filename = "syntax-theme-dark.css" },
-  { theme = "base16-ocean-light", filename = "syntax-theme-light.css" },
-]
+highlight_theme = "solarized-dark"
 
 [extra]
