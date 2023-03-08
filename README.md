@@ -1,14 +1,25 @@
 # thenegation.com
 
-- Install [Zola](https://www.getzola.org)
-- Run locally:
+Enter Nix development shell:
 
-        zola serve
+```sh
+nix develop
+```
 
-- Check:
+Run locally:
 
-        zola check
+```sh
+zola serve
+```
 
-- Build:
+Check:
 
-        zola build
+```sh
+zola check
+```
+
+Build:
+
+```sh
+zola build
+```
