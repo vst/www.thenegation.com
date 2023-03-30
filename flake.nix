@@ -1,5 +1,5 @@
 {
-  description = "Nix devshell for thenegation.com";
+  description = "Nix Development Shell";
 
   inputs = {
     nixpkgs.url = github:nixos/nixpkgs/release-22.11;
@@ -14,7 +14,7 @@
       {
         devShell = nixpkgs.mkShell {
           buildInputs = [
-            nixpkgs.zola
+            nixpkgs.nodejs
           ];
         };
       }
