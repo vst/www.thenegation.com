@@ -130,7 +130,7 @@ export function getPost(path: string): Post {
 }
 
 export function getSlugFromPath(path: string): string {
-  return pathlib.basename(path, pathlib.extname(path));
+  return pathlib.basename(path, pathlib.extname(path)).replace(/^.+?(_)/, '');
 }
 
 export const TheBlog = new Blog('./content/posts');
