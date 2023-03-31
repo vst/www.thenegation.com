@@ -1,11 +1,9 @@
 import { formatDate } from '@/lib/commons/zeitgeist';
+import { TheBlog } from '@/lib/website/blog';
 import ReactMarkdown from 'react-markdown';
-import { getPost, getPostPaths } from '../helpers';
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const posts = getPostPaths();
-  const path = posts.filter(({ slug }) => slug == params.slug)[0];
-  const post = getPost(path);
+  const post = TheBlog.getPost(params.slug);
 
   return (
     <div className="xl:relative">
@@ -13,15 +11,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <article>
           <header className="flex flex-col">
             <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              {post.meta.title}
+              {post.title}
             </h1>
 
             <time
-              dateTime={`${post.meta.date}`}
+              dateTime={`${post.date}`}
               className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
             >
               <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-              <span className="ml-3">{formatDate(post.meta.date)}</span>
+              <span className="ml-3">{formatDate(post.date)}</span>
             </time>
           </header>
 
@@ -37,5 +35,5 @@ export default async function Page({ params }: { params: { slug: string } }) {
 }
 
 export async function generateStaticParams() {
-  return getPostPaths().map(({ slug }) => ({ slug }));
+  return TheBlog.getArchive().map(({ slug }) => ({ slug }));
 }

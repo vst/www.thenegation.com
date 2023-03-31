@@ -25,6 +25,7 @@
     "eslint-config-next": "13.2.4",
     "gray-matter": "^4.0.3",
     "next": "13.2.4",
+    "purify-ts": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.6",
