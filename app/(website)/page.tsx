@@ -1,15 +1,34 @@
 import SiteConfig from '@/config';
+import { TheBlog } from '@/lib/website/blog';
 import { Content } from '@/lib/website/components/layout/content';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PostSummary } from './(blog)/posts/page';
 
 export default function Home() {
+  const posts = TheBlog.getArchive().slice(0, 5);
+
   return (
     <>
       <Tagline />
 
       <CrookedGallery images={SiteConfig.images.gallery.crooked} />
+
+      <Content className="mt-20 mb-16 lg:mt-32 lg:mb-20">
+        <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+          <div className="flex max-w-3xl flex-col space-y-16">
+            {posts.map((post) => (
+              <PostSummary key={post.slug} post={post} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-6">
+          <Link href="/posts" className="text-sm font-medium text-teal-500">
+            See all &raquo;
+          </Link>
+        </div>
+      </Content>
     </>
   );
 }

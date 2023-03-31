@@ -22,7 +22,7 @@ export interface SiteConfig {
 const SiteConfig: SiteConfig = {
   title: 'the negation',
   description: 'as in the negation of negation...',
-  copyright: '© 2023 Vehbi Sinan Tunalioglu. Some rights reserved.',
+  copyright: `© ${new Date().getFullYear()} Vehbi Sinan Tunalioglu. All rights reserved.`,
   email: 'vst@vsthost.com',
   images: {
     avatar: logo,

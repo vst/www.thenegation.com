@@ -17,7 +17,7 @@ export default async function Page() {
   );
 }
 
-function PostSummary({ post }: { post: Post }) {
+export function PostSummary({ post }: { post: Post }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <div className="md:col-span-3 group relative flex flex-col items-start">
@@ -52,7 +52,7 @@ function PostSummary({ post }: { post: Post }) {
 
       <time
         dateTime={`${post.date}`}
-        className="mt-1 md:block relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500"
+        className="mt-1 hidden md:block relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500"
       >
         {formatDate(post.date)}
       </time>
