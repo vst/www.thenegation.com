@@ -1,5 +1,6 @@
 import { formatDate } from '@/lib/commons/zeitgeist';
 import { TheBlog } from '@/lib/website/blog';
+import { Prose } from '@/lib/website/components/layout/prose';
 import ReactMarkdown from 'react-markdown';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -23,11 +24,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </time>
           </header>
 
-          <div className="prose mt-8">
+          <Prose className="mt-8">
             <ReactMarkdown skipHtml={true} remarkPlugins={[]}>
               {post.content}
             </ReactMarkdown>
-          </div>
+          </Prose>
         </article>
       </div>
     </div>

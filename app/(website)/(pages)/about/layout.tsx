@@ -1,4 +1,5 @@
 import SiteConfig from '@/config';
+import { Prose } from '@/lib/website/components/layout/prose';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
@@ -19,7 +20,7 @@ export default function PagesLayout({ children }: { children: React.ReactNode })
           />
         </div>
       </div>
-      <div className="prose  lg:order-first lg:row-span-2">{children}</div>
+      <Prose className="lg:order-first lg:row-span-2">{children}</Prose>
       <div className="lg:pl-20">
         <ul role="list">
           {SiteConfig.linksSocial.map((link) => (
