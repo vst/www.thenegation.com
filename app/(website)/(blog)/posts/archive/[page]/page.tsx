@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: { page: string } }) {
 }
 
 export async function generateStaticParams() {
-  return TheBlog.getPages().map((x) => ({ page: x }));
+  return TheBlog.getPages().map((x) => ({ page: `${x}` }));
 }
 
 function PagePrev({ href }: { href: string }) {
