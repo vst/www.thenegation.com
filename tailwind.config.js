@@ -115,7 +115,7 @@ module.exports = {
             fontWeight: theme('fontWeight.semibold'),
           },
           h1: {
-            fontSize: theme('fontSize.5xl')[0],
+            fontSize: theme('fontSize.4xl')[0],
             lineHeight: theme('lineHeight.10'),
             marginTop: theme('spacing.24'),
             marginBottom: theme('spacing.12'),
