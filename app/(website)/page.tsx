@@ -24,9 +24,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-6">
-          <Link href="/posts/archive/1" className="text-sm font-medium text-teal-500">
-            See all &raquo;
+        <div className="mt-12">
+          <Link href="/posts/archive/1" className="text-lg font-medium text-teal-500">
+            See all posts &raquo;
           </Link>
         </div>
       </Content>
