@@ -1,25 +1,17 @@
 # thenegation.com
 
-Enter Nix development shell:
+First, enter the Nix shell:
 
 ```sh
 nix develop
 ```
 
-Run locally:
+Then, run the development server:
 
-```sh
-zola serve
+```bash
+npm run dev
 ```
 
-Check:
+Finally, open the Web browser to see the result:
 
-```sh
-zola check
-```
-
-Build:
-
-```sh
-zola build
-```
+Open <http://localhost:3000> with your browser to see the result.
