@@ -93,7 +93,7 @@ export class Blog {
   }
 
   getPages(): number[] {
-    return Array.from(Array(this.getPageCount() - 1).keys()).map((x) => x + 1);
+    return Array.from(Array(this.getPageCount()).keys()).map((x) => x + 1);
   }
 
   getPage(page: number): Post[] {
