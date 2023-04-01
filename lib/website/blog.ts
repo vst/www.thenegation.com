@@ -15,10 +15,14 @@ export interface Post {
 export class Blog {
   private directory: string;
   private posts: Map<string, Post>;
+  private pageSize: number;
 
-  constructor(directory: string) {
+  constructor(directory: string, pageSize: number) {
     // Keep the directory:
     this.directory = directory;
+
+    // Keep the page size:
+    this.pageSize = pageSize;
 
     // Initialize a lookup table for <slug, Post>:
     this.posts = new Map();
@@ -74,6 +78,27 @@ export class Blog {
       },
       Just: (x) => x,
     });
+  }
+
+  getPostCount(): number {
+    return this.posts.size;
+  }
+
+  getPageSize(): number {
+    return this.pageSize;
+  }
+
+  getPageCount(): number {
+    return Math.floor(this.posts.size / this.pageSize) + 1;
+  }
+
+  getPages(): number[] {
+    return Array.from(Array(this.getPageCount() - 1).keys()).map((x) => x + 1);
+  }
+
+  getPage(page: number): Post[] {
+    const offset = (page - 1) * this.pageSize;
+    return this.getArchive().slice(offset, offset + this.pageSize);
   }
 }
 
@@ -133,4 +158,4 @@ export function getSlugFromPath(path: string): string {
   return pathlib.basename(path, pathlib.extname(path)).replace(/^.+?(_)/, '');
 }
 
-export const TheBlog = new Blog('./content/posts');
+export const TheBlog = new Blog('./content/posts', 5);

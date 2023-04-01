@@ -4,7 +4,7 @@ import { Content } from '@/lib/website/components/layout/content';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PostSummary } from './(blog)/posts/page';
+import { PostSummary } from './(blog)/posts/archive/[page]/page';
 
 export default function Home() {
   const posts = TheBlog.getArchive().slice(0, 5);
@@ -23,8 +23,9 @@ export default function Home() {
             ))}
           </div>
         </div>
+
         <div className="mt-6">
-          <Link href="/posts" className="text-sm font-medium text-teal-500">
+          <Link href="/posts/archive/1" className="text-sm font-medium text-teal-500">
             See all &raquo;
           </Link>
         </div>

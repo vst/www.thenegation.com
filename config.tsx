@@ -39,7 +39,7 @@ const SiteConfig: SiteConfig = {
   },
   linksNav: [
     { name: 'Home', href: '/' },
-    { name: 'Blog', href: '/posts' },
+    { name: 'Blog', href: '/posts/archive/1' },
     { name: 'About', href: '/about' },
   ],
   linksSocial: [
