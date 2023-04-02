@@ -61,7 +61,7 @@ We need to install [markdown-unlit](https://github.com/sol/markdown-unlit) that
 is a custom unlit program to extract Haskell code from Markdown files. Once
 installed, we can compile our program:
 
-```console
+```txt
 $ ghc -pgmLmarkdown-unlit Main.lhs
 [1 of 1] Compiling Main             ( Main.lhs, Main.o )
 Linking Main ...
@@ -71,7 +71,7 @@ $
 This will produce your executable (`Main`) along with `Main.o` and `Main.hi`
 files. You can run your program:
 
-```console
+```txt
 $ ./Main
 Hello World!
 $
@@ -79,7 +79,7 @@ $
 
 We could have ran the program directly using `runhaskell`, too:
 
-```console
+```txt
 $ runhaskell -pgmLmarkdown-unlit Main.lhs
 Hello World!
 $
@@ -87,7 +87,7 @@ $
 
 Also, we can produce the Haskell code of interest:
 
-```console
+```txt
 $ markdown-unlit -h label Main.lhs Main.hs
 $
 ```
@@ -95,7 +95,7 @@ $
 We can study `Main.hs` or run `doctest` on it (do not forget to re-generate
 `Main.hs` after you change the source code):
 
-```console
+```txt
 $ doctest Main.hs
 label:51: failure in expression `div42 0'
 expected: 0

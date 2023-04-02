@@ -2,6 +2,8 @@ import { formatDate } from '@/lib/commons/zeitgeist';
 import { TheBlog } from '@/lib/website/blog';
 import { Prose } from '@/lib/website/components/layout/prose';
 import ReactMarkdown from 'react-markdown';
+import rehypePrism from 'rehype-prism-plus';
+import remarkGfm from 'remark-gfm';
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const post = TheBlog.getPost(params.slug);
@@ -25,7 +27,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </header>
 
           <Prose className="mt-8">
-            <ReactMarkdown skipHtml={true} remarkPlugins={[]}>
+            <ReactMarkdown skipHtml={true} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypePrism]}>
               {post.content}
             </ReactMarkdown>
           </Prose>
