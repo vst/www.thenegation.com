@@ -1,0 +1,31 @@
+## Website title:
+title = "@vst"
+
+## The base URL the site will be built for:
+base_url = "/"
+
+## Automatically compile all SASS files in the sass directory:
+compile_sass = false
+
+## Build a search index to be used later on by a JavaScript library:
+build_search_index = true
+
+## Minify HTML:
+minify_html = true
+
+[[taxonomies]]
+
+name = "tags"
+
+feed = true
+render = true
+
+[markdown]
+
+highlight_code = true
+highlight_theme = "dracula"
+
+render_emoji = true
+smart_punctuation = true
+
+[extra]

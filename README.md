@@ -1,17 +1,23 @@
-# thenegation.com
+# The Negation Website
 
-First, enter the Nix shell:
+> **TODO**
+
+## Development
+
+Enter the Nix shell provisioned in the repository:
 
 ```sh
 nix develop
 ```
 
-Then, run the development server:
+Build stylesheet:
 
-```bash
-npm run dev
+```sh
+tailwindcss -i styles/main.css -o static/styles/main.css
 ```
 
-Finally, open the Web browser to see the result:
+Run development server:
 
-Open <http://localhost:3000> with your browser to see the result.
+```sh
+zola serve
+```
