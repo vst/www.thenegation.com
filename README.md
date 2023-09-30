@@ -1,6 +1,4 @@
-# The Negation Website
-
-> **TODO**
+# Personal Website
 
 ## Development
 
@@ -13,7 +11,7 @@ nix develop
 Build stylesheet:
 
 ```sh
-tailwindcss -i styles/main.css -o static/styles/main.css
+tailwindcss --minify --input styles/main.css --output static/styles/main.css
 ```
 
 Run development server:
