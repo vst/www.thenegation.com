@@ -1,0 +1,36 @@
+{% set blog = get_section(path="posts/_index.md") %}
+
+{% if section.content or blog.pages %}
+  <h1>{{ section.title }}</h1>
+
+  {% if section.content %}
+    <div {% if blog.pages %}class="space" {% endif %}>{{ section.content | safe }}</div>
+  {% endif %}
+
+  {% if blog.pages %}
+    <h2>Recent posts</h2>
+
+    <ul>
+      {% for post in blog.pages | sort(attribute="date") | reverse | slice(end=5) %}
+        <li>
+          <p class="text-lg">
+            <a href="{{ post.path }}">{{ post.title }}</a>
+            <span class="text-xs italic">({{ post.date | date(format="%-d %B %Y") }})</span>
+          </p>
+
+          {% if post.summary %}
+            <div class="pl-4 border-l-4 border-gray-100 dark:border-gray-100 text-sm">
+              {{ post.summary | safe }}
+            </div>
+
+            <a href="{{ post.path }}" class="text-xs">Read more &raquo;</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="mt-4">
+      <a href="{{ blog.path }}">See all posts &raquo;</a>
+    </div>
+  {% endif %}
+{% endif %}

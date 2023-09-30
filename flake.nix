@@ -2,7 +2,7 @@
   description = "Nix Development Shell";
 
   inputs = {
-    nixpkgs.url = github:nixos/nixpkgs/release-22.11;
+    nixpkgs.url = github:nixos/nixpkgs/nixos-unstable;
     flake-utils.url = github:numtide/flake-utils;
   };
 
@@ -14,7 +14,9 @@
       {
         devShell = nixpkgs.mkShell {
           buildInputs = [
-            nixpkgs.nodejs
+            nixpkgs.nodejs_18
+            nixpkgs.tailwindcss
+            nixpkgs.zola
           ];
         };
       }

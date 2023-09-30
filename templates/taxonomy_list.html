@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}{{ config.title }} | {{ taxonomy.name }}{% endblock title %}
+
+{% block content %}
+  <h1 class="uppercase">
+    <a href="/{{ taxonomy.name }}">{{ taxonomy.name }}</a>
+  </h1>
+
+  <ul>
+    {% for term in terms %}
+      <li>
+        <a href="{{ term.path }}">{{ term.name }} ({{ term.pages | length }})</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

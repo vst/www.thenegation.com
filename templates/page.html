@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block title %}{{ config.title }} | {{ page.title }}{% endblock title %}
+
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+
+{% block content %}
+  <h1>{{ page.title }}</h1>
+
+  {{ page.content | safe }}
+
+  {% if page.date %}
+    <div class="flex justify-between items-center my-8">
+      <span class="text-sm italic">
+        Published on {{ page.date | date(format="%-d %B %Y") }}
+      </span>
+
+      {% if page.taxonomies.tags %}
+        <span class="space-x-1">
+          {% for tag in page.taxonomies.tags %}
+            {% set term = get_taxonomy_term(kind="tags", term=tag) %}
+            <a href="{{ term.path }}" class="label no-underline">{{ tag }}</a>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock content %}

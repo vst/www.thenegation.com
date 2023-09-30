@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}" />
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="{{ get_url(path='styles/main.css', cachebust=true) }}" />
+
+    {% if config.generate_feed %}
+      <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}" />
+    {% endif %}
+
+    {% block extra_head %}{% endblock extra_head %}
+  </head>
+
+  <body class="dark:bg-slate-950 dark:text-gray-300">
+    <header class="mx-auto max-w-2xl mt-4 mb-8">
+      <nav class="flex justify-between items-center">
+        <div class="flex lg:flex-1">
+          <a href="/" class="flex items-center space-x-4 no-underline">
+            <span class="text-lg font-semibold uppercase tracking-tight">@vst</span>
+          </a>
+        </div>
+
+        <div class="flex space-x-4 text-sm">
+          <a href="/">Home</a>
+          <a href="/posts">Blog</a>
+          <a href="/about">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-2xl mb-8 prose dark:prose-invert">
+      {% block content %}
+        {% include "partials/homepage.html" %}
+      {% endblock content %}
+    </main>
+
+    <footer class="mx-auto max-w-2xl">
+      <p
+        class="py-4 border-t border-gray-100 dark:border-gray-500 text-xs"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:dct="http://purl.org/dc/terms/"
+      >
+        <a
+          href="https://www.thenegation.com"
+          rel="cc:attributionURL"
+          property="dct:title"
+        >
+          This Website
+        </a>
+        and its content by
+        <a
+          href="https://github.com/vst"
+          rel="cc:attributionURL dct:creator"
+          property="cc:attributionName"
+        >
+          Vehbi Sinan Tunalioglu
+        </a>
+        are licensed under
+        <a
+          href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"
+          target="_blank"
+          rel="license noopener noreferrer"
+        >
+          CC BY-SA 4.0
+        </a>
+        unless otherwise noted.
+      </p>
+    </footer>
+
+    {# <pre class="mx-auto max-w-2xl">{{ __tera_context }}</pre> #}
+  </body>
+</html>
