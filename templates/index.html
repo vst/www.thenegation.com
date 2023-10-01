@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{{ get_url(path='styles/main.css', cachebust=true) }}" />
 
+    <script src="{{ get_url(path='scripts/main.js', cachebust=true) }}"></script>
+
     {% if config.generate_feed %}
       <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}" />
     {% endif %}
@@ -26,10 +28,11 @@
           </a>
         </div>
 
-        <div class="flex space-x-4 text-sm">
+        <div class="flex space-x-3 items-center text-sm">
           <a href="/">Home</a>
           <a href="/posts">Blog</a>
           <a href="/about">About</a>
+          {% include "partials/theme-switcher.html" %}
         </div>
       </nav>
     </header>
