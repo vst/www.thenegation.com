@@ -4,6 +4,9 @@ title = "@vst"
 ## The base URL the site will be built for:
 base_url = "/"
 
+## Set the author (especially for feed):
+author = "Vehbi Sinan Tunalioglu"
+
 ## Automatically compile all SASS files in the sass directory:
 compile_sass = false
 
@@ -12,6 +15,9 @@ build_search_index = true
 
 ## Minify HTML:
 minify_html = true
+
+## Generate feed:
+generate_feed = true
 
 [[taxonomies]]
 
