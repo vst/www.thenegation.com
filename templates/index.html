@@ -33,6 +33,13 @@
           <a href="/posts">Blog</a>
           <a href="/about">About</a>
           {% include "partials/theme-switcher.html" %}
+          {% if config.generate_feed %}
+            <a href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24.332 24.332" class="w-4 h-4 fill-gray-950 dark:fill-gray-50">
+                <path d="M3.607 17.11A3.61 3.61 0 0 0 0 20.717c0 1.984 1.618 3.604 3.607 3.604s3.607-1.619 3.607-3.604a3.61 3.61 0 0 0-3.607-3.607z"/><path d="M.375 7.951A.377.377 0 0 0 0 8.328v4.578c0 .206.169.374.375.374 5.879 0 10.665 4.784 10.665 10.665 0 .205.166.375.375.375h4.597c.209 0 .377-.17.377-.375l-.018-.117C16.305 15.064 9.152 7.951.375 7.951z"/><path d="M24.311 23.828C24.246 10.681 13.531.01.375.01A.377.377 0 0 0 0 .387v4.711c0 .207.169.375.375.375 10.186 0 18.472 8.287 18.472 18.473 0 .205.168.375.373.375h4.733c.205 0 .379-.17.379-.375l-.021-.118z"/>
+              </svg>
+            </a>
+          {% endif %}
         </div>
       </nav>
     </header>
