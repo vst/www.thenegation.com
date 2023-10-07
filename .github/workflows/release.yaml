@@ -9,22 +9,39 @@ jobs:
   build:
     name: "Build Website"
     runs-on: "ubuntu-latest"
+    outputs:
+      release_created: "${{ steps.release.outputs.release_created }}"
     steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: simple
+          extra-files: |
+            config.toml
+
       - name: "Checkout main"
+        if: ${{ steps.release.outputs.release_created }}
         uses: "actions/checkout@v3.0.0"
+
       - name: "Install Nix"
+        if: ${{ steps.release.outputs.release_created }}
         uses: "cachix/install-nix-action@v22"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
+
       - name: "Build Website"
+        if: ${{ steps.release.outputs.release_created }}
         run: |
           nix develop --command bash -c "tailwindcss --minify --input styles/main.css --output static/styles/main.css && zola build"
+
       - name: "Fix Permissions of Website Artifacts"
+        if: ${{ steps.release.outputs.release_created }}
         run: |
           chmod -c -R +rX "public/" | while read -r line; do
             echo "::warning title=Invalid file permissions automatically fixed::${line}"
           done
       - name: "Upload Website"
+        if: ${{ steps.release.outputs.release_created }}
         uses: "actions/upload-pages-artifact@v2"
         with:
           path: "public/"
@@ -43,3 +60,4 @@ jobs:
       - name: "Deploy to GitHub Pages"
         id: "deployment"
         uses: "actions/deploy-pages@v2"
+        if: ${{ needs.build.outputs.release_created }}
