@@ -32,6 +32,13 @@ zola build
 
 The output is generated under the `public/` directory.
 
+Lint codebase:
+
+```sh
+taplo check
+taplo fmt --check
+```
+
 ## License and Copyrights
 
 This Website, its content and source code by Vehbi Sinan Tunalioglu are licensed
