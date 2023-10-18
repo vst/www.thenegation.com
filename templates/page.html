@@ -19,7 +19,7 @@
         <span class="space-x-1">
           {% for tag in page.taxonomies.tags %}
             {% set term = get_taxonomy_term(kind="tags", term=tag) %}
-            <a href="{{ term.path }}" class="label no-underline">{{ tag }}</a>
+            <a href="{{ term.path }}" class="label no-underline hover:underline">{{ tag }}</a>
           {% endfor %}
         </span>
       {% endif %}

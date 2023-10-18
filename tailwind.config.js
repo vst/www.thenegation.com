@@ -29,16 +29,6 @@ module.exports = {
           fontSize: "1.125rem",
           lineHeight: "1.75rem",
         },
-        a: {
-          color: "var(--tw-prose-links)",
-          textDecoration: "underline",
-          textDecorationColor: "var(--tw-prose-underline)",
-        },
-        "a:hover": {
-          color: "var(--tw-prose-links-hover)",
-          textDecoration: "underline",
-          textDecorationColor: "var(--tw-prose-underline-hover)",
-        },
       });
       addComponents({
         ".label": {

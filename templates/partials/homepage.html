@@ -8,9 +8,9 @@
   {% endif %}
 
   {% if blog.pages %}
-    <h2>Recent posts</h2>
+    <h2>Recent Posts</h2>
 
-    <ul>
+    <ol>
       {% for post in blog.pages | sort(attribute="date") | reverse | slice(end=5) %}
         <li>
           <p class="text-lg">
@@ -19,15 +19,17 @@
           </p>
 
           {% if post.summary %}
-            <div class="pl-4 border-l-4 border-gray-100 dark:border-gray-100 text-sm">
+            <div class="pl-4 border-l-4 border-gray-200 dark:border-gray-600 text-sm">
               {{ post.summary | safe }}
-            </div>
 
-            <a href="{{ post.path }}" class="text-xs">Read more &raquo;</a>
+              <a href="{{ post.path }}" class="text-xs text-gray-400 dark:text-gray-300">
+                Read more &raquo;
+              </a>
+            </div>
           {% endif %}
         </li>
       {% endfor %}
-    </ul>
+    </ol>
 
     <div class="mt-4">
       <a href="{{ blog.path }}">See all posts &raquo;</a>

@@ -16,6 +16,7 @@
           buildInputs = [
             nixpkgs.nodejs_18
             nixpkgs.tailwindcss
+            nixpkgs.taplo
             nixpkgs.zola
           ];
         };
