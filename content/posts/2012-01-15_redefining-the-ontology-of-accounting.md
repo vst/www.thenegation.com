@@ -1,58 +1,120 @@
 ---
 title: Redefining the Ontology of Accounting
 date: 2012-01-15 08:03:01
-tags: computing
-layout: post
+updated: 2023-10-18 13:53:28
+taxonomies:
+  tags:
+    - computing
 ---
 
-The human-kind has been performing <em>accounting</em> for more than 7,000 years. This discipline does not only give us the arithmetic means to plan, execute and assess business transactions, but also the universal language of business.
+*Accounting* is more than 7,000 years old. This discipline helps us to plan,
+execute and assess business transactions. It is also the universal language of
+business.
 
-In particular, we have been using the <em>double-entry bookkeeping</em> system for about the last 5 centuries as a framework to record transactions. Furthermore, with the help of the concept of <em>ledger</em>s, we have been consolidating transactions and reporting summaries of them through standardized documents such as balance sheets, income statements etc.
+In particular, *double-entry accounting* (also known as *double-entry
+bookkeeping*) system has been used for about the last five centuries as a
+framework to record business transactions. We can then consolidate these
+transactions and report summaries through standardized documents such as
+ledgers, balance sheets, income statements, etc.
 
-So far, so good... But is it all good? I have some doubts. In the following, I will briefly explain two concerns of mine. By the end, a recent ontological movement follows which really excites me.
+However, we are living in the age of information technology. And the way we
+perform accounting still looks like it is pre-computer age.
+
+Can we do any better now?
+
+In the following, I will briefly explain my concerns. Then, a relatively recent
+and exciting ontological approach to accounting follows.
 
 <!-- more -->
 
-Before proceeding, please note that the person who expresses his ideas here is a <em>poor</em> programmer, not an accountant.
+Before proceeding, please note that I am a programmer, not an accountant.
+However, I do hands-on accounting and develop accounting systems.
 
 ## Problem 1: What happened to my data?
 
-Firstly, I am not comfortable with the highly opaque nature of the information resulting from the accounting process. All the accountants which I've been working with (both juniors and seniors, regardless of their nationality being Turkish, Singaporean or Indian) concentrate mostly on the preparation of a <em>summary of transactional data</em> (such as balance sheets) which presents the top-level view of the business operations. Furthermore, there is not much emphasis on the very continuum of the business execution; there are significant cut-off times such as end of month, quarter or year. In conclusion, there is a critical mass of information loss (both in quantity and quality) due to the excessive focus on the summary of the data.
+Firstly, the information resulting from the accounting process is quite opaque.
+The typical accounting process tends to concentrate mostly on the preparation of
+*summary of transactional data* for statutory filing which presents a top-level
+view of business operations.
 
-There is nothing wrong with summarizing <em>per se</em>. However, we should ask ourselves: "How relevant are these summaries to our ongoing business processes?"
+Furthermore, there is not much emphasis on the very continuum of business
+execution; there are significant cut-off times such as end of month, quarter or
+year. In conclusion, there is some information loss both in quantity and quality
+due to the primary focus on the summary of the data.
 
-I have always been impressed by <em>accountants</em> and their presence in office premises. What they do seems always to be a sort of sacred work. Nobody sees them around, knows what they do, how they do. Now, I understand better "Why?". Instead of that the accountant who collects and keeps probably the most valuable information on the business is an integral actor in decision making and business processes, she is simply isolated from the ongoing business to focus more on the fulfillment of this <em>degrading</em> work of summarizing data, calculating ratios, filling in forms, filing applications etc.
+There is nothing wrong with summarizing *per se*. What I am trying to say is
+that the target audience of such summaries is merely external.
 
-## Problem 2: Computers are meant to replace us, not our tools
+## Problem 2: Computers to Replace Processes, Not Tools
 
-Secondly, I am more concerned with the technical aspect of accounting. Let's look at the <a href="http://en.wikipedia.org/wiki/Accounting#Etymology">etymology of accountant</a> (from Wikipedia as of 2012-01-15):
+Secondly, I am more concerned with the technical aspects of accounting. Let's
+look at the [etymology of accountant] (from Wikipedia as of 2012-01-15):
 
-> The word <em>"Accountant"</em> is derived from the French > word <em>Compter</em>, which took its origin from the Latin > word <em>Computare</em>.
+> The word *"Accountant"* is derived from the French word *Compter*, which took
+> its origin from the Latin word *Computare*.
 
- Is it all about computation? If so, we have a better understanding of computational models compared to 500 years ago. How did this affect the accounting throughout the time at all? As far as I understand, there is not much difference except that we are using portable calculators instead of pen and paper, personal computers instead of Facit.
+If it is about computation, we have a better understanding of computational
+models and methodologies compared to 500 years ago. If this sounds like a bold
+claim, check this out: [Algebraic Models For Accounting Systems]. It even talks
+about *monoids* which can characterize certain accounting systems with special
+properties. The term *monoid* can be dated back to the early 1930s, but not any
+earlier.
 
-For example, although relational database model could have deprecated the use of T-accounts entirely, it has been used only to replace our solid books to store the T-accounts in the electronic form. What a shame...
+As far as I understand, there is not much of a difference between the
+pre-computer age and now in how we perform accounting except that we are using
+portable calculators instead of pen and paper, and personal computers instead of
+Facit.
 
-## There should be a way out!
+## A Better Way
 
-Why am I concerned with accounting at all? During the last 5 years, I've been involved in designing and implementing e-commerce and financial portfolio management systems. I have been thinking that accounting in general could have served a solid basis for our data modeling. Everytime we prototyped around this idea, we failed and ended up having two seperate systems: one based on an operational data model and another one based on an accounting data model.
+Why am I concerned with accounting?
 
-However, for about one and a half year ago, we met a different approach: REA (Resources - Events - Agents). Since then, a part of our e-commerce systems sits on top of REA. We are not using REA fully, but so far, I can tell that it was a wise choice and it seems very promising.
+I have been involved in designing and implementing e-commerce and financial
+portfolio management systems. I think that accounting in general could have
+served as a more solid basis for our data modeling. Every time we prototyped
+around this idea, we failed and ended up having two separate systems: one based
+on an operational data model and another one based on an accounting data model.
 
-<a href="http://en.wikipedia.org/wiki/Resources,_Events,_Agents">Wikipedia article</a> gives a relatively good overview on REA. However, I'd suggest to get a copy of <a href="http://reatechnology.com/">"Model-Driven Design Using Business Patterns"</a> by Hruby et. al.
+However, around 2010, we met a different approach: Resources - Events - Agents
+(REA). We used some concepts from REA in our e-commerce application. Later in
+2014, we used a watered-down version of it to build our portfolio and fund
+management system.
+
+I can tell that it was a wise choice, and it still seems very promising.
+
+[REA Wikipedia article] gives a relatively good overview of REA. However, I
+would recommend [Model-Driven Design Using Business Patterns] by Pavel Hruby.
+
+In essence, REA defines an ontology of business *events* occurring among
+*agents* as *resources* being exchanged during a business transaction or
+converted during a manufacturing process.
 
 ![REA Entity Diagram](/assets/media/posts/REA_entity_diagram.png)
 
-Basically, REA defines an ontology of business <em>events</em> occuring among <em>agents</em> as <em>resources</em> are being exchanged during a business transaction or converted during a manufacturing process. Besides these entities, the core of the ontology also includes commitments of agents to events. Furthermore, "Model-Driven Design Using Business Patterns" shows how the REA ontology can be extended through policies and other patterns to incorporate various complex business processes. In short, REA is relatively more able to capture the micro-economics of business transactions, and has the capacity of incorporating business processes into accounting process.
+Besides these entities, the core of the ontology also includes the commitments
+of agents to events. Furthermore, "Model-Driven Design Using Business Patterns"
+shows how REA ontology can be extended via policies (and various other patterns)
+to incorporate complex business processes, capture more granular information
+about business transactions, and derive reports directly from first-hand data.
 
-One surprising side-effect of REA is that accounting (as we know of) is <em>consequential</em>, whereas double-entry bookkeeping system needs accounting information <em>a priori</em> (such as the account code), ie. before recording the debit/credit transaction. In other words, REA forces the user to define the business process and record the <em>business transaction</em> properly (<em>focus on relations as values</em>), whereas double-entry bookkeeping system forces the user to record <em>the debit/credit transaction</em> and rely on what has already been defined in the chart of accounts (<em>focus on nominal amounts as values</em>).
+As for the last point above: One surprising result of using REA is that
+conventional accounting is a natural consequence of working with business
+transactions: You fold them and get your insights, and some of these insights
+are already what we use the *double-entry accounting system* for.
 
-This means that times are ahead that we do no longer need to restructure our business just because we have purchased a new off-the-shelf accounting system.
+REA comes with one more surprise egg: Using REA, accounting systems can *very
+easily* be implemented from an independent, third-party perspective, i.e. if you
+have access to business transactions for multiple entities, one system can
+handle accounting for all these entities in full integrity.
 
-REA comes with one more surprise egg: Using REA, accounting systems can <em>very easily</em> be implemented from an independent third-party perspective, ie. if you have multiple companies, one system can handle all accounting for your individual companies in full integrity.
+Is REA ready? From an academic perspective, probably yes. Yet, we cannot find
+practices, let alone the best ones, publicly. There is no reference
+implementation, either. Yet, do not be discouraged: learn more about REA and
+play with it to assess its merits.
 
-What would be the value added of using REA in different domains? I personally believe that it is highly possible that any economic transaction can be modeled through REA. For example, portfolio management systems and automated trading systems can benefit a lot from REA.
+<!-- REFERENCES -->
 
-Is REA complete? It seems that it is not. There is no standardization, no reference implementation and lack of consensus on some patterns. However, it should not demotivate the <em>hacker</em> from attempting to read more on REA and implementing a simple REA-based application to assess its usability.
-
-Looking forward to writing more on this as we acquire more knowledge on REA.
+[etymology of accountant]: http://en.wikipedia.org/wiki/Accounting#Etymology
+[Algebraic Models For Accounting Systems]: https://www.researchgate.net/publication/275209178_Algebraic_Models_for_Accounting_Systems
+[REA Wikipedia Article]: http://en.wikipedia.org/wiki/Resources,_Events,_Agents
+[Model-Driven Design Using Business Patterns]: https://www.researchgate.net/publication/220689230_Model-Driven_Design_Using_Business_Patterns
