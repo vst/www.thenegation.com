@@ -18,7 +18,7 @@ jobs:
 
       - name: "Build Website"
         run: |
-          nix develop --command bash -c "tailwindcss --minify --input styles/main.css --output static/styles/main.css && zola build"
+          nix-shell --run "tailwindcss --minify --input styles/main.css --output static/styles/main.css && zola build"
 
       - name: "Fix Permissions of Website Artifacts"
         run: |
