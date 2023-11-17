@@ -1,16 +1,24 @@
 # My Personal Website
 
-This Website is built using [Zola] and [Tailwind]. It is built and deployed
-using GitHub Actions. The Website *should* be live on <https://thenegation.com>
-and <https://vst.github.com>.
+This Website is built using [Zola] and [Tailwind]. It is built and
+deployed using GitHub Actions. The Website *should* be live on
+<https://thenegation.com> and <https://vst.github.com>.
 
 ## Development
 
 Enter the Nix shell provisioned in the repository:
 
 ```sh
-nix develop
+nix-shell
 ```
+
+> **Note**
+>
+> If you want, you can use [direnv] integration, too:
+>
+> ```sh
+> direnv allow
+> ```
 
 Build stylesheet:
 
@@ -41,8 +49,8 @@ taplo fmt --check
 
 ## License and Copyrights
 
-This Website, its content and source code by Vehbi Sinan Tunalioglu are licensed
-under [CC BY-SA 4.0] unless otherwise noted.
+This Website, its content and source code by Vehbi Sinan Tunalioglu
+are licensed under [CC BY-SA 4.0] unless otherwise noted.
 
 <!-- REFERENCES -->
 
