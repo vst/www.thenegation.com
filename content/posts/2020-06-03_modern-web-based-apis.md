@@ -4,7 +4,7 @@ date: 2020-06-03
 updated: 2023-10-18 14:42:13
 taxonomies:
   tags:
-    - computing
+    - Computing
 ---
 
 Here are some quick notes for mysels on what to expect from a modern, Web-based

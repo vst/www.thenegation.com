@@ -4,7 +4,7 @@ date: 2012-05-19 14:09:23
 updated: 2023-10-18 14:27:28
 taxonomies:
   tags:
-    - mathematics
+    - Mathematics
 ---
 
 I find the first pages of a book to be the most instructive ones for many

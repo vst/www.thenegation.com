@@ -4,7 +4,7 @@ date: 2012-01-15 08:03:01
 updated: 2023-10-18 13:53:28
 taxonomies:
   tags:
-    - computing
+    - Computing
 ---
 
 *Accounting* is more than 7,000 years old. This discipline helps us to plan,
