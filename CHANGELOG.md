@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/vst/vst.github.io/compare/v1.0.0...v1.1.0) (2023-11-18)
+
+
+### Features
+
+* add post "NixOS on Raspberry Pi 4 with Encrypted Filesystem" ([cd92e25](https://github.com/vst/vst.github.io/commit/cd92e25ba7005e1fd9333dc021560e51e8c38efd))
+
+
+### Bug Fixes
+
+* fix GitHub pages URL in the README ([a06a599](https://github.com/vst/vst.github.io/commit/a06a5995406a840e035f1110ee1dde3d7d19551a))
+* make tags title-case ([a61b800](https://github.com/vst/vst.github.io/commit/a61b800bfbdbc8d4f5fbd8f803db06ce0654b851))
+* put post date and tags below the title ([479bfcd](https://github.com/vst/vst.github.io/commit/479bfcd5ec2ca511aa8f143a7d032c2eac2c7c11))
+
 ## 1.0.0 (2023-10-18)
 
 
