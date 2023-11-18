@@ -4,7 +4,7 @@ date: 2021-10-16
 updated: 2023-10-18 14:48:18
 taxonomies:
   tags:
-    - hacking
+    - Hacking
 ---
 
 This is a short guide to writing *[Literate Haskell]* programs using Markdown.

@@ -2,7 +2,7 @@
 
 This Website is built using [Zola] and [Tailwind]. It is built and
 deployed using GitHub Actions. The Website *should* be live on
-<https://thenegation.com> and <https://vst.github.com>.
+<https://thenegation.com> and <https://vst.github.io>.
 
 ## Development
 

@@ -4,9 +4,9 @@ date: 2012-06-10 23:10:00
 updated: 2023-10-18 14:39:26
 taxonomies:
   tags:
-    - computing
-    - literature
-    - mathematics
+    - Computing
+    - Literature
+    - Mathematics
 ---
 
 *[How to Solve It: A New Aspect of Mathematical Method]* by [George Pólya]
