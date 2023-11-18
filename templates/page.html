@@ -7,8 +7,6 @@
 {% block content %}
   <h1>{{ page.title }}</h1>
 
-  {{ page.content | safe }}
-
   {% if page.date %}
     <div class="flex justify-between items-center my-8">
       <span class="text-sm italic">
@@ -16,7 +14,7 @@
       </span>
 
       {% if page.taxonomies.tags %}
-        <span class="space-x-1">
+        <span class="flex items-center space-x-1">
           {% for tag in page.taxonomies.tags %}
             {% set term = get_taxonomy_term(kind="tags", term=tag) %}
             <a href="{{ term.path }}" class="label no-underline hover:underline">{{ tag }}</a>
@@ -25,4 +23,6 @@
       {% endif %}
     </div>
   {% endif %}
+
+  {{ page.content | safe }}
 {% endblock content %}
