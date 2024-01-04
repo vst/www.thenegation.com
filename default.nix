@@ -26,6 +26,7 @@ let
 
       ## Development dependencies:
       pkgs.git
+      pkgs.marksman
       pkgs.nil
       pkgs.nixpkgs-fmt
       pkgs.taplo
