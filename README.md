@@ -45,6 +45,7 @@ Lint codebase:
 ```sh
 taplo check
 taplo fmt --check
+prettier --check .
 find . -iname "*.nix" -not -path "*/nix/sources.nix" -exec nil diagnostics {} \;
 find . -iname "*.nix" -not -path "*/nix/sources.nix" -print0 | xargs --null nixpkgs-fmt --check
 ```
@@ -53,6 +54,7 @@ Automatically format codebase:
 
 ```sh
 taplo fmt
+prettier --write .
 find . -iname "*.nix" -not -path "*/nix/sources.nix" -print0 | xargs --null nixpkgs-fmt
 ```
 

@@ -29,6 +29,7 @@ let
       pkgs.marksman
       pkgs.nil
       pkgs.nixpkgs-fmt
+      pkgs.nodePackages.prettier
       pkgs.taplo
     ];
   };
