@@ -27,6 +27,7 @@ let
       ## Development dependencies:
       pkgs.git
       pkgs.nil
+      pkgs.nixpkgs-fmt
       pkgs.taplo
     ];
   };
