@@ -1,7 +1,7 @@
 # My Personal Website
 
 This Website is built using [Zola] and [Tailwind]. It is built and
-deployed using GitHub Actions. The Website *should* be live on
+deployed using GitHub Actions. The Website _should_ be live on
 <https://thenegation.com> and <https://vst.github.io>.
 
 ## Development

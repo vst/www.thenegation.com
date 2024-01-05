@@ -47,7 +47,7 @@ ruin the entire experience.
 
 On the other hand, I can reproduce my NixOS-based workstation
 configuration easily on different hosts. I already have almost
-identical workstations in my reach. *Almost*, because certain states
+identical workstations in my reach. _Almost_, because certain states
 can not be easily reproduced or the benefits are not worth the hassle
 (such as ad-hoc data files, Web browser cache or ephemeral
 development, build and testing artefacts).
@@ -142,7 +142,7 @@ Note the IP address, because we will use it in the next step.
 
 ### SSH Connection
 
-We want to continue the installation from a *proper*
+We want to continue the installation from a _proper_
 workstation. Luckily, the installation media already launched an SSH
 service. Therefore, we will setup authorised SSH keys, switch to the
 workstation and continue installation there.

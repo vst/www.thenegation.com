@@ -7,7 +7,7 @@ taxonomies:
     - Hacking
 ---
 
-This is a short guide to writing *[Literate Haskell]* programs using Markdown.
+This is a short guide to writing _[Literate Haskell]_ programs using Markdown.
 
 <!-- more -->
 
@@ -62,7 +62,7 @@ div42 :: Int -> Int
 div42 = div 42
 ```
 
-We need to install [markdown-unlit], a custom *unlit* program to extract Haskell
+We need to install [markdown-unlit], a custom _unlit_ program to extract Haskell
 code from Markdown files. Once installed, we can compile our program:
 
 ```console
