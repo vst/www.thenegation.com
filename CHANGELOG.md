@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/vst/vst.github.io/compare/v1.1.0...v1.2.0) (2024-01-05)
+
+
+### Features
+
+* add post "Develop R Packages under Nix Shell" ([8c49da1](https://github.com/vst/vst.github.io/commit/8c49da1da7c78350f3695275de7ca862054bbac8))
+
+
+### Bug Fixes
+
+* **style:** fix footnote styling ([0e92bc7](https://github.com/vst/vst.github.io/commit/0e92bc7c1b871dc8bbfb1ad3772d26f6bc4d4c12))
+
 ## [1.1.0](https://github.com/vst/vst.github.io/compare/v1.0.0...v1.1.0) (2023-11-18)
 
 
