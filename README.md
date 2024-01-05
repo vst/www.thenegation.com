@@ -1,7 +1,7 @@
 # My Personal Website
 
 This Website is built using [Zola] and [Tailwind]. It is built and
-deployed using GitHub Actions. The Website *should* be live on
+deployed using GitHub Actions. The Website _should_ be live on
 <https://thenegation.com> and <https://vst.github.io>.
 
 ## Development
@@ -45,6 +45,17 @@ Lint codebase:
 ```sh
 taplo check
 taplo fmt --check
+prettier --check .
+find . -iname "*.nix" -not -path "*/nix/sources.nix" -exec nil diagnostics {} \;
+find . -iname "*.nix" -not -path "*/nix/sources.nix" -print0 | xargs --null nixpkgs-fmt --check
+```
+
+Automatically format codebase:
+
+```sh
+taplo fmt
+prettier --write .
+find . -iname "*.nix" -not -path "*/nix/sources.nix" -print0 | xargs --null nixpkgs-fmt
 ```
 
 ## License and Copyrights

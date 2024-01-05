@@ -9,15 +9,15 @@ taxonomies:
     - Mathematics
 ---
 
-*[How to Solve It: A New Aspect of Mathematical Method]* by [George Pólya]
+_[How to Solve It: A New Aspect of Mathematical Method]_ by [George Pólya]
 provides a detailed and entertaining survey of general methods for problem
-solving, namely *heuristics*. I guess that most people dealing with mathematics
+solving, namely _heuristics_. I guess that most people dealing with mathematics
 in daily life have read this book.
 
 <!-- more -->
 
-Recently, I came across *[How to Solve It: Modern Heuristics]*. This book, like
-its *predecessor*, is about problem solving, but it focuses on computational
+Recently, I came across _[How to Solve It: Modern Heuristics]_. This book, like
+its _predecessor_, is about problem solving, but it focuses on computational
 methodologies for problem solving. There are many beautiful comments on the book
 around the Internet.
 
