@@ -12,37 +12,38 @@ jobs:
     outputs:
       release_created: "${{ steps.release.outputs.release_created }}"
     steps:
-      - uses: google-github-actions/release-please-action@v3
-        id: release
+      - id: "release"
+        uses: "googleapis/release-please-action@v4"
         with:
-          release-type: simple
+          release-type: "simple"
           extra-files: |
             config.toml
 
       - name: "Checkout main"
-        if: ${{ steps.release.outputs.release_created }}
+        if: "${{ steps.release.outputs.release_created }}"
         uses: "actions/checkout@v4"
 
       - name: "Install Nix"
-        if: ${{ steps.release.outputs.release_created }}
-        uses: "cachix/install-nix-action@v22"
+        if: "${{ steps.release.outputs.release_created }}"
+        uses: "cachix/install-nix-action@v27"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: "Build Website"
-        if: ${{ steps.release.outputs.release_created }}
+        if: "${{ steps.release.outputs.release_created }}"
         run: |
           nix-shell -A shell --run "dev-build"
 
       - name: "Fix Permissions of Website Artifacts"
-        if: ${{ steps.release.outputs.release_created }}
+        if: "${{ steps.release.outputs.release_created }}"
         run: |
           chmod -c -R +rX "public/" | while read -r line; do
             echo "::warning title=Invalid file permissions automatically fixed::${line}"
           done
+
       - name: "Upload Website"
-        if: ${{ steps.release.outputs.release_created }}
-        uses: "actions/upload-pages-artifact@v2"
+        if: "${{ steps.release.outputs.release_created }}"
+        uses: "actions/upload-pages-artifact@v3"
         with:
           path: "public/"
 
@@ -59,5 +60,5 @@ jobs:
     steps:
       - name: "Deploy to GitHub Pages"
         id: "deployment"
-        uses: "actions/deploy-pages@v2"
+        uses: "actions/deploy-pages@v4"
         if: ${{ needs.build.outputs.release_created }}
