@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ get_url(path='styles/main.css', cachebust=true) }}" />
 
     <script src="{{ get_url(path='scripts/main.js', cachebust=true) }}"></script>
+    <script defer data-domain="thenegation.com" src="https://plausible.io/js/script.js"></script>
 
     {% if config.generate_feed %}
       <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}" />
