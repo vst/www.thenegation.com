@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/vst/vst.github.io/compare/v1.2.0...v1.2.1) (2024-07-30)
+
+
+### Bug Fixes
+
+* **build:** fix Release Please configuration ([aad5bc1](https://github.com/vst/vst.github.io/commit/aad5bc1da7047308a35e8b041cdb076df68489c0))
+* **build:** upgrade GitHub Actions, revisit steps ([71d3984](https://github.com/vst/vst.github.io/commit/71d39842ace7d4b2a0741c80aa76816c82e0e393))
+
 ## [1.2.0](https://github.com/vst/vst.github.io/compare/v1.1.0...v1.2.0) (2024-01-05)
 
 
