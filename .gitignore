@@ -1,3 +1,4 @@
 /.direnv
+/.envrc
 /public
 /static/styles/main.css

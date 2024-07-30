@@ -32,7 +32,7 @@ jobs:
       - name: "Build Website"
         if: ${{ steps.release.outputs.release_created }}
         run: |
-          nix-shell --run "tailwindcss --minify --input styles/main.css --output static/styles/main.css && zola build"
+          nix-shell -A shell --run "dev-build"
 
       - name: "Fix Permissions of Website Artifacts"
         if: ${{ steps.release.outputs.release_created }}

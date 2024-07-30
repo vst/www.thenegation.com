@@ -9,7 +9,7 @@ deployed using GitHub Actions. The Website _should_ be live on
 Enter the Nix shell provisioned in the repository:
 
 ```sh
-nix-shell
+nix-shell -A shell
 ```
 
 > **Note**
@@ -17,6 +17,7 @@ nix-shell
 > If you want, you can use [direnv] integration, too:
 >
 > ```sh
+> echo "use nix -A shell" > .envrc
 > direnv allow
 > ```
 
@@ -43,19 +44,19 @@ The output is generated under the `public/` directory.
 Lint codebase:
 
 ```sh
-taplo check
-taplo fmt --check
-prettier --check .
-find . -iname "*.nix" -not -path "*/nix/sources.nix" -exec nil diagnostics {} \;
-find . -iname "*.nix" -not -path "*/nix/sources.nix" -print0 | xargs --null nixpkgs-fmt --check
+dev-check
 ```
 
-Automatically format codebase:
+Format codebase:
 
 ```sh
-taplo fmt
-prettier --write .
-find . -iname "*.nix" -not -path "*/nix/sources.nix" -print0 | xargs --null nixpkgs-fmt
+dev-format
+```
+
+Build the Website:
+
+```sh
+dev-build
 ```
 
 ## License and Copyrights
