@@ -115,6 +115,8 @@ play with it to assess its merits.
 <!-- REFERENCES -->
 
 [etymology of accountant]: http://en.wikipedia.org/wiki/Accounting#Etymology
-[Algebraic Models For Accounting Systems]: https://www.researchgate.net/publication/275209178_Algebraic_Models_for_Accounting_Systems
+[Algebraic Models For Accounting Systems]:
+  https://www.researchgate.net/publication/275209178_Algebraic_Models_for_Accounting_Systems
 [REA Wikipedia Article]: http://en.wikipedia.org/wiki/Resources,_Events,_Agents
-[Model-Driven Design Using Business Patterns]: https://www.researchgate.net/publication/220689230_Model-Driven_Design_Using_Business_Patterns
+[Model-Driven Design Using Business Patterns]:
+  https://www.researchgate.net/publication/220689230_Model-Driven_Design_Using_Business_Patterns

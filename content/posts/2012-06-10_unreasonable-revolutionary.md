@@ -38,7 +38,9 @@ to his writings earlier.
 
 <!-- REFERENCES -->
 
-[How to Solve It: A New Aspect of Mathematical Method]: http://www.goodreads.com/book/show/192221.How_to_Solve_It
+[How to Solve It: A New Aspect of Mathematical Method]:
+  http://www.goodreads.com/book/show/192221.How_to_Solve_It
 [George Pólya]: http://en.wikipedia.org/wiki/George_P%C3%B3lya
-[How to Solve It: Modern Heuristics]: http://www.goodreads.com/book/show/633240.How_to_Solve_It
+[How to Solve It: Modern Heuristics]:
+  http://www.goodreads.com/book/show/633240.How_to_Solve_It
 [George Bernard Shaw]: http://en.wikipedia.org/wiki/George_Bernard_Shaw

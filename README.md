@@ -1,8 +1,8 @@
 # My Personal Website
 
-This Website is built using [Zola] and [Tailwind]. It is built and
-deployed using GitHub Actions. The Website _should_ be live on
-<https://thenegation.com> and <https://vst.github.io>.
+This Website is built using [Zola] and [Tailwind]. It is built and deployed
+using GitHub Actions. The Website _should_ be live on <https://thenegation.com>
+and <https://vst.github.io>.
 
 ## Development
 
@@ -61,8 +61,8 @@ dev-build
 
 ## License and Copyrights
 
-This Website, its content and source code by Vehbi Sinan Tunalioglu
-are licensed under [CC BY-SA 4.0] unless otherwise noted.
+This Website, its content and source code by Vehbi Sinan Tunalioglu are licensed
+under [CC BY-SA 4.0] unless otherwise noted.
 
 <!-- REFERENCES -->
 
