@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/vst/vst.github.io/compare/v1.3.0...v1.4.0) (2024-07-30)
+
+
+### Features
+
+* **analytics:** integrate Plausible analytics ([8d5e2ce](https://github.com/vst/vst.github.io/commit/8d5e2cebaae5312a0c51b6f797625da912b730a7))
+
 ## [1.3.0](https://github.com/vst/vst.github.io/compare/v1.2.1...v1.3.0) (2024-07-30)
 
 
