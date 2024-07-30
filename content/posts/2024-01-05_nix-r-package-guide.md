@@ -29,8 +29,8 @@ for creating an R package. Such an environment can then be used by
 other developers to contribute to the package. Furthermore, it can be
 used for automated testing (such as on CI/CD pipelines), packaging and
 even deploying solutions to production environments as it is
-reproducible. It mainly helps with a huge class of *"works on my
-machine"* kind of problems.
+reproducible. It mainly helps with a huge class of _"works on my
+machine"_ kind of problems.
 
 The most important requirement for this guide is to have Nix installed
 on one's workstation. The [official guide] should help.
@@ -95,7 +95,7 @@ Good. Let's create the package.
 ## Initializing the R Project
 
 `usethis` has a function to do this. Assuming that you will create an
-R package with the  name `hebele` under `./hebele` path:
+R package with the name `hebele` under `./hebele` path:
 
 ```R
 usethis::create_package(
@@ -214,7 +214,6 @@ devtools::check(".")
 > is normal as our `NEWS.md` does not have proper content yet and you
 > will have to deal with it when you are about to release your
 > package.
-
 
 ### Git Setup
 
@@ -374,11 +373,9 @@ here:
 
 **Footnotes**
 
-[^1]: It is much more than that, indeed. I just said so for the sake
-    of our purpose.
+[^1]: It is much more than that, indeed. I just said so for the sake of our purpose.
 
-[^2]: [Release Please] would be nice, but it does not officially
-    support R language yet. However, it [may happen][RP R Issue] one day.
+[^2]: [Release Please] would be nice, but it does not officially support R language yet. However, it [may happen][RP R Issue] one day.
 
 <!-- REFERENCES -->
 

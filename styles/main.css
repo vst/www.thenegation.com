@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .footnote-definition > p {
-    display: inline;
+  display: inline;
 }
 
 .footnote-definition > .footnote-definition-label {
-    padding-right: 8px;
+  padding-right: 8px;
 }
