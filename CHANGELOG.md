@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/vst/vst.github.io/compare/v1.2.1...v1.3.0) (2024-07-30)
+
+
+### Features
+
+* **post:** add technical note for NixOS/PostgreSQL Backup and Archive ([a6f71aa](https://github.com/vst/vst.github.io/commit/a6f71aae01b75a1802ad68f3a3836134b1d76a36))
+
 ## [1.2.1](https://github.com/vst/vst.github.io/compare/v1.2.0...v1.2.1) (2024-07-30)
 
 
