@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/vst/vst.github.io/compare/v1.4.0...v1.5.0) (2024-07-31)
+
+
+### Features
+
+* **post:** add technical note for running NixOS guests on QEMU ([39318ef](https://github.com/vst/vst.github.io/commit/39318ef5d501cf9d5502f5793308f2328b091825))
+
 ## [1.4.0](https://github.com/vst/vst.github.io/compare/v1.3.0...v1.4.0) (2024-07-30)
 
 
