@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/vst/vst.github.io/compare/v1.5.0...v1.6.0) (2024-08-01)
+
+
+### Features
+
+* **post:** add technical note for OpenResty on NixOS ([cdd570d](https://github.com/vst/vst.github.io/commit/cdd570de4cec066a20a3978514daa1fde05e1762))
+
 ## [1.5.0](https://github.com/vst/vst.github.io/compare/v1.4.0...v1.5.0) (2024-07-31)
 
 
