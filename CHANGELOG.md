@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/vst/vst.github.io/compare/v1.6.0...v1.7.0) (2024-08-02)
+
+
+### Features
+
+* **post:** add technical opinion on JS/TS dependency debt ([ed8edbc](https://github.com/vst/vst.github.io/commit/ed8edbc3bad86c2e4d230a592ba429b453709269))
+
 ## [1.6.0](https://github.com/vst/vst.github.io/compare/v1.5.0...v1.6.0) (2024-08-01)
 
 
