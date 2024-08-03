@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/vst/vst.github.io/compare/v1.8.0...v1.8.1) (2024-08-03)
+
+
+### Bug Fixes
+
+* **post:** make some fixes to the last post ([7d4f76b](https://github.com/vst/vst.github.io/commit/7d4f76b4e7f3287f073c38ef3de3c0ba5e7b5ef1))
+
 ## [1.8.0](https://github.com/vst/vst.github.io/compare/v1.7.0...v1.8.0) (2024-08-03)
 
 
