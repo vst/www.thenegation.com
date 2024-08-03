@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/vst/vst.github.io/compare/v1.7.0...v1.8.0) (2024-08-03)
+
+
+### Features
+
+* **post:** add post about SOPS, sops-nix and opsops ([6ab774f](https://github.com/vst/vst.github.io/commit/6ab774f8abb75154d472dd30e2bf8814031048e1))
+
 ## [1.7.0](https://github.com/vst/vst.github.io/compare/v1.6.0...v1.7.0) (2024-08-02)
 
 
