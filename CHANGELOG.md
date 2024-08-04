@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/vst/vst.github.io/compare/v1.9.0...v1.9.1) (2024-08-04)
+
+
+### Bug Fixes
+
+* **post:** make a few fixes to the last post ([505b82e](https://github.com/vst/vst.github.io/commit/505b82e32ece0a1b955f6bafe09e83acc27b8186))
+
 ## [1.9.0](https://github.com/vst/vst.github.io/compare/v1.8.1...v1.9.0) (2024-08-04)
 
 
