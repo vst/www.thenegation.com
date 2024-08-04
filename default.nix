@@ -84,6 +84,22 @@ let
     zola build
   '';
 
+  ## Prepare the MD-reformat script:
+  dev-md-format = pkgs.writeShellScriptBin "dev-md-format" ''
+    #!/usr/bin/env bash
+
+    runhaskell -pgmLmarkdown-unlit content/posts/2024-08-04_abuse-haskell.lhs "''${1}"
+  '';
+
+  #########
+  ## GHC ##
+  #########
+
+  ghc = pkgs.haskellPackages.ghcWithPackages (hpkgs: [
+    hpkgs.markdown-unlit
+    hpkgs.pandoc
+  ]);
+
   ###########
   ## SHELL ##
   ###########
@@ -98,6 +114,7 @@ let
       pkgs.zola
 
       ## Development dependencies:
+      ghc
       pkgs.git
       pkgs.marksman
       pkgs.nil
@@ -111,7 +128,13 @@ let
       dev-format
       dev-serve
       dev-build
+      dev-md-format
     ];
+
+    NIX_GHC = "${ghc}/bin/ghc";
+    NIX_GHCPKG = "${ghc}/bin/ghc-pkg";
+    NIX_GHC_DOCDIR = "${ghc}/share/doc/ghc/html";
+    NIX_GHC_LIBDIR = "${ghc}/lib/ghc-9.6.5/lib";
   };
 in
 {

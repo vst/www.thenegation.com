@@ -1,4 +1,7 @@
 /.direnv
 /.envrc
+/content/posts/2024-08-04_abuse-haskell
+/content/posts/2024-08-04_abuse-haskell.hi
+/content/posts/2024-08-04_abuse-haskell.o
 /public
 /static/styles/main.css
