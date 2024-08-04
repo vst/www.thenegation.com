@@ -56,6 +56,20 @@ let
     zola build
   '';
 
+  ## Prepare the serve script:
+  dev-serve = pkgs.writeShellScriptBin "dev-serve" ''
+    #!/usr/bin/env bash
+
+    ## Fail on errors:
+    set -e
+
+    ## Compile the CSS:
+    tailwindcss --minify --input styles/main.css --output static/styles/main.css
+
+    ## Build the site:
+    zola serve
+  '';
+
   ## Prepare the build script:
   dev-build = pkgs.writeShellScriptBin "dev-build" ''
     #!/usr/bin/env bash
@@ -95,6 +109,7 @@ let
       ## Our custom scripts:
       dev-check
       dev-format
+      dev-serve
       dev-build
     ];
   };
