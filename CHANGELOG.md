@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.9.0](https://github.com/vst/vst.github.io/compare/v1.8.1...v1.9.0) (2024-08-04)
+
+
+### Features
+
+* **post:** add first post in "Abuse Haskell" series :) ([a2b6e9b](https://github.com/vst/vst.github.io/commit/a2b6e9bbea0e8ed0209d9a88372082f990a5bd97))
+
+
+### Bug Fixes
+
+* **style:** reposition and restyle post meta-data ([581667a](https://github.com/vst/vst.github.io/commit/581667a4f751b923c8ff4e7b2d6868bccb5c4c7e))
+
 ## [1.8.1](https://github.com/vst/vst.github.io/compare/v1.8.0...v1.8.1) (2024-08-03)
 
 
