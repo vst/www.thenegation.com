@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/vst/vst.github.io/compare/v1.9.1...v1.10.0) (2024-08-05)
+
+
+### Features
+
+* **post:** add post to promote Git backups and gidek ([1ea4846](https://github.com/vst/vst.github.io/commit/1ea48462b485aab1bf18aeb76ccb2ca657011d2d))
+
 ## [1.9.1](https://github.com/vst/vst.github.io/compare/v1.9.0...v1.9.1) (2024-08-04)
 
 
