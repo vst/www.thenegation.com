@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/vst/vst.github.io/compare/v1.10.0...v1.11.0) (2024-08-06)
+
+
+### Features
+
+* **post:** add post about Niv and Hackage dependencies ([8449648](https://github.com/vst/vst.github.io/commit/844964869669209682cc3db3a5640045f1a44e83))
+
 ## [1.10.0](https://github.com/vst/vst.github.io/compare/v1.9.1...v1.10.0) (2024-08-05)
 
 
