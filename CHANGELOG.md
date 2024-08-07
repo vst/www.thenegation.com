@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/vst/vst.github.io/compare/v1.11.0...v1.12.0) (2024-08-07)
+
+
+### Features
+
+* **post:** add post about Hasura CLI on NixOS ([1a18c40](https://github.com/vst/vst.github.io/commit/1a18c404bb734f36fa1f6a964af5bca3fee6b524))
+
 ## [1.11.0](https://github.com/vst/vst.github.io/compare/v1.10.0...v1.11.0) (2024-08-06)
 
 
