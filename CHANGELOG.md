@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/vst/vst.github.io/compare/v1.12.0...v1.13.0) (2024-08-08)
+
+
+### Features
+
+* **post:** add post pomodoro waybar nixos ([616217b](https://github.com/vst/vst.github.io/commit/616217bf9115a09df15f0cb109c35526c9e5883e))
+
 ## [1.12.0](https://github.com/vst/vst.github.io/compare/v1.11.0...v1.12.0) (2024-08-07)
 
 
