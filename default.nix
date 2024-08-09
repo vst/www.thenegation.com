@@ -29,6 +29,12 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
+    ## Create blog post images:
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
+      static/assets/media/posts/haskell-diagrams-intro
+
     ## Build the site:
     zola build
   '';
@@ -66,6 +72,12 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
+    ## Create blog post images:
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
+      static/assets/media/posts/haskell-diagrams-intro
+
     ## Build the site:
     zola serve
   '';
@@ -79,6 +91,12 @@ let
 
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
+
+    ## Create blog post images:
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
+      static/assets/media/posts/haskell-diagrams-intro
 
     ## Build the site:
     zola build
@@ -96,6 +114,7 @@ let
   #########
 
   ghc = pkgs.haskellPackages.ghcWithPackages (hpkgs: [
+    hpkgs.diagrams
     hpkgs.markdown-unlit
     hpkgs.pandoc
   ]);
