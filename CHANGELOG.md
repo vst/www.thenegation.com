@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/vst/vst.github.io/compare/v1.13.0...v1.14.0) (2024-08-09)
+
+
+### Features
+
+* **post:** add post about Haskell diagrams library ([88340a1](https://github.com/vst/vst.github.io/commit/88340a12300f1554a0cc4e1c90775040dbd32843))
+
 ## [1.13.0](https://github.com/vst/vst.github.io/compare/v1.12.0...v1.13.0) (2024-08-08)
 
 
