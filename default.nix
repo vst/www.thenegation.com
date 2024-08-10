@@ -34,6 +34,10 @@ let
       -pgmLmarkdown-unlit \
       content/posts/2024-08-09_haskell-diagrams-intro.lhs \
       static/assets/media/posts/haskell-diagrams-intro
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-10_haskell-diagrams-images.lhs \
+      static/assets/media/posts/haskell-diagrams-images
 
     ## Build the site:
     zola build
@@ -77,6 +81,10 @@ let
       -pgmLmarkdown-unlit \
       content/posts/2024-08-09_haskell-diagrams-intro.lhs \
       static/assets/media/posts/haskell-diagrams-intro
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-10_haskell-diagrams-images.lhs \
+      static/assets/media/posts/haskell-diagrams-images
 
     ## Build the site:
     zola serve
@@ -97,6 +105,10 @@ let
       -pgmLmarkdown-unlit \
       content/posts/2024-08-09_haskell-diagrams-intro.lhs \
       static/assets/media/posts/haskell-diagrams-intro
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-10_haskell-diagrams-images.lhs \
+      static/assets/media/posts/haskell-diagrams-images
 
     ## Build the site:
     zola build
@@ -115,6 +127,7 @@ let
 
   ghc = pkgs.haskellPackages.ghcWithPackages (hpkgs: [
     hpkgs.diagrams
+    hpkgs.diagrams-cairo
     hpkgs.markdown-unlit
     hpkgs.pandoc
   ]);
