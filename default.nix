@@ -118,7 +118,7 @@ let
   dev-md-format = pkgs.writeShellScriptBin "dev-md-format" ''
     #!/usr/bin/env bash
 
-    runhaskell -pgmLmarkdown-unlit content/posts/2024-08-04_abuse-haskell.lhs "''${1}"
+    runhaskell -pgmLmarkdown-unlit content/posts/2024-08-11_executable-blog-post-pandoc-filters.lhs "''${1}"
   '';
 
   #########
@@ -130,6 +130,7 @@ let
     hpkgs.diagrams-cairo
     hpkgs.markdown-unlit
     hpkgs.pandoc
+    hpkgs.pandoc-lua-engine
   ]);
 
   ###########
