@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/vst/vst.github.io/compare/v1.15.0...v1.16.0) (2024-08-11)
+
+
+### Features
+
+* **post:** add post to improve abuse haskell ([d28ffb3](https://github.com/vst/vst.github.io/commit/d28ffb362a65cdd6560fc4af26b7f96719283ff6))
+
 ## [1.15.0](https://github.com/vst/vst.github.io/compare/v1.14.0...v1.15.0) (2024-08-10)
 
 
