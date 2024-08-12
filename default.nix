@@ -6,6 +6,28 @@ let
   ## Import nixpkgs pinned by niv:
   pkgs = import sources.nixpkgs { };
 
+  ## Generate content:
+  dev-gen-content = pkgs.writeShellScriptBin "dev-gen-content" ''
+    #!/usr/bin/env bash
+
+    ## Fail on errors:
+    set -e
+
+    ## Create blog post images:
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
+      static/assets/media/posts/haskell-diagrams-intro
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-10_haskell-diagrams-images.lhs \
+      static/assets/media/posts/haskell-diagrams-images
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-12_haskell-diagrams-og.lhs \
+      static/assets/media/posts/haskell-diagrams-og
+  '';
+
   ## Prepare the check script:
   dev-check = pkgs.writeShellScriptBin "dev-check" ''
     #!/usr/bin/env bash
@@ -29,15 +51,8 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
-    ## Create blog post images:
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
-      static/assets/media/posts/haskell-diagrams-intro
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-10_haskell-diagrams-images.lhs \
-      static/assets/media/posts/haskell-diagrams-images
+    ## Generate duynamic content:
+    dev-gen-content
 
     ## Build the site:
     zola build
@@ -76,15 +91,8 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
-    ## Create blog post images:
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
-      static/assets/media/posts/haskell-diagrams-intro
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-10_haskell-diagrams-images.lhs \
-      static/assets/media/posts/haskell-diagrams-images
+    ## Generate duynamic content:
+    dev-gen-content
 
     ## Build the site:
     zola serve
@@ -100,15 +108,8 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
-    ## Create blog post images:
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
-      static/assets/media/posts/haskell-diagrams-intro
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-10_haskell-diagrams-images.lhs \
-      static/assets/media/posts/haskell-diagrams-images
+    ## Generate duynamic content:
+    dev-gen-content
 
     ## Build the site:
     zola build
@@ -157,6 +158,7 @@ let
       pkgs.taplo
 
       ## Our custom scripts:
+      dev-gen-content
       dev-check
       dev-format
       dev-serve
