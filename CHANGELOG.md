@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/vst/vst.github.io/compare/v1.16.0...v1.17.0) (2024-08-12)
+
+
+### Features
+
+* **post:** add literate Haskell post for OpenGraph image generation ([61b956c](https://github.com/vst/vst.github.io/commit/61b956cab9c581b35100874cf71a92dad71f0950))
+
 ## [1.16.0](https://github.com/vst/vst.github.io/compare/v1.15.0...v1.16.0) (2024-08-11)
 
 
