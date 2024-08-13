@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/vst/vst.github.io/compare/v1.17.0...v1.18.0) (2024-08-13)
+
+
+### Features
+
+* **post:** add post about Haskell diagrams + SVGFont library ([3015c55](https://github.com/vst/vst.github.io/commit/3015c5563aa69da1cba5fa8770aa9b75bfa5be57))
+
 ## [1.17.0](https://github.com/vst/vst.github.io/compare/v1.16.0...v1.17.0) (2024-08-12)
 
 
