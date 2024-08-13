@@ -26,6 +26,10 @@ let
       -pgmLmarkdown-unlit \
       content/posts/2024-08-12_haskell-diagrams-og.lhs \
       static/assets/media/posts/haskell-diagrams-og
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-13_haskell-diagrams-text.lhs \
+      static/assets/media/posts/haskell-diagrams-text
   '';
 
   ## Prepare the check script:
@@ -127,6 +131,7 @@ let
   #########
 
   ghc = pkgs.haskellPackages.ghcWithPackages (hpkgs: [
+    hpkgs.SVGFonts
     hpkgs.diagrams
     hpkgs.diagrams-cairo
     hpkgs.markdown-unlit
