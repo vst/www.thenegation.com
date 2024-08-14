@@ -30,6 +30,10 @@ let
       -pgmLmarkdown-unlit \
       content/posts/2024-08-13_haskell-diagrams-text.lhs \
       static/assets/media/posts/haskell-diagrams-text
+    runhaskell \
+      -pgmLmarkdown-unlit \
+      content/posts/2024-08-14_haskell-diagrams-dynamic-og.lhs \
+      static/assets/media/posts/haskell-diagrams-dynamic-og
   '';
 
   ## Prepare the check script:
@@ -132,11 +136,13 @@ let
 
   ghc = pkgs.haskellPackages.ghcWithPackages (hpkgs: [
     hpkgs.SVGFonts
+    hpkgs.aeson
     hpkgs.diagrams
     hpkgs.diagrams-cairo
     hpkgs.markdown-unlit
     hpkgs.pandoc
     hpkgs.pandoc-lua-engine
+    hpkgs.yaml
   ]);
 
   ###########
