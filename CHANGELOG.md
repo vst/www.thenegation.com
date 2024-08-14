@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/vst/vst.github.io/compare/v1.18.0...v1.19.0) (2024-08-14)
+
+
+### Features
+
+* **post:** add post about generaging OG image dynamically ([2e5e693](https://github.com/vst/vst.github.io/commit/2e5e693b2587e19399d270e4e7c20f4eb3378445))
+
 ## [1.18.0](https://github.com/vst/vst.github.io/compare/v1.17.0...v1.18.0) (2024-08-13)
 
 
