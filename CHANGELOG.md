@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.1](https://github.com/vst/vst.github.io/compare/v1.21.0...v1.21.1) (2024-08-16)
+
+
+### Bug Fixes
+
+* **post:** fix the post publish date/time ([0d6ecad](https://github.com/vst/vst.github.io/commit/0d6ecad0018f6e19c3bb6ceb9dbd773de37af356))
+
 ## [1.21.0](https://github.com/vst/vst.github.io/compare/v1.20.0...v1.21.0) (2024-08-16)
 
 
