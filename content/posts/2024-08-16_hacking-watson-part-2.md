@@ -1,6 +1,6 @@
 ---
 title: "Hacking Watson with Haskell - Part 2"
-date: 2024-08-15 21:33:55
+date: 2024-08-16 22:50:46
 taxonomies:
   tags:
     - Technical Note
