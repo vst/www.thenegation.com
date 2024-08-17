@@ -36,4 +36,4 @@ smart_punctuation = true
 
 [extra]
 
-version = "1.21.1" # x-release-please-version
+version = "1.22.0" # x-release-please-version
