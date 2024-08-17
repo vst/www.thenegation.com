@@ -143,6 +143,7 @@ let
     hpkgs.pandoc
     hpkgs.pandoc-lua-engine
     hpkgs.yaml
+    hpkgs.haskell-language-server
   ]);
 
   ###########
