@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/vst/vst.github.io/compare/v1.21.1...v1.22.0) (2024-08-17)
+
+
+### Features
+
+* **post:** add post for hacking Watson with Haskell (3) ([6cc3355](https://github.com/vst/vst.github.io/commit/6cc335514647a03482ee2887cd8aa22a2797fbc9))
+
 ## [1.21.1](https://github.com/vst/vst.github.io/compare/v1.21.0...v1.21.1) (2024-08-16)
 
 
