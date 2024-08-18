@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.0](https://github.com/vst/vst.github.io/compare/v1.22.0...v1.23.0) (2024-08-18)
+
+
+### Features
+
+* **post:** add post about Neovim ([d170d1f](https://github.com/vst/vst.github.io/commit/d170d1fd946a2fde08746440215b6213a2980b1e))
+
 ## [1.22.0](https://github.com/vst/vst.github.io/compare/v1.21.1...v1.22.0) (2024-08-17)
 
 
