@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.0](https://github.com/vst/vst.github.io/compare/v1.23.0...v1.24.0) (2024-08-19)
+
+
+### Features
+
+* **post:** add post about custom GitHub extensions under Nix ([b6e3d34](https://github.com/vst/vst.github.io/commit/b6e3d3407833ba49764571d7b0768e60e65f9d57))
+
 ## [1.23.0](https://github.com/vst/vst.github.io/compare/v1.22.0...v1.23.0) (2024-08-18)
 
 
