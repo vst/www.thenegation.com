@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/vst/vst.github.io/compare/v1.24.0...v1.25.0) (2024-08-20)
+
+
+### Features
+
+* **post:** add post for cross-posting to Dev.to via API ([a12ea7e](https://github.com/vst/vst.github.io/commit/a12ea7eead3e18449cea7eb3078776aff9e364f3))
+
 ## [1.24.0](https://github.com/vst/vst.github.io/compare/v1.23.0...v1.24.0) (2024-08-19)
 
 
