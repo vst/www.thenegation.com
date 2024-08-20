@@ -130,6 +130,9 @@ let
     runhaskell -pgmLmarkdown-unlit content/posts/2024-08-11_executable-blog-post-pandoc-filters.lhs "''${1}"
   '';
 
+  ## Prepare the cross-post script (dev.to):
+  dev-cross-post-devto = pkgs.writeShellScriptBin "dev-cross-post-devto" (builtins.readFile ./nix/src/cross-post-devto.sh);
+
   #########
   ## GHC ##
   #########
@@ -162,12 +165,14 @@ let
       ## Development dependencies:
       ghc
       pkgs.git
+      pkgs.jq
       pkgs.marksman
       pkgs.nil
       pkgs.nixpkgs-fmt
       pkgs.nodePackages.prettier
       pkgs.tailwindcss-language-server
       pkgs.taplo
+      pkgs.yq-go
 
       ## Our custom scripts:
       dev-gen-content
@@ -176,6 +181,7 @@ let
       dev-serve
       dev-build
       dev-md-format
+      dev-cross-post-devto
     ];
 
     NIX_GHC = "${ghc}/bin/ghc";
