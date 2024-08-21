@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.0](https://github.com/vst/vst.github.io/compare/v1.25.0...v1.26.0) (2024-08-21)
+
+
+### Features
+
+* **post:** add post for cross-posting to Hashnode via API ([7c25f94](https://github.com/vst/vst.github.io/commit/7c25f9455ac458bbbebb0fdcae60c88f579797fc))
+
 ## [1.25.0](https://github.com/vst/vst.github.io/compare/v1.24.0...v1.25.0) (2024-08-20)
 
 
