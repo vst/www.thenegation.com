@@ -133,6 +133,9 @@ let
   ## Prepare the cross-post script (dev.to):
   dev-cross-post-devto = pkgs.writeShellScriptBin "dev-cross-post-devto" (builtins.readFile ./nix/src/cross-post-devto.sh);
 
+  ## Prepare the cross-post script (hashnode):
+  dev-cross-post-hashnode = pkgs.writeShellScriptBin "dev-cross-post-hashnode" (builtins.readFile ./nix/src/cross-post-hashnode.sh);
+
   #########
   ## GHC ##
   #########
@@ -182,6 +185,7 @@ let
       dev-build
       dev-md-format
       dev-cross-post-devto
+      dev-cross-post-hashnode
     ];
 
     NIX_GHC = "${ghc}/bin/ghc";
