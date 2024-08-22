@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.27.0](https://github.com/vst/vst.github.io/compare/v1.26.0...v1.27.0) (2024-08-22)
+
+
+### Features
+
+* **post:** add post "Plot GeoJSON on Your Blog Posts" ([69d5500](https://github.com/vst/vst.github.io/commit/69d55004239a6e66451a28146af6764ff4fa5f3c))
+
 ## [1.26.0](https://github.com/vst/vst.github.io/compare/v1.25.0...v1.26.0) (2024-08-21)
 
 
