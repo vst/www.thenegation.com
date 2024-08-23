@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.28.0](https://github.com/vst/vst.github.io/compare/v1.27.0...v1.28.0) (2024-08-23)
+
+
+### Features
+
+* **post:** add post about NixOS, DO and Colmena ([8082053](https://github.com/vst/vst.github.io/commit/8082053ad2fe17ec8d4879b748c4d498c87bb16e))
+
 ## [1.27.0](https://github.com/vst/vst.github.io/compare/v1.26.0...v1.27.0) (2024-08-22)
 
 
