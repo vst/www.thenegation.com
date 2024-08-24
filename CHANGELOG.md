@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.0](https://github.com/vst/vst.github.io/compare/v1.28.0...v1.29.0) (2024-08-24)
+
+
+### Features
+
+* **post:** add post for Part 1 of Web Browser Extension Workshop ([4862b28](https://github.com/vst/vst.github.io/commit/4862b2849d9d5b19891897faed17ec9eb059b772))
+
 ## [1.28.0](https://github.com/vst/vst.github.io/compare/v1.27.0...v1.28.0) (2024-08-23)
 
 
