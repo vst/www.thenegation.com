@@ -243,6 +243,7 @@ of the Webpage and show them in a popup.
 [Chrome]: https://www.google.com/chrome
 [Firefox]: https://www.mozilla.org/en-US/firefox
 [Greasemonkey]: https://www.greasespot.net
-[WXT - Getting Started Documentation]: https://wxt.dev/get-started/introduction.html
+[WXT - Getting Started Documentation]:
+  https://wxt.dev/get-started/introduction.html
 [WXT]: https://wxt.dev
 [ogpatrol]: https://github.com/vst/ogpatrol
