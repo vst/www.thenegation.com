@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.30.0](https://github.com/vst/vst.github.io/compare/v1.29.0...v1.30.0) (2024-08-25)
+
+
+### Features
+
+* **post:** add post for Part 2 of Web Browser Extension Workshop ([fb671ae](https://github.com/vst/vst.github.io/commit/fb671aed2d365781d74f06bb1da562d6ba2ae0c4))
+
+
+### Bug Fixes
+
+* reformat post 2024-08-24_browser-wext-1.md ([04a8cb8](https://github.com/vst/vst.github.io/commit/04a8cb87ff535f2a5a312a7c33096798beab85e6))
+
 ## [1.29.0](https://github.com/vst/vst.github.io/compare/v1.28.0...v1.29.0) (2024-08-24)
 
 
