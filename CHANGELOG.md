@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.0](https://github.com/vst/vst.github.io/compare/v1.32.0...v1.33.0) (2024-08-28)
+
+
+### Features
+
+* **post:** add post for Part 5 of Web Browser Extension Workshop ([d6c423f](https://github.com/vst/vst.github.io/commit/d6c423fca928818c1883cb7d4dcd9537da502a79))
+
 ## [1.32.0](https://github.com/vst/vst.github.io/compare/v1.31.0...v1.32.0) (2024-08-27)
 
 
