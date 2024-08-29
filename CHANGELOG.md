@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.34.0](https://github.com/vst/vst.github.io/compare/v1.33.0...v1.34.0) (2024-08-29)
+
+
+### Features
+
+* **post:** add post "Shell Cacophony" ([ac02aa0](https://github.com/vst/vst.github.io/commit/ac02aa014eaf9e6cc43d73b89b32e7ed72146fba))
+
 ## [1.33.0](https://github.com/vst/vst.github.io/compare/v1.32.0...v1.33.0) (2024-08-28)
 
 
