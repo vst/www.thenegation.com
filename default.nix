@@ -34,6 +34,13 @@ let
       -pgmLmarkdown-unlit \
       content/posts/2024-08-14_haskell-diagrams-dynamic-og.lhs \
       static/assets/media/posts/haskell-diagrams-dynamic-og
+    find content/posts -type f -iname "*.md" -exec grep -m1 -oE "^date:[ ]*[0-9\-]{10}" {} \; |
+      tr -d " " |
+      cut -f 2 -d ":" |
+      runhaskell \
+        -pgmLmarkdown-unlit \
+        content/posts/2024-08-30_haskell-diagrams-plot-calendar.lhs \
+        static/assets/media/posts/haskell-diagrams-plot-calendar
   '';
 
   ## Prepare the check script:
