@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.35.0](https://github.com/vst/vst.github.io/compare/v1.34.0...v1.35.0) (2024-08-30)
+
+
+### Features
+
+* **post:** add post for contribution graph with Haskell diagrams ([a43f7d5](https://github.com/vst/vst.github.io/commit/a43f7d5a93d1c96da4c8c9816fc0b21db15dbaea))
+
 ## [1.34.0](https://github.com/vst/vst.github.io/compare/v1.33.0...v1.34.0) (2024-08-29)
 
 
