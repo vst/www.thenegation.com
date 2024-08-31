@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.36.0](https://github.com/vst/vst.github.io/compare/v1.35.0...v1.36.0) (2024-08-31)
+
+
+### Features
+
+* **post:** add post about blogging challenge completion ([aa54c41](https://github.com/vst/vst.github.io/commit/aa54c41b4f9c3cc5480660b92488a23b5a1a87a7))
+
 ## [1.35.0](https://github.com/vst/vst.github.io/compare/v1.34.0...v1.35.0) (2024-08-30)
 
 
