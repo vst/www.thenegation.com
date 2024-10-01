@@ -41,6 +41,13 @@ let
         -pgmLmarkdown-unlit \
         content/posts/2024-08-30_haskell-diagrams-plot-calendar.lhs \
         static/assets/media/posts/haskell-diagrams-plot-calendar
+
+    cd var/og/ &&
+      tailwindcss -i ./input.css -o ./build/output.css &&
+      echo '{"title": "the negation", "subtitle": "@vst", "url": "https://thenegation.com", "author": "Vehbi Sinan Tunalioglu", "avatar": "https://gravatar.com/avatar/eb4489c4e08af7eb9c2163234047df50"}' |
+        mustache templates/default.html > build/default.html &&
+      puppeteer screenshot build/default.html ../../static/assets/media/og/default.png --viewport 1200x630 &&
+      cd -
   '';
 
   ## Prepare the check script:
@@ -168,7 +175,9 @@ let
     ## Build inputs for development shell:
     buildInputs = [
       ## Build dependencies:
+      pkgs.mustache-go
       pkgs.nodejs_20
+      pkgs.puppeteer-cli
       pkgs.tailwindcss
       pkgs.zola
 

@@ -2,7 +2,7 @@
 title = "@vst"
 
 ## The base URL the site will be built for:
-base_url = "/"
+base_url = "https://thenegation.com"
 
 ## Set the author (especially for feed):
 author = "Vehbi Sinan Tunalioglu"

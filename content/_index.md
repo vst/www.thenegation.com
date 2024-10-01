@@ -1,5 +1,6 @@
 ---
 title: My name is Sinan.
+description: This is my personal website.
 ---
 
 I am currently busy trying to [avoid success at all costs].
