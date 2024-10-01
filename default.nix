@@ -80,6 +80,14 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
+    ## Temporarily copy assets to preserve external links to static assets:
+    find content/posts/ -mindepth 1 -type d | while read -r _path; do
+      _dir="$(basename "''${_path}" | cut -f 2 -d "_")"
+      mkdir -p "static/assets/media/posts/''${_dir}"
+      rsync -avP --exclude="*.md" --exclude="*.lhs" "''${_path}/" "static/assets/media/posts/''${_dir}"
+    done
+    cp content/posts/2012-01-15_redefining-the-ontology-of-accounting/REA_entity_diagram.png static/assets/media/posts
+
     ## Build the site:
     zola build
   '';
