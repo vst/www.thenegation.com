@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}" />
+    <meta name="author" content="{{ config.author }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+
+    {% if section %}
+    <title>{{ section.title | default(value=config.title) }}</title>
+    <meta name="og:title" content="{{ section.title | default(value=config.title) }}" />
+    <meta name="description" content="{{ section.description | default(value=config.description) }}" />
+    <meta name="og:description" content="{{ section.description | default(value=config.description) }}" />
+    {% elif page %}
+    <title>{{ page.title | default(value=config.title) }}</title>
+    <meta name="og:title" content="{{ page.title | default(value=config.title) }}" />
+    <meta name="description" content="{{ page.description | default(value=config.description) }}" />
+    <meta name="og:description" content="{{ page.description | default(value=config.description) }}" />
+    {% else  %}
+    <title>{{ config.title }}</title>
+    <meta name="og:title" content="{{ config.title }}" />
+    <meta name="description" content="{{ config.description }}" />
+    <meta name="og:description" content="{{ config.description }}" />
+    {% endif %}
+    <meta name="og:image" content="{{ config.base_url }}/assets/media/og/default.png" />
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{{ get_url(path='styles/main.css', cachebust=true) }}" />
