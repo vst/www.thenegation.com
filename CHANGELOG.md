@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.36.2](https://github.com/vst/vst.github.io/compare/v1.36.1...v1.36.2) (2024-10-01)
+
+
+### Bug Fixes
+
+* add description to all posts ([12b263c](https://github.com/vst/vst.github.io/commit/12b263c0da36e476a787669234b6a249af31528f))
+* copy static assets to preserve links from external resources ([b4c741e](https://github.com/vst/vst.github.io/commit/b4c741e0f8940b1f9bd3e919cd5eba0efcf69a50))
+* fix default OpenGraph image path ([29808fd](https://github.com/vst/vst.github.io/commit/29808fdbbb27f49fc2a4b84ca818a7cde82aca95))
+
 ## [1.36.1](https://github.com/vst/vst.github.io/compare/v1.36.0...v1.36.1) (2024-10-01)
 
 
