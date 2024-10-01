@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.36.3](https://github.com/vst/vst.github.io/compare/v1.36.2...v1.36.3) (2024-10-01)
+
+
+### Bug Fixes
+
+* add copy code button to code blocks ([adc06d8](https://github.com/vst/vst.github.io/commit/adc06d89084f31829e087f9d276c3aced146687a))
+* regenerate default OpenGraph image ([935b466](https://github.com/vst/vst.github.io/commit/935b466e8114a2a225b6a0dc340d56b9c98f81f1))
+
 ## [1.36.2](https://github.com/vst/vst.github.io/compare/v1.36.1...v1.36.2) (2024-10-01)
 
 
