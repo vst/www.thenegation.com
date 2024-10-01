@@ -1,6 +1,9 @@
 ---
 title: "Learning to Like Neovim"
 date: 2024-08-18 21:43:13
+description:
+  My recent experience of switching to Neovim after almost 20 years of using
+  Emacs.
 taxonomies:
   tags:
     - Technical Note

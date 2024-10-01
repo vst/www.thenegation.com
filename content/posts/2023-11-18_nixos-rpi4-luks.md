@@ -1,6 +1,8 @@
 ---
 title: NixOS on Raspberry Pi 4 with Encrypted Filesystem
 date: 2023-11-18
+description:
+  A guide to install NixOS on Raspberry Pi 4 with an encrypted root filesystem.
 taxonomies:
   tags:
     - Hacking

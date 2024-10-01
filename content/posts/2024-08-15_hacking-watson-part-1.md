@@ -1,6 +1,7 @@
 ---
 title: "Hacking Watson with Haskell - Part 1"
 date: 2024-08-15 21:33:55
+description: Using Haskell to read Watson frames from a JSON file.
 taxonomies:
   tags:
     - Technical Note

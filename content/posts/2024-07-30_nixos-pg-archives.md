@@ -1,6 +1,9 @@
 ---
 title: Archiving PostgreSQL Backups on NixOS
 date: 2024-07-30 09:18:10
+description:
+  A technical note on how to archive PostgreSQL backups on NixOS to one or more
+  targets using rclone.
 taxonomies:
   tags:
     - Technical Notes

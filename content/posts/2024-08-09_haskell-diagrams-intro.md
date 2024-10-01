@@ -1,6 +1,7 @@
 ---
 title: "Introduction to Haskell Diagrams"
 date: 2024-08-09 23:20:10
+description: Getting started with the diagrams Haskell library.
 taxonomies:
   tags:
     - Technical Note

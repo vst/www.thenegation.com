@@ -1,6 +1,7 @@
 ---
 title: "Pomodoro Timer: Waybar and uair"
 date: 2024-08-08 21:02:30
+description: A brief note on my Pomodoro Technique setup with Waybar and uair.
 taxonomies:
   tags:
     - Life Hack

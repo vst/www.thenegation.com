@@ -1,6 +1,9 @@
 ---
 title: "Managing NixOS on DigitalOcean with Colmena"
 date: 2024-08-23 21:14:29
+description:
+  Let's prepare a DigitalOcean image for NixOS, launch a droplet with it and
+  manage it using Colmena.
 taxonomies:
   tags:
     - Technical Note

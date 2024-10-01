@@ -1,6 +1,9 @@
 ---
 title: Your package.json as a Credit Account
 date: 2024-08-02 21:54:10
+description:
+  Every dependency in your (JavaScript) project is like an expense on your
+  credit account.
 taxonomies:
   tags:
     - Technical Opinion

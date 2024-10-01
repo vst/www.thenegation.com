@@ -1,6 +1,8 @@
 ---
 title: "Web Browser Extension Workshop - Part 1"
 date: 2024-08-24 22:31:40
+description:
+  Setting up the development environment and reading the content of the Webpage.
 taxonomies:
   tags:
     - Technical Note

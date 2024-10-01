@@ -2,6 +2,7 @@
 title: Abstraction as Bread and Butter
 date: 2012-05-19 14:09:23
 updated: 2023-10-18 14:27:28
+description: Short note on the abstraction of abstraction.
 taxonomies:
   tags:
     - Mathematics

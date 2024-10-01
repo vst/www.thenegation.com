@@ -1,6 +1,7 @@
 ---
 title: OpenResty on NixOS for an API Gateway
 date: 2024-08-01 11:45:40
+description: A technical note on using OpenResty on NixOS as an API gateway.
 taxonomies:
   tags:
     - Technical Notes

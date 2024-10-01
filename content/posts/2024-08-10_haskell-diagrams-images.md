@@ -1,6 +1,7 @@
 ---
 title: "More Haskell Diagrams: Images"
 date: 2024-08-10 11:03:50
+description: Embedding external images in Haskell diagrams.
 taxonomies:
   tags:
     - Technical Note

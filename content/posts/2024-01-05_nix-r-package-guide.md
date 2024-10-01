@@ -1,6 +1,9 @@
 ---
 title: Develop R Packages under Nix Shell
 date: 2024-01-05 08:22:10
+description:
+  A guide for creating, developing and testing R packages under a Nix Shell
+  using R tools such as devtools, testthat and usethis.
 taxonomies:
   tags:
     - Computing

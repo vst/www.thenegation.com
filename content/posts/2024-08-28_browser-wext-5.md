@@ -1,6 +1,9 @@
 ---
 title: "Web Browser Extension Workshop - Part 5"
 date: 2024-08-28 22:12:02
+description:
+  Populating the popup with the OpenGraph information parsed from the Webpage on
+  active tabs.
 taxonomies:
   tags:
     - Technical Note

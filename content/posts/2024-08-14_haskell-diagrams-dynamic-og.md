@@ -1,6 +1,7 @@
 ---
 title: "More Haskell Diagrams: Dynamic OpenGraph Images"
 date: 2024-08-14 20:29:55
+description: Generating OpenGraph images dynamically with Haskell diagrams.
 taxonomies:
   tags:
     - Technical Note
@@ -8,11 +9,6 @@ taxonomies:
     - Hacking
     - Literate Programming
     - Computing
-og:
-  title: "More Haskell Diagrams: Dynamic OpenGraph Images"
-  description: |
-    This blog post is a Literate Haskell program that produces
-    its own OpenGraph image using the infamous Haskell diagrams library.
 ---
 
 This blog post is a Literate Haskell program that produces its own OpenGraph

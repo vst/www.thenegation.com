@@ -1,6 +1,7 @@
 ---
 title: "Shell Cacophony"
 date: 2024-08-29 20:05:47
+description: Using jq, qsv, and uplot to waste more time in the terminal.
 taxonomies:
   tags:
     - Technical Note

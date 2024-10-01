@@ -1,6 +1,9 @@
 ---
 title: "Abusing Haskell: Executable Blog Posts"
 date: 2024-08-04 12:21:10
+description:
+  A blog post that is an executable Haskell program to convert Markdown files to
+  a target format.
 taxonomies:
   tags:
     - Technical Note

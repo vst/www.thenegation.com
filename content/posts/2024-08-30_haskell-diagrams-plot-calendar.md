@@ -1,6 +1,7 @@
 ---
 title: "More Haskell Diagrams: Contribution Graph"
 date: 2024-08-30 22:39:46
+description: How to generate a contribution graph using Haskell diagrams.
 taxonomies:
   tags:
     - Technical Note

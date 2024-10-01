@@ -1,6 +1,7 @@
 ---
 title: Running NixOS Guests on QEMU
 date: 2024-07-31 14:41:19
+description: A quick reference to create and run NixOS guests on QEMU.
 taxonomies:
   tags:
     - Technical Notes

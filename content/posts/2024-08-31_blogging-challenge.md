@@ -1,6 +1,7 @@
 ---
 title: "Completed My Blogging Challenge"
 date: 2024-08-31 17:16:54
+description: My short report on the blogging challenge I completed.
 taxonomies:
   tags:
     - Writing

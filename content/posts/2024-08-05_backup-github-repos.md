@@ -1,6 +1,7 @@
 ---
 title: "Backup GitHub Repositories with gidek"
 date: 2024-08-05 21:24:10
+description: A simple Haskell program to backup your GitHub repositories.
 taxonomies:
   tags:
     - Technical Note

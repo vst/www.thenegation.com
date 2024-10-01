@@ -1,6 +1,7 @@
 ---
 title: "Hacking Watson with Haskell - Part 3"
 date: 2024-08-17 21:02:23
+description: Using Haskell to start and stop Watson timer.
 taxonomies:
   tags:
     - Technical Note

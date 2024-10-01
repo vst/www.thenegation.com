@@ -1,6 +1,7 @@
 ---
 title: "Web Browser Extension Workshop - Part 2"
 date: 2024-08-25 15:42:40
+description: Reading the OpenGraph tags of the Webpage.
 taxonomies:
   tags:
     - Technical Note

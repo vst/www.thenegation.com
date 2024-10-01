@@ -1,6 +1,7 @@
 ---
 title: "Hacking Watson with Haskell - Part 2"
 date: 2024-08-16 22:50:46
+description: Using Haskell to read Watson state from a JSON file.
 taxonomies:
   tags:
     - Technical Note

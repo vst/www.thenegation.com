@@ -1,6 +1,7 @@
 ---
 title: "More Haskell Diagrams: Wrapping Text"
 date: 2024-08-13 19:14:35
+description: Wrapping text in Haskell diagrams.
 taxonomies:
   tags:
     - Technical Note

@@ -1,6 +1,7 @@
 ---
 title: "Easy GitHub CLI Extensions with Nix"
 date: 2024-08-19 20:35:24
+description: Writing a simple GitHub CLI extension and packaging it with Nix.
 taxonomies:
   tags:
     - Technical Note

@@ -1,6 +1,9 @@
 ---
 title: "Web Browser Extension Workshop - Part 4"
 date: 2024-08-27 21:53:14
+description:
+  Populating a database with the OpenGraph information parsed from the Webpage
+  on active tabs.
 taxonomies:
   tags:
     - Technical Note

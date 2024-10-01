@@ -1,6 +1,9 @@
 ---
 title: "Web Browser Extension Workshop - Part 3"
 date: 2024-08-26 21:53:14
+description:
+  Changing the extension icon based on the OpenGraph information parsed from the
+  Webpage.
 taxonomies:
   tags:
     - Technical Note

@@ -2,6 +2,9 @@
 title: "Modern Web-based APIs: What to Expect?"
 date: 2020-06-03
 updated: 2023-10-18 14:42:13
+description:
+  Short note on what to expect from a modern, Web-based API that facilitates
+  data query and manipulation.
 taxonomies:
   tags:
     - Computing

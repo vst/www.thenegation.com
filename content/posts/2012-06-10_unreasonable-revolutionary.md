@@ -2,6 +2,9 @@
 title: Unreasonable Revolutionary
 date: 2012-06-10 23:10:00
 updated: 2023-10-18 14:39:26
+description: |
+  Short note on the book 'How to Solve It: Modern Heuristics' and a quote from
+  George Bernard Shaw.
 taxonomies:
   tags:
     - Computing

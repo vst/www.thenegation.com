@@ -1,6 +1,7 @@
 ---
 title: "Cross-Posting to Dev.to with API"
 date: 2024-08-20 22:54:52
+description: Let's cross-post this blog post to Dev.to using its API.
 taxonomies:
   tags:
     - Technical Note

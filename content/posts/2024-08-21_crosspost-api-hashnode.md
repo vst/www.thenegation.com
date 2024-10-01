@@ -1,6 +1,7 @@
 ---
 title: "Cross-Posting to Hashnode with API"
 date: 2024-08-21 17:42:49
+description: Let's cross-post this blog post to Hashnode using its API.
 taxonomies:
   tags:
     - Technical Note

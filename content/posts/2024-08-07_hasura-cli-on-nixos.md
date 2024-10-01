@@ -1,6 +1,8 @@
 ---
 title: "Hasura CLI on NixOS: A Working Solution"
 date: 2024-08-07 22:02:10
+description:
+  A working solution to get Hasura CLI work on NixOS like any other program.
 taxonomies:
   tags:
     - Technical Note

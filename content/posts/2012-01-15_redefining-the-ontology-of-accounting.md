@@ -2,6 +2,10 @@
 title: Redefining the Ontology of Accounting
 date: 2012-01-15 08:03:01
 updated: 2023-10-18 13:53:28
+slug: redefining-the-ontology-of-accounting
+description:
+  A brief opinion on the current state of accounting and the Resources - Events
+  - Agents (REA) ontology.
 taxonomies:
   tags:
     - Computing

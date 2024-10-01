@@ -1,6 +1,8 @@
 ---
 title: "Executable Blog Posts: Second Take"
 date: 2024-08-11 22:35:12
+description:
+  A second take on executable blog posts with a Lua filter for Pandoc.
 taxonomies:
   tags:
     - Technical Note
