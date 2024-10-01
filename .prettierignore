@@ -1,4 +1,4 @@
-CHANGELOG.md
-nix/sources.json
-templates/
-var/og/build/
+/CHANGELOG.md
+/nix/sources.json
+/templates
+/var/og/build
