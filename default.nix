@@ -168,7 +168,9 @@ let
     ## Build inputs for development shell:
     buildInputs = [
       ## Build dependencies:
+      pkgs.mustache-go
       pkgs.nodejs_20
+      pkgs.puppeteer-cli
       pkgs.tailwindcss
       pkgs.zola
 

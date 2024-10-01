@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .og-body {
+    @apply flex h-screen items-center justify-center;
+  }
+
+  .og-canvas {
+    @apply flex flex-col max-w-[1200px] max-h-[630px] h-full border border-black w-full bg-gray-100 text-gray-900;
+  }
+
+  .og-canvas-head {
+  }
+
+  .og-canvas-main {
+    @apply flex flex-col grow gap-6 items-center justify-center;
+  }
+
+  .og-canvas-foot {
+    @apply shrink bg-gray-900 text-gray-200 text-2xl flex flex-row w-full justify-between px-10 py-1;
+  }
+
+  .og-avatar {
+    @apply inline-block rounded-full ring-4 ring-gray-300;
+  }
+}
+
+@page {
+  size: 1200px 630px;
+}
