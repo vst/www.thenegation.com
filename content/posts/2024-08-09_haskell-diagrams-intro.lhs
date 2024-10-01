@@ -1,1 +1,0 @@
-2024-08-09_haskell-diagrams-intro.md

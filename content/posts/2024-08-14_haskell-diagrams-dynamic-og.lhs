@@ -1,1 +1,0 @@
-2024-08-14_haskell-diagrams-dynamic-og.md
