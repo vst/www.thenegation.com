@@ -6,50 +6,6 @@ let
   ## Import nixpkgs pinned by niv:
   pkgs = import sources.nixpkgs { };
 
-  ## Generate content:
-  dev-gen-content = pkgs.writeShellScriptBin "dev-gen-content" ''
-    #!/usr/bin/env bash
-
-    ## Fail on errors:
-    set -e
-
-    ## Create blog post images:
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-09_haskell-diagrams-intro.lhs \
-      static/assets/media/posts/haskell-diagrams-intro
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-10_haskell-diagrams-images.lhs \
-      static/assets/media/posts/haskell-diagrams-images
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-12_haskell-diagrams-og.lhs \
-      static/assets/media/posts/haskell-diagrams-og
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-13_haskell-diagrams-text.lhs \
-      static/assets/media/posts/haskell-diagrams-text
-    runhaskell \
-      -pgmLmarkdown-unlit \
-      content/posts/2024-08-14_haskell-diagrams-dynamic-og.lhs \
-      static/assets/media/posts/haskell-diagrams-dynamic-og
-    find content/posts -type f -iname "*.md" -exec grep -m1 -oE "^date:[ ]*[0-9\-]{10}" {} \; |
-      tr -d " " |
-      cut -f 2 -d ":" |
-      runhaskell \
-        -pgmLmarkdown-unlit \
-        content/posts/2024-08-30_haskell-diagrams-plot-calendar.lhs \
-        static/assets/media/posts/haskell-diagrams-plot-calendar
-
-    cd var/og/ &&
-      tailwindcss -i ./input.css -o ./build/output.css &&
-      echo '{"title": "the negation", "subtitle": "@vst", "url": "https://thenegation.com", "author": "Vehbi Sinan Tunalioglu", "avatar": "https://gravatar.com/avatar/eb4489c4e08af7eb9c2163234047df50"}' |
-        mustache templates/default.html > build/default.html &&
-      puppeteer screenshot build/default.html ../../static/assets/media/og/default.png --viewport 1200x630 &&
-      cd -
-  '';
-
   ## Prepare the check script:
   dev-check = pkgs.writeShellScriptBin "dev-check" ''
     #!/usr/bin/env bash
@@ -72,9 +28,6 @@ let
 
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
-
-    ## Generate duynamic content:
-    dev-gen-content
 
     ## Build the site:
     zola build
@@ -113,9 +66,6 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
-    ## Generate duynamic content:
-    dev-gen-content
-
     ## Build the site:
     zola serve
   '';
@@ -130,9 +80,6 @@ let
     ## Compile the CSS:
     tailwindcss --minify --input styles/main.css --output static/styles/main.css
 
-    ## Generate duynamic content:
-    dev-gen-content
-
     ## Build the site:
     zola build
   '';
@@ -141,7 +88,9 @@ let
   dev-md-format = pkgs.writeShellScriptBin "dev-md-format" ''
     #!/usr/bin/env bash
 
-    runhaskell -pgmLmarkdown-unlit content/posts/2024-08-11_executable-blog-post-pandoc-filters.lhs "''${1}"
+    _path="$(realpath "''${1}")"
+
+    cd content/posts/2024-08-11_executable-blog-post-pandoc-filters/ && runhaskell -pgmLmarkdown-unlit index.lhs "''${_path}" && cd -
   '';
 
   ## Prepare the cross-post script (dev.to):
@@ -194,7 +143,6 @@ let
       pkgs.yq-go
 
       ## Our custom scripts:
-      dev-gen-content
       dev-check
       dev-format
       dev-serve
