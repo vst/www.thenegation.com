@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.36.1](https://github.com/vst/vst.github.io/compare/v1.36.0...v1.36.1) (2024-10-01)
+
+
+### Bug Fixes
+
+* add OpenGraph information with a default image ([7883be2](https://github.com/vst/vst.github.io/commit/7883be2e97e299ec077e540f6539fa88ad6c9349))
+* set the base URL to the correct value ([4a07a03](https://github.com/vst/vst.github.io/commit/4a07a03207dbdab8dc36b11e5022056afde4141f))
+
 ## [1.36.0](https://github.com/vst/vst.github.io/compare/v1.35.0...v1.36.0) (2024-08-31)
 
 
