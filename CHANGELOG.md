@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.36.4](https://github.com/vst/vst.github.io/compare/v1.36.3...v1.36.4) (2024-10-02)
+
+
+### Bug Fixes
+
+* fix OpenGraph and Twitter metadata ([096f9f5](https://github.com/vst/vst.github.io/commit/096f9f542b5aec1168ae8d43855ff447d92baade))
+
 ## [1.36.3](https://github.com/vst/vst.github.io/compare/v1.36.2...v1.36.3) (2024-10-01)
 
 
