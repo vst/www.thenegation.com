@@ -4,27 +4,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="{{ config.author }}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="og:author" content="{{ config.author }}">
+    <meta property="og:image" content="{{ config.base_url }}/media/ogimg.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ config.base_url }}/media/twimg.png" />
+    <meta name="twitter:domain" content="thenegation.com" />
+    <meta name="twitter:site" content="@vehbisinan" />
+    <meta name="twitter:creator" content="@vehbisinan" />
+
+    {% if current_url %}
+    <link rel="canonical" href="{{ current_url }}" />
+    <meta property="og:url" content="{{ current_url }}" />
+    <meta name="twitter:url" content="{{ current_url }}" />
+    {% endif %}
 
     {% if section %}
     <title>{{ section.title | default(value=config.title) }}</title>
-    <meta name="og:title" content="{{ section.title | default(value=config.title) }}" />
     <meta name="description" content="{{ section.description | default(value=config.description) }}" />
-    <meta name="og:description" content="{{ section.description | default(value=config.description) }}" />
+    <meta property="og:title" content="{{ section.title | default(value=config.title) }}" />
+    <meta property="og:description" content="{{ section.description | default(value=config.description) }}" />
+    <meta name="twitter:title" content="{{ section.title | default(value=config.title) }}" />
+    <meta name="twitter:description" content="{{ section.description | default(value=config.description) }}" />
     {% elif page %}
     <title>{{ page.title | default(value=config.title) }}</title>
-    <meta name="og:title" content="{{ page.title | default(value=config.title) }}" />
     <meta name="description" content="{{ page.description | default(value=config.description) }}" />
-    <meta name="og:description" content="{{ page.description | default(value=config.description) }}" />
+    <meta property="og:title" content="{{ page.title | default(value=config.title) }}" />
+    <meta property="og:description" content="{{ page.description | default(value=config.description) }}" />
+    <meta name="twitter:title" content="{{ page.title | default(value=config.title) }}" />
+    <meta name="twitter:description" content="{{ page.description | default(value=config.description) }}" />
     {% else  %}
     <title>{{ config.title }}</title>
-    <meta name="og:title" content="{{ config.title }}" />
     <meta name="description" content="{{ config.description }}" />
-    <meta name="og:description" content="{{ config.description }}" />
+    <meta property="og:title" content="{{ config.title }}" />
+    <meta property="og:description" content="{{ config.description }}" />
+    <meta name="twitter:title" content="{{ config.title }}" />
+    <meta name="twitter:description" content="{{ config.description }}" />
     {% endif %}
-    <meta name="og:image" content="{{ config.base_url }}/media/og.png" />
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{{ get_url(path='styles/main.css', cachebust=true) }}" />

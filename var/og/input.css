@@ -10,7 +10,7 @@
   }
 
   .og-canvas {
-    @apply flex flex-col max-w-[1200px] max-h-[630px] h-full w-full bg-gray-100 text-gray-900;
+    @apply flex flex-col w-full h-full bg-gray-100 text-gray-900;
   }
 
   .og-canvas-head {
@@ -27,8 +27,4 @@
   .og-avatar {
     @apply inline-block rounded-full ring-4 ring-gray-300;
   }
-}
-
-@page {
-  size: 1200px 630px;
 }

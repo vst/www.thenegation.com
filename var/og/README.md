@@ -22,5 +22,6 @@ echo '{"title": "the negation", "subtitle": "@vst", "url": "https://thenegation.
 Build default OpenGraph image:
 
 ```sh
-puppeteer screenshot build/default.html ../../static/media/og.png --viewport 1200x630
+puppeteer screenshot build/default.html ../../static/media/ogimg.png --viewport 1200x630
+puppeteer screenshot build/default.html ../../static/media/twimg.png --viewport 1200x675
 ```
