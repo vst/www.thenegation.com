@@ -17,7 +17,7 @@ build_search_index = true
 minify_html = true
 
 ## Generate feed:
-generate_feed = true
+generate_feeds = true
 
 [[taxonomies]]
 
