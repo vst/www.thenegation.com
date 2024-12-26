@@ -74,9 +74,9 @@ them in a popup.
 
 ## Getting Started
 
-You do not need this post to get started as [WXT - Getting Started
-Documentation] is good enough, but let me tell you what I did for good orders
-sake.
+You do not need this post to get started as [WXT - Getting
+Started Documentation] is good enough, but let me tell you what I did for good
+orders sake.
 
 I used `npx` and `wxt` to create the project:
 

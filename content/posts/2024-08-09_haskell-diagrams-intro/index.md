@@ -25,9 +25,8 @@ decent diagramming tool which I can integrate in both my workflow and programs.
 I can go two ways:
 
 1. Use a low-level language like [TikZ] and hate my life (I did before), or
-2. Use a high-level language like [Plant UML], [D2], [Graphviz] which are good
-   for the purpose they are designed for, but not for generic purpose
-   diagramming.
+2. Use a high-level language like [Plant UML], [D2], [Graphviz] which are good for
+   the purpose they are designed for, but not for generic purpose diagramming.
 
 I think that I need something in between. Recently, I was checking [typst]. It
 is quite impressive. But I am not sure if I need a better LaTeX.

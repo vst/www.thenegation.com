@@ -118,9 +118,9 @@ issues for now.
 
 ## Comparison to Emacs
 
-Emacs is an [operating system]. Vi(m), in the spirit of `ed`, is a program that
-adheres well to [Unix Philosophy]. Neovim is a program that tries to be a bit
-more than Vim and significantly less than Emacs.
+Emacs is an [operating system]. Vi(m), in the spirit of `ed`, is a program that adheres
+well to [Unix Philosophy]. Neovim is a program that tries to be a bit more than
+Vim and significantly less than Emacs.
 
 I can confidently say these things:
 
