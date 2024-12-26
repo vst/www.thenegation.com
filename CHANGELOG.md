@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.36.5](https://github.com/vst/vst.github.io/compare/v1.36.4...v1.36.5) (2024-12-26)
+
+
+### Bug Fixes
+
+* **feed:** adopt changes to Zola's feed machinery ([84444fa](https://github.com/vst/vst.github.io/commit/84444fa408e34eb999ab8356a3ce8dea5f9b45ca))
+* fix gitignore that hides a post ([db80054](https://github.com/vst/vst.github.io/commit/db80054afb8c2432809383e61b73610a8f9cfdd1))
+* reformat codebase ([7522409](https://github.com/vst/vst.github.io/commit/7522409e827ac28b6093f224cc28060b0e8b85b2))
+
 ## [1.36.4](https://github.com/vst/vst.github.io/compare/v1.36.3...v1.36.4) (2024-10-02)
 
 
