@@ -22,17 +22,17 @@ limiting, caching, logging, monitoring, etc. There are quite a few such
 proprietary and open-source API gateways available. Cloud service providers
 offer their own managed API gateways as well.
 
-We have been using [Apache APISIX] for a while now. It is a high-performance,
-cloud-native API gateway solution. It also has a nice dashboard for managing
-APIs. However, I have been looking for a simpler and more portable solution for
-our use case. In particular, I want to be able manage the API gateway as a NixOS
-service so that the configuration can be tested and redeployed easily.
+We have been using [Apache APISIX] for a while now. It is a high-performance, cloud-native
+API gateway solution. It also has a nice dashboard for managing APIs. However, I
+have been looking for a simpler and more portable solution for our use case. In particular,
+I want to be able manage the API gateway as a NixOS service so that the configuration
+can be tested and redeployed easily.
 
-Two of the fairly popular open-source API gateways, [Kong] and [Apache APISIX],
-are based on [OpenResty] that is mainly powered by [Nginx] and [Lua]. NixOS has
-first-class support for OpenResty. So, naturally, I decided to give it a try.
-The result was promising enough for us to start migrating our current APISIX
-deployments to OpenResty on NixOS.
+Two of the fairly popular open-source API gateways, [Kong] and [Apache APISIX], are
+based on [OpenResty] that is mainly powered by [Nginx] and [Lua]. NixOS has first-class
+support for OpenResty. So, naturally, I decided to give it a try. The result was
+promising enough for us to start migrating our current APISIX deployments to OpenResty
+on NixOS.
 
 In this post, I will show how to set up OpenResty as NixOS service along with a
 few rudimentary location examples.

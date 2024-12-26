@@ -21,7 +21,8 @@ more useful: start and stop timer.
 
 This blog post is a Literate Haskell program that attempts to start/stop
 [Watson] timer. We will build on top of the previous blog posts ([part 1], [part
-2]). If you haven't read them, I recommend you to read them first.
+2]).
+If you haven't read them, I recommend you to read them first.
 
 Let's start with the language extensions:
 

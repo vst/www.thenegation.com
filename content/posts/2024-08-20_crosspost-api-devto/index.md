@@ -15,9 +15,10 @@ Let's cross-post this blog post to [Dev.to] using its API.
 
 ## Getting Started
 
-We will use the [Dev.to API] (Version 1) to create a new article on Dev.to. The
-API requires an API key to authenticate the user. You can get the API key from
-the [Dev.to settings page].
+We will use the [Dev.to API] (Version 1) to create a new article on Dev.to. The API
+requires an API key to authenticate the user. You can get the API key from the [Dev.to
+settings
+page].
 
 If you have obtained the API key, you can use it to authenticate the API
 requests via the `api-key` header. Let's give it a try:

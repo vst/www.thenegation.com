@@ -17,9 +17,9 @@ map using the Leaflet.js JavaScript library.
 
 ## Motivation
 
-I am currently not using [Microsoft Azure]. But for a tool I am developing, I
-wanted to check Azure regions. [Azure CLI] provides a command to list all
-regions. And the output contains longitude and latitude information.
+I am currently not using [Microsoft Azure]. But for a tool I am developing, I wanted
+to check Azure regions. [Azure CLI] provides a command to list all regions. And
+the output contains longitude and latitude information.
 
 I thought it would be nice to plot these regions on a map. Better, I can use
 this as an example to show how to plot GeoJSON data on a blog post.
@@ -38,8 +38,8 @@ map. You can play with GeoJSON using the [GeoJSON.io] website or [GeoJSONLint]
 webtool.
 
 In my case, I created a GeoJSON file named `azure.json` containing the Microsoft
-Azure region coordinates. I used [Azure CLI] to list physical regions and
-produced the GeoJSON file:
+Azure region coordinates. I used [Azure CLI] to list physical regions and produced
+the GeoJSON file:
 
 ```sh
 az account list-locations --query "[?metadata.regionType == 'Physical']" -o json |
@@ -53,8 +53,8 @@ az account list-locations --query "[?metadata.regionType == 'Physical']" -o json
 
 You can see the [file] yourself. In fact, you can copy the content of this file
 and paste it into the [GeoJSON.io] or [GeoJSONLint] to see the map yourself. A
-bonus: GitHub [can render] GeoJSON and TopoJSON data in markdown files like it
-does with Mermaid diagrams.
+bonus: GitHub [can render] GeoJSON and TopoJSON data in markdown files like it does
+with Mermaid diagrams.
 
 ## Plotting the Data
 
