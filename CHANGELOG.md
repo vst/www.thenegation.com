@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.37.0](https://github.com/vst/vst.github.io/compare/v1.36.5...v1.37.0) (2025-05-01)
+
+
+### Features
+
+* **post:** add post about Grafana and ntfy integration ([5708a45](https://github.com/vst/vst.github.io/commit/5708a459ea75d79b50861a0ce726982c9d973157))
+
 ## [1.36.5](https://github.com/vst/vst.github.io/compare/v1.36.4...v1.36.5) (2024-12-26)
 
 
