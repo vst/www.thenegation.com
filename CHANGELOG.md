@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.38.0](https://github.com/vst/vst.github.io/compare/v1.37.0...v1.38.0) (2025-05-02)
+
+
+### Features
+
+* **post:** add post linters and formatters, migration to ruff ([751126a](https://github.com/vst/vst.github.io/commit/751126a8bbad2c343fa1825c2c368f3b48733bb6))
+
 ## [1.37.0](https://github.com/vst/vst.github.io/compare/v1.36.5...v1.37.0) (2025-05-01)
 
 
