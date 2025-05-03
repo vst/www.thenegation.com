@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.39.0](https://github.com/vst/vst.github.io/compare/v1.38.0...v1.39.0) (2025-05-03)
+
+
+### Features
+
+* **post:** add post about Vector ([d140e3c](https://github.com/vst/vst.github.io/commit/d140e3c464e11d20867a10c2d199decc11f15ab9))
+
 ## [1.38.0](https://github.com/vst/vst.github.io/compare/v1.37.0...v1.38.0) (2025-05-02)
 
 
