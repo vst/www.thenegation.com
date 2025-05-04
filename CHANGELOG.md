@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.40.0](https://github.com/vst/vst.github.io/compare/v1.39.0...v1.40.0) (2025-05-04)
+
+
+### Features
+
+* **post:** add post about data management ([892dc9b](https://github.com/vst/vst.github.io/commit/892dc9b0b927a82202475e559f0fcc521d696caa))
+
 ## [1.39.0](https://github.com/vst/vst.github.io/compare/v1.38.0...v1.39.0) (2025-05-03)
 
 
