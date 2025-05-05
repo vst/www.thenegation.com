@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.41.0](https://github.com/vst/vst.github.io/compare/v1.40.0...v1.41.0) (2025-05-05)
+
+
+### Features
+
+* **post:** add post about OpenTelemetry metrics ([b03a2ef](https://github.com/vst/vst.github.io/commit/b03a2ef182392d0fcb0e79f5cb412795e6d2fb75))
+
 ## [1.40.0](https://github.com/vst/vst.github.io/compare/v1.39.0...v1.40.0) (2025-05-04)
 
 
