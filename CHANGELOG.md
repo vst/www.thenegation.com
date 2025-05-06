@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.42.0](https://github.com/vst/vst.github.io/compare/v1.41.0...v1.42.0) (2025-05-06)
+
+
+### Features
+
+* **post:** add post about Nix Flake Templates ([123ff55](https://github.com/vst/vst.github.io/commit/123ff55b7042f2e427c19133f06613af05e7b6ac))
+
+
+### Bug Fixes
+
+* fix directory name for opentelemetry-metrics post ([c78eff0](https://github.com/vst/vst.github.io/commit/c78eff0cf18d86674f33114469d9237d70ff12bc))
+
 ## [1.41.0](https://github.com/vst/vst.github.io/compare/v1.40.0...v1.41.0) (2025-05-05)
 
 
