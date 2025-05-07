@@ -9,24 +9,25 @@ _title="$(yq --front-matter=extract .title "${_path}")"
 ## Convert the Markdown file to target format (commonmark):
 _body="$(dev-md-format "${_path}")"
 
-## Get the filename of the Markdown file:
-_filename=$(basename -- "${_path}")
+## Get the directory of the Markdown file:
+_dirname=$(dirname -- "${_path}")
 
 ## Extract the slug from the filename:
-_slug="$(echo "${_filename%.*}" | cut -f 2- -d "_")"
+_slug="$(echo "${_dirname%.*}" | cut -f 2- -d "_")"
 
 ## Build the URL for the post:
 _url="https://thenegation.com/posts/${_slug}/"
 
 ## Build the payload for the API request:
-_payload="$(jq \
-  --null-input \
-  --arg title "${_title}" \
-  --arg slug "${_slug}" \
-  --arg body "${_body}" \
-  --arg url "${_url}" \
-  --arg publication "${THENEGATION_HASHNODE_PUBLICATION_ID}" \
-  '{
+_payload="$(
+  jq \
+    --null-input \
+    --arg title "${_title}" \
+    --arg slug "${_slug}" \
+    --arg body "${_body}" \
+    --arg url "${_url}" \
+    --arg publication "${THENEGATION_HASHNODE_PUBLICATION_ID}" \
+    '{
   "query": "mutation CreateDraft($input: CreateDraftInput!) { createDraft(input: $input) { draft { id slug title } } }",
   "variables": {
     "input": {

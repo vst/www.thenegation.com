@@ -98,7 +98,7 @@ let
 
     _path="$(realpath "''${1}")"
 
-    cd content/posts/2024-08-11_executable-blog-post-pandoc-filters/ && runhaskell -pgmLmarkdown-unlit index.lhs "''${_path}" && cd -
+    cd content/posts/2024-08-11_executable-blog-post-pandoc-filters/ && runhaskell -pgmLmarkdown-unlit index.lhs "''${_path}" && cd - > /dev/null
   '';
 
   ## Prepare the cross-post script (dev.to):
