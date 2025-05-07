@@ -15,10 +15,10 @@ taxonomies:
 
 Why? Because I can, and it is a rainy Sunday.
 
-I post my notes on [my blog], [Hashnode] and [dev.to], which require slightly
-different markdown formats. I have been doing the sane thing to fix formats so
-far. But it is a rainy Sunday and I am bored, so I decided to make this blog
-post an executable Haskell program to do the same.
+I post my notes on [my blog], [Hashnode] and [dev.to], which require slightly different
+markdown formats. I have been doing the sane thing to fix formats so far. But it
+is a rainy Sunday and I am bored, so I decided to make this blog post an executable
+Haskell program to do the same.
 
 <!-- more -->
 
