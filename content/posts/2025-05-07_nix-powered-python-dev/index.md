@@ -344,8 +344,6 @@ Here is our Nix flake:
 
 Let us dissect this a bit.
 
-### Package Metadata
-
 Instead of manually typing relevant project metadata in the Nix expression, we
 use the `builtins.fromTOML` function to read the `pyproject.toml` file and parse
 it into `project` attribute set.
