@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.43.0](https://github.com/vst/vst.github.io/compare/v1.42.0...v1.43.0) (2025-05-07)
+
+
+### Features
+
+* **post:** add post about Nix flake setup for Python development ([1aecd23](https://github.com/vst/vst.github.io/commit/1aecd23b4a12f86e754bb276f3994eaf725e0675))
+
+
+### Bug Fixes
+
+* **dev:** fix devto and hashnode cross-posting scripts ([a62538f](https://github.com/vst/vst.github.io/commit/a62538f1bdeb8e4e35f1eedb8c8e1545e28ae6f2))
+
 ## [1.42.0](https://github.com/vst/vst.github.io/compare/v1.41.0...v1.42.0) (2025-05-06)
 
 
