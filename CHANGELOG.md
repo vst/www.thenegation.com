@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.44.0](https://github.com/vst/vst.github.io/compare/v1.43.0...v1.44.0) (2025-05-08)
+
+
+### Features
+
+* **post:** add post about patching Python packages on Nix ([fd0c14f](https://github.com/vst/vst.github.io/commit/fd0c14f68c83af30f34ef2950a3de38a1301e456))
+
+
+### Bug Fixes
+
+* remove redundant heading from post ([531ca42](https://github.com/vst/vst.github.io/commit/531ca420416f3889f7ba6f9666c8af6a4909d0c0))
+
 ## [1.43.0](https://github.com/vst/vst.github.io/compare/v1.42.0...v1.43.0) (2025-05-07)
 
 
