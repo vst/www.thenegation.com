@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.45.0](https://github.com/vst/vst.github.io/compare/v1.44.0...v1.45.0) (2025-05-09)
+
+
+### Features
+
+* **post:** add post about Watson and gh extension ([ff9bd0a](https://github.com/vst/vst.github.io/commit/ff9bd0a7f80fa672136f7e59a1e3b689266a4662))
+
 ## [1.44.0](https://github.com/vst/vst.github.io/compare/v1.43.0...v1.44.0) (2025-05-08)
 
 
