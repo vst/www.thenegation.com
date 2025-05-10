@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.46.0](https://github.com/vst/vst.github.io/compare/v1.45.0...v1.46.0) (2025-05-10)
+
+
+### Features
+
+* **post:** add post about GitHub Projects and gh-cpi ([dbf8095](https://github.com/vst/vst.github.io/commit/dbf8095f34c2f4c898a4ad6e4c7be0fd81bdff4c))
+
 ## [1.45.0](https://github.com/vst/vst.github.io/compare/v1.44.0...v1.45.0) (2025-05-09)
 
 
