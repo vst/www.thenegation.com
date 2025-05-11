@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.47.0](https://github.com/vst/vst.github.io/compare/v1.46.0...v1.47.0) (2025-05-11)
+
+
+### Features
+
+* **post:** add post about Wayland app launchers and rofi ([c180477](https://github.com/vst/vst.github.io/commit/c18047784cf13405d247de007955bac7c253a867))
+
 ## [1.46.0](https://github.com/vst/vst.github.io/compare/v1.45.0...v1.46.0) (2025-05-10)
 
 
