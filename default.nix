@@ -142,6 +142,7 @@ let
       ghc
       pkgs.git
       pkgs.jq
+      pkgs.markdown-link-check
       pkgs.marksman
       pkgs.nil
       pkgs.nixpkgs-fmt
