@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.48.0](https://github.com/vst/vst.github.io/compare/v1.47.0...v1.48.0) (2025-05-12)
+
+
+### Features
+
+* **post:** add post about building and packaging fzf script with Nix ([926bd2f](https://github.com/vst/vst.github.io/commit/926bd2fd5947827aa90daf5230e0aaddd68e9df0))
+
 ## [1.47.0](https://github.com/vst/vst.github.io/compare/v1.46.0...v1.47.0) (2025-05-11)
 
 
