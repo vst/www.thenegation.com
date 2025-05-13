@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.49.0](https://github.com/vst/vst.github.io/compare/v1.48.0...v1.49.0) (2025-05-13)
+
+
+### Features
+
+* **post:** add post about code as liability ([e6fa33b](https://github.com/vst/vst.github.io/commit/e6fa33ba847fe36d04637afa709edcf8ef0152b1))
+
 ## [1.48.0](https://github.com/vst/vst.github.io/compare/v1.47.0...v1.48.0) (2025-05-12)
 
 
