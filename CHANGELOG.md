@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.50.0](https://github.com/vst/vst.github.io/compare/v1.49.0...v1.50.0) (2025-05-14)
+
+
+### Features
+
+* **post:** add post about Zola and Hugo comparison, migration ([4d7db60](https://github.com/vst/vst.github.io/commit/4d7db607c47b2070095d39ea8c243ce8cf39a130))
+
 ## [1.49.0](https://github.com/vst/vst.github.io/compare/v1.48.0...v1.49.0) (2025-05-13)
 
 
