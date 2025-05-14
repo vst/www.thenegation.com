@@ -1,22 +1,23 @@
-name: "Build on PRs"
+name: "Test and Build Website"
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
-    name: "Build Website"
+    name: "Test and Build Website"
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout main"
         uses: "actions/checkout@v4"
 
       - name: "Install Nix"
-        uses: "DeterminateSystems/nix-installer-action@v17"
+        uses: "DeterminateSystems/nix-installer-action@v19"
 
-      - name: "Build Website"
+      - name: "Test and Build Website"
         run: |
-          nix-shell -A shell --run "dev-build"
+          nix develop --command bash -c "npm ci && npm run test && npm run build"
 
       - name: "Fix Permissions of Website Artifacts"
         run: |

@@ -12,7 +12,7 @@ taxonomies:
 In this post, I share why I value linters and formatters, and how I migrate from
 traditional Python tools to [ruff].
 
-<!-- more -->
+<!--more-->
 
 > When I was using Haskell, I was fighting the type checker. Now I am fighting
 > the Rust borrow checker.

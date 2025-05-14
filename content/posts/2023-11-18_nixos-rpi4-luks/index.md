@@ -13,7 +13,7 @@ taxonomies:
 This guide documents how to install NixOS on Raspberry Pi 4 with an encrypted
 root filesystem.
 
-<!-- more -->
+<!--more-->
 
 ## Background and Motivation
 

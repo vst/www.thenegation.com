@@ -15,7 +15,7 @@ taxonomies:
 and powerful, yet it lacks some features that I would like to have. In this blog
 post, I will start hacking [Watson] with Haskell.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

@@ -15,7 +15,7 @@ I need a solid declarative diagramming library or tool that I can invest time
 in. I always wanted to learn Haskell's `diagrams` library. In this post, I will
 give it a try.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

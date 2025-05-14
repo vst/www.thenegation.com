@@ -11,7 +11,7 @@ taxonomies:
 Today marks the end of my monthly blogging challenge. I wrote a blog post every
 day for a month. Here is how it went and what I learned.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

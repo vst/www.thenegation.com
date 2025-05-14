@@ -12,7 +12,7 @@ taxonomies:
 This is a guide for creating, developing and testing [R] packages under a [Nix]
 Shell using R tools such as [devtools], [testthat] and [usethis].
 
-<!-- more -->
+<!--more-->
 
 <!-- toc -->
 

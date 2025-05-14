@@ -22,7 +22,7 @@ In this post, I will show you what using [niv] looks like and how to override
 Haskell dependencies. I will also demo a small script I wrote to add Hackage
 packages to the `sources.json` file.
 
-<!-- more -->
+<!--more-->
 
 ## What is niv?
 

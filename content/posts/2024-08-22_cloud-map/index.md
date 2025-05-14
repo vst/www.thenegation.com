@@ -13,7 +13,7 @@ If you wonder how to plot GeoJSON data on your blog posts, here is a simple
 example. In this blog post, I will show how to plot Microsoft Azure regions on a
 map using the Leaflet.js JavaScript library.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

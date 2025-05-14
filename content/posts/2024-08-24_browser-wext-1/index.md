@@ -16,7 +16,7 @@ extension using [WXT]. In this first part, we will set up the development
 environment and try to read the content of the navigated Webpage or Webpage on
 the active tab.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

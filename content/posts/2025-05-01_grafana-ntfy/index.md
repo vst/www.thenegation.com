@@ -14,7 +14,7 @@ This post explains how to integrate Grafana alerts with the `ntfy` notification
 service using Grafana's Webhook integration, notification templates, and
 `ntfy`'s templating capabilities.
 
-<!-- more -->
+<!--more-->
 
 ## Problem
 

@@ -17,7 +17,7 @@ I bumped into an annoying issue today while upgrading my Python dependencies in
 a codebase. And I thought it would be a good idea to share the solution with
 you. Thanks to [Nix] for making this kind of fix so straightforward.
 
-<!-- more -->
+<!--more-->
 
 Admittedly, learning and getting used to Nix may take a while. But once you get
 the hang of it, you will be amazed by its power, flexibility and reliability.

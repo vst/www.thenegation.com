@@ -16,7 +16,7 @@ commands, it allows you to write your own extensions. In this post, I will show
 you how to write a simple GitHub CLI extension and how to package it with Nix,
 in particular under Nix Home Manager.
 
-<!-- more -->
+<!--more-->
 
 ## GitHub CLI and Its Extensions
 

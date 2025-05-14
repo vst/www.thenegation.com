@@ -14,7 +14,7 @@ I started using Watson with low expectations. Two and a half years later, it is
 still one of the few tools I have not quit. And it taught me a little bit about
 how I really spend my time.
 
-<!-- more -->
+<!--more-->
 
 I have been using [Watson] since -- well, let me check:
 

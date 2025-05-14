@@ -13,7 +13,7 @@ taxonomies:
 Today is a lazy Sunday, and I did what nobody should do on a Sunday: Spend time
 trying to replace something that already works. This time, my victim was [rofi].
 
-<!-- more -->
+<!--more-->
 
 I have been using GNU/Linux since 2001 on my workstations. During this time, I
 have never used Microsoft Windows, and I used macOS for a short period of time

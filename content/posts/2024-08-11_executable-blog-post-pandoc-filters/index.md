@@ -17,7 +17,7 @@ This is a second take for my previous blog post [Abusing Haskell: Executable
 Blog Posts]. This time, I am going to improve the solution with a [Lua] filter
 for [pandoc].
 
-<!-- more -->
+<!--more-->
 
 ## Background
 

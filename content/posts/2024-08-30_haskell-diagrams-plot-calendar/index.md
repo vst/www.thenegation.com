@@ -10,7 +10,7 @@ taxonomies:
     - Computing
 ---
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

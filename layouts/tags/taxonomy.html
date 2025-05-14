@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="prose dark:prose-invert max-w-none">
+    <h1>{{ .Title | markdownify }}</h1>
+
+    {{ .Content }}
+
+
+    <ul>
+      {{ range .Pages.ByTitle }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            {{ .LinkTitle | markdownify }} ({{ len .Pages }})
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

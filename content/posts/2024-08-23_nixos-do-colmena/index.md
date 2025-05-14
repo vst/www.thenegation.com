@@ -15,7 +15,7 @@ taxonomies:
 In this post, we will prepare a [DigitalOcean] image for [NixOS], launch a
 droplet with it and manage it using [Colmena].
 
-<!-- more -->
+<!--more-->
 
 [DigitalOcean] does not have out-of-the-box support for [NixOS]. However, we can
 use a custom image to launch a droplet with NixOS.

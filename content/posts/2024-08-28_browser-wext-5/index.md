@@ -16,7 +16,7 @@ This is the last post in the series of the Web Browser Extension Workshop. In
 this post, we will populate our popup using the service we created in the
 previous post.
 
-<!-- more -->
+<!--more-->
 
 ## Overview
 

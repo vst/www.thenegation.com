@@ -15,7 +15,7 @@ In the previous blog posts ([part 1], [part 2]), we managed to read [Watson]
 frames and state from its JSON files. In this blog post, we will do something
 more useful: start and stop timer.
 
-<!-- more -->
+<!--more-->
 
 ## Program
 

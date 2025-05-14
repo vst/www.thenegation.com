@@ -13,7 +13,7 @@ taxonomies:
 I have started adopting [OpenTelemetry] in my workshop to unify metrics, logs,
 and traces. This post explains why --and how-- I took the first step.
 
-<!-- more -->
+<!--more-->
 
 My main job definition is to design and implement computer programs. However, a
 significant part of my work involves system administration and DevOps

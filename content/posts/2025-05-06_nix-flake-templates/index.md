@@ -15,7 +15,7 @@ development and production environments across my projects. Over time, I found
 myself repeating certain setups. This post is a short note on how I started
 working with Nix Flake templates to avoid or reduce this repetition.
 
-<!-- more -->
+<!--more-->
 
 ## Using Nix and Self Plagiarism
 

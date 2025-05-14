@@ -14,7 +14,7 @@ taxonomies:
 Let's continue exploring the Haskell [diagrams] library. In this post, we will
 embed external images in our diagrams.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

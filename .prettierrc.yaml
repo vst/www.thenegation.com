@@ -1,2 +1,15 @@
 printWidth: 80
-proseWrap: always
+proseWrap: "always"
+plugins:
+  - "prettier-plugin-go-template"
+  - "prettier-plugin-tailwindcss"
+overrides:
+  - files: ["*.html"]
+    options:
+      parser: "go-template"
+      goTemplateBracketSpacing: true
+      bracketSameLine: true
+  - files: ["*.js", "*.ts"]
+    options:
+      useTabs: false
+      singleQuote: false

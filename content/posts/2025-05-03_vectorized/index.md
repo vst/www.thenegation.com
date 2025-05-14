@@ -12,7 +12,7 @@ taxonomies:
 This post shows how to use Vector to capture and persist webhook events -- like
 those from SendGrid -- into a PostgreSQL database with minimal setup.
 
-<!-- more -->
+<!--more-->
 
 Due to my profession, I work with large amounts of data, logs and metrics.
 Collecting them is one thing, processing and analyzing them is another. My

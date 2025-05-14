@@ -1,7 +1,18 @@
+## Nix ignores:
 /.direnv
 /.envrc
+
+## Hugo specific ignores:
+/public
+.hugo_build.lock
+hugo_stats.json
+
+## Node.js ignores:
+/node_modules
+
+## Content ignores:
 /content/posts/**/*.hi
 /content/posts/**/*.o
-/public
-/static/styles/main.css
+
+## Various ignores:
 /tmp

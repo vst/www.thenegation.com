@@ -15,7 +15,7 @@ After a few years of floating from one hack to another, this is my practical
 guide to setting up a reasonable Python development environment using Nix flakes
 with support for testing, linting, formatting, and LSP-based editor integration.
 
-<!-- more -->
+<!--more-->
 
 I have mentioned in my earlier posts that [I am migrating][ruff-post] to [ruff]
 for my Python projects, and [I have started][nix-tmpl-post] putting together a

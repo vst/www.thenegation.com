@@ -16,7 +16,7 @@ Do you backup your Git repositories? If not, you should consider doing so. I
 might even have a solution for you if you are using GitHub: [gidek]. It even has
 some NixOS goodies packed with it.
 
-<!-- more -->
+<!--more-->
 
 ## Why Backup Git Repositories?
 

@@ -14,7 +14,7 @@ taxonomies:
 This blog post is a Literate Haskell program that produces its own OpenGraph
 image using the infamous Haskell [diagrams] library.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

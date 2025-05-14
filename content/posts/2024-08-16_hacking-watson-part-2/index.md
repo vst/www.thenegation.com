@@ -15,7 +15,7 @@ In the [previous blog post], we read the [Watson] frames from a JSON file. In
 this blog post, we will read the [Watson] state file and print it to the
 standard output.
 
-<!-- more -->
+<!--more-->
 
 ## Watson State
 

@@ -20,7 +20,7 @@ security and operational efficiency.
 In this post, I am going to discuss [SOPS], [sops-nix] and [opsops] tools for
 managing secrets and how I and my team use it.
 
-<!-- more -->
+<!--more-->
 
 ## Imperative vs Declarative Secret Management
 

@@ -19,7 +19,7 @@ that I am starting to like it. In this article, I will share my experience of
 switching from Emacs to Neovim, highlighting the differences, challenges, and
 benefits I encountered along the way.
 
-<!-- more -->
+<!--more-->
 
 Disclaimer: Although my not primary objective, I intend to insult both Vim and
 Emacs users in this article. I will occassionally insult users of other editors

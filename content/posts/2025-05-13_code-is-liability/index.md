@@ -16,7 +16,7 @@ ironically, much of programming exists to automate boring tasks in the first
 place. But repetition is just one symptom of a much deeper problem: Code itself
 is a liability.
 
-<!-- more -->
+<!--more-->
 
 Repetition reveals itself in different forms. Off the top of my head, I can
 think of:

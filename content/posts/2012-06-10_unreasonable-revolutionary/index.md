@@ -17,7 +17,7 @@ provides a detailed and entertaining survey of general methods for problem
 solving, namely _heuristics_. I guess that most people dealing with mathematics
 in daily life have read this book.
 
-<!-- more -->
+<!--more-->
 
 Recently, I came across _[How to Solve It: Modern Heuristics]_. This book, like its
 _predecessor_, is about problem solving, but it focuses on computational methodologies

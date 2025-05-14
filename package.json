@@ -1,0 +1,32 @@
+{
+  "name": "thenegation",
+  "version": "1.67.0",
+  "description": "vst's Personal Website",
+  "author": "Vehbi Sinan Tunalioglu",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/vst/vst.github.io#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vst/vst.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vst/vst.github.io/issues"
+  },
+  "scripts": {
+    "prettier": "prettier",
+    "prettier-check": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "format": "npm run prettier-write",
+    "test": "npm run prettier-check",
+    "dev": "hugo server",
+    "build": "hugo build --gc --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/typography": "^0.5.16",
+    "prettier": "^3.6.2",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.11"
+  }
+}

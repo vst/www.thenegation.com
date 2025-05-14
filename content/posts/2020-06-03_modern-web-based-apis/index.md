@@ -14,7 +14,7 @@ Here are some quick notes for mysels on what to expect from a modern, Web-based
 API that facilitates data query and manipulation (and possibly remote procedure
 calls).
 
-<!-- more -->
+<!--more-->
 
 1. **High-Level and Accessible:** Data should be made available via an API that
    (1) does not require any proprietary or idiosyncratic technology, custom

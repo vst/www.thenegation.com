@@ -13,7 +13,7 @@ Are you using an API gateway? Do you really need one? If you are using [NixOS]
 and feel comfortable with some [Lua], you may want to consider [OpenResty] on
 NixOS as an API gateway.
 
-<!-- more -->
+<!--more-->
 
 An _API Gateway_ is simply a service that acts as a reverse proxy for API
 requests to one or more upstream services. Modern API gateways streamline the

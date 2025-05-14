@@ -19,7 +19,7 @@ solution for my needs.
 
 This guide is a quick reference to create and run NixOS guests on QEMU.
 
-<!-- more -->
+<!--more-->
 
 <!-- toc -->
 

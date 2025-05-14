@@ -15,7 +15,7 @@ This post explains why and how I use GitHub for nearly everything. I will also
 explain how I use GitHub Actions to automate the creation of issues in my GitHub
 Projects.
 
-<!-- more -->
+<!--more-->
 
 I am using [GitHub] for both personal and work projects. In the past, I used
 [BitBucket], and at some point I considered using [GitLab], too. However, the

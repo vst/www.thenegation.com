@@ -1,0 +1,30 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="robots" content="index, follow" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/site.webmanifest" />
+<!-- Our Custom CSS -->
+{{ with (templates.Defer (dict "key" "global")) }}
+  {{ partialCached "head/css.html" . }}
+{{ end }}
+<!-- Our Custom JS -->
+{{ partialCached "head/js.html" . }}
+<!-- Alpine Plugins -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+<!-- Alpine Core -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Feeds -->
+{{ with .OutputFormats.Get "rss" }}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+<!-- Analytics -->
+<script
+  defer
+  data-domain="thenegation.com"
+  src="https://plausible.io/js/script.js"></script>
+<!-- SEO Tags -->
+{{ partial "head/seo.html" . }}

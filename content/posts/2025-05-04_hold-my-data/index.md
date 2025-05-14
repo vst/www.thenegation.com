@@ -14,7 +14,7 @@ This post is about data snapshots, backups and archives, why we create and keep
 them, and how this entire exercise can be seen from top-down and bottom-up in a
 business setting.
 
-<!-- more -->
+<!--more-->
 
 What will follow is not a practical guide. It will start as philosophical and
 psychological musings. Then, I will try to establish a glossary for reference.

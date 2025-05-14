@@ -17,7 +17,7 @@ In this part, we will change the extension icon based on the OpenGraph
 information parsed from the Webpage on the active tab. We will also refactor the
 code by encoding parse results in a better type.
 
-<!-- more -->
+<!--more-->
 
 ## Overview
 

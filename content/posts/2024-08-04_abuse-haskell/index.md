@@ -20,7 +20,7 @@ markdown formats. I have been doing the sane thing to fix formats so far. But it
 is a rainy Sunday and I am bored, so I decided to make this blog post an executable
 Haskell program to do the same.
 
-<!-- more -->
+<!--more-->
 
 ## The Non-Problem
 

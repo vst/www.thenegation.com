@@ -15,7 +15,7 @@ In my blog post [yesterday], I mentioned [fzf]. Its simplicity and power make it
 a good tool for many scripting tasks. In this post, we will see a practical
 example of how to use it in a CLI program and package it with Nix.
 
-<!-- more -->
+<!--more-->
 
 ## `fzf` Part
 

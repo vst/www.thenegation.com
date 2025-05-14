@@ -16,7 +16,7 @@ This post comes after an exciting discovery of a solution to a problem I and my
 team have been facing for a while: Getting Hasura CLI work on NixOS like any
 other program.
 
-<!-- more -->
+<!--more-->
 
 ## Problem
 

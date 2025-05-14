@@ -13,7 +13,7 @@ Most life hackers know about the _[Pomodoro Technique]_. I tried it, and saw its
 merits in the past, but I never adopted it as a habit. I decided to fully invest
 in it this time, starting with my _Pomodoro Timer_ on my desktop.
 
-<!-- more -->
+<!--more-->
 
 ```txt
  Work 52:00 100%

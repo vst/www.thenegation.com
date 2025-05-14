@@ -14,7 +14,7 @@ This is the second part of the series of blog posts about creating a Web browser
 extension using [WXT]. In this part, we will try to read the OpenGraph tags of
 the Webpage that is rendered on the active tab.
 
-<!-- more -->
+<!--more-->
 
 ## Overview
 

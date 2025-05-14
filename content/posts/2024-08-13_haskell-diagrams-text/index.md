@@ -16,7 +16,7 @@ with Haskell's [diagrams] library. In this blog post, we will write a literate
 Haskell program to generate an image with text that fits in a box and wraps if
 we want so.
 
-<!-- more -->
+<!--more-->
 
 ## Problem
 

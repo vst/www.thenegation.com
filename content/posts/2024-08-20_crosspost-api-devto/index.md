@@ -11,7 +11,7 @@ taxonomies:
 
 Let's cross-post this blog post to [Dev.to] using its API.
 
-<!-- more -->
+<!--more-->
 
 ## Getting Started
 

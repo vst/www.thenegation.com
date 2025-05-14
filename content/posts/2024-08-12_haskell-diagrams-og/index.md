@@ -14,7 +14,7 @@ taxonomies:
 In this blog post, we are continuing to play with Haskell's [diagrams] library.
 We will write a literate Haskell program to generate an [OpenGraph] image.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

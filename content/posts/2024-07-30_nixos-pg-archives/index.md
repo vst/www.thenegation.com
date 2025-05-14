@@ -14,7 +14,7 @@ taxonomies:
 This is a technical note on how to archive PostgreSQL backups on [NixOS] to one
 or more targets using [rclone].
 
-<!-- more -->
+<!--more-->
 
 <!-- toc -->
 

@@ -21,12 +21,12 @@ jobs:
 
       - name: "Install Nix"
         if: "${{ steps.release.outputs.release_created }}"
-        uses: "DeterminateSystems/nix-installer-action@v17"
+        uses: "DeterminateSystems/nix-installer-action@v19"
 
       - name: "Build Website"
         if: "${{ steps.release.outputs.release_created }}"
         run: |
-          nix-shell -A shell --run "dev-build"
+          nix develop --command bash -c "npm ci && npm run build"
 
       - name: "Fix Permissions of Website Artifacts"
         if: "${{ steps.release.outputs.release_created }}"

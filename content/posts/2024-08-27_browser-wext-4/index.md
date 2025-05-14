@@ -17,7 +17,7 @@ part, we will populate a database with the OpenGraph information parsed from the
 Webpage on active tabs. For this, we will implement a service that we can use
 later to query the OpenGraph information as well.
 
-<!-- more -->
+<!--more-->
 
 ## Overview
 

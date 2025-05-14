@@ -12,7 +12,7 @@ taxonomies:
 In my previous post, I showed how to cross-post to [Dev.to] using its API. In
 this post, I will show how to cross-post to [Hashnode] using its API.
 
-<!-- more -->
+<!--more-->
 
 ## Getting Started
 

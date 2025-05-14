@@ -14,7 +14,7 @@ I am using [`jq`][jq], [`qsv`][qsv], [`uplot`][uplot] quite often. This post is
 to make sure that you know and use them, too. I hope you will waste as much time
 as I do, especially with [`uplot`][uplot].
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

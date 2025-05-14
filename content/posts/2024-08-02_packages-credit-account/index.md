@@ -18,7 +18,7 @@ further, and insist on that actually it is _too_ easy.
 Every dependency in your project is like an expense on your credit account. And
 that is [not good] if this credit account is not managed properly.
 
-<!-- more -->
+<!--more-->
 
 ## Economic Analogy
 

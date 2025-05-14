@@ -29,7 +29,7 @@ Can we do any better now?
 In the following, I will briefly explain my concerns. Then, a relatively recent
 and exciting ontological approach to accounting follows.
 
-<!-- more -->
+<!--more-->
 
 Before proceeding, please note that I am a programmer, not an accountant.
 However, I do hands-on accounting and develop accounting systems.

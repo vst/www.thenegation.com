@@ -10,7 +10,7 @@ taxonomies:
 
 This is a short guide to writing _[Literate Haskell]_ programs using Markdown.
 
-<!-- more -->
+<!--more-->
 
 The source code of this very Web page is a Markdown file with a frontmatter. At
 the same time, the source code is a Literate Haskell program, i.e. you can
