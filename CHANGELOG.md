@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.51.1](https://github.com/vst/vst.github.io/compare/v1.51.0...v1.51.1) (2025-05-15)
+
+
+### Bug Fixes
+
+* **post:** fix path of the post about SDK-driven development ([92d7e3d](https://github.com/vst/vst.github.io/commit/92d7e3d5d9dc53000d0cb87ffce34316a9e2d085))
+
 ## [1.51.0](https://github.com/vst/vst.github.io/compare/v1.50.0...v1.51.0) (2025-05-15)
 
 
