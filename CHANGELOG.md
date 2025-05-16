@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.52.0](https://github.com/vst/vst.github.io/compare/v1.51.1...v1.52.0) (2025-05-16)
+
+
+### Features
+
+* **post:** add post about thinking in templates ([28dfe9c](https://github.com/vst/vst.github.io/commit/28dfe9c5bdadb2a58d3f69645eae0692bd8f6a77))
+
 ## [1.51.1](https://github.com/vst/vst.github.io/compare/v1.51.0...v1.51.1) (2025-05-15)
 
 
