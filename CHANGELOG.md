@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.53.0](https://github.com/vst/vst.github.io/compare/v1.52.0...v1.53.0) (2025-05-17)
+
+
+### Features
+
+* **post:** add post about abstraction power and template engines ([3386dfa](https://github.com/vst/vst.github.io/commit/3386dfa2f16cc9672b44efbfb5d6c4d94d3c797d))
+
+
+### Bug Fixes
+
+* fix sentence in the thinking-in-templates post ([932f93b](https://github.com/vst/vst.github.io/commit/932f93b0d22f0c2b152dba151ab0ad1eab8dd458))
+
 ## [1.52.0](https://github.com/vst/vst.github.io/compare/v1.51.1...v1.52.0) (2025-05-16)
 
 
