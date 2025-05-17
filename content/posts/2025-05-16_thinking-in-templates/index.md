@@ -138,8 +138,8 @@ classification:
    All the logic is pre-applied to the variable content, our data, before it
    even arrives at the template engine. A typical example is [Mustache].
 2. **Logic-capable**: The template engine allows you to define some logic in the
-   template, such as not only display data, but also what, when and how to
-   display it. A typical example is [Jinja2].
+   template, such as not only what, but also when and how to display it. A
+   typical example is [Jinja2].
 3. **Logic-full**: Such template engines allow you to define any arbitrary logic
    in the template, by allowing you to even execute code in the template. One
    example is [Sweave] in R, which allows embedding R code in LaTeX templates.
