@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.54.0](https://github.com/vst/vst.github.io/compare/v1.53.0...v1.54.0) (2025-05-18)
+
+
+### Features
+
+* **post:** add post about embracing complexity ([1cef43e](https://github.com/vst/vst.github.io/commit/1cef43e28e5847aaa2f7276c8c2bc8c8abb0418c))
+
 ## [1.53.0](https://github.com/vst/vst.github.io/compare/v1.52.0...v1.53.0) (2025-05-17)
 
 
