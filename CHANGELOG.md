@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.55.0](https://github.com/vst/vst.github.io/compare/v1.54.0...v1.55.0) (2025-05-19)
+
+
+### Features
+
+* **post:** add post about deadman checks in Grafana ([bbae8e2](https://github.com/vst/vst.github.io/commit/bbae8e2336def34ceafea5a43cb7206625fef0f5))
+
+
+### Bug Fixes
+
+* **post:** fix directory name of post about embracing complexity ([c49d027](https://github.com/vst/vst.github.io/commit/c49d027ad761065bb4bf7e0ad7755d42e11d2e8a))
+
 ## [1.54.0](https://github.com/vst/vst.github.io/compare/v1.53.0...v1.54.0) (2025-05-18)
 
 
