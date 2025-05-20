@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.56.0](https://github.com/vst/vst.github.io/compare/v1.55.0...v1.56.0) (2025-05-20)
+
+
+### Features
+
+* **post:** add post about Haskell template repository ([d55dd3e](https://github.com/vst/vst.github.io/commit/d55dd3efc1de8a71cc0fef6a4e907d40dc88d87b))
+
 ## [1.55.0](https://github.com/vst/vst.github.io/compare/v1.54.0...v1.55.0) (2025-05-19)
 
 
