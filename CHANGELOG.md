@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.57.0](https://github.com/vst/vst.github.io/compare/v1.56.0...v1.57.0) (2025-05-21)
+
+
+### Features
+
+* **post:** add post about mdBook pre-processing ([aceeb1d](https://github.com/vst/vst.github.io/commit/aceeb1dcaa4a1e87a40f14fc3e928c353cb52c3c))
+
 ## [1.56.0](https://github.com/vst/vst.github.io/compare/v1.55.0...v1.56.0) (2025-05-20)
 
 
