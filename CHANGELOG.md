@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.58.0](https://github.com/vst/vst.github.io/compare/v1.57.0...v1.58.0) (2025-05-22)
+
+
+### Features
+
+* **post:** add post about Nix-based Haskell setup hacks ([21ed1b9](https://github.com/vst/vst.github.io/commit/21ed1b9dc912d25597e84f38da0f0b25f74207c4))
+
 ## [1.57.0](https://github.com/vst/vst.github.io/compare/v1.56.0...v1.57.0) (2025-05-21)
 
 
