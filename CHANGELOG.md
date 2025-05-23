@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.59.0](https://github.com/vst/vst.github.io/compare/v1.58.0...v1.59.0) (2025-05-23)
+
+
+### Features
+
+* **post:** add post about Haskell autodocodec library ([3e9d89e](https://github.com/vst/vst.github.io/commit/3e9d89e675375dbe028d5624af9ea339a9d9dc39))
+
 ## [1.58.0](https://github.com/vst/vst.github.io/compare/v1.57.0...v1.58.0) (2025-05-22)
 
 
