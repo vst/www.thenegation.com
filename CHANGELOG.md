@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.60.0](https://github.com/vst/vst.github.io/compare/v1.59.0...v1.60.0) (2025-05-24)
+
+
+### Features
+
+* **post:** add post about brooks' flowcharts vs tables ([dc17059](https://github.com/vst/vst.github.io/commit/dc17059de33324554420787d9c5c7eb009ec8c13))
+
 ## [1.59.0](https://github.com/vst/vst.github.io/compare/v1.58.0...v1.59.0) (2025-05-23)
 
 
