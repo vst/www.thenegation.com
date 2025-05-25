@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.61.0](https://github.com/vst/vst.github.io/compare/v1.60.0...v1.61.0) (2025-05-25)
+
+
+### Features
+
+* **post:** add post about my shell history ([b81a8f0](https://github.com/vst/vst.github.io/commit/b81a8f0d1e185646cf31ef043e9323e83340ed11))
+
 ## [1.60.0](https://github.com/vst/vst.github.io/compare/v1.59.0...v1.60.0) (2025-05-24)
 
 
