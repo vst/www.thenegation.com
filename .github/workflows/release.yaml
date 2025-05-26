@@ -21,11 +21,7 @@ jobs:
 
       - name: "Install Nix"
         if: "${{ steps.release.outputs.release_created }}"
-        uses: "DeterminateSystems/nix-installer-action@v14"
-
-      - name: "Use Nix Cache"
-        if: "${{ steps.release.outputs.release_created }}"
-        uses: "DeterminateSystems/magic-nix-cache-action@v8"
+        uses: "DeterminateSystems/nix-installer-action@v17"
 
       - name: "Build Website"
         if: "${{ steps.release.outputs.release_created }}"
