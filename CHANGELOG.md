@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.62.0](https://github.com/vst/vst.github.io/compare/v1.61.0...v1.62.0) (2025-05-26)
+
+
+### Features
+
+* **post:** add post about boring and bold work ([1e6555d](https://github.com/vst/vst.github.io/commit/1e6555dc38800c4bd2a52446ee18abf66192509a))
+
 ## [1.61.0](https://github.com/vst/vst.github.io/compare/v1.60.0...v1.61.0) (2025-05-25)
 
 
