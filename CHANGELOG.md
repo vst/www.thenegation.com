@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.63.0](https://github.com/vst/vst.github.io/compare/v1.62.0...v1.63.0) (2025-05-27)
+
+
+### Features
+
+* **post:** add post about NixOS rebuilds and upgrades ([be3a5f4](https://github.com/vst/vst.github.io/commit/be3a5f4589ddeab67640d23420079239fdf408b8))
+
+
+### Bug Fixes
+
+* **ci:** update GitHub Actions workflows ([0131fcd](https://github.com/vst/vst.github.io/commit/0131fcd13a514908dce8d467ce447f6b1bb48196))
+
 ## [1.62.0](https://github.com/vst/vst.github.io/compare/v1.61.0...v1.62.0) (2025-05-26)
 
 
