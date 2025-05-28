@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.64.0](https://github.com/vst/vst.github.io/compare/v1.63.0...v1.64.0) (2025-05-28)
+
+
+### Features
+
+* **post:** add post about terminal-first setup ([60e63b3](https://github.com/vst/vst.github.io/commit/60e63b345dba02885b3cd6b4fd2283a912ba0ca9))
+
 ## [1.63.0](https://github.com/vst/vst.github.io/compare/v1.62.0...v1.63.0) (2025-05-27)
 
 
