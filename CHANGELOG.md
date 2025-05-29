@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.65.0](https://github.com/vst/vst.github.io/compare/v1.64.0...v1.65.0) (2025-05-29)
+
+
+### Features
+
+* **post:** add post about cross-compiling Haskell ([ff85d07](https://github.com/vst/vst.github.io/commit/ff85d07f2491519db13b86525cd394d5841dffc4))
+
 ## [1.64.0](https://github.com/vst/vst.github.io/compare/v1.63.0...v1.64.0) (2025-05-28)
 
 
