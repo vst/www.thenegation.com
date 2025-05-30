@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.66.0](https://github.com/vst/vst.github.io/compare/v1.65.0...v1.66.0) (2025-05-30)
+
+
+### Features
+
+* **post:** add post about daily Z report and weekly review ([07acffb](https://github.com/vst/vst.github.io/commit/07acffb8dcb707ad37b5ab6fc9037a1c115149ae))
+
 ## [1.65.0](https://github.com/vst/vst.github.io/compare/v1.64.0...v1.65.0) (2025-05-29)
 
 
