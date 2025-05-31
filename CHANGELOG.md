@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.67.0](https://github.com/vst/vst.github.io/compare/v1.66.0...v1.67.0) (2025-05-31)
+
+
+### Features
+
+* **post:** add post about second blog challenge ([aff472a](https://github.com/vst/vst.github.io/commit/aff472acccb6a251c7c138499f25783931c49d46))
+
 ## [1.66.0](https://github.com/vst/vst.github.io/compare/v1.65.0...v1.66.0) (2025-05-30)
 
 
