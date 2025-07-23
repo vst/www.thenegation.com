@@ -2,13 +2,13 @@
 title: "More Haskell Diagrams: Images"
 date: 2024-08-10 11:03:50
 description: Embedding external images in Haskell diagrams.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Literate Programming
-    - Computing
+slug: haskell-diagrams-images
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Literate Programming
+  - Computing
 ---
 
 Let's continue exploring the Haskell [diagrams] library. In this post, we will
@@ -146,11 +146,15 @@ mkAvatarWithText txt img =
 
 That's all! Let's see how SVG, PNG and JPG images look like:
 
-<div class="flex flex-col md:flex-row justify-between">
-  <img src="diagram1.svg" />
-  <img src="diagram1.png" />
-  <img src="diagram1.jpg" />
-</div>
+{{< columns >}}
+
+{{< column >}}![](diagram1.svg){{< /column >}}
+
+{{< column >}}![](diagram1.png){{< /column >}}
+
+{{< column >}}![](diagram1.jpg){{< /column >}}
+
+{{< /columns >}}
 
 ## Wrap-Up
 

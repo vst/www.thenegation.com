@@ -5,11 +5,11 @@ updated: 2023-10-18 14:39:26
 description: |
   Short note on the book 'How to Solve It: Modern Heuristics' and a quote from
   George Bernard Shaw.
-taxonomies:
-  tags:
-    - Computing
-    - Literature
-    - Mathematics
+slug: unreasonable-revolutionary
+tags:
+  - Computing
+  - Literature
+  - Mathematics
 ---
 
 _[How to Solve It: A New Aspect of Mathematical Method]_ by [George Pólya]
@@ -19,9 +19,10 @@ in daily life have read this book.
 
 <!--more-->
 
-Recently, I came across _[How to Solve It: Modern Heuristics]_. This book, like its
-_predecessor_, is about problem solving, but it focuses on computational methodologies
-for problem solving. There are many beautiful comments on the book around the Internet.
+Recently, I came across _[How to Solve It: Modern Heuristics]_. This book, like
+its _predecessor_, is about problem solving, but it focuses on computational
+methodologies for problem solving. There are many beautiful comments on the book
+around the Internet.
 
 I was especially delighted when I read the introductory chapter. Below is a
 quote from [George Bernard Shaw], which is given at the beginning of the very

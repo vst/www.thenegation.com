@@ -4,19 +4,20 @@ date: 2025-05-14 23:45:57
 description: >
   Why I decided to settle back to Hugo after Zola -- a pragmatic comparison and
   lessons learned.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Decision Making
-    - Tools
-    - Web
+
+slug: migrate-from-zola-to-hugo
+tags:
+  - Technical Notes
+  - Decision Making
+  - Tools
+  - Web
 ---
 
 This post is a summary of my recent decision to go back to [Hugo] after using
 [Zola]. I also report on how LLM assistants with Web access can aid in such
 decisions, not as an authority but as a research assistant.
 
-<!-- more -->
+<!--more-->
 
 As a programmer, I made my first bucks back in 2002 by writing PHP code for a
 Web site. Throughout the years, I have used various programming languages,

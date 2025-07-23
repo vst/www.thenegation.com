@@ -3,10 +3,10 @@ title: "Vectorized Data Pipelines"
 date: 2025-05-03 23:04:29
 description: |
   Learn how to build a simple, declarative data pipeline using Vector to ingest, transform, and store webhook events—without writing a single line of custom code.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Infrastructure
+slug: vectorized
+tags:
+  - Technical Notes
+  - Infrastructure
 ---
 
 This post shows how to use Vector to capture and persist webhook events -- like
@@ -37,28 +37,23 @@ for choosing a data tool are as follows:
    configure. Obviously, no tool is advertised as being complicated. My
    definition of simplicity is to be able to understand its operational model.
    My quick checklist is:
-
    - Is it complicated, simple or simplistic?
    - Do I understand how it works?
    - What is its dependency footprint?
    - Can I use it both at work and at home?
-
 2. **Composability:** Being used to functional programming and Unix philosophy,
    I expect tools to be able to compose together to solve a problem. This is
    especially fruitful when refactoring certain parts of the pipeline: You can
    replace one tool with another without having to change the whole pipeline.
    Following questions help me to evaluate composability:
-
    - Is it stateful or stateless?
    - Does it offer clear interfaces?
    - Is it a monolith or a collection of small, independent tools?
    - Does it use ubiquitous data formats and protocols?
-
 3. **Declarative Approach:** Imperative or procedural approach to deployment and
    configuration is a recipe for disaster in long run. I prefer to use
    declarative tools which allow introspection and validation. Such approach
    pretty much facilitates composability, too. Some things to consider:
-
    - Does it have a declarative configuration?
    - Does the language have a type system?
    - Is it an expression or statement based language?
@@ -74,8 +69,8 @@ understand and appreciate that I can not use the same tool for everything. What
 I was looking for was something that could solve a relatively large class of
 practical problems.
 
-I kept an eye on both [Fluent Bit] and [Vector] for a while. I decided to pick one
-to test in production, in particular to:
+I kept an eye on both [Fluent Bit] and [Vector] for a while. I decided to pick
+one to test in production, in particular to:
 
 1. Capture and land data from various sources, and
 1. Notify me (and my team) when something goes wrong or seems fishy.

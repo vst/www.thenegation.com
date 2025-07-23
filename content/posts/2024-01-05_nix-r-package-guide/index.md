@@ -4,9 +4,9 @@ date: 2024-01-05 08:22:10
 description:
   A guide for creating, developing and testing R packages under a Nix Shell
   using R tools such as devtools, testthat and usethis.
-taxonomies:
-  tags:
-    - Computing
+slug: nix-r-package-guide
+tags:
+  - Computing
 ---
 
 This is a guide for creating, developing and testing [R] packages under a [Nix]
@@ -356,21 +356,13 @@ done following on top of what we have done here:
 - Setup GitHub Actions to build and check the package
 - Setup GitHub Actions for automated releases[^2]
 
----
-
-**Footnotes**
-
-<!-- prettier-ignore-start -->
-
 [^1]:
-  It is much more than that, indeed. I just said so for the sake of our
-  purpose.
+    It is much more than that, indeed. I just said so for the sake of our
+    purpose.
 
 [^2]:
-  [Release Please] would be nice, but it does not officially support R
-  language yet. However, it [may happen][RP R Issue] one day.
-
-<!-- prettier-ignore-end -->
+    [Release Please] would be nice, but it does not officially support R
+    language yet. However, it [may happen][RP R Issue] one day.
 
 <!-- REFERENCES -->
 

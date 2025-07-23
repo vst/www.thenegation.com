@@ -2,13 +2,13 @@
 title: "More Haskell Diagrams: OpenGraph Images"
 date: 2024-08-12 21:15:53
 description: Generating OpenGraph images with Haskell diagrams.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Literate Programming
-    - Computing
+slug: haskell-diagrams-og
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Literate Programming
+  - Computing
 ---
 
 In this blog post, we are continuing to play with Haskell's [diagrams] library.

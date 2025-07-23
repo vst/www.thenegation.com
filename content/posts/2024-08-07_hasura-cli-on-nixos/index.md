@@ -3,13 +3,13 @@ title: "Hasura CLI on NixOS: A Working Solution"
 date: 2024-08-07 22:02:10
 description:
   A working solution to get Hasura CLI work on NixOS like any other program.
-taxonomies:
-  tags:
-    - Technical Note
-    - Nix
-    - Hasura
-    - Hacking
-    - Computing
+slug: hasura-cli-on-nixos
+tags:
+  - Technical Note
+  - Nix
+  - Hasura
+  - Hacking
+  - Computing
 ---
 
 This post comes after an exciting discovery of a solution to a problem I and my

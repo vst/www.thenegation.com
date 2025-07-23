@@ -2,11 +2,12 @@
 title: "Pomodoro Timer: Waybar and uair"
 date: 2024-08-08 21:02:30
 description: A brief note on my Pomodoro Technique setup with Waybar and uair.
-taxonomies:
-  tags:
-    - Life Hack
-    - Technical Note
-    - Computing
+slug: pomodoro-waybar-uair
+aliases: ["pomodoro_waybar_uair"]
+tags:
+  - Life Hack
+  - Technical Note
+  - Computing
 ---
 
 Most life hackers know about the _[Pomodoro Technique]_. I tried it, and saw its
@@ -16,7 +17,7 @@ in it this time, starting with my _Pomodoro Timer_ on my desktop.
 <!--more-->
 
 ```txt
- Work 52:00 100%
+●●●●●●●●●●● Work 52:00 100%
 ```
 
 ## What is Pomodoro Technique?
@@ -118,7 +119,7 @@ clicking on my mouse, or simply issuing `uairctl jump <session-id>` or
 My [Waybar] shows now:
 
 ```txt
- Work 18:12 36%
+○○○○○○●●●● Work 18:12 36%
 ```
 
 ## My Configuration
@@ -161,16 +162,15 @@ My [Waybar] configuration has the following custom module for `uair`
 {
   "format": "{icon} {}",
   "format-icons": [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "○○○○○○○○○●",
+    "○○○○○○○○●●",
+    "○○○○○○●●●●",
+    "○○○○○●●●●●",
+    "○○○○●●●●●●",
+    "○○○●●●●●●●",
+    "○○●●●●●●●●",
+    "○●●●●●●●●●",
+    "●●●●●●●●●●"
   ],
   "tooltip": false,
   "return-type": "json",

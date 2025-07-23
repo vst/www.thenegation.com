@@ -4,13 +4,13 @@ date: 2024-08-06 20:31:10
 description:
   Using niv to manage Nix-based project dependencies and development
   environments.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Nix
-    - Hacking
-    - Computing
+slug: using-niv-with-hackage
+tags:
+  - Technical Note
+  - Haskell
+  - Nix
+  - Hacking
+  - Computing
 ---
 
 Using Nix to manage project dependencies and development environments is a great

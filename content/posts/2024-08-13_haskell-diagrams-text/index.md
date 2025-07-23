@@ -2,13 +2,13 @@
 title: "More Haskell Diagrams: Wrapping Text"
 date: 2024-08-13 19:14:35
 description: Wrapping text in Haskell diagrams.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Literate Programming
-    - Computing
+slug: haskell-diagrams-text
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Literate Programming
+  - Computing
 ---
 
 Working with text, especially wrapping it, can be tricky when generating images

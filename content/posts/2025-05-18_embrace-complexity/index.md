@@ -5,16 +5,17 @@ description: >
   Complexity is not inherently bad. The complications are the real enemy. This
   post invites you to rethink how you analyze problems, choose tools, and avoid
   self-made messes.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Thinking
+
+slug: embrace-complexity
+tags:
+  - Technical Notes
+  - Thinking
 ---
 
 Let me tell you the conclusion up-front: _Complexity is not inherently bad. The
 complications are the real enemy._
 
-<!-- more -->
+<!--more-->
 
 Call it wishful thinking, but I have never been intimidated by complexity.
 Indeed, I was trained to embrace it during my studies and academic work.

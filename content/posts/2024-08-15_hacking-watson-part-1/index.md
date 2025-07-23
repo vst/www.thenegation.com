@@ -2,13 +2,13 @@
 title: "Hacking Watson with Haskell - Part 1"
 date: 2024-08-15 21:33:55
 description: Using Haskell to read Watson frames from a JSON file.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Literate Programming
-    - Computing
+slug: hacking-watson-part-1
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Literate Programming
+  - Computing
 ---
 
 [Watson] is a command-line tool that helps you to track your time. It is simple

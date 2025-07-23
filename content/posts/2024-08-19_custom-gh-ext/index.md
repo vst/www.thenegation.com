@@ -2,13 +2,13 @@
 title: "Easy GitHub CLI Extensions with Nix"
 date: 2024-08-19 20:35:24
 description: Writing a simple GitHub CLI extension and packaging it with Nix.
-taxonomies:
-  tags:
-    - Technical Note
-    - GitHub
-    - Nix
-    - Hacking
-    - Computing
+slug: custom-gh-ext
+tags:
+  - Technical Note
+  - GitHub
+  - Nix
+  - Hacking
+  - Computing
 ---
 
 GitHub CLI (`gh`) is one of my favourite tools. In addition to its built-in
@@ -20,10 +20,10 @@ in particular under Nix Home Manager.
 
 ## GitHub CLI and Its Extensions
 
-[GitHub CLI] (`gh`) is the official command-line tool for GitHub. It provides a set
-of commands for interacting with GitHub repositories, issues, pull requests, and
-more. It also provides convenience functionality to issue authenticated API requests
-to both REST and GraphQL APIs of GitHub:
+[GitHub CLI] (`gh`) is the official command-line tool for GitHub. It provides a
+set of commands for interacting with GitHub repositories, issues, pull requests,
+and more. It also provides convenience functionality to issue authenticated API
+requests to both REST and GraphQL APIs of GitHub:
 
 ```sh
 $ gh api repos/vst/hostpatrol/releases \
@@ -66,8 +66,8 @@ $ gh pv
 
 Extensions are more powerful than aliases. They are written in any language and
 installed as a binary or a script. The extension is executed as a subcommand of
-`gh`. You may check out the [official gh extensions documentation] for more details
-or [available extensions] on GitHub.
+`gh`. You may check out the [official gh extensions documentation] for more
+details or [available extensions] on GitHub.
 
 ## Nix Home Manager and `gh`
 

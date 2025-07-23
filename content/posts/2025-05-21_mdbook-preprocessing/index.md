@@ -3,27 +3,28 @@ title: "Hacking with mdBook"
 date: 2025-05-21 20:35:08
 description: >
   Hacking an mdBook project with a few scripts for fun and profit.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Technical Writing
-    - Hacking
+
+slug: mdbook-preprocessing
+tags:
+  - Technical Notes
+  - Technical Writing
+  - Hacking
 ---
 
 This post explores how to hack an [mdBook] project with scripts.
 
-<!-- more -->
+<!--more-->
 
-A few days back, I [wrote a blog post] about [static site generators], in particular
-how I decided to migrate my blog from [Zola] to [Hugo]. One of my points was to be
-able to _hack_ my own content before generating the final HTML.
+A few days back, I [wrote a blog post] about [static site generators], in
+particular how I decided to migrate my blog from [Zola] to [Hugo]. One of my
+points was to be able to _hack_ my own content before generating the final HTML.
 
 ## mdBook
 
 [mdBook] is a Rust-based tool to create Web-based books from vanilla Markdown
 files. Although it is quite minimalistic, you will bump into it quite often in
-the wild. Most notably, the [Rust Book] uses it. I see it quite often in the [Nix]
-ecosystem, too.
+the wild. Most notably, the [Rust Book] uses it. I see it quite often in the
+[Nix] ecosystem, too.
 
 As I said, it is minimalistic. If you have a tree of Markdown files, you just
 need a `SUMMARY.md` file to render them into a navigable book. The Markdown

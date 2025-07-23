@@ -5,9 +5,9 @@ updated: 2023-10-18 14:42:13
 description:
   Short note on what to expect from a modern, Web-based API that facilitates
   data query and manipulation.
-taxonomies:
-  tags:
-    - Computing
+slug: modern-web-based-apis
+tags:
+  - Computing
 ---
 
 Here are some quick notes for mysels on what to expect from a modern, Web-based

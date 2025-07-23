@@ -4,10 +4,11 @@ date: 2025-05-11 23:55:27
 description: >
   A quick log of my recent attempt to replace `rofi` with something
   Wayland-native, and the alternatives I explored.
-taxonomies:
-  tags:
-    - Technical Notes
-    - GNU/Linux
+
+slug: wayland-app-launchers-rofi
+tags:
+  - Technical Notes
+  - GNU/Linux
 ---
 
 Today is a lazy Sunday, and I did what nobody should do on a Sunday: Spend time
@@ -83,10 +84,10 @@ alternatives are worth mentioning, in alphabetical order:
 - [yofi]: Nice, but too rough. I can use it for shell programming for prompting
   users for actions.
 
-There is a dedicated section on Wayland launchers in the [Awesome Wayland]. You can
-check it out yourself if you are interested in more options. For me, in the final
-analysis, I did not find a replacement for `rofi`. Yet, I see [fuzzel] and [raffi]
-as future options.
+There is a dedicated section on Wayland launchers in the [Awesome Wayland]. You
+can check it out yourself if you are interested in more options. For me, in the
+final analysis, I did not find a replacement for `rofi`. Yet, I see [fuzzel] and
+[raffi] as future options.
 
 But also, [sway-launcher-desktop] is a brilliant hack that uses [fzf] to
 implement a launcher that works in the console. I can think of many such use

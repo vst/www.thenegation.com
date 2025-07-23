@@ -2,11 +2,11 @@
 title: "Cross-Posting to Hashnode with API"
 date: 2024-08-21 17:42:49
 description: Let's cross-post this blog post to Hashnode using its API.
-taxonomies:
-  tags:
-    - Technical Note
-    - Hacking
-    - Computing
+slug: crosspost-api-hashnode
+tags:
+  - Technical Note
+  - Hacking
+  - Computing
 ---
 
 In my previous post, I showed how to cross-post to [Dev.to] using its API. In
@@ -17,8 +17,9 @@ this post, I will show how to cross-post to [Hashnode] using its API.
 ## Getting Started
 
 [Dev.to]'s API is a REST API. It is pretty straightforward to use. [Hashnode]'s
-API is a [GraphQL API]. If you are not familiar with GraphQL, you can think of it
-as a query language running over HTTP that can traverse and manipulate the data graph.
+API is a [GraphQL API]. If you are not familiar with GraphQL, you can think of
+it as a query language running over HTTP that can traverse and manipulate the
+data graph.
 
 [Hashnode] API is [well-documented]. Also, it comes with a [GraphiQL]
 [playground]. You can use the playground to explore the API and test your

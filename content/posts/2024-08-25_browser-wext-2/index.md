@@ -2,12 +2,12 @@
 title: "Web Browser Extension Workshop - Part 2"
 date: 2024-08-25 15:42:40
 description: Reading the OpenGraph tags of the Webpage.
-taxonomies:
-  tags:
-    - Technical Note
-    - Web Development
-    - Hacking
-    - Computing
+slug: browser-wext-2
+tags:
+  - Technical Note
+  - Web Development
+  - Hacking
+  - Computing
 ---
 
 This is the second part of the series of blog posts about creating a Web browser

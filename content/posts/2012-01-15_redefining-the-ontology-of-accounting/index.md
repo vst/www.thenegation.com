@@ -6,9 +6,8 @@ slug: redefining-the-ontology-of-accounting
 description:
   A brief opinion on the current state of accounting and the Resources - Events
   - Agents (REA) ontology.
-taxonomies:
-  tags:
-    - Computing
+tags:
+  - Computing
 ---
 
 _Accounting_ is more than 7,000 years old. This discipline helps us to plan,

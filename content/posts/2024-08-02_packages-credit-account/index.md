@@ -4,12 +4,12 @@ date: 2024-08-02 21:54:10
 description:
   Every dependency in your (JavaScript) project is like an expense on your
   credit account.
-taxonomies:
-  tags:
-    - Technical Opinion
-    - JavaScript
-    - TypeScript
-    - Computing
+slug: packages-credit-account
+tags:
+  - Technical Opinion
+  - JavaScript
+  - TypeScript
+  - Computing
 ---
 
 It is quite easy to install a new `npm` package into your project. I go one step

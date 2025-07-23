@@ -2,14 +2,14 @@
 title: "Backup GitHub Repositories with gidek"
 date: 2024-08-05 21:24:10
 description: A simple Haskell program to backup your GitHub repositories.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - NixOS
-    - Git
-    - Hacking
-    - Computing
+slug: backup-github-repos
+tags:
+  - Technical Note
+  - Haskell
+  - NixOS
+  - Git
+  - Hacking
+  - Computing
 ---
 
 Do you backup your Git repositories? If not, you should consider doing so. I

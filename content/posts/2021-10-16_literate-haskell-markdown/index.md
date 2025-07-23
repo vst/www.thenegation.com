@@ -3,9 +3,9 @@ title: Literate Haskell with Markdown
 date: 2021-10-16
 updated: 2023-10-18 14:48:18
 description: A short guide to writing Literate Haskell programs using Markdown.
-taxonomies:
-  tags:
-    - Hacking
+slug: literate-haskell-markdown
+tags:
+  - Hacking
 ---
 
 This is a short guide to writing _[Literate Haskell]_ programs using Markdown.

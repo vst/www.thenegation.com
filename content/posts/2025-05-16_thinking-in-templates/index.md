@@ -3,11 +3,12 @@ title: "Thinking in Templates"
 date: 2025-05-16 22:30:13
 description: >
   On the conceptual and practical value of templates in programming.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Programming
-    - Thoughts
+
+slug: thinking-in-templates
+tags:
+  - Technical Notes
+  - Programming
+  - Thoughts
 ---
 
 I believe that there is value in thinking in templates when it comes to
@@ -15,7 +16,7 @@ programming. I will try to explore the concept of templating in general, how it
 reveals important patterns in programming, and how it appears in the wild often
 in the form of _template engines_.
 
-<!-- more -->
+<!--more-->
 
 ## Templating
 

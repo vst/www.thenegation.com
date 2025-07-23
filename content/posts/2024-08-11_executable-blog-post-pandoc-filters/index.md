@@ -3,14 +3,14 @@ title: "Executable Blog Posts: Second Take"
 date: 2024-08-11 22:35:12
 description:
   A second take on executable blog posts with a Lua filter for Pandoc.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Pandoc
-    - Literate Programming
-    - Computing
+slug: executable-blog-post-pandoc-filters
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Pandoc
+  - Literate Programming
+  - Computing
 ---
 
 This is a second take for my previous blog post [Abusing Haskell: Executable
@@ -42,9 +42,9 @@ can manipulate the AST of the document. They can be written in any language, but
 the most common language is Lua as its interpreter is embedded in pandoc, and it
 is faster compared to the JSON filter interface which is also used by other
 languages (_You may wish to listen to the [Episode 37] of [The Haskell
-Interlude] podcast, where [Joachim Breitner] and [David Christiansen] interview [John
-MacFarlane],
-the creator of [pandoc], where he mentions Lua vs JSON filters_).
+Interlude] podcast, where [Joachim Breitner] and [David Christiansen] interview
+[John MacFarlane], the creator of [pandoc], where he mentions Lua vs JSON
+filters_).
 
 Since I am abusing Haskell, why not abuse Lua as well? Let's write a Lua filter
 to process the links and images in the Markdown document.

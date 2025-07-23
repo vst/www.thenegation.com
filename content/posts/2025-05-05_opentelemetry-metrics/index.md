@@ -3,11 +3,11 @@ title: "Working with OpenTelemetry Metrics"
 date: 2025-05-05 21:17:22
 description: |
   Why I switched to OpenTelemetry for metrics ingestion and how to get started.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Infrastructure
-    - Observability
+slug: opentelemetry-metrics
+tags:
+  - Technical Notes
+  - Infrastructure
+  - Observability
 ---
 
 I have started adopting [OpenTelemetry] in my workshop to unify metrics, logs,
@@ -98,10 +98,10 @@ services:
       - "127.0.0.1:9090:9090" # Prometheus UI
 ```
 
-In this setup, we are launching the [OpenTelemetry Collector] with the configuration
-file `otel-collector-config.yaml` and exposing its gRPC and HTTP receiver ports on
-localhost. Also, we are launching [Prometheus] with the configuration file `prometheus.yaml`
-and exposing its UI on localhost.
+In this setup, we are launching the [OpenTelemetry Collector] with the
+configuration file `otel-collector-config.yaml` and exposing its gRPC and HTTP
+receiver ports on localhost. Also, we are launching [Prometheus] with the
+configuration file `prometheus.yaml` and exposing its UI on localhost.
 
 The configuration file `otel-collector-config.yaml` for the OpenTelemetry
 Collector is as follows:

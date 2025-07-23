@@ -4,11 +4,12 @@ date: 2025-05-10 22:33:27
 description: >
   How I use GitHub Projects, Actions, and custom tooling to run all aspects of
   my personal and work projects.
-taxonomies:
-  tags:
-    - Lifehack
-    - Hacking
-    - GitHub
+
+slug: github-projects-my-way
+tags:
+  - Lifehack
+  - Hacking
+  - GitHub
 ---
 
 This post explains why and how I use GitHub for nearly everything. I will also
@@ -71,10 +72,10 @@ I chose to centralize the creation of these issues in a single GitHub
 repository. Originally, the idea was to pick a suitable GitHub Action and use it
 to create issues in the target repositories using a set of predefined templates.
 
-Unfortunately, all the GitHub Actions I found on the [GitHub Marketplace] were limited
-in various ways. Therefore, I decided to write my own script to create GitHub issues
-from templates with appropriate users, assign them, and add them to the appropriate
-GitHub Projects with the correct project fields filled out.
+Unfortunately, all the GitHub Actions I found on the [GitHub Marketplace] were
+limited in various ways. Therefore, I decided to write my own script to create
+GitHub issues from templates with appropriate users, assign them, and add them
+to the appropriate GitHub Projects with the correct project fields filled out.
 
 Since all my personal and work GitHub Projects share the same structure and
 settings, the script applies to all of them.
@@ -166,8 +167,9 @@ the actual iteration).
 
 I called the script [gh-cpi] and put it on GitHub as a public repository.
 Currently, it works only with my peculiar GitHub Project structure, but I plan
-to make it more generic and publish it on the [GitHub Marketplace] as a GitHub Action
-once [GitHub Issue Types] are more mature in the GitHub API and GitHub CLI.
+to make it more generic and publish it on the [GitHub Marketplace] as a GitHub
+Action once [GitHub Issue Types] are more mature in the GitHub API and GitHub
+CLI.
 
 <!-- REFERENCES -->
 

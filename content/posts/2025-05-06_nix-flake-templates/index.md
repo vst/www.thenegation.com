@@ -3,11 +3,11 @@ title: "Nix Flake Templates"
 date: 2025-05-06 11:36:39
 description: |
   Notes on creating and using personal Nix Flake templates to bootstrap new projects or experiments.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Templates
-    - Nix
+slug: nix-flake-templates
+tags:
+  - Technical Notes
+  - Templates
+  - Nix
 ---
 
 Nix is now central to how I structure my workstation setups and manage

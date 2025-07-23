@@ -4,18 +4,18 @@ date: 2025-05-27 21:20:42
 description: >-
   My experience with upgrading NixOS to v25.05, how I use nvd to check
   differences between generations, and when to reboot after upgrades.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Hacking
-    - NixOS
-    - Nix
+slug: nixos-rebuilds-and-upgrades
+tags:
+  - Technical Notes
+  - Hacking
+  - NixOS
+  - Nix
 ---
 
 Today, I upgraded my NixOS system to the latest version, v25.05. It went
 smoothly. I just want to report my experience here.
 
-<!-- more -->
+<!--more-->
 
 ## In-Place Upgrades: NixOS vs Other Distributions
 

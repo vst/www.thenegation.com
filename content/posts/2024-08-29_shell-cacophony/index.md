@@ -2,12 +2,12 @@
 title: "Shell Cacophony"
 date: 2024-08-29 20:05:47
 description: Using jq, qsv, and uplot to waste more time in the terminal.
-taxonomies:
-  tags:
-    - Technical Note
-    - Unix
-    - Hacking
-    - Computing
+slug: shell-cacophony
+tags:
+  - Technical Note
+  - Unix
+  - Hacking
+  - Computing
 ---
 
 I am using [`jq`][jq], [`qsv`][qsv], [`uplot`][uplot] quite often. This post is
@@ -32,8 +32,8 @@ I am pretty sure that you have heard about [`jq`][jq] before, and most of you
 are already using it. But for those who are not familiar with it, `jq` is a
 lightweight and command-line JSON processor, sort of like `sed` for JSON data.
 
-For example, use [xColors API] to generate 10 random colors and extract the hex codes
-to print them:
+For example, use [xColors API] to generate 10 random colors and extract the hex
+codes to print them:
 
 ```bash
 curl -s "https://x-colors.yurace.pro/api/random?number=10" |

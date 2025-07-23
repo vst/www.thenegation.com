@@ -4,12 +4,12 @@ date: 2025-05-22 22:10:37
 description: >-
   Two tricks to quickly hack a Haskell script or even a minimal but complete
   Haskell project using Nix.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Hacking
-    - Haskell
-    - Nix
+slug: quick-haskell-dev-setup
+tags:
+  - Technical Notes
+  - Hacking
+  - Haskell
+  - Nix
 ---
 
 I have mentioned a few times in my posts that [Haskell] is my go-to language.
@@ -18,7 +18,7 @@ This is true even for small applications which go beyond a simple shell script.
 Hacking Haskell with Nix is an easy and fun way to quickly prototype. I want to
 share two tricks that I use.
 
-<!-- more -->
+<!--more-->
 
 ## Nix-Based Haskell Scripting
 
@@ -154,8 +154,8 @@ I am not explaining the `cabal` file here, but you should get the general idea:
 A set of metadata followed by an `executable` section that describes how to
 build an executable with its dependencies.
 
-In addition to the above two files, how about a [Nix Flakes] to develop and package
-this project as a Nix program?
+In addition to the above two files, how about a [Nix Flakes] to develop and
+package this project as a Nix program?
 
 ```nix
 {

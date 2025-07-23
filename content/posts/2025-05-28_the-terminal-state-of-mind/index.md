@@ -4,20 +4,20 @@ date: 2025-05-28 21:24:28
 description: >-
   A reflection on why I still choose a terminal-first setup in 2025, not out of
   nostalgia or elitism, but because it supports my flow.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Productivity
-    - Hacking
-    - NixOS
-    - Nix
+slug: the-terminal-state-of-mind
+tags:
+  - Technical Notes
+  - Productivity
+  - Hacking
+  - NixOS
+  - Nix
 ---
 
 I use the terminal. Not because I am a command-line wizard or particularly
 efficient with it, but because the GUI has never given me the rhythm and flow I
 need.
 
-<!-- more -->
+<!--more-->
 
 ## The GUI Does Not Fit My Mind
 
