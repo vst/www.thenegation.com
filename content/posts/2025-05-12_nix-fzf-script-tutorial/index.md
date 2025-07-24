@@ -4,18 +4,19 @@ date: 2025-05-12 21:10:27
 description: >
   A hands-on tutorial showing how to build an emoji picker CLI using fzf and
   package it as a Nix flake.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Tutorial
-    - Nix
+
+slug: nix-fzf-script-tutorial
+tags:
+  - Technical Notes
+  - Tutorial
+  - Nix
 ---
 
 In my blog post [yesterday], I mentioned [fzf]. Its simplicity and power make it
 a good tool for many scripting tasks. In this post, we will see a practical
 example of how to use it in a CLI program and package it with Nix.
 
-<!-- more -->
+<!--more-->
 
 ## `fzf` Part
 
@@ -24,9 +25,9 @@ that make it a small UI framework.
 
 Let us see it in action.
 
-Our job is to create a simple CLI program that lists all [GitHub Emojis], lets the
-user search for one and copy either the selected emoji or its `:EMOJICODE:` to the
-clipboard.
+Our job is to create a simple CLI program that lists all [GitHub Emojis], lets
+the user search for one and copy either the selected emoji or its `:EMOJICODE:`
+to the clipboard.
 
 I found the list of emojis in the [github/gemoji] repository, in particular in
 the following file:
@@ -117,14 +118,11 @@ first and second fields, respectively.
 Then, we added two `--bind` options:
 
 1. `enter:become(printf {1} | wl-copy --trim-newline)`:
-
    - `enter` is the key binding.
    - `become(...)` is a command to run when the key binding is pressed.
    - `printf {1}` prints the first field (the emoji).
    - `wl-copy --trim-newline` copies the emoji to the clipboard.
-
 2. `ctrl-c:become(printf {2} | wl-copy --trim-newline)`:
-
    - `ctrl-c` is the key binding.
    - `become(...)` is a command to run when the key binding is pressed.
    - `printf {2}` prints the second field (the `:EMOJICODE:`).

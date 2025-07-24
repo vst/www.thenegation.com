@@ -2,16 +2,16 @@
 title: "Completed My Blogging Challenge"
 date: 2024-08-31 17:16:54
 description: My short report on the blogging challenge I completed.
-taxonomies:
-  tags:
-    - Writing
-    - Life Hack
+slug: blogging-challenge
+tags:
+  - Writing
+  - Life Hack
 ---
 
 Today marks the end of my monthly blogging challenge. I wrote a blog post every
 day for a month. Here is how it went and what I learned.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 
@@ -132,8 +132,8 @@ Thirdly, I have a better understanding about audience. Nobody knows my
 [Website], but I cross-posted my blog posts to [dev.to] and [Hashnode]. I even
 posted [one of my posts] to [Haskell subreddit] that was eventually published on
 [Haskell Weekly]. If the post is "fun to read" --- as a friend has put it --- it
-can get traction even on expert topics. If it is too general, it gets traction only
-on popular topics.
+can get traction even on expert topics. If it is too general, it gets traction
+only on popular topics.
 
 Lastly, I managed to get about 1,000 reads on my [Website], 1,000 reads on
 [dev.to] and 200 reads on [Hashnode] in a month. I did not manage to engage with

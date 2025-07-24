@@ -4,17 +4,17 @@ date: 2025-05-01 11:16:05
 description: |
   Send Grafana alert notifications to ntfy using Webhook integration and
   templates.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Infrastructure
+slug: grafana-ntfy
+tags:
+  - Technical Notes
+  - Infrastructure
 ---
 
 This post explains how to integrate Grafana alerts with the `ntfy` notification
 service using Grafana's Webhook integration, notification templates, and
 `ntfy`'s templating capabilities.
 
-<!-- more -->
+<!--more-->
 
 ## Problem
 

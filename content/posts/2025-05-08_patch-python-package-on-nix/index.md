@@ -4,20 +4,21 @@ date: 2025-05-08 17:24:26
 description: >
   How to apply a patch to a Python package in Nix without relying on unreleased
   code or maintaining a fork.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Dependency Management
-    - Nix
-    - Python
-    - Django
+
+slug: patch-python-package-on-nix
+tags:
+  - Technical Notes
+  - Dependency Management
+  - Nix
+  - Python
+  - Django
 ---
 
 I bumped into an annoying issue today while upgrading my Python dependencies in
 a codebase. And I thought it would be a good idea to share the solution with
 you. Thanks to [Nix] for making this kind of fix so straightforward.
 
-<!-- more -->
+<!--more-->
 
 Admittedly, learning and getting used to Nix may take a while. But once you get
 the hang of it, you will be amazed by its power, flexibility and reliability.

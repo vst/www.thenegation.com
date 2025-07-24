@@ -4,18 +4,18 @@ date: 2025-05-31 22:06:31
 description: >-
   I wrote and published a blog post every day for 31 days. Here are my
   takeaways.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Blogging
-    - Lifehack
+slug: blog-challenge-take-two
+tags:
+  - Technical Notes
+  - Blogging
+  - Lifehack
 ---
 
 Today marks the final day of my second month-long blogging challenge. The first
 was in [August] last year. This one, in May, felt different -- but just as
 transformative.
 
-<!-- more -->
+<!--more-->
 
 Here are my takeaways.
 

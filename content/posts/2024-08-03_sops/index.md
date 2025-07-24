@@ -4,13 +4,13 @@ date: 2024-08-03 18:29:25
 description:
   A technical note on managing secrets in a declarative way using SOPS, sops-nix
   and opsops.
-taxonomies:
-  tags:
-    - Technical Note
-    - Security
-    - SOPS
-    - NixOS
-    - Computing
+slug: sops
+tags:
+  - Technical Note
+  - Security
+  - SOPS
+  - NixOS
+  - Computing
 ---
 
 Secret provisioning is a critical operation during the deployment and management
@@ -20,7 +20,7 @@ security and operational efficiency.
 In this post, I am going to discuss [SOPS], [sops-nix] and [opsops] tools for
 managing secrets and how I and my team use it.
 
-<!-- more -->
+<!--more-->
 
 ## Imperative vs Declarative Secret Management
 

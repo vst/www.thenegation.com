@@ -4,17 +4,18 @@ date: 2025-05-09 23:15:40
 description: >
   What 2.5 years of time tracking with Watson taught me about how I work, what
   really matters, and the small hacks that stick.
-taxonomies:
-  tags:
-    - Lifehack
-    - Hacking
+
+slug: watson-via-gh
+tags:
+  - Lifehack
+  - Hacking
 ---
 
 I started using Watson with low expectations. Two and a half years later, it is
 still one of the few tools I have not quit. And it taught me a little bit about
 how I really spend my time.
 
-<!-- more -->
+<!--more-->
 
 I have been using [Watson] since -- well, let me check:
 
@@ -67,7 +68,8 @@ It is more about how you use them, hence the hacking! For example, I could have
 invested in a more sophisticated tool, but instead I stuck to what suits my
 workflow best.
 
-Here is a hack that I am proud of: I wrote a small script as a [GitHub CLI] extension:
+Here is a hack that I am proud of: I wrote a small script as a [GitHub CLI]
+extension:
 
 ```sh
 #!/usr/bin/env bash

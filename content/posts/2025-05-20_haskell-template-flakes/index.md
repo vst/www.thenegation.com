@@ -4,17 +4,18 @@ date: 2025-05-20 21:43:46
 description: >
   This post demonstrates my Haskell project template with Nix Flakes. It is a
   simple template that I use to quickly spin up new Haskell projects.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Haskell
-    - Nix
+
+slug: haskell-template-flakes
+tags:
+  - Technical Notes
+  - Haskell
+  - Nix
 ---
 
 This post introduces my Haskell project template powered by Nix Flakes -- a
 simple setup I use to quickly spin up new Haskell applications.
 
-<!-- more -->
+<!--more-->
 
 [Haskell] has been my go-to language for over 7 years. First, I started with
 [Stack], then switched to plain [Cabal] and finally settled on [Nix] to
@@ -35,11 +36,12 @@ three most prominent are:
 
 I tried the second option a few years ago but have not tried the third one. I
 have been using the first one, using classic Nix. Only recently, I have
-refactored some of my projects to use [Nix Flakes]. Today, I also refactored my Haskell
-project [template] to use Flakes.
+refactored some of my projects to use [Nix Flakes]. Today, I also refactored my
+Haskell project [template] to use Flakes.
 
-My plan is to invest some time in _flake-parts_ and [Horizon Haskell]. In this post,
-I will simply go through my template's `flake.nix` file and show what it does.
+My plan is to invest some time in _flake-parts_ and [Horizon Haskell]. In this
+post, I will simply go through my template's `flake.nix` file and show what it
+does.
 
 The template may evolve, but the examples in this post reference a [pinned
 version][template-pinned] for consistency. Also note that the template is a
@@ -264,8 +266,8 @@ with `upx` to reduce the size of the final binary.
 I am pretty sure that there are many better ways to do what I do in this
 template repository, but I am happy using it to quickly spin up a new Haskell
 project. There are quite a few other things and methods I use in real-life
-projects, such as multi-package builds and [GitHub Release Please Action] integration,
-which are quite easy to add upon this template.
+projects, such as multi-package builds and [GitHub Release Please Action]
+integration, which are quite easy to add upon this template.
 
 If you find this template useful, consider starring the [repository][template]
 or bookmarking it for future reference. You might also want to check out my new

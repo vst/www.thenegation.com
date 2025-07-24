@@ -4,13 +4,13 @@ date: 2024-08-18 21:43:13
 description:
   My recent experience of switching to Neovim after almost 20 years of using
   Emacs.
-taxonomies:
-  tags:
-    - Technical Note
-    - Vim
-    - Emacs
-    - Hacking
-    - Computing
+slug: liking-neovim
+tags:
+  - Technical Note
+  - Vim
+  - Emacs
+  - Hacking
+  - Computing
 ---
 
 After using Emacs for almost 20 years, usually day-in and day-out, I decided to
@@ -19,7 +19,7 @@ that I am starting to like it. In this article, I will share my experience of
 switching from Emacs to Neovim, highlighting the differences, challenges, and
 benefits I encountered along the way.
 
-<!-- more -->
+<!--more-->
 
 Disclaimer: Although my not primary objective, I intend to insult both Vim and
 Emacs users in this article. I will occassionally insult users of other editors
@@ -118,9 +118,9 @@ issues for now.
 
 ## Comparison to Emacs
 
-Emacs is an [operating system]. Vi(m), in the spirit of `ed`, is a program that adheres
-well to [Unix Philosophy]. Neovim is a program that tries to be a bit more than
-Vim and significantly less than Emacs.
+Emacs is an [operating system]. Vi(m), in the spirit of `ed`, is a program that
+adheres well to [Unix Philosophy]. Neovim is a program that tries to be a bit
+more than Vim and significantly less than Emacs.
 
 I can confidently say these things:
 

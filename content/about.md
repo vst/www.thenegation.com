@@ -1,5 +1,8 @@
 ---
 title: About
+seo:
+  og:
+    type: profile
 ---
 
 My name is Sinan.

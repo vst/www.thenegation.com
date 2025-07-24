@@ -1,0 +1,45 @@
+{{ $author := .Site.Params.tn.author.name }}
+{{ $siteTitle := .Site.Title }}
+{{ $pageTitle := or .Title $siteTitle }}
+{{ $siteDescription := .Site.Params.tn.description }}
+{{ $pageDescription := or .Params.description $siteDescription }}
+{{ $twitterHandle := "vehbisinan" }}
+{{ $domain := "thenegation.com" }}
+{{ $imageOg := printf "%smedia/ogimg.png" .Site.BaseURL }}
+{{ $imageTw := printf "%smedia/twimg.png" .Site.BaseURL }}
+
+
+<title>{{ $pageTitle | markdownify }}</title>
+<meta name="author" content="{{ $author | markdownify }}" />
+{{ if .Params.seo.og.type }}
+  <meta property="og:type" content="{{ .Params.seo.og.type }}" />
+{{ else if .IsHome }}
+  <meta property="og:type" content="website" />
+{{ else if .IsSection }}
+  <meta property="og:type" content="website" />
+{{ else }}
+  <meta property="og:type" content="article" />
+{{ end }}
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="{{ $siteTitle | markdownify }}" />
+<meta property="og:author" content="{{ $author | markdownify }}" />
+<meta property="og:image" content="{{ $imageOg }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ $imageTw }}" />
+<meta name="twitter:domain" content="{{ $domain }}" />
+<meta name="twitter:site" content="@{{ $twitterHandle }}" />
+<meta name="twitter:creator" content="@{{ $twitterHandle }}" />
+{{ with .Permalink }}
+  <link rel="canonical" href="{{ . }}" />
+  <meta property="og:url" content="{{ . }}" />
+  <meta name="twitter:url" content="{{ . }}" />
+{{ end }}
+<meta name="description" content="{{ $pageDescription | markdownify }}" />
+<meta property="og:title" content="{{ $pageTitle | markdownify }}" />
+<meta
+  property="og:description"
+  content="{{ $pageDescription | markdownify }}" />
+<meta name="twitter:title" content="{{ $pageTitle | markdownify }}" />
+<meta
+  name="twitter:description"
+  content="{{ $pageDescription | markdownify }}" />

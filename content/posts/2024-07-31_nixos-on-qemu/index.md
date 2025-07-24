@@ -2,11 +2,11 @@
 title: Running NixOS Guests on QEMU
 date: 2024-07-31 14:41:19
 description: A quick reference to create and run NixOS guests on QEMU.
-taxonomies:
-  tags:
-    - Technical Notes
-    - NixOS
-    - Computing
+slug: nixos-on-qemu
+tags:
+  - Technical Notes
+  - NixOS
+  - Computing
 ---
 
 Once in a while, I want to test some NixOS configuration without affecting my
@@ -19,7 +19,7 @@ solution for my needs.
 
 This guide is a quick reference to create and run NixOS guests on QEMU.
 
-<!-- more -->
+<!--more-->
 
 <!-- toc -->
 

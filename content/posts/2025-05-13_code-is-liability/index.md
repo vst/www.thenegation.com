@@ -4,11 +4,12 @@ date: 2025-05-13 23:55:27
 description: >
   Code is a liability, not an asset. This post explores practical ways to write
   less code, reduce complexity and improve maintainability.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Programming
-    - Principles
+
+slug: code-is-liability
+tags:
+  - Technical Notes
+  - Programming
+  - Principles
 ---
 
 While programming, we often aim to avoid repetition. Repetition is boring, and
@@ -16,7 +17,7 @@ ironically, much of programming exists to automate boring tasks in the first
 place. But repetition is just one symptom of a much deeper problem: Code itself
 is a liability.
 
-<!-- more -->
+<!--more-->
 
 Repetition reveals itself in different forms. Off the top of my head, I can
 think of:

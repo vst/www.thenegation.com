@@ -2,27 +2,26 @@
 title: "Hacking Watson with Haskell - Part 3"
 date: 2024-08-17 21:02:23
 description: Using Haskell to start and stop Watson timer.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Literate Programming
-    - Computing
+slug: hacking-watson-part-3
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Literate Programming
+  - Computing
 ---
 
 In the previous blog posts ([part 1], [part 2]), we managed to read [Watson]
 frames and state from its JSON files. In this blog post, we will do something
 more useful: start and stop timer.
 
-<!-- more -->
+<!--more-->
 
 ## Program
 
 This blog post is a Literate Haskell program that attempts to start/stop
 [Watson] timer. We will build on top of the previous blog posts ([part 1], [part
-2]).
-If you haven't read them, I recommend you to read them first.
+2]). If you haven't read them, I recommend you to read them first.
 
 Let's start with the language extensions:
 

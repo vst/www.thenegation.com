@@ -1,0 +1,67 @@
+title = "The Negation --- @vst's Personal Website"
+languageCode = "en-us"
+baseURL = "https://thenegation.com"
+enableEmoji = true
+
+[params]
+  [params.tn]
+    version = "1.67.0" # x-release-please-version
+    description = "Personal Website of Vehbi Sinan Tunalioglu"
+
+    [params.tn.author]
+      name = "Vehbi Sinan Tunalioglu"
+      ebsite = "https://github.com/vst"
+
+[build]
+  [build.buildStats]
+    enable = true
+
+  [[build.cachebusters]]
+    source = "assets/notwatching/hugo_stats\\.json"
+    target = "css"
+
+  [[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+
+  [[module.mounts]]
+    disableWatch = true
+    source = "hugo_stats.json"
+    target = "assets/notwatching/hugo_stats.json"
+
+[menus]
+  [[menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+
+  [[menus.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
+
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 30
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = true
+    style = 'catppuccin-mocha'
+    tabWidth = 4
+    wrapperClass = 'highlight'

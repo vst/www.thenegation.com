@@ -4,17 +4,18 @@ date: 2025-05-17 21:49:05
 description: >
   A reflection on template engine choices through the lens of abstractions in
   terms of their power.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Programming
+
+slug: choosing-template-engine
+tags:
+  - Technical Notes
+  - Programming
 ---
 
 Continuing on the topic of template engines, I would like to share my thoughts
 on the _power_ of template engines, and how it relates to the _power_ of
 abstractions in programming.
 
-<!-- more -->
+<!--more-->
 
 First, let us look at the classification of template engines I have listed in my
 [previous post]:

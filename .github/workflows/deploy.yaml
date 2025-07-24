@@ -12,11 +12,11 @@ jobs:
         uses: "actions/checkout@v4"
 
       - name: "Install Nix"
-        uses: "DeterminateSystems/nix-installer-action@v17"
+        uses: "DeterminateSystems/nix-installer-action@v19"
 
       - name: "Build Website"
         run: |
-          nix-shell -A shell --run "dev-build"
+          nix develop --command bash -c "npm ci && npm run build"
 
       - name: "Fix Permissions of Website Artifacts"
         run: |

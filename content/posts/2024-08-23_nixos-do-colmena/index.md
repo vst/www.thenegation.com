@@ -4,18 +4,18 @@ date: 2024-08-23 21:14:29
 description:
   Let's prepare a DigitalOcean image for NixOS, launch a droplet with it and
   manage it using Colmena.
-taxonomies:
-  tags:
-    - Technical Note
-    - NixOS
-    - Hacking
-    - Computing
+slug: nixos-do-colmena
+tags:
+  - Technical Note
+  - NixOS
+  - Hacking
+  - Computing
 ---
 
 In this post, we will prepare a [DigitalOcean] image for [NixOS], launch a
 droplet with it and manage it using [Colmena].
 
-<!-- more -->
+<!--more-->
 
 [DigitalOcean] does not have out-of-the-box support for [NixOS]. However, we can
 use a custom image to launch a droplet with NixOS.
@@ -82,8 +82,8 @@ $ ls -lh result/nixos.qcow2.gz
 ```
 
 The next step is to upload the image to DigitalOcean. For this, you can follow
-the [Custom Images Quickstart] section of the [DigitalOcean documentation]. In my
-case, I used following information while uploading the image:
+the [Custom Images Quickstart] section of the [DigitalOcean documentation]. In
+my case, I used following information while uploading the image:
 
 1. Name: `NixOS 24.05 (797f7dc4)`
 2. Distribution: `Unknown`
@@ -148,8 +148,8 @@ activated on the host. You can build the configuration on the host, too, but I
 have quite decent Internet connection and using my workstation's Nix store as
 cache sounds good to me.
 
-[Colmena Documentation] is quite decent. I recommend you to read it, especially the
-[Tutorial] section.
+[Colmena Documentation] is quite decent. I recommend you to read it, especially
+the [Tutorial] section.
 
 Let's start by installing Colmena:
 

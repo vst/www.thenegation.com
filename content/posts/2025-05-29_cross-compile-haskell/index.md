@@ -4,19 +4,19 @@ date: 2025-05-29 23:55:54
 description: >-
   Cross-compiling Haskell projects under NixOS using Docker images for ARM
   architectures, and running them under emulation on x86_64 hosts.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Docker
-    - Hacking
-    - Haskell
-    - Nix
+slug: cross-compile-haskell
+tags:
+  - Technical Notes
+  - Docker
+  - Hacking
+  - Haskell
+  - Nix
 ---
 
 I learned how to cross-compile Haskell projects under NixOS using Docker images
 for ARM architectures, and how to run them under emulation on `x86_64` hosts.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 

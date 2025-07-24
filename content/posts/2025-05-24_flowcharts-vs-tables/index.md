@@ -5,17 +5,17 @@ description: >-
   Computer programs are best understood in terms of the data they consume,
   process and produce. Flowcharts are useful for visualizing control flow, but
   not for understanding complexity.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Programming
+slug: flowcharts-vs-tables
+tags:
+  - Technical Notes
+  - Programming
 ---
 
 Computer programs are best understood in terms of the data they consume, process
 and produce. Flowcharts are useful for visualizing control flow, but not for
 understanding complexity.
 
-<!-- more -->
+<!--more-->
 
 One of the most famous quotes of [Frederick Brooks] is:
 

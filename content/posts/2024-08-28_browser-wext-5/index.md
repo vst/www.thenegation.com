@@ -4,19 +4,19 @@ date: 2024-08-28 22:12:02
 description:
   Populating the popup with the OpenGraph information parsed from the Webpage on
   active tabs.
-taxonomies:
-  tags:
-    - Technical Note
-    - Web Development
-    - Hacking
-    - Computing
+slug: browser-wext-5
+tags:
+  - Technical Note
+  - Web Development
+  - Hacking
+  - Computing
 ---
 
 This is the last post in the series of the Web Browser Extension Workshop. In
 this post, we will populate our popup using the service we created in the
 previous post.
 
-<!-- more -->
+<!--more-->
 
 ## Overview
 

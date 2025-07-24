@@ -3,16 +3,16 @@ title: "A Glimpse into My Shell"
 date: 2025-05-25 23:20:42
 description: >-
   A glimpse into my shell history reveals the tools I rely on daily.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Hacking
+slug: shell-history
+tags:
+  - Technical Notes
+  - Hacking
 ---
 
 A glimpse into my shell history reveals the tools I rely on daily. These are not
 curated -- just raw, frequent commands logged over time.
 
-<!-- more -->
+<!--more-->
 
 Since I have exhausted all my curiosity, I ran a quick command on my terminal to
 see which commands I use the most:

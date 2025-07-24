@@ -3,16 +3,16 @@ title: "Ruff and Ready: Linting Before the Party"
 date: 2025-05-02 14:32:07
 description: |
   A practical guide to migrating from traditional Python linters to Ruff, with a staged strategy, tooling insights, and lessons from a large production codebase.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Python
+slug: migrate-to-ruff
+tags:
+  - Technical Notes
+  - Python
 ---
 
 In this post, I share why I value linters and formatters, and how I migrate from
 traditional Python tools to [ruff].
 
-<!-- more -->
+<!--more-->
 
 > When I was using Haskell, I was fighting the type checker. Now I am fighting
 > the Rust borrow checker.

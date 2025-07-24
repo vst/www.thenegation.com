@@ -3,19 +3,19 @@ title: "Nix-Powered Python Development"
 date: 2025-05-07 19:11:06
 description: |
   Python development environment using Nix flakes with support for testing, linting, formatting, and LSP-based editor integration.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Templates
-    - Nix
-    - Python
+slug: nix-powered-python-dev
+tags:
+  - Technical Notes
+  - Templates
+  - Nix
+  - Python
 ---
 
 After a few years of floating from one hack to another, this is my practical
 guide to setting up a reasonable Python development environment using Nix flakes
 with support for testing, linting, formatting, and LSP-based editor integration.
 
-<!-- more -->
+<!--more-->
 
 I have mentioned in my earlier posts that [I am migrating][ruff-post] to [ruff]
 for my Python projects, and [I have started][nix-tmpl-post] putting together a

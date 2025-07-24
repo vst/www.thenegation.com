@@ -1,6 +1,6 @@
 # My Personal Website
 
-This Website is built using [Zola] and [Tailwind]. It is built and deployed
+This Website is built using [Hugo] and [Tailwind]. It is built and deployed
 using GitHub Actions. The Website _should_ be live on <https://thenegation.com>
 and <https://vst.github.io>.
 
@@ -30,13 +30,13 @@ tailwindcss --minify --input styles/main.css --output static/styles/main.css
 Run development server:
 
 ```sh
-zola serve
+hugo server
 ```
 
 Build the Website:
 
 ```sh
-zola build
+hugo build --gc --minify
 ```
 
 The output is generated under the `public/` directory.
@@ -66,6 +66,6 @@ under [CC BY-SA 4.0] unless otherwise noted.
 
 <!-- REFERENCES -->
 
-[Zola]: https://www.getzola.org
+[Hugo]: https://gohugo.io
 [Tailwind]: https://tailwindcss.com
 [CC BY-SA 4.0]: https://creativecommons.org/licenses/by-sa/4.0

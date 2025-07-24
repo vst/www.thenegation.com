@@ -2,18 +2,18 @@
 title: OpenResty on NixOS for an API Gateway
 date: 2024-08-01 11:45:40
 description: A technical note on using OpenResty on NixOS as an API gateway.
-taxonomies:
-  tags:
-    - Technical Notes
-    - NixOS
-    - Computing
+slug: nixos-openresty-api-gateway
+tags:
+  - Technical Notes
+  - NixOS
+  - Computing
 ---
 
 Are you using an API gateway? Do you really need one? If you are using [NixOS]
 and feel comfortable with some [Lua], you may want to consider [OpenResty] on
 NixOS as an API gateway.
 
-<!-- more -->
+<!--more-->
 
 An _API Gateway_ is simply a service that acts as a reverse proxy for API
 requests to one or more upstream services. Modern API gateways streamline the
@@ -22,17 +22,17 @@ limiting, caching, logging, monitoring, etc. There are quite a few such
 proprietary and open-source API gateways available. Cloud service providers
 offer their own managed API gateways as well.
 
-We have been using [Apache APISIX] for a while now. It is a high-performance, cloud-native
-API gateway solution. It also has a nice dashboard for managing APIs. However, I
-have been looking for a simpler and more portable solution for our use case. In particular,
-I want to be able manage the API gateway as a NixOS service so that the configuration
-can be tested and redeployed easily.
+We have been using [Apache APISIX] for a while now. It is a high-performance,
+cloud-native API gateway solution. It also has a nice dashboard for managing
+APIs. However, I have been looking for a simpler and more portable solution for
+our use case. In particular, I want to be able manage the API gateway as a NixOS
+service so that the configuration can be tested and redeployed easily.
 
-Two of the fairly popular open-source API gateways, [Kong] and [Apache APISIX], are
-based on [OpenResty] that is mainly powered by [Nginx] and [Lua]. NixOS has first-class
-support for OpenResty. So, naturally, I decided to give it a try. The result was
-promising enough for us to start migrating our current APISIX deployments to OpenResty
-on NixOS.
+Two of the fairly popular open-source API gateways, [Kong] and [Apache APISIX],
+are based on [OpenResty] that is mainly powered by [Nginx] and [Lua]. NixOS has
+first-class support for OpenResty. So, naturally, I decided to give it a try.
+The result was promising enough for us to start migrating our current APISIX
+deployments to OpenResty on NixOS.
 
 In this post, I will show how to set up OpenResty as NixOS service along with a
 few rudimentary location examples.

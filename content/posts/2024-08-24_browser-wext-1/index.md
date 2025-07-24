@@ -3,12 +3,12 @@ title: "Web Browser Extension Workshop - Part 1"
 date: 2024-08-24 22:31:40
 description:
   Setting up the development environment and reading the content of the Webpage.
-taxonomies:
-  tags:
-    - Technical Note
-    - Web Development
-    - Hacking
-    - Computing
+slug: browser-wext-1
+tags:
+  - Technical Note
+  - Web Development
+  - Hacking
+  - Computing
 ---
 
 I am starting a short series of blog posts about creating a Web browser
@@ -16,7 +16,7 @@ extension using [WXT]. In this first part, we will set up the development
 environment and try to read the content of the navigated Webpage or Webpage on
 the active tab.
 
-<!-- more -->
+<!--more-->
 
 ## Motivation
 
@@ -74,9 +74,9 @@ them in a popup.
 
 ## Getting Started
 
-You do not need this post to get started as [WXT - Getting
-Started Documentation] is good enough, but let me tell you what I did for good
-orders sake.
+You do not need this post to get started as [WXT - Getting Started
+Documentation] is good enough, but let me tell you what I did for good orders
+sake.
 
 I used `npx` and `wxt` to create the project:
 

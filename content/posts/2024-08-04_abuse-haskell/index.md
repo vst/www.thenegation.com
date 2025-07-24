@@ -4,23 +4,23 @@ date: 2024-08-04 12:21:10
 description:
   A blog post that is an executable Haskell program to convert Markdown files to
   a target format.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Literate Programming
-    - Computing
+slug: abuse-haskell
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Literate Programming
+  - Computing
 ---
 
 Why? Because I can, and it is a rainy Sunday.
 
-I post my notes on [my blog], [Hashnode] and [dev.to], which require slightly different
-markdown formats. I have been doing the sane thing to fix formats so far. But it
-is a rainy Sunday and I am bored, so I decided to make this blog post an executable
-Haskell program to do the same.
+I post my notes on [my blog], [Hashnode] and [dev.to], which require slightly
+different markdown formats. I have been doing the sane thing to fix formats so
+far. But it is a rainy Sunday and I am bored, so I decided to make this blog
+post an executable Haskell program to do the same.
 
-<!-- more -->
+<!--more-->
 
 ## The Non-Problem
 

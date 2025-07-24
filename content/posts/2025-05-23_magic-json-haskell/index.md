@@ -4,17 +4,17 @@ date: 2025-05-23 21:19:46
 description: >-
   Maximize your return on investment into writing boilerplate with autodocodec
   Haskell library.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Hacking
-    - Haskell
+slug: magic-json-haskell
+tags:
+  - Technical Notes
+  - Hacking
+  - Haskell
 ---
 
 Among all Haskell libraries I have used, the one I reach for the most is
 [autodocodec]. I will explain what it is and what freebies it gives you.
 
-<!-- more -->
+<!--more-->
 
 I have been thinking about writing this post for a while, but I never got around
 to it. There is no right time to talk about it, so it is now.

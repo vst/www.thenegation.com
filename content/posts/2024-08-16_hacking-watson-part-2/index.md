@@ -2,20 +2,20 @@
 title: "Hacking Watson with Haskell - Part 2"
 date: 2024-08-16 22:50:46
 description: Using Haskell to read Watson state from a JSON file.
-taxonomies:
-  tags:
-    - Technical Note
-    - Haskell
-    - Hacking
-    - Literate Programming
-    - Computing
+slug: hacking-watson-part-2
+tags:
+  - Technical Note
+  - Haskell
+  - Hacking
+  - Literate Programming
+  - Computing
 ---
 
 In the [previous blog post], we read the [Watson] frames from a JSON file. In
 this blog post, we will read the [Watson] state file and print it to the
 standard output.
 
-<!-- more -->
+<!--more-->
 
 ## Watson State
 

@@ -5,17 +5,17 @@ description: >-
   A simple personal routine -- daily Z reports and weekly reviews -- helped me
   become more self-aware, accountable, and realistic. Over time, I extended it
   to the team.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Lifehack
+slug: daily-z-report-weekly-review
+tags:
+  - Technical Notes
+  - Lifehack
 ---
 
 This is not about improving productivity, but rather a simple but bottom-up hack
 to improve personal awareness and accountability and extend it to the team.
 Productivity should be a natural byproduct of that.
 
-<!-- more -->
+<!--more-->
 
 It is important how we plan, but more important is how we execute and adapt to
 the ever-changing environment.

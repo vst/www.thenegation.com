@@ -4,16 +4,17 @@ date: 2025-05-15 18:23:55
 description: >
   How thinking of your code as an SDK can help validate your development
   practices and improve code quality
-taxonomies:
-  tags:
-    - Technical Notes
-    - Thinking
+
+slug: sdk-driven-development
+tags:
+  - Technical Notes
+  - Thinking
 ---
 
 This-driven development, that-driven development, and now you should bother with
 this other thing?
 
-<!-- more -->
+<!--more-->
 
 I am only half-serious. You should not. Yet you might still want to consider it
 as a litmus test for your projects.
@@ -80,9 +81,9 @@ REST APIs in the form of an OpenAPI specification are a great example of SDKs
 for starters. For a well-designed and well-documented REST API, you do not need
 an SDK library that does not come with additional value such as error handling,
 caching or rate limiting. I noticed this clearly when I was looking into the
-[Zendesk API] documentation. Zendesk maintains a single library in Ruby and lists
-another 20 community-maintained libraries written in different languages. Honestly,
-I do not need any of them.
+[Zendesk API] documentation. Zendesk maintains a single library in Ruby and
+lists another 20 community-maintained libraries written in different languages.
+Honestly, I do not need any of them.
 
 I design and document most of my REST APIs for myself and my team. Then, I take
 the extra step to imagine third-party developers using them. This comes

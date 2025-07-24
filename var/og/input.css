@@ -10,18 +10,18 @@
   }
 
   .og-canvas {
-    @apply flex flex-col w-full h-full bg-gray-100 text-gray-900;
+    @apply flex h-full w-full flex-col bg-gray-100 text-gray-900;
   }
 
   .og-canvas-head {
   }
 
   .og-canvas-main {
-    @apply flex flex-col grow gap-6 items-center justify-center;
+    @apply flex grow flex-col items-center justify-center gap-6;
   }
 
   .og-canvas-foot {
-    @apply shrink bg-gray-900 text-gray-200 text-2xl flex flex-row w-full justify-between px-10 py-1;
+    @apply flex w-full shrink flex-row justify-between bg-gray-900 px-10 py-1 text-2xl text-gray-200;
   }
 
   .og-avatar {

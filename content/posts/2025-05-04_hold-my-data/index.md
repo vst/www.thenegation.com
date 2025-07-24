@@ -3,18 +3,18 @@ title: "Hold My Data"
 date: 2025-05-04 20:20:29
 description: |
   How do we manage data? Why is it important?
-taxonomies:
-  tags:
-    - Technical Notes
-    - Data
-    - Infrastructure
+slug: hold-my-data
+tags:
+  - Technical Notes
+  - Data
+  - Infrastructure
 ---
 
 This post is about data snapshots, backups and archives, why we create and keep
 them, and how this entire exercise can be seen from top-down and bottom-up in a
 business setting.
 
-<!-- more -->
+<!--more-->
 
 What will follow is not a practical guide. It will start as philosophical and
 psychological musings. Then, I will try to establish a glossary for reference.

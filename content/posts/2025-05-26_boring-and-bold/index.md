@@ -4,18 +4,18 @@ date: 2025-05-26 23:56:04
 description: >-
   How boring work can lead to effective internal tooling with bold
   experimentation.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Productivity
-    - Hacking
+slug: boring-and-bold
+tags:
+  - Technical Notes
+  - Productivity
+  - Hacking
 ---
 
 Boring work is often the most effective work. It is the kind of work that might
 lead us to understand patterns and solve problems that we did not even know we
 had.
 
-<!-- more -->
+<!--more-->
 
 Tolerance to boredom and tedium is a superpower, especially for programmers.
 Once we begin to recognize the patterns in our work, we can factor out the
@@ -111,7 +111,8 @@ trick is to start small -- think weekend-sized.
 
 Scratching your own itch can be risky: your use case may not generalize. But who
 knows, maybe someday those experiments turn into something others want to use as
-well. What you need is a good [Mom Test] to validate your problem and its solution.
+well. What you need is a good [Mom Test] to validate your problem and its
+solution.
 
 <!-- References -->
 

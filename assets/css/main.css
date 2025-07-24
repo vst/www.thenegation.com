@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "hugo_stats.json";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+body {
+  @apply flex min-h-screen flex-col;
+  @apply mx-2 bg-gray-50 lg:mx-0 dark:bg-gray-950 dark:text-gray-300;
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+body > header {
+  @apply flex w-full shrink flex-row items-center justify-between;
+  @apply mx-auto mt-4 mb-8 max-w-2xl;
+}
+
+body > header > a {
+  @apply flex grow flex-row;
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+body > header > nav {
+  @apply flex shrink flex-row items-center space-x-2;
+}
+
+body > header > nav > ul {
+  @apply flex flex-row;
+}
+
+body > header > nav > ul > li {
+  @apply block;
+  @apply px-2 py-1;
+  @apply text-sm;
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+body > header > nav > ul > li > a.active {
+  @apply text-gray-600 dark:text-gray-300;
+  @apply decoration-gray-400 dark:decoration-gray-600;
+  @apply underline decoration-solid decoration-1 underline-offset-4;
+}
+
+div.highlight > pre {
+  @apply relative py-5;
+}
+
+div.highlight > pre > .copy-button {
+  @apply absolute top-0 right-0;
+  @apply rounded-bl-md border-b border-l border-gray-500 dark:border-gray-600;
+  @apply bg-gray-950 dark:bg-gray-800;
+  @apply cursor-pointer;
+  @apply px-1.5 py-0.5;
+  @apply text-xs;
+  @apply text-gray-400 hover:text-gray-100 dark:text-gray-500 dark:hover:text-gray-200;
+  @apply transition-colors duration-200 ease-in-out;
+}
+
+.section-prev-next {
+  @apply mt-12 flex justify-between gap-4 text-sm;
+  @apply mx-auto w-full;
+}
+
+/********/
+/* MAIN */
+/********/
+
+body > main {
+  @apply flex grow flex-col;
+  @apply mx-auto mb-8 w-full max-w-2xl;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+body > footer {
+  @apply flex w-full shrink flex-col;
+  @apply mx-auto max-w-2xl;
+  @apply space-y-2 border-t border-dashed border-gray-300 py-3 text-xs text-gray-400 dark:border-gray-700 dark:text-gray-500;
+}
+
+/**************/
+/* COMPONENTS */
+/**************/
+
+@layer components {
+  .label {
+    @apply bg-gray-300 dark:bg-gray-700;
+    @apply text-gray-800 dark:text-gray-200;
+    @apply rounded-sm;
+    @apply px-2 py-1;
+    @apply text-xs;
+  }
+}

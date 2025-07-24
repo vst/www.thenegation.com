@@ -4,18 +4,19 @@ date: 2025-05-19 22:17:05
 description: >
   A quick note on how to set up deadman checks in Grafana with InfluxDB as the
   data source.
-taxonomies:
-  tags:
-    - Technical Notes
-    - Observability
-    - Grafana
+
+slug: grafana-deadman-checks
+tags:
+  - Technical Notes
+  - Observability
+  - Grafana
 ---
 
 This post is a quick, technical note on how to set up deadman checks in Grafana
 with InfluxDB as the data source, and how to deal with a peculiar case when the
 host is not reporting and the alert enters the _resolved_ state.
 
-<!-- more -->
+<!--more-->
 
 ## Background
 
@@ -26,9 +27,9 @@ InfluxDB as the persistence layer. Although I am not using the InfluxDB UI
 anymore, I still rely on InfluxDB alerts.
 
 Recently, I set up Grafana alerts with InfluxDB as my data source, except for
-[Deadman Checks]. Then, I decided to set up deadman checks in Grafana so that I could
-run Grafana and InfluxDB alerts in parallel until I was sure everything was working
-as expected, to eventually drop InfluxDB alerts.
+[Deadman Checks]. Then, I decided to set up deadman checks in Grafana so that I
+could run Grafana and InfluxDB alerts in parallel until I was sure everything
+was working as expected, to eventually drop InfluxDB alerts.
 
 ## Setting Up the Deadman Check
 
@@ -80,9 +81,9 @@ However, I encountered a misleading behavior:
 
 Apparently, the "Configure no data and error handling" configuration for the
 alert rule applies to the entire query, not to a missing series in the query
-result. This appears to be the [intended behavior]. The only thing we can do in Grafana
-v12 is to set the number of evaluations to a higher number before it enters the _resolved_
-state.
+result. This appears to be the [intended behavior]. The only thing we can do in
+Grafana v12 is to set the number of evaluations to a higher number before it
+enters the _resolved_ state.
 
 ## Workarounds and Final Thoughts
 
