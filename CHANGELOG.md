@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.0.0](https://github.com/vst/vst.github.io/compare/v1.67.0...v2.0.0) (2025-07-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **repo:** change the repository name
+* **ci:** switch from GitHub Pages to Vercel for production
+* **hugo:** revisit content for Hugo adaptation
+* **hugo:** migrate Website from Zola to Hugo
+
+### Bug Fixes
+
+* **analytics:** proxy plausible analytics on Vercel ([d19f708](https://github.com/vst/vst.github.io/commit/d19f708f6f45cb4b79c120db23e3859dca84c658))
+* **release:** fix Release Please configuration ([142066a](https://github.com/vst/vst.github.io/commit/142066a145e71c25fbd623591a1022773c3164d3))
+
+
+### Code Refactoring
+
+* **ci:** switch from GitHub Pages to Vercel for production ([a9ffc74](https://github.com/vst/vst.github.io/commit/a9ffc74c76bd0a8760befaf977fb881330829206))
+* **hugo:** migrate Website from Zola to Hugo ([612678a](https://github.com/vst/vst.github.io/commit/612678abb9bff2112d229f65cc8e8f5478cf8c9e))
+* **hugo:** revisit content for Hugo adaptation ([7b7e63a](https://github.com/vst/vst.github.io/commit/7b7e63a04b69450b54b76c584fc2552110f33b57))
+* **repo:** change the repository name ([b62df96](https://github.com/vst/vst.github.io/commit/b62df961a13bfe3a2ea1608bd6320f522c79a41a))
+
 ## [1.67.0](https://github.com/vst/vst.github.io/compare/v1.66.0...v1.67.0) (2025-05-31)
 
 
