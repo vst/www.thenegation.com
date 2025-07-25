@@ -191,7 +191,7 @@ runhaskell -pgmLmarkdown-unlit content/posts/2024-08-16_hacking-watson-part-2.lh
 ..., and see the output:
 
 ```txt
-CurrentStateRunning {currentStateRunningSince = 2024-08-16 14:53:57 UTC, currentStateRunningProject = "vst", currentStateRunningTags = ["gh:vst/vst.github.io"]}
+CurrentStateRunning {currentStateRunningSince = 2024-08-16 14:53:57 UTC, currentStateRunningProject = "vst", currentStateRunningTags = ["gh:vst/www.thenegation.com"]}
 ```
 
 ## Wrap-Up

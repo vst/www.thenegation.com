@@ -4,13 +4,13 @@
   "description": "vst's Personal Website",
   "author": "Vehbi Sinan Tunalioglu",
   "license": "CC-BY-SA-4.0",
-  "homepage": "https://github.com/vst/vst.github.io#readme",
+  "homepage": "https://github.com/vst/www.thenegation.com#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vst/vst.github.io.git"
+    "url": "git+https://github.com/vst/www.thenegation.com.git"
   },
   "bugs": {
-    "url": "https://github.com/vst/vst.github.io/issues"
+    "url": "https://github.com/vst/www.thenegation.com/issues"
   },
   "scripts": {
     "prettier": "prettier",

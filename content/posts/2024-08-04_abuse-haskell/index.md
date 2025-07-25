@@ -209,5 +209,5 @@ Joke aside; rain is over.
 [Nix shell]: https://wiki.nixos.org/wiki/Development_environment_with_nix-shell
 [Zola]: https://www.getzola.org
 [dev.to]: https://dev.to/vst
-[my blog's source code]: https://github.com/vst/vst.github.io
+[my blog's source code]: https://github.com/vst/www.thenegation.com
 [my blog]: https://thenegation.com

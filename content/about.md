@@ -17,4 +17,4 @@ This Website hosts my blog posts. Its [source code] is available on GitHub.
 
 [LinkedIn]: https://www.linkedin.com/in/vehbisinan
 [GitHub profile]: https://github.com/vst
-[source code]: https://github.com/vst/vst.github.io
+[source code]: https://github.com/vst/www.thenegation.com

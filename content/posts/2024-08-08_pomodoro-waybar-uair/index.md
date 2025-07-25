@@ -67,9 +67,9 @@ Monday 31 October 2022 (38m 43s)
 I even integrated it into my [gh] setup as an extension:
 
 ```sh
-$ cd ~/repos/vst/vst.github.io
+$ cd ~/repos/vst/www.thenegation.com
 $ gh watson
-Starting project vst [gh:vst/vst.github.io] at 21:01
+Starting project vst [gh:vst/www.thenegation.com] at 21:01
 $ watson stop
 ...
 ```
