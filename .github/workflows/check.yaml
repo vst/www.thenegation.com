@@ -18,14 +18,3 @@ jobs:
       - name: "Test and Build Website"
         run: |
           nix develop --command bash -c "npm ci && npm run test && npm run build"
-
-      - name: "Fix Permissions of Website Artifacts"
-        run: |
-          chmod -c -R +rX "public/" | while read -r line; do
-            echo "::warning title=Invalid file permissions automatically fixed::${line}"
-          done
-
-      - name: "Upload Website"
-        uses: "actions/upload-pages-artifact@v3"
-        with:
-          path: "public/"
