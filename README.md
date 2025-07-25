@@ -1,62 +1,57 @@
 # My Personal Website
 
-This Website is built using [Hugo] and [Tailwind]. It is built and deployed
-using GitHub Actions. The Website _should_ be live on <https://thenegation.com>
-and <https://vst.github.io>.
+This Website is built using [Hugo] and [Tailwind]. The Website _should_ be live
+on <https://www.thenegation.com>.
 
 ## Development
 
 Enter the Nix shell provisioned in the repository:
 
 ```sh
-nix-shell -A shell
+nix develop
 ```
 
-> **Note**
->
-> If you want, you can use [direnv] integration, too:
->
-> ```sh
-> echo "use nix -A shell" > .envrc
-> direnv allow
-> ```
-
-Build stylesheet:
+For [direnv] integration, first create a `.envrc` file in the root of the
+repository with the following content:
 
 ```sh
-tailwindcss --minify --input styles/main.css --output static/styles/main.css
+echo "use flake" > .envrc
 ```
 
-Run development server:
+... and then allow it:
 
 ```sh
-hugo server
+direnv allow
 ```
 
-Build the Website:
+Install Node dependencies:
 
 ```sh
-hugo build --gc --minify
+npm install
 ```
 
-The output is generated under the `public/` directory.
-
-Lint codebase:
+Run the Website in development mode:
 
 ```sh
-dev-check
+npm run dev
 ```
 
-Format codebase:
+Format the codebase:
 
 ```sh
-dev-format
+npm run format
 ```
 
-Build the Website:
+Test the codebase:
 
 ```sh
-dev-build
+npm run test
+```
+
+Build the Website in production mode:
+
+```sh
+npm run build
 ```
 
 ## License and Copyrights
