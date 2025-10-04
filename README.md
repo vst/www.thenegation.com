@@ -42,10 +42,10 @@ Format the codebase:
 npm run format
 ```
 
-Test the codebase:
+Check and build the codebase:
 
 ```sh
-npm run test
+npm run check
 ```
 
 Build the Website in production mode:
