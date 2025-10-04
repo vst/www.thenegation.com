@@ -15,6 +15,7 @@
       devShells = forAllSystems (system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
+          dev-md-format = pkgs.callPackage ./var/tools/dev-md-format { };
         in
         {
           default = pkgs.mkShell {
@@ -23,6 +24,10 @@
               pkgs.taplo
               pkgs.nodejs_22
               pkgs.vscode-langservers-extracted
+
+              dev-md-format
+              (pkgs.callPackage ./var/tools/dev-cross-post-devto { inherit dev-md-format; })
+              (pkgs.callPackage ./var/tools/dev-cross-post-hashnode { inherit dev-md-format; })
             ];
           };
         }
