@@ -10,11 +10,11 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout main"
-        uses: "actions/checkout@v4"
+        uses: "actions/checkout@v5"
 
       - name: "Install Nix"
-        uses: "DeterminateSystems/nix-installer-action@v19"
+        uses: "DeterminateSystems/nix-installer-action@v20"
 
       - name: "Test and Build Website"
         run: |
-          nix develop --command bash -c "npm ci && npm run test && npm run build"
+          nix develop .#ci --command bash -c "npm ci && npm run check && npm run build"
