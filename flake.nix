@@ -30,6 +30,14 @@
               (pkgs.callPackage ./var/tools/dev-cross-post-hashnode { inherit dev-md-format; })
             ];
           };
+
+          ci = pkgs.mkShell {
+            packages = [
+              pkgs.hugo
+              pkgs.taplo
+              pkgs.nodejs_22
+            ];
+          };
         }
       );
     };
