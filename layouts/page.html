@@ -33,22 +33,21 @@
     <nav class="section-prev-next">
       {{- with .PrevInSection -}}
         <a
-          class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
           href="{{- .RelPermalink -}}"
-          >← {{ .Title | markdownify }}</a
+          title="[Previous Post] {{ .Title | markdownify }}"
+          class="prev"
+          ><span class="arrow">←</span>
+          <span class="title">{{ .Title | markdownify }}</span></a
         >
-      {{- else -}}
-        <span></span>
       {{- end -}}
-
       {{- with .NextInSection -}}
         <a
-          class="text-right text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
           href="{{- .RelPermalink -}}"
-          >{{ .Title | markdownify }} →</a
+          class="next"
+          title="[Next Post] {{ .Title | markdownify }}"
+          ><span class="title">{{ .Title | markdownify }}</span>
+          <span class="arrow">→</span></a
         >
-      {{- else -}}
-        <span></span>
       {{- end -}}
     </nav>
   {{- end -}}

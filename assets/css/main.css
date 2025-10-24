@@ -73,10 +73,31 @@ div.highlight > pre > .copy-button {
 }
 
 .section-prev-next {
-  @apply mt-12 flex justify-between gap-4 text-sm;
+  @apply mt-12 gap-4;
+  @apply grid grid-cols-1 md:grid-cols-2;
+  @apply text-sm;
   @apply mx-auto w-full;
 }
 
+.section-prev-next > a {
+  @apply text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white;
+  @apply font-light italic;
+  @apply block whitespace-nowrap;
+}
+
+.section-prev-next > a .title {
+  @apply inline-block overflow-hidden align-bottom text-ellipsis whitespace-nowrap;
+  max-width: calc(100% - 1.5rem);
+}
+
+.section-prev-next > a .arrow {
+  @apply inline-block shrink-0;
+}
+
+.section-prev-next > a.next {
+  @apply text-right;
+  grid-column: 2;
+}
 /********/
 /* MAIN */
 /********/
