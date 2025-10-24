@@ -1,8 +1,8 @@
 {{- define "main" -}}
   <article class="prose dark:prose-invert max-w-none">
-    <h1>{{- .Title | markdownify -}}</h1>
+    <h1>{{ .Title | markdownify }}</h1>
 
-    {{- .Content -}}
+    {{ .Content }}
 
 
     <h2>Recent Posts</h2>
@@ -12,24 +12,21 @@
       {{- range $recentPosts -}}
         <li>
           <p class="text-lg">
-            <a href="{{- .RelPermalink -}}">{{- .LinkTitle | markdownify -}}</a>
-            <span class="text-xs italic">
-              ({{- .Date | time.Format "2 Jan 2006" -}})
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
+            <span class="text-xs italic contrast-50">
+              ({{ .Date | time.Format "2 Jan 2006" }})
             </span>
           </p>
 
           {{- if .Summary -}}
             <div
               class="border-l-4 border-gray-200 pl-4 text-sm dark:border-gray-600">
-              {{- .Summary -}}
-
-
-              <a
-                href="{{- .RelPermalink -}}"
-                class="text-xs text-gray-400 dark:text-gray-300">
-                Read more &raquo;
-              </a>
+              {{ .Summary }}
             </div>
+
+            <a href="{{ .RelPermalink }}" class="text-sm contrast-50">
+              Read more &raquo;
+            </a>
           {{- end -}}
         </li>
       {{- end -}}
@@ -37,7 +34,7 @@
 
     <div class="mt-4">
       {{- with site.GetPage "section" "posts" -}}
-        <a href="{{- .RelPermalink -}}">See all posts &raquo;</a>
+        <a href="{{ .RelPermalink }}">See all posts &raquo;</a>
       {{- end -}}
     </div>
   </article>
