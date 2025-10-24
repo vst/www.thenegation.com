@@ -2,7 +2,7 @@
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav>
+  <nav class="gap-1">
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
@@ -13,9 +13,7 @@
         target="_blank"
         rel="noopener noreferrer"
         title="{{ site.Title | markdownify }}">
-        <img
-          src="https://media.thenegation.com/icons/rss.svg"
-          class="contrast-25 dark:invert" />
+        <i class="bi bi-rss-fill contrast-25"></i>
       </a>
     {{ end }}
   </nav>
