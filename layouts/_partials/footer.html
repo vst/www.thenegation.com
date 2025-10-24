@@ -2,7 +2,7 @@
   xmlns:cc="http://creativecommons.org/ns#"
   xmlns:dct="http://purl.org/dc/terms/">
   <a
-    href="{{- .Site.BaseURL -}}"
+    href="{{ .Site.BaseURL }}"
     rel="cc:attributionURL"
     property="dct:title"
     class="text-nowrap"
@@ -10,12 +10,12 @@
   >
   and its content by
   <a
-    href="{{- .Site.Params.tn.author.website -}}"
+    href="{{ .Site.Params.tn.author.website }}"
     target="_blank"
     rel="cc:attributionURL dct:creator license noopener noreferrer"
     property="cc:attributionName"
     class="text-nowrap"
-    >{{- .Site.Params.tn.author.name -}}</a
+    >{{ .Site.Params.tn.author.name }}</a
   >
   are licensed under
   <a
@@ -27,5 +27,5 @@
   >
   unless otherwise noted. Last compiled/published at
   {{ time.Now | time.Format "2006-01-02T15:04:05Z" }}
-  (v{{- .Site.Params.tn.version -}}).
+  (v{{ .Site.Params.tn.version }}).
 </p>

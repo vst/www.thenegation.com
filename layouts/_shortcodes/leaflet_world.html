@@ -1,7 +1,7 @@
 <div
   class="leaflet"
-  id="{{- .Get "id" -}}"
-  style="height: {{- .Get "height" -}}px;">
+  id="{{ .Get "id" }}"
+  style="height: {{ .Get "height" }}px;">
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -13,7 +13,7 @@
     crossorigin=""></script>
 
   <script type="text/javascript">
-    const map = L.map('{{- .Get "id" -}}', {});
+    const map = L.map('{{ .Get "id" }}', {});
 
     const cartodbAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>';
 
@@ -25,6 +25,6 @@
     map.setZoom(1);
     map.setView([10, 0]);
 
-    fetch('{{- .Get "geojson" -}}').then((res) => res.json()).then((data) => L.geoJSON(data).addTo(map));
+    fetch('{{ .Get "geojson" }}').then((res) => res.json()).then((data) => L.geoJSON(data).addTo(map));
   </script>
 </div>

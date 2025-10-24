@@ -10,7 +10,7 @@
     :class="{'dark': darkMode === true }"
     class="antialiased">
     <header>{{- partial "header.html" . -}}</header>
-    <main>{{- block "main" . }}{{- end -}}</main>
+    <main>{{- block "main" . }}{{ end -}}</main>
     <footer>{{- partial "footer.html" . -}}</footer>
   </body>
 </html>

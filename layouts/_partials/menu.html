@@ -9,10 +9,10 @@
     {{- partial "components/search.html" -}}
     {{- with site.Home.OutputFormats.Get "rss" -}}
       <a
-        href="{{- .RelPermalink -}}"
+        href="{{ .RelPermalink }}"
         target="_blank"
         rel="noopener noreferrer"
-        title="{{- site.Title | markdownify -}}">
+        title="{{ site.Title | markdownify }}">
         <i class="bi bi-rss-fill contrast-25"></i>
       </a>
     {{- end -}}
@@ -39,10 +39,10 @@
       <a
         {{- range $k, $v := $attrs -}}
           {{- with $v -}}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+            {{ printf " %s=%q" $k $v | safeHTMLAttr }}
           {{- end -}}
         {{- end -}}>
-        {{- $name -}}
+        {{ $name }}
       </a>
       {{- with .Children -}}
         <ul>
