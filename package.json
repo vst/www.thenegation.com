@@ -24,7 +24,9 @@
     "check:format:taplo": "taplo fmt --check",
     "check:format": "npm run check:format:prettier && npm run check:format:taplo",
     "check": "npm run check:format && npm run lint && npm run build",
-    "build": "hugo build --gc --minify"
+    "build:hugo": "hugo build --gc --minify",
+    "build:pagefind": "npx -y pagefind --site public",
+    "build": "npm run build:hugo && npm run build:pagefind"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.16",

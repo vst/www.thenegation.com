@@ -1,0 +1,98 @@
+<button
+  id="search-button"
+  class="inline-flex cursor-pointer items-center justify-center border-0 bg-transparent transition-opacity duration-200 hover:opacity-70"
+  aria-label="Open search">
+  <i class="bi bi-search contrast-25"></i>
+</button>
+
+<div
+  id="search-overlay"
+  class="fixed inset-0 z-[9999] hidden items-start justify-center overflow-y-auto bg-black/50 pt-[10vh]"
+  aria-hidden="true">
+  <div
+    class="flex max-h-[80vh] w-[90%] max-w-[600px] animate-[slideDown_0.2s_ease-out] flex-col rounded-lg bg-white shadow-xl dark:bg-gray-800">
+    <div
+      class="flex items-center justify-between border-b border-gray-200 px-5 py-4 dark:border-gray-700">
+      <h2 class="m-0 text-lg font-semibold text-gray-900 dark:text-gray-100">
+        Search
+      </h2>
+      <button
+        id="search-close"
+        class="flex cursor-pointer items-center justify-center rounded border-0 bg-transparent p-1 text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
+        aria-label="Close search">
+        <i class="bi bi-x size-6"></i>
+      </button>
+    </div>
+    <div class="overflow-y-auto p-5">
+      <div id="search"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #search-overlay[aria-hidden="false"] {
+    display: flex;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchButton = document.getElementById("search-button");
+    const searchOverlay = document.getElementById("search-overlay");
+    const searchClose = document.getElementById("search-close");
+
+    function openSearch() {
+      searchOverlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      // Focus on search input after Pagefind loads
+      setTimeout(() => {
+        const searchInput = searchOverlay.querySelector('input[type="text"]');
+        if (searchInput) searchInput.focus();
+      }, 100);
+    }
+
+    function closeSearch() {
+      searchOverlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    searchButton.addEventListener("click", openSearch);
+    searchClose.addEventListener("click", closeSearch);
+
+    // Close on overlay click (but not dialog click)
+    searchOverlay.addEventListener("click", function (e) {
+      if (e.target === searchOverlay) {
+        closeSearch();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", function (e) {
+      if (
+        e.key === "Escape" &&
+        searchOverlay.getAttribute("aria-hidden") === "false"
+      ) {
+        closeSearch();
+      }
+    });
+
+    // Optional: Keyboard shortcut (Ctrl+K or Cmd+K)
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        openSearch();
+      }
+    });
+  });
+</script>

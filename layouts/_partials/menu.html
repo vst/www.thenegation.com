@@ -6,7 +6,7 @@
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
-    {{ partial "components/light-switch.html" }}
+    {{ partial "components/search.html" }}
     {{ with site.Home.OutputFormats.Get "rss" }}
       <a
         href="{{ .RelPermalink }}"
@@ -16,6 +16,7 @@
         <i class="bi bi-rss-fill contrast-25"></i>
       </a>
     {{ end }}
+    {{ partial "components/light-switch.html" }}
   </nav>
 {{- end }}
 
