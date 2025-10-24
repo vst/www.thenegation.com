@@ -4,11 +4,11 @@
 <link rel="icon" href="/favicon.ico" />
 <link rel="manifest" href="/site.webmanifest" />
 <!-- Our Custom CSS -->
-{{ with (templates.Defer (dict "key" "global")) }}
-  {{ partialCached "head/css.html" . }}
-{{ end }}
+{{- with (templates.Defer (dict "key" "global")) -}}
+  {{- partialCached "head/css.html" . -}}
+{{- end -}}
 <!-- Our Custom JS -->
-{{ partialCached "head/js.html" . }}
+{{- partialCached "head/js.html" . -}}
 <!-- Alpine Plugins -->
 <script
   defer
@@ -18,9 +18,9 @@
   defer
   src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <!-- Feeds -->
-{{ with .OutputFormats.Get "rss" }}
-  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
-{{ end }}
+{{- with .OutputFormats.Get "rss" -}}
+  {{- printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML -}}
+{{- end -}}
 <!-- Analytics -->
 <script
   defer
@@ -28,7 +28,7 @@
   data-api="/vendor/p/api/event"
   data-domain="thenegation.com"></script>
 <!-- SEO Tags -->
-{{ partial "head/seo.html" . }}
+{{- partial "head/seo.html" . -}}
 <!-- ICONS -->
 <link
   rel="stylesheet"

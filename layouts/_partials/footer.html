@@ -1,29 +1,31 @@
 <p
   xmlns:cc="http://creativecommons.org/ns#"
   xmlns:dct="http://purl.org/dc/terms/">
-  <a href="{{ .Site.BaseURL }}" rel="cc:attributionURL" property="dct:title">
-    This Website
-  </a>
+  <a
+    href="{{ .Site.BaseURL }}"
+    rel="cc:attributionURL"
+    property="dct:title"
+    class="text-nowrap"
+    >This Website</a
+  >
   and its content by
   <a
     href="{{ .Site.Params.tn.author.website }}"
     target="_blank"
     rel="cc:attributionURL dct:creator license noopener noreferrer"
-    property="cc:attributionName">
-    {{ .Site.Params.tn.author.name }}
-  </a>
+    property="cc:attributionName"
+    class="text-nowrap"
+    >{{ .Site.Params.tn.author.name }}</a
+  >
   are licensed under
   <a
     href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"
     target="_blank"
-    rel="license noopener noreferrer">
-    CC BY-SA 4.0
-  </a>
-  unless otherwise noted.
-</p>
-
-<p>
-  Last compiled/published at
+    rel="license noopener noreferrer"
+    class="text-nowrap"
+    >CC BY-SA 4.0</a
+  >
+  unless otherwise noted. Last compiled/published at
   {{ time.Now | time.Format "2006-01-02T15:04:05Z" }}
   (v{{ .Site.Params.tn.version }}).
 </p>

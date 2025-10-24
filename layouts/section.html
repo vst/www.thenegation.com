@@ -1,22 +1,22 @@
-{{ define "main" }}
+{{- define "main" -}}
   <article class="prose dark:prose-invert max-w-none">
     <h1>{{ .Title | markdownify }}</h1>
 
     {{ .Content }}
 
-    {{ range (.Pages.GroupByDate "2006") }}
+    {{- range (.Pages.GroupByDate "2006") -}}
       <h2>{{ .Key }}</h2>
 
       <ul>
-        {{ range .Pages.ByDate.Reverse }}
+        {{- range .Pages.ByDate.Reverse -}}
           <li>
             <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
-            <span class="text-xs italic">
+            <span class="text-xs italic contrast-50">
               ({{ .Date.Format "2 Jan 2006" }})
             </span>
           </li>
-        {{ end }}
+        {{- end -}}
       </ul>
-    {{ end }}
+    {{- end -}}
   </article>
-{{ end }}
+{{- end -}}

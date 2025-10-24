@@ -1,0 +1,37 @@
+{{- define "main" -}}
+  {{- $page := . -}}
+  <article class="prose dark:prose-invert max-w-none">
+    <h1 class="flex flex-row items-center gap-2">
+      <a href="{{ .Parent.RelPermalink }}" class="font-bold">Tags</a>
+      <span>&raquo;</span>
+      <span>{{ .Title | markdownify }}</span>
+      {{- with .OutputFormats.Get "rss" -}}
+        <a
+          href="{{ .RelPermalink }}"
+          class="not-prose"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="RSS Feed for {{ page.Title }}"
+          ><i class="bi bi-rss-fill text-xl contrast-50"></i
+        ></a>
+      {{- end -}}
+    </h1>
+
+    {{ .Content }}
+
+    {{- range (.Pages.GroupByDate "2006") -}}
+      <h2>{{ .Key | markdownify }}</h2>
+
+      <ul>
+        {{- range .Pages.ByDate.Reverse -}}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
+            <span class="text-xs italic">
+              ({{ .Date.Format "2 Jan 2006" }})
+            </span>
+          </li>
+        {{- end -}}
+      </ul>
+    {{- end -}}
+  </article>
+{{- end -}}

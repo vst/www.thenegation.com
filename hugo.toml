@@ -30,6 +30,9 @@ enableEmoji = true
     pageRef = "/about"
     weight = 30
 
+[taxonomies]
+  tag = "tags"
+
 [markup]
   [markup.highlight]
     anchorLineNos = true
