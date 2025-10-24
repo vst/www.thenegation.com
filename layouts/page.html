@@ -1,8 +1,8 @@
 {{- define "main" -}}
   <article class="prose dark:prose-invert max-w-none">
-    <h1>{{- .Title | markdownify -}}</h1>
+    <h1>{{ .Title | markdownify }}</h1>
 
-    {{- .Content -}}
+    {{ .Content }}
 
     {{- if .Date -}}
       {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
@@ -12,17 +12,17 @@
       <div class="my-12 flex flex-col items-start justify-between space-y-2">
         <span class="text-sm italic">
           Published on
-          <time datetime="{{- $dateMachine -}}">{{- $dateHuman -}}</time>
+          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
         </span>
 
         <span
           class="flex flex-col items-start space-y-1 md:flex-row md:space-y-0 md:space-x-1">
           {{- range .Params.tags -}}
             <a
-              href="/tags/{{- . | urlize -}}/"
-              class="label no-underline hover:underline">
-              {{- . -}}
-            </a>
+              href="/tags/{{ . | urlize }}/"
+              class="label no-underline hover:underline"
+              >{{ . }}</a
+            >
           {{- end -}}
         </span>
       </div>
@@ -33,7 +33,7 @@
     <nav class="section-prev-next">
       {{- with .PrevInSection -}}
         <a
-          href="{{- .RelPermalink -}}"
+          href="{{ .RelPermalink }}"
           title="[Previous Post] {{ .Title | markdownify }}"
           class="prev"
           ><span class="arrow">←</span>
@@ -42,7 +42,7 @@
       {{- end -}}
       {{- with .NextInSection -}}
         <a
-          href="{{- .RelPermalink -}}"
+          href="{{ .RelPermalink }}"
           class="next"
           title="[Next Post] {{ .Title | markdownify }}"
           ><span class="title">{{ .Title | markdownify }}</span>
