@@ -1,16 +1,16 @@
 <!doctype html>
 <html
-  lang="{{ site.Language.LanguageCode }}"
-  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  lang="{{- site.Language.LanguageCode -}}"
+  dir="{{- or site.Language.LanguageDirection `ltr` -}}">
   <head>
-    {{ partial "head.html" . }}
+    {{- partial "head.html" . -}}
   </head>
   <body
     x-data="{darkMode: $persist(false)}"
     :class="{'dark': darkMode === true }"
     class="antialiased">
-    <header>{{ partial "header.html" . }}</header>
-    <main>{{ block "main" . }}{{ end }}</main>
-    <footer>{{ partial "footer.html" . }}</footer>
+    <header>{{- partial "header.html" . -}}</header>
+    <main>{{- block "main" . }}{{- end -}}</main>
+    <footer>{{- partial "footer.html" . -}}</footer>
   </body>
 </html>

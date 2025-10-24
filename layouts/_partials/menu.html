@@ -1,54 +1,54 @@
-{{- $page := .page }}
-{{- $menuID := .menuID }}
+{{- $page := .page -}}
+{{- $menuID := .menuID -}}
 
-{{- with index site.Menus $menuID }}
+{{- with index site.Menus $menuID -}}
   <nav class="gap-1">
     <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
     </ul>
-    {{ partial "components/search.html" }}
-    {{ with site.Home.OutputFormats.Get "rss" }}
+    {{- partial "components/search.html" -}}
+    {{- with site.Home.OutputFormats.Get "rss" -}}
       <a
-        href="{{ .RelPermalink }}"
+        href="{{- .RelPermalink -}}"
         target="_blank"
         rel="noopener noreferrer"
-        title="{{ site.Title | markdownify }}">
+        title="{{- site.Title | markdownify -}}">
         <i class="bi bi-rss-fill contrast-25"></i>
       </a>
-    {{ end }}
-    {{ partial "components/light-switch.html" }}
+    {{- end -}}
+    {{- partial "components/light-switch.html" -}}
   </nav>
-{{- end }}
+{{- end -}}
 
-{{- define "_partials/inline/menu/walk.html" }}
-  {{- $page := .page }}
-  {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-    {{- end }}
-    {{- $name := .Name }}
-    {{- with .Identifier }}
-      {{- with T . }}
-        {{- $name = . }}
-      {{- end }}
-    {{- end }}
+{{- define "_partials/inline/menu/walk.html" -}}
+  {{- $page := .page -}}
+  {{- range .menuEntries -}}
+    {{- $attrs := dict "href" .URL -}}
+    {{- if $page.IsMenuCurrent .Menu . -}}
+      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") -}}
+    {{- else if $page.HasMenuCurrent .Menu . -}}
+      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") -}}
+    {{- end -}}
+    {{- $name := .Name -}}
+    {{- with .Identifier -}}
+      {{- with T . -}}
+        {{- $name = . -}}
+      {{- end -}}
+    {{- end -}}
     <li>
       <a
-        {{- range $k, $v := $attrs }}
-          {{- with $v }}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
-          {{- end }}
+        {{- range $k, $v := $attrs -}}
+          {{- with $v -}}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+          {{- end -}}
         {{- end -}}>
-        {{ $name }}
+        {{- $name -}}
       </a>
-      {{- with .Children }}
+      {{- with .Children -}}
         <ul>
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
         </ul>
-      {{- end }}
+      {{- end -}}
     </li>
-  {{- end }}
-{{- end }}
+  {{- end -}}
+{{- end -}}

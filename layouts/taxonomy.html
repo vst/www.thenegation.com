@@ -1,18 +1,18 @@
-{{ define "main" }}
+{{- define "main" -}}
   <div class="prose dark:prose-invert max-w-none">
-    <h1>{{ .Title | markdownify }}</h1>
+    <h1>{{- .Title | markdownify -}}</h1>
 
-    {{ .Content }}
+    {{- .Content -}}
 
 
     <ul>
-      {{ range .Pages.ByTitle }}
+      {{- range .Pages.ByTitle -}}
         <li>
-          <a href="{{ .RelPermalink }}">
-            {{ .LinkTitle | markdownify }} ({{ len .Pages }})
+          <a href="{{- .RelPermalink -}}">
+            {{- .LinkTitle | markdownify -}} ({{- len .Pages -}})
           </a>
         </li>
-      {{ end }}
+      {{- end -}}
     </ul>
   </div>
-{{ end }}
+{{- end -}}
