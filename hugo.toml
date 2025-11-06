@@ -49,6 +49,8 @@ enableEmoji = true
     wrapperClass = "highlight"
 
 [build]
+  noJSConfigInAssets = true
+
   [build.buildStats]
     enable = true
 

@@ -99,7 +99,7 @@ Runs format checks, linting, and builds the site (used in CI)
 - **`assets/`** - Source assets processed by Hugo
   - `assets/css/main.css` - Tailwind CSS v4 with custom styles and dark mode
     variants
-  - `assets/js/main.js` - Custom JavaScript
+  - `assets/ts/main.ts` - Custom TypeScript
 
 - **`static/`** - Static files copied as-is to output
 
