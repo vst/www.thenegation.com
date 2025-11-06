@@ -7,7 +7,7 @@ code in this repository.
 
 This is a personal website built with **Hugo** (static site generator) and
 **Tailwind CSS v4** (styling framework). The site features a blog with search
-functionality powered by Pagefind, dark mode support via Alpine.js, and is
+functionality powered by Pagefind, dark mode support via custom JS, and is
 deployed on Vercel.
 
 ## Development Environment
@@ -89,7 +89,7 @@ Runs format checks, linting, and builds the site (used in CI)
   - `content/about.md` - About page
 
 - **`layouts/`** - Hugo templates (Go templates)
-  - `layouts/baseof.html` - Base template with Alpine.js dark mode integration
+  - `layouts/baseof.html` - Base template structure
   - `layouts/_partials/` - Reusable template components (header, footer, head,
     etc.)
   - `layouts/_shortcodes/` - Custom shortcodes for content (columns,
@@ -99,7 +99,11 @@ Runs format checks, linting, and builds the site (used in CI)
 - **`assets/`** - Source assets processed by Hugo
   - `assets/css/main.css` - Tailwind CSS v4 with custom styles and dark mode
     variants
-  - `assets/ts/main.ts` - Custom TypeScript
+  - `assets/ts/` - Modular TypeScript codebase
+    - `main.ts` - Entry point that initializes all modules
+    - `-theme.ts` - Dark mode toggle functionality
+    - `-search.ts` - Search modal with Pagefind integration
+    - `-code-copy.ts` - Copy buttons for code blocks
 
 - **`static/`** - Static files copied as-is to output
 
@@ -130,18 +134,35 @@ The site uses **Tailwind CSS v4** with:
 - Typography plugin for prose content
 - CSS source tracking via `hugo_stats.json` for automatic class purging
 - Google Fonts: Inter (sans) and JetBrains Mono (monospace)
-- Dark mode toggled by Alpine.js `x-data` on `<body>` with localStorage
-  persistence
+- Dark mode toggle via vanilla TypeScript
 
 ### JavaScript & Interactivity
 
-- **Alpine.js** - Lightweight framework for dark mode toggle and interactive
-  components
-  - Alpine Persist plugin for dark mode state persistence
-  - Dark mode controlled via `x-data="{darkMode: $persist(false)}"` on body
-    element
-- **Pagefind** - Client-side search initialized on page load
-- **Plausible Analytics** - Privacy-friendly analytics at `/vendor/p/`
+The site uses a modular TypeScript architecture in `assets/ts/`:
+
+- **`-theme.ts`** - Dark mode management
+  - Persists preference to localStorage
+  - Respects system color scheme preference
+  - Syncs with OS theme changes
+  - Toggles `.dark` class on `<body>` element
+
+- **`-search.ts`** - Search functionality
+  - Modal overlay with Pagefind UI integration
+  - Keyboard shortcuts (Ctrl/Cmd+K to open, Escape to close)
+  - Click-outside-to-close behavior
+  - Auto-focus on search input
+
+- **`-code-copy.ts`** - Code block enhancements
+  - Adds copy buttons to code blocks
+  - Visual feedback on successful copy
+
+- **`main.ts`** - Entry point that initializes all modules on DOMContentLoaded
+
+**External dependencies:**
+
+- **Pagefind** - Client-side search library (self-hosted at `/pagefind/`)
+- **Plausible Analytics** - Privacy-friendly analytics (self-hosted at
+  `/vendor/p/`)
 
 ### Template Patterns
 
