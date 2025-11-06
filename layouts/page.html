@@ -1,12 +1,12 @@
-{{ define "main" }}
+{{- define "main" -}}
   <article class="prose dark:prose-invert max-w-none">
     <h1>{{ .Title | markdownify }}</h1>
 
     {{ .Content }}
 
-    {{ if .Date }}
-      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
+    {{- if .Date -}}
+      {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
+      {{- $dateHuman := .Date | time.Format ":date_long" -}}
 
 
       <div class="my-12 flex flex-col items-start justify-between space-y-2">
@@ -17,40 +17,38 @@
 
         <span
           class="flex flex-col items-start space-y-1 md:flex-row md:space-y-0 md:space-x-1">
-          {{ range .Params.tags }}
+          {{- range .Params.tags -}}
             <a
               href="/tags/{{ . | urlize }}/"
-              class="label no-underline hover:underline">
-              {{ . }}
-            </a>
-          {{ end }}
+              class="label no-underline hover:underline"
+              >{{ . }}</a
+            >
+          {{- end -}}
         </span>
       </div>
-    {{ end }}
+    {{- end -}}
   </article>
 
-  {{ if (or .PrevInSection .NextInSection) }}
+  {{- if (or .PrevInSection .NextInSection) -}}
     <nav class="section-prev-next">
-      {{ with .PrevInSection }}
+      {{- with .PrevInSection -}}
         <a
-          class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
-          href="{{ .RelPermalink }}">
-          ←
-          {{ .Title }}
-        </a>
-      {{ else }}
-        <span></span>
-      {{ end }}
-
-      {{ with .NextInSection }}
+          href="{{ .RelPermalink }}"
+          title="[Previous Post] {{ .Title | markdownify }}"
+          class="prev"
+          ><span class="arrow">←</span>
+          <span class="title">{{ .Title | markdownify }}</span></a
+        >
+      {{- end -}}
+      {{- with .NextInSection -}}
         <a
-          class="text-right text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
-          href="{{ .RelPermalink }}">
-          {{ .Title }} →
-        </a>
-      {{ else }}
-        <span></span>
-      {{ end }}
+          href="{{ .RelPermalink }}"
+          class="next"
+          title="[Next Post] {{ .Title | markdownify }}"
+          ><span class="title">{{ .Title | markdownify }}</span>
+          <span class="arrow">→</span></a
+        >
+      {{- end -}}
     </nav>
-  {{ end }}
-{{ end }}
+  {{- end -}}
+{{- end -}}

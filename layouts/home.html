@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{- define "main" -}}
   <article class="prose dark:prose-invert max-w-none">
     <h1>{{ .Title | markdownify }}</h1>
 
@@ -7,38 +7,35 @@
 
     <h2>Recent Posts</h2>
 
-    {{ $recentPosts := first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "posts" ) }}
+    {{- $recentPosts := first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "posts" ) -}}
     <ol>
-      {{ range $recentPosts }}
+      {{- range $recentPosts -}}
         <li>
           <p class="text-lg">
             <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
-            <span class="text-xs italic">
+            <span class="text-xs italic contrast-50">
               ({{ .Date | time.Format "2 Jan 2006" }})
             </span>
           </p>
 
-          {{ if .Summary }}
+          {{- if .Summary -}}
             <div
               class="border-l-4 border-gray-200 pl-4 text-sm dark:border-gray-600">
               {{ .Summary }}
-
-
-              <a
-                href="{{ .RelPermalink }}"
-                class="text-xs text-gray-400 dark:text-gray-300">
-                Read more &raquo;
-              </a>
             </div>
-          {{ end }}
+
+            <a href="{{ .RelPermalink }}" class="text-sm contrast-50">
+              Read more &raquo;
+            </a>
+          {{- end -}}
         </li>
-      {{ end }}
+      {{- end -}}
     </ol>
 
     <div class="mt-4">
-      {{ with site.GetPage "section" "posts" }}
+      {{- with site.GetPage "section" "posts" -}}
         <a href="{{ .RelPermalink }}">See all posts &raquo;</a>
-      {{ end }}
+      {{- end -}}
     </div>
   </article>
-{{ end }}
+{{- end -}}

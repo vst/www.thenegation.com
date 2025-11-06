@@ -1,47 +1,341 @@
+<!------------------------>
+<!-- CONTEXT & DEFAULTS -->
+<!------------------------>
+
+{{- $site := .Site -}}
+{{- $baseURL := $site.BaseURL -}}
+{{- $siteTitleRaw := $site.Title -}}
+{{- $siteTitle := $siteTitleRaw | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- $siteDescriptionRaw := default "" $site.Params.tn.description -}}
+{{- $siteDescription := $siteDescriptionRaw
+  | plainify
+  | htmlUnescape
+  | replaceRE "\\s+"
+  " "
+  | strings.TrimSpace
+-}}
+{{- $authorRaw := $site.Params.tn.author.name -}}
+{{- $author := $authorRaw | plainify | htmlUnescape | strings.TrimSpace -}}
+
+{{- $pageTitleRaw := default $siteTitleRaw .Title -}}
+{{- $pageTitle := $pageTitleRaw | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- $pageDescriptionRaw := default $siteDescriptionRaw .Params.description -}}
+{{- $pageDescriptionPlain := $pageDescriptionRaw
+  | plainify
+  | htmlUnescape
+  | replaceRE "\\s+"
+  " "
+  | strings.TrimSpace
+-}}
+{{- $pageDescription := truncate 160 $pageDescriptionPlain -}}
+
+{{- $browserTitle := $pageTitle -}}
+{{- if and (not .IsHome) (ne $pageTitle $siteTitle) -}}
+  {{- $browserTitle = printf "%s — %s" $pageTitle $siteTitle -}}
+{{- end -}}
+
+{{- $languageCodeRaw := replace (default "en-US" $site.LanguageCode) "_" "-" -}}
+{{- $languageParts := split $languageCodeRaw "-" -}}
+{{- $languageCode := "en-US" -}}
+{{- if gt (len $languageParts) 1 -}}
+  {{- $languageCode = printf "%s-%s" (lower (index $languageParts 0)) (upper (index $languageParts 1)) -}}
+{{- else if eq (len $languageParts) 1 -}}
+  {{- $languageCode = lower (index $languageParts 0) -}}
+{{- end -}}
+{{- $ogLocale := replace (strings.ToUpper $languageCode) "-" "_" -}}
+{{- if not $ogLocale }}
+  {{- $ogLocale = "EN_US" -}}
+{{- end -}}
+
+{{- $twitterHandle := "vehbisinan" -}}
+{{- $defaultOgImage := absURL "media/ogimg.png" -}}
+{{- $defaultTwitterImage := absURL "media/twimg.png" -}}
+{{- $pageOgImage := $defaultOgImage -}}
+{{- $pageTwitterImage := $defaultTwitterImage -}}
+{{- with .Params.seo }}
+  {{- with .og }}
+    {{- with .image }}
+      {{- $pageOgImage = absURL . -}}
+    {{- end }}
+  {{- end }}
+  {{- with .twitter }}
+    {{- with .image }}
+      {{- $pageTwitterImage = absURL . -}}
+    {{- end }}
+  {{- end }}
+{{- end -}}
+{{- $pageTwitterImage = default $pageOgImage $pageTwitterImage -}}
+
+{{- $permalink := .Permalink -}}
+{{- $isListing := or .IsHome .IsSection -}}
+{{- $isPost := and .IsPage (eq .Section "posts") -}}
+
+{{- $ogType := "article" -}}
+{{- if $isListing -}}
+  {{- $ogType = "website" -}}
+{{- end }}
+{{- with .Params.seo }}
+  {{- with .og }}
+    {{- with .type }}
+      {{- $ogType = . -}}
+    {{- end }}
+  {{- end }}
+{{- end -}}
+
+{{- $robots := "index, follow" -}}
+{{- with .Params.robots }}
+  {{- $robots = . -}}
+{{- end }}
+{{- with .Params.seo }}
+  {{- with .robots }}
+    {{- $robots = . -}}
+  {{- end }}
+{{- end }}
+{{- if or .Draft (.Params.noindex) }}
+  {{- $robots = "noindex, nofollow" -}}
+{{- end -}}
+
+{{- $parsedBase := urls.Parse $baseURL -}}
+{{- $domain := "thenegation.com" -}}
+{{- with $parsedBase }}
+  {{- with .Host }}
+    {{- $domain = . -}}
+  {{- end }}
+{{- end -}}
+
+{{- $imageAlt := printf "%s — %s" $pageTitle $siteTitle -}}
+{{- if eq $pageTitle $siteTitle -}}
+  {{- $imageAlt = printf "%s social preview" $siteTitle -}}
+{{- end -}}
+
+{{- $keywords := "" -}}
+{{- with .Params.tags }}
+  {{- $keywords = delimit . ", " -}}
+{{- end -}}
+
+
+<!----------------------->
+<!-- DOCUMENT METADATA -->
+<!----------------------->
+
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)" />
+<meta
+  name="theme-color"
+  content="#1e1e2e"
+  media="(prefers-color-scheme: dark)" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+
+<title>{{ $browserTitle }}</title>
+<meta name="description" content="{{ $pageDescription }}" />
+{{- with $author }}
+  <meta name="author" content="{{ . }}" />
+{{- end }}
+
+
+<!---------------------->
+<!-- ICONS & MANIFEST -->
+<!---------------------->
+
 <link rel="icon" href="/favicon.ico" />
 <link rel="manifest" href="/site.webmanifest" />
-<!-- Our Custom CSS -->
-{{ with (templates.Defer (dict "key" "global")) }}
-  {{ partialCached "head/css.html" . }}
-{{ end }}
-<!-- Our Custom JS -->
-{{ partialCached "head/js.html" . }}
-<!-- Alpine Plugins -->
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
-<!-- Alpine Core -->
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<!-- Feeds -->
-{{ with .OutputFormats.Get "rss" }}
-  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
-{{ end }}
-<!-- Analytics -->
+
+<!--------------------->
+<!-- SEO & DISCOVERY -->
+<!--------------------->
+
+<meta name="robots" content="{{ $robots }}" />
+{{- with $permalink }}
+  <link rel="canonical" href="{{ . }}" />
+{{- end }}
+
+
+<!---------------->
+<!-- OPEN GRAPH -->
+<!---------------->
+
+<meta property="og:type" content="{{ $ogType }}" />
+<meta property="og:locale" content="{{ $ogLocale }}" />
+<meta property="og:site_name" content="{{ $siteTitle }}" />
+<meta property="og:title" content="{{ $pageTitle }}" />
+<meta property="og:description" content="{{ $pageDescription }}" />
+<meta property="og:image" content="{{ $pageOgImage }}" />
+<meta property="og:image:secure_url" content="{{ $pageOgImage }}" />
+<meta property="og:image:alt" content="{{ $imageAlt }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+{{- with $permalink }}
+  <meta property="og:url" content="{{ . }}" />
+{{- end }}
+{{- if eq $ogType "article" }}
+  {{- with .Date }}
+    <meta
+      property="article:published_time"
+      content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{- end }}
+  {{- with .Lastmod }}
+    <meta
+      property="article:modified_time"
+      content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
+    <meta
+      property="og:updated_time"
+      content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{- end }}
+  {{- with $author }}
+    <meta property="article:author" content="{{ . }}" />
+  {{- end }}
+  {{- with .Section }}
+    <meta property="article:section" content="{{ humanize . }}" />
+  {{- end }}
+  {{- range .Params.tags }}
+    <meta property="article:tag" content="{{ . }}" />
+  {{- end }}
+{{- end }}
+
+
+<!------------------>
+<!-- TWITTER CARD -->
+<!------------------>
+
+<meta name="twitter:card" content="summary_large_image" />
+{{- if $twitterHandle }}
+  <meta name="twitter:site" content="@{{ $twitterHandle }}" />
+  <meta name="twitter:creator" content="@{{ $twitterHandle }}" />
+{{- end }}
+<meta name="twitter:title" content="{{ $pageTitle }}" />
+<meta name="twitter:description" content="{{ $pageDescription }}" />
+<meta name="twitter:image" content="{{ $pageTwitterImage }}" />
+<meta name="twitter:image:alt" content="{{ $imageAlt }}" />
+{{- with $permalink }}
+  <meta name="twitter:url" content="{{ . }}" />
+{{- end }}
+
+
+<!--------------------->
+<!-- STRUCTURED DATA -->
+<!--------------------->
+
+{{- $structuredData := dict -}}
+{{- if $isPost -}}
+  {{- $structuredData = dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" (truncate 110 $pageTitle)
+    "name" $pageTitle
+    "description" $pageDescription
+    "image" (slice $pageOgImage)
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" $permalink)
+    "url" $permalink
+  -}}
+  {{- if $author }}
+    {{- $structuredData = merge
+      $structuredData
+      (dict "author" (dict "@type" "Person" "name" $author))
+    -}}
+  {{- end }}
+  {{- with .Date }}
+    {{- $structuredData = merge
+      $structuredData
+      (dict "datePublished" (.Format "2006-01-02T15:04:05Z07:00"))
+    -}}
+  {{- end }}
+  {{- with .Lastmod }}
+    {{- $structuredData = merge
+      $structuredData
+      (dict "dateModified" (.Format "2006-01-02T15:04:05Z07:00"))
+    -}}
+  {{- end }}
+  {{- if $keywords }}
+    {{- $structuredData = merge $structuredData (dict "keywords" $keywords) -}}
+  {{- end }}
+  {{- $structuredData = merge $structuredData (dict "wordCount" .WordCount) -}}
+{{- else if $isListing -}}
+  {{- $structuredData = dict
+    "@context" "https://schema.org"
+    "@type" (cond .IsHome "WebSite" "CollectionPage")
+    "name" (cond .IsHome $siteTitle $pageTitle)
+    "description" $pageDescription
+    "url" (cond .IsHome $baseURL $permalink)
+  -}}
+{{- else -}}
+  {{- $structuredData = dict
+    "@context" "https://schema.org"
+    "@type" "WebPage"
+    "name" $pageTitle
+    "description" $pageDescription
+    "url" $permalink
+  -}}
+  {{- if $author }}
+    {{- $structuredData = merge
+      $structuredData
+      (dict "author" (dict "@type" "Person" "name" $author))
+    -}}
+  {{- end }}
+{{- end }}
+{{- if $structuredData }}
+  <script type="application/ld+json">
+    {{- $structuredData | jsonify (dict "indent" "  ") | safeJS -}}
+  </script>
+{{- end }}
+
+
+<!----------------->
+<!-- CORE STYLES -->
+<!----------------->
+
+{{- with (templates.Defer (dict "key" "global")) -}}
+  {{- partialCached "head/css.html" . -}}
+{{- end -}}
+
+
+<!------------------>
+<!-- CORE SCRIPTS -->
+<!------------------>
+
+{{- partialCached "head/js.html" . -}}
+
+
+<!----------------------------->
+<!-- VENDOR: BOOTSTRAP ICONS -->
+<!----------------------------->
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+<!---------------------->
+<!-- VENDOR: PAGEFIND -->
+<!---------------------->
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+<script defer src="/pagefind/pagefind-ui.js"></script>
+
+<!--------------->
+<!-- ANALYTICS -->
+<!--------------->
+
 <script
   defer
   src="/vendor/p/js/script.js"
   data-api="/vendor/p/api/event"
-  data-domain="thenegation.com"></script>
-<!-- SEO Tags -->
-{{ partial "head/seo.html" . }}
-<!-- ICONS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-<!-- PAGEFIND -->
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-<script src="/pagefind/pagefind-ui.js"></script>
-<script>
-  window.addEventListener("DOMContentLoaded", (event) => {
-    new PagefindUI({
-      element: "#search",
-      showSubResults: true,
-      showImages: false,
-    });
-  });
-</script>
+  data-domain="{{ $domain }}"></script>
+
+<!----------->
+<!-- FEEDS -->
+<!----------->
+
+{{- with .OutputFormats.Get "rss" -}}
+  {{- printf
+    `<link rel=%q type=%q href=%q title=%q>`
+    .Rel
+    .MediaType.Type
+    .Permalink
+    site.Title
+    | safeHTML
+  -}}
+{{- end -}}

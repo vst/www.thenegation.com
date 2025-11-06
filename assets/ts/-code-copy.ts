@@ -1,5 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function setupCodeCopy() {
   document.querySelectorAll("pre code").forEach((block) => {
+    if (!(block && block.textContent)) {
+      return;
+    }
+
     const content = block.textContent.trim();
 
     const isLineNumbers = content
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      block.parentNode.insertBefore(button, block);
+      block.parentNode?.insertBefore(button, block);
     }
   });
-});
+}
