@@ -34,8 +34,14 @@
   {{- $browserTitle = printf "%s — %s" $pageTitle $siteTitle -}}
 {{- end -}}
 
-{{- $languageCode := default "en-US" $site.LanguageCode -}}
-{{- $lang := default (lower $languageCode) $site.Language.Lang -}}
+{{- $languageCodeRaw := replace (default "en-US" $site.LanguageCode) "_" "-" -}}
+{{- $languageParts := split $languageCodeRaw "-" -}}
+{{- $languageCode := "en-US" -}}
+{{- if gt (len $languageParts) 1 -}}
+  {{- $languageCode = printf "%s-%s" (lower (index $languageParts 0)) (upper (index $languageParts 1)) -}}
+{{- else if eq (len $languageParts) 1 -}}
+  {{- $languageCode = lower (index $languageParts 0) -}}
+{{- end -}}
 {{- $ogLocale := replace (strings.ToUpper $languageCode) "-" "_" -}}
 {{- if not $ogLocale }}
   {{- $ogLocale = "EN_US" -}}

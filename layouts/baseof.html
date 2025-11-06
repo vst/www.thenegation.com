@@ -1,7 +1,14 @@
+{{- $langCodeRaw := replace (default "en-US" site.Language.LanguageCode) "_" "-" -}}
+{{- $langParts := split $langCodeRaw "-" -}}
+{{- $htmlLang := "en-US" -}}
+{{- if gt (len $langParts) 1 -}}
+  {{- $htmlLang = printf "%s-%s" (lower (index $langParts 0)) (upper (index $langParts 1)) -}}
+{{- else if eq (len $langParts) 1 -}}
+  {{- $htmlLang = lower (index $langParts 0) -}}
+{{- end -}}
+{{- $htmlLangDir := site.Language.LanguageDirection | default "ltr" -}}
 <!doctype html>
-<html
-  lang="{{ site.Language.LanguageCode }}"
-  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ $htmlLang }}" dir="{{ $htmlLangDir }}">
   <head>
     {{- partial "head.html" . -}}
   </head>
