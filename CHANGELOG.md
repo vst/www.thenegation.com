@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/vst/www.thenegation.com/compare/v2.0.0...v2.1.0) (2025-11-06)
+
+
+### Features
+
+* **search:** add search functionality ([ba018ed](https://github.com/vst/www.thenegation.com/commit/ba018ed3f3d7d75bad502b4aa3e68fc561e87e9e))
+
 ## [2.0.0](https://github.com/vst/vst.github.io/compare/v1.67.0...v2.0.0) (2025-07-25)
 
 
