@@ -17,7 +17,27 @@
       </a>
     {{- end -}}
 
-    {{- partial "components/light-switch.html" -}}
+
+    <button
+      data-theme-toggle
+      type="button"
+      class="tn-theme-switch"
+      role="switch"
+      aria-checked="false">
+      <span class="sr-only">Dark mode</span>
+      <span class="tn-theme-switch-thumb">
+        <span
+          class="tn-theme-switch-icon tn-theme-switch-icon-light"
+          aria-hidden="true">
+          <i class="bi bi-sun contrast-25"></i>
+        </span>
+        <span
+          class="tn-theme-switch-icon tn-theme-switch-icon-dark"
+          aria-hidden="true">
+          <i class="bi bi-moon contrast-25"></i>
+        </span>
+      </span>
+    </button>
 
     <div id="pf-theme-container" data-pf-theme="dark" class="flex items-center">
       <pagefind-modal-trigger compact hide-shortcut></pagefind-modal-trigger>

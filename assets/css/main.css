@@ -126,11 +126,49 @@ body > footer > p > a {
 /**************/
 
 @layer components {
+  /*******************/
+  /* Label Component */
+  /*******************/
+
   .label {
     @apply bg-gray-300 dark:bg-gray-700;
     @apply text-gray-800 dark:text-gray-200;
     @apply rounded-sm;
     @apply px-2 py-1;
     @apply text-xs;
+  }
+
+  /****************************/
+  /* Theme Switcher Component */
+  /****************************/
+
+  .tn-theme-switch {
+    @apply relative inline-flex h-6 w-11 shrink-0 cursor-pointer;
+    @apply rounded-full border-2 border-transparent;
+    @apply bg-zinc-200 dark:bg-zinc-700;
+    @apply transition-colors duration-200 ease-in-out;
+    @apply focus:ring-2 focus:ring-neutral-700 focus:ring-offset-2 focus:outline-none;
+  }
+
+  .tn-theme-switch-thumb {
+    @apply pointer-events-none relative inline-block h-5 w-5 translate-x-0 transform;
+    @apply rounded-full bg-white shadow ring-0;
+    @apply transition duration-500 ease-in-out;
+    @apply dark:translate-x-5;
+  }
+
+  .tn-theme-switch-icon {
+    @apply absolute inset-0 flex h-full w-full items-center justify-center;
+    @apply transition-opacity;
+  }
+
+  .tn-theme-switch-icon-light {
+    @apply opacity-100 duration-500 ease-in;
+    @apply dark:opacity-0 dark:duration-100 dark:ease-out;
+  }
+
+  .tn-theme-switch-icon-dark {
+    @apply opacity-0 duration-100 ease-out;
+    @apply dark:opacity-100 dark:duration-200 dark:ease-in;
   }
 }
