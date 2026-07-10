@@ -151,8 +151,8 @@ hopefully in a form that is more engaging and useful for others.
 
 [dev.to]: https://dev.to/vst
 [Hashnode]: https://thenegation.hashnode.dev
-[one of my posts]: https://thenegation.com/posts/abuse-haskell/
+[one of my posts]: https://www.thenegation.com/posts/abuse-haskell/
 [Haskell Weekly]: https://haskellweekly.news/issue/432.html
-[Website]: https://thenegation.com
+[Website]: https://www.thenegation.com
 [Haskell subreddit]:
   https://www.reddit.com/r/haskell/comments/1ejrg92/abusing_haskell_executable_blog_posts/

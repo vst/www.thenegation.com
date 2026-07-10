@@ -1,4 +1,4 @@
-local base_url = "https://thenegation.com"
+local base_url = "https://www.thenegation.com"
 
 function fix_link(url)
     return url:sub(1, 1) == "/" and base_url .. url or url

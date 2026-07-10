@@ -2,7 +2,7 @@
 
 title: "The Negation --- @vst's Personal Website"
 locale: "en-us"
-baseURL: "https://thenegation.com"
+baseURL: "https://www.thenegation.com"
 enableEmoji: true
 
 params:

@@ -302,4 +302,4 @@ showstopper for newcomers and too much for a simple blog post.
 [Nginx]: https://nginx.org
 [NixOS]: https://nixos.org
 [OpenResty]: https://openresty.org
-[Running NixOS Guests on QEMU]: https://thenegation.com/posts/nixos-on-qemu/
+[Running NixOS Guests on QEMU]: https://www.thenegation.com/posts/nixos-on-qemu/

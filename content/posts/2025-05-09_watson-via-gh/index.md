@@ -129,7 +129,7 @@ about it if I manage to crack it.
 
 [Watson]: https://jazzband.github.io/Watson/
 [Jazzband]: https://jazzband.co/
-[1]: https://thenegation.com/posts/hacking-watson-part-1/
-[2]: https://thenegation.com/posts/hacking-watson-part-2/
-[3]: https://thenegation.com/posts/hacking-watson-part-3/
+[1]: https://www.thenegation.com/posts/hacking-watson-part-1/
+[2]: https://www.thenegation.com/posts/hacking-watson-part-2/
+[3]: https://www.thenegation.com/posts/hacking-watson-part-3/
 [GitHub CLI]: https://cli.github.com/
