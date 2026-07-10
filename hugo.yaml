@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://www.schemastore.org/hugo.json
 
 title: "The Negation --- @vst's Personal Website"
-languageCode: "en-us"
+locale: "en-us"
 baseURL: "https://thenegation.com"
 enableEmoji: true
 

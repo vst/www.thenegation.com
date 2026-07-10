@@ -1,4 +1,4 @@
-{{- $langCodeRaw := replace (default "en-US" site.Language.LanguageCode) "_" "-" -}}
+{{- $langCodeRaw := replace (default "en-US" site.Language.Locale) "_" "-" -}}
 {{- $langParts := split $langCodeRaw "-" -}}
 {{- $htmlLang := "en-US" -}}
 {{- if gt (len $langParts) 1 -}}
@@ -6,7 +6,7 @@
 {{- else if eq (len $langParts) 1 -}}
   {{- $htmlLang = lower (index $langParts 0) -}}
 {{- end -}}
-{{- $htmlLangDir := site.Language.LanguageDirection | default "ltr" -}}
+{{- $htmlLangDir := site.Language.Direction | default "ltr" -}}
 <!doctype html>
 <html lang="{{ $htmlLang }}" dir="{{ $htmlLangDir }}">
   <head>

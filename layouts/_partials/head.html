@@ -34,7 +34,7 @@
   {{- $browserTitle = printf "%s — %s" $pageTitle $siteTitle -}}
 {{- end -}}
 
-{{- $languageCodeRaw := replace (default "en-US" $site.LanguageCode) "_" "-" -}}
+{{- $languageCodeRaw := replace (default "en-US" $site.Language.Locale) "_" "-" -}}
 {{- $languageParts := split $languageCodeRaw "-" -}}
 {{- $languageCode := "en-US" -}}
 {{- if gt (len $languageParts) 1 -}}
