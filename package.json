@@ -29,12 +29,12 @@
     "build": "npm run build:hugo && npm run build:pagefind"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.16",
-    "@tailwindcss/typography": "^0.5.19",
-    "prettier": "^3.6.2",
+    "@tailwindcss/cli": "^4.3.2",
+    "@tailwindcss/typography": "^0.5.20",
+    "prettier": "^3.9.5",
     "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.7.1",
-    "tailwindcss": "^4.1.16"
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "tailwindcss": "^4.3.2"
   },
   "prettier": {
     "printWidth": 80,
