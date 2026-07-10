@@ -17,4 +17,4 @@ jobs:
 
       - name: "Test and Build Website"
         run: |
-          nix develop .#ci --command bash -c "npm ci && npm run check && npm run build"
+          nix develop .#ci --command bash -c "pnpm install --frozen-lockfile && pnpm run check && pnpm run build"

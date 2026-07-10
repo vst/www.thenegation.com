@@ -27,31 +27,31 @@ direnv allow
 Install Node dependencies:
 
 ```sh
-npm install
+pnpm install
 ```
 
 Run the Website in development mode:
 
 ```sh
-npm run dev
+pnpm run dev
 ```
 
 Format the codebase:
 
 ```sh
-npm run format
+pnpm run format
 ```
 
 Check and build the codebase:
 
 ```sh
-npm run check
+pnpm run check
 ```
 
 Build the Website in production mode:
 
 ```sh
-npm run build
+pnpm run build
 ```
 
 ## License and Copyrights

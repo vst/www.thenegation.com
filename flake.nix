@@ -24,6 +24,7 @@
             packages = [
               pkgs.hugo
               pkgs.nodejs
+              pkgs.pnpm
               pkgs.taplo
               pkgs.vscode-langservers-extracted
 
@@ -37,6 +38,7 @@
             packages = [
               pkgs.hugo
               pkgs.nodejs
+              pkgs.pnpm
               pkgs.taplo
             ];
           };

@@ -30,7 +30,7 @@ This project uses **Nix flakes** for reproducible development environments.
 
 3. Install Node.js dependencies:
    ```sh
-   npm install
+   pnpm install
    ```
 
 ### Common Commands
@@ -38,7 +38,7 @@ This project uses **Nix flakes** for reproducible development environments.
 **Development server:**
 
 ```sh
-npm run dev
+pnpm run dev
 ```
 
 Runs Hugo server with live reload at http://localhost:1313
@@ -46,18 +46,18 @@ Runs Hugo server with live reload at http://localhost:1313
 **Build for production:**
 
 ```sh
-npm run build
+pnpm run build
 ```
 
 This runs two steps:
 
-1. `npm run build:hugo` - Builds the Hugo site with GC and minification
-2. `npm run build:pagefind` - Generates the search index using Pagefind
+1. `pnpm run build:hugo` - Builds the Hugo site with GC and minification
+2. `pnpm run build:pagefind` - Generates the search index using Pagefind
 
 **Formatting:**
 
 ```sh
-npm run format
+pnpm run format
 ```
 
 Formats code using Prettier (with Go template and Tailwind plugins) and Taplo
@@ -66,7 +66,7 @@ Formats code using Prettier (with Go template and Tailwind plugins) and Taplo
 **Linting:**
 
 ```sh
-npm run lint
+pnpm run lint
 ```
 
 Runs Taplo linting for TOML files
@@ -74,7 +74,7 @@ Runs Taplo linting for TOML files
 **Check everything:**
 
 ```sh
-npm run check
+pnpm run check
 ```
 
 Runs format checks, linting, and builds the site (used in CI)
@@ -189,7 +189,7 @@ GitHub Actions workflow (`.github/workflows/check.yaml`):
 
 - Runs on PRs and manual dispatch
 - Uses Nix CI shell: `nix develop .#ci`
-- Executes: `npm ci && npm run check && npm run build`
+- Executes: `pnpm install --frozen-lockfile && pnpm run check && pnpm run build`
 
 Deployment happens automatically via Vercel (configured in `vercel.json`).
 
