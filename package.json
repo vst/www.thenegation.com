@@ -16,14 +16,10 @@
   "scripts": {
     "dev": "hugo server",
     "format:prettier": "prettier --write .",
-    "format:taplo": "taplo fmt",
-    "format": "pnpm run format:prettier && pnpm run format:taplo",
-    "lint:taplo": "taplo check",
-    "lint": "pnpm run lint:taplo",
+    "format": "pnpm run format:prettier",
     "check:format:prettier": "prettier --check .",
-    "check:format:taplo": "taplo fmt --check",
-    "check:format": "pnpm run check:format:prettier && pnpm run check:format:taplo",
-    "check": "pnpm run check:format && pnpm run lint && pnpm run build",
+    "check:format": "pnpm run check:format:prettier",
+    "check": "pnpm run check:format && pnpm run build",
     "build:hugo": "hugo build --gc --minify",
     "build:pagefind": "pnpm dlx pagefind --site public",
     "build": "pnpm run build:hugo && pnpm run build:pagefind"

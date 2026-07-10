@@ -25,7 +25,6 @@
               pkgs.hugo
               pkgs.nodejs
               pkgs.pnpm
-              pkgs.taplo
               pkgs.vscode-langservers-extracted
 
               dev-md-format
@@ -39,7 +38,6 @@
               pkgs.hugo
               pkgs.nodejs
               pkgs.pnpm
-              pkgs.taplo
             ];
           };
         }

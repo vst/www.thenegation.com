@@ -11,7 +11,7 @@
       "draft": false,
       "prerelease": false,
       "initial-version": "0.0.1",
-      "extra-files": ["hugo.toml"]
+      "extra-files": ["hugo.yaml"]
     }
   }
 }

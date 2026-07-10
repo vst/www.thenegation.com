@@ -60,16 +60,7 @@ This runs two steps:
 pnpm run format
 ```
 
-Formats code using Prettier (with Go template and Tailwind plugins) and Taplo
-(TOML)
-
-**Linting:**
-
-```sh
-pnpm run lint
-```
-
-Runs Taplo linting for TOML files
+Formats code using Prettier with Go template and Tailwind plugins.
 
 **Check everything:**
 
@@ -77,7 +68,7 @@ Runs Taplo linting for TOML files
 pnpm run check
 ```
 
-Runs format checks, linting, and builds the site (used in CI)
+Runs format checks and builds the site (used in CI)
 
 ## Architecture
 
@@ -116,7 +107,7 @@ Runs format checks, linting, and builds the site (used in CI)
 
 ### Hugo Configuration
 
-Configuration is in `hugo.toml`:
+Configuration is in `hugo.yaml`:
 
 - Site metadata (title, baseURL, language)
 - Menu structure (Home, Blog, About)
@@ -179,9 +170,9 @@ Hugo templates follow a hierarchical structure:
 
 Two shells defined in `flake.nix`:
 
-1. **default** - Full development environment with Hugo, Node.js, Taplo, and
+1. **default** - Full development environment with Hugo, Node.js, pnpm, and
    custom cross-posting tools
-2. **ci** - Minimal CI environment with just Hugo, Node.js, and Taplo
+2. **ci** - Minimal CI environment with just Hugo, Node.js, and pnpm
 
 ## CI/CD
 
