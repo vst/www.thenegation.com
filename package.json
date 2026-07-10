@@ -19,18 +19,21 @@
     "format": "pnpm run format:prettier",
     "check:format:prettier": "prettier --check .",
     "check:format": "pnpm run check:format:prettier",
-    "check": "pnpm run check:format && pnpm run build",
+    "check:types": "tsc --noEmit",
+    "check": "pnpm run check:format && pnpm run check:types && pnpm run build",
     "build:hugo": "hugo build --gc --minify",
-    "build:pagefind": "pnpm dlx pagefind --site public",
+    "build:pagefind": "pnpm exec pagefind --site public",
     "build": "pnpm run build:hugo && pnpm run build:pagefind"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.2",
     "@tailwindcss/typography": "^0.5.20",
+    "pagefind": "^1.5.2",
     "prettier": "^3.9.5",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4.3.2"
+    "tailwindcss": "^4.3.2",
+    "typescript": "^7.0.2"
   },
   "prettier": {
     "printWidth": 80,
