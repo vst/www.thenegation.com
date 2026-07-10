@@ -93,7 +93,6 @@ Runs format checks and builds the site (used in CI)
   - `assets/ts/` - Modular TypeScript codebase
     - `main.ts` - Entry point that initializes all modules
     - `-theme.ts` - Dark mode toggle functionality
-    - `-search.ts` - Search modal with Pagefind integration
     - `-code-copy.ts` - Copy buttons for code blocks
 
 - **`static/`** - Static files copied as-is to output
@@ -136,18 +135,17 @@ The site uses a modular TypeScript architecture in `assets/ts/`:
   - Respects system color scheme preference
   - Syncs with OS theme changes
   - Toggles `.dark` class on `<body>` element
-
-- **`-search.ts`** - Search functionality
-  - Modal overlay with Pagefind UI integration
-  - Keyboard shortcuts (Ctrl/Cmd+K to open, Escape to close)
-  - Click-outside-to-close behavior
-  - Auto-focus on search input
+  - Syncs Pagefind Component UI theme via `data-pf-theme`
 
 - **`-code-copy.ts`** - Code block enhancements
   - Adds copy buttons to code blocks
   - Visual feedback on successful copy
 
 - **`main.ts`** - Entry point that initializes all modules on DOMContentLoaded
+
+Search is provided by Pagefind's Component UI web components in the Hugo
+templates. The build generates the static `/pagefind/` assets and index after
+Hugo renders the site.
 
 **External dependencies:**
 

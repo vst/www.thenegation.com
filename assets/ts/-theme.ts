@@ -26,12 +26,16 @@ export function setupTheme() {
    * Apply dark mode class to body and update button aria-checked
    */
   function applyTheme(isDark: boolean) {
-    if (isDark) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
+    // Update aria-checked attribute for setting the toggle state:
     toggleButton.setAttribute("aria-checked", String(isDark));
+
+    // Add or remove the dark class on the body:
+    document.body.classList.toggle("dark", isDark);
+
+    // Set the data-pf-theme for pagefind component theme:
+    document
+      .querySelector("[data-pf-theme]")
+      ?.setAttribute("data-pf-theme", isDark ? "dark" : "light");
   }
 
   /**

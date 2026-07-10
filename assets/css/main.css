@@ -134,30 +134,3 @@ body > footer > p > a {
     @apply text-xs;
   }
 }
-
-/************/
-/* PAGEFIND */
-/************/
-
-body.dark {
-  --pagefind-ui-primary: #eeeeee;
-  --pagefind-ui-text: #eeeeee;
-  --pagefind-ui-background: #152028;
-  --pagefind-ui-border: #152028;
-  --pagefind-ui-tag: #152028;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#search-overlay[aria-hidden="false"] {
-  display: flex;
-}
