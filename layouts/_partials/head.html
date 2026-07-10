@@ -67,13 +67,10 @@
 {{- $pageTwitterImage = default $pageOgImage $pageTwitterImage -}}
 
 {{- $permalink := .Permalink -}}
-{{- $isListing := or .IsHome .IsSection -}}
+{{- $isListing := or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
 {{- $isPost := and .IsPage (eq .Section "posts") -}}
 
-{{- $ogType := "article" -}}
-{{- if $isListing -}}
-  {{- $ogType = "website" -}}
-{{- end }}
+{{- $ogType := cond $isPost "article" "website" -}}
 {{- with .Params.seo }}
   {{- with .og }}
     {{- with .type }}
@@ -142,7 +139,10 @@
 <!-- ICONS & MANIFEST -->
 <!---------------------->
 
-<link rel="icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 
 <!--------------------->
@@ -172,7 +172,7 @@
 {{- with $permalink }}
   <meta property="og:url" content="{{ . }}" />
 {{- end }}
-{{- if eq $ogType "article" }}
+{{- if $isPost }}
   {{- with .Date }}
     <meta
       property="article:published_time"
