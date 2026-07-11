@@ -7,6 +7,10 @@
 .hugo_build.lock
 hugo_stats.json
 
+## Generated Chroma stylesheets (see package.json's generate:chroma script):
+/assets/css/chroma-latte.css
+/assets/css/chroma-mocha.css
+
 ## Node.js ignores:
 /node_modules
 

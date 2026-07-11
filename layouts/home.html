@@ -1,5 +1,5 @@
 {{- define "main" -}}
-  <article class="prose dark:prose-invert max-w-none">
+  <article class="prose prose-catppuccin max-w-none">
     <h1>{{ .Title | markdownify }}</h1>
 
     {{ .Content }}
@@ -19,8 +19,7 @@
           </p>
 
           {{- if .Summary -}}
-            <div
-              class="border-l-4 border-gray-200 pl-4 text-sm dark:border-gray-600">
+            <div class="border-ctp-surface0 border-l-4 pl-4 text-sm">
               {{ .Summary }}
             </div>
 

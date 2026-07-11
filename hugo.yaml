@@ -38,7 +38,7 @@ markup:
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: false
-    noClasses: true
+    noClasses: false
     style: "catppuccin-mocha"
     tabWidth: 4
     wrapperClass: "highlight"

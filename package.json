@@ -14,18 +14,20 @@
   },
   "private": true,
   "scripts": {
-    "dev": "hugo server",
+    "generate:chroma": "hugo gen chromastyles --style=catppuccin-latte > assets/css/chroma-latte.css && hugo gen chromastyles --style=catppuccin-mocha > assets/css/chroma-mocha.css",
+    "dev": "pnpm run generate:chroma && hugo server",
     "format:prettier": "prettier --write .",
     "format": "pnpm run format:prettier",
     "check:format:prettier": "prettier --check .",
     "check:format": "pnpm run check:format:prettier",
     "check:types": "tsc --noEmit",
     "check": "pnpm run check:format && pnpm run check:types && pnpm run build",
-    "build:hugo": "hugo build --gc --minify",
+    "build:hugo": "pnpm run generate:chroma && hugo build --gc --minify",
     "build:pagefind": "pnpm exec pagefind --site public",
     "build": "pnpm run build:hugo && pnpm run build:pagefind"
   },
   "devDependencies": {
+    "@catppuccin/tailwindcss": "^1.0.0",
     "@tailwindcss/cli": "^4.3.2",
     "@tailwindcss/typography": "^0.5.20",
     "pagefind": "^1.5.2",

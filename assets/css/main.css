@@ -1,13 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
+@import "@catppuccin/tailwindcss/mocha.css";
 @plugin "@tailwindcss/typography";
 @source "hugo_stats.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Chroma (see hugo.yaml, noClasses: false) emits token classes rather than
+   inline colors, so we supply the token colors ourselves: catppuccin-latte
+   unscoped as the light-mode default, catppuccin-mocha nested under our
+   dark variant. These two files are generated (not committed, see
+   .gitignore) by the `generate:chroma` script in package.json, which runs
+   ahead of both `dev` and `build:hugo`. */
+@import "chroma-latte.css";
+:where(.dark, .dark *) {
+  @import "chroma-mocha.css";
+}
+
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+}
+
+@utility prose-catppuccin {
+  --tw-prose-body: var(--color-ctp-text);
+  --tw-prose-headings: var(--color-ctp-text);
+  --tw-prose-lead: var(--color-ctp-overlay2);
+  --tw-prose-links: var(--color-ctp-blue);
+  --tw-prose-bold: var(--color-ctp-text);
+  --tw-prose-counters: var(--color-ctp-overlay0);
+  --tw-prose-bullets: var(--color-ctp-surface2);
+  --tw-prose-hr: var(--color-ctp-surface1);
+  --tw-prose-quotes: var(--color-ctp-subtext0);
+  --tw-prose-quote-borders: var(--color-ctp-overlay2);
+  --tw-prose-captions: var(--color-ctp-text);
+  --tw-prose-kbd: var(--color-ctp-overlay2);
+  --tw-prose-kbd-shadows: color-mix(
+    in oklab,
+    var(--color-ctp-overlay2) 50%,
+    transparent
+  );
+  --tw-prose-code: var(--color-ctp-subtext0);
+  --tw-prose-pre-code: var(--color-ctp-subtext1);
+  --tw-prose-pre-bg: var(--color-ctp-mantle);
+  --tw-prose-th-borders: var(--color-ctp-surface2);
+  --tw-prose-td-borders: var(--color-ctp-surface0);
 }
 
 @layer base {
@@ -19,7 +56,7 @@
 
 body {
   @apply flex min-h-screen flex-col;
-  @apply mx-2 bg-gray-50 lg:mx-0 dark:bg-gray-950 dark:text-gray-300;
+  @apply bg-ctp-base text-ctp-text mx-2 lg:mx-0;
 }
 
 /**********/
@@ -33,7 +70,7 @@ body > header {
 
 body > header > a {
   @apply flex grow flex-row;
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-ctp-subtext0;
 }
 
 body > header > nav {
@@ -48,27 +85,31 @@ body > header > nav > ul > li {
   @apply block;
   @apply px-2 py-1;
   @apply text-sm;
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-ctp-subtext0;
 }
 
 body > header > nav > ul > li > a.active {
-  @apply text-gray-600 dark:text-gray-300;
-  @apply decoration-gray-400 dark:decoration-gray-600;
+  @apply text-ctp-text;
+  @apply decoration-ctp-overlay0;
   @apply underline decoration-solid decoration-1 underline-offset-4;
 }
 
+/* mantle instead of base so the code block reads as a distinct panel
+   rather than blending into the page background; wins over the chroma
+   stylesheets' own `.chroma` background by specificity, no `!` needed. */
 div.highlight > pre {
   @apply relative py-5;
+  @apply bg-ctp-mantle;
 }
 
 div.highlight > pre > .copy-button {
   @apply absolute top-0 right-0;
-  @apply rounded-bl-md border-b border-l border-gray-500 dark:border-gray-600;
-  @apply bg-gray-950 dark:bg-gray-800;
+  @apply border-ctp-overlay0 rounded-bl-md border-b border-l;
+  @apply bg-ctp-crust;
   @apply cursor-pointer;
   @apply px-1.5 py-0.5;
   @apply text-xs;
-  @apply text-gray-400 hover:text-gray-100 dark:text-gray-500 dark:hover:text-gray-200;
+  @apply text-ctp-overlay1 hover:text-ctp-text;
   @apply transition-colors duration-200 ease-in-out;
 }
 
@@ -80,7 +121,7 @@ div.highlight > pre > .copy-button {
 }
 
 .section-prev-next > a {
-  @apply text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white;
+  @apply text-ctp-subtext1 hover:text-ctp-text;
   @apply font-light italic;
   @apply block whitespace-nowrap;
 }
@@ -114,11 +155,11 @@ body > main {
 body > footer {
   @apply flex w-full shrink flex-col;
   @apply mx-auto max-w-2xl;
-  @apply space-y-2 border-t border-dashed border-gray-300 py-3 text-xs text-gray-400 dark:border-gray-700 dark:text-gray-500;
+  @apply border-ctp-surface0 text-ctp-subtext0 space-y-2 border-t border-dashed py-3 text-xs;
 }
 
 body > footer > p > a {
-  @apply font-medium text-gray-600/80 underline dark:text-gray-400/80;
+  @apply text-ctp-subtext1/80 font-medium underline;
 }
 
 /**************/
@@ -131,8 +172,8 @@ body > footer > p > a {
   /*******************/
 
   .label {
-    @apply bg-gray-300 dark:bg-gray-700;
-    @apply text-gray-800 dark:text-gray-200;
+    @apply bg-ctp-surface0;
+    @apply text-ctp-text;
     @apply rounded-sm;
     @apply px-2 py-1;
     @apply text-xs;
@@ -145,9 +186,9 @@ body > footer > p > a {
   .tn-theme-switch {
     @apply relative inline-flex h-6 w-11 shrink-0 cursor-pointer;
     @apply rounded-full border-2 border-transparent;
-    @apply bg-zinc-200 dark:bg-zinc-700;
+    @apply bg-ctp-surface0;
     @apply transition-colors duration-200 ease-in-out;
-    @apply focus:ring-2 focus:ring-neutral-700 focus:ring-offset-2 focus:outline-none;
+    @apply focus:ring-ctp-overlay0 focus:ring-2 focus:ring-offset-2 focus:outline-none;
   }
 
   .tn-theme-switch-thumb {
