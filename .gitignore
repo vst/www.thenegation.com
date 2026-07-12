@@ -11,6 +11,9 @@ hugo_stats.json
 /assets/css/chroma-latte.css
 /assets/css/chroma-mocha.css
 
+## Self-hosted webfonts (see scripts/fetch-fonts.sh):
+/static/fonts
+
 ## Node.js ignores:
 /node_modules
 

@@ -22,9 +22,11 @@
         {
           default = pkgs.mkShell {
             packages = [
+              pkgs.curl
               pkgs.hugo
               pkgs.nodejs
               pkgs.pnpm
+              pkgs.unzip
               pkgs.vscode-langservers-extracted
 
               dev-md-format
@@ -35,9 +37,11 @@
 
           ci = pkgs.mkShell {
             packages = [
+              pkgs.curl
               pkgs.hugo
               pkgs.nodejs
               pkgs.pnpm
+              pkgs.unzip
             ];
           };
         }

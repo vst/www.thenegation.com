@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/mocha.css";
 @plugin "@tailwindcss/typography";
@@ -17,12 +16,75 @@
   @import "chroma-mocha.css";
 }
 
-@theme {
-  --font-sans: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+/* Self-hosted webfonts (see scripts/fetch-fonts.sh, not committed to git).
+   JetBrains Mono is the site-wide default (nav, UI chrome, code); Source
+   Serif 4 is scoped to prose content only (see `prose-catppuccin` below).
+   Source Serif 4 is variable-weight; JetBrains Mono ships as four static
+   weight/style instances. */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/source-serif/SourceSerif4Variable-Roman.woff2")
+    format("woff2");
 }
 
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/source-serif/SourceSerif4Variable-Italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-BoldItalic.woff2")
+    format("woff2");
+}
+
+/* JetBrains Mono is the site-wide default font (via --default-font-family,
+   which Tailwind's Preflight applies to html); Source Serif 4 is only
+   pulled in below, by the `prose-catppuccin` utility, for prose content. */
+@theme {
+  --font-serif: "Source Serif 4", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --default-font-family: var(--font-mono);
+}
+
+/* Applies the site's Catppuccin colors and Source Serif 4 (see @theme
+   above) to Tailwind Typography's `.prose` content. */
 @utility prose-catppuccin {
+  font-family: var(--font-serif);
   --tw-prose-body: var(--color-ctp-text);
   --tw-prose-headings: var(--color-ctp-text);
   --tw-prose-lead: var(--color-ctp-overlay2);
@@ -49,8 +111,7 @@
 
 @layer base {
   html {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    @apply text-xl;
   }
 }
 
