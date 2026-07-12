@@ -16,7 +16,8 @@
   "scripts": {
     "generate:chroma": "hugo gen chromastyles --style=catppuccin-latte > assets/css/chroma-latte.css && hugo gen chromastyles --style=catppuccin-mocha > assets/css/chroma-mocha.css",
     "generate:fonts": "./scripts/fetch-fonts.sh",
-    "generate": "pnpm run generate:chroma && pnpm run generate:fonts",
+    "generate:version": "./scripts/generate-version.sh",
+    "generate": "pnpm run generate:chroma && pnpm run generate:fonts && pnpm run generate:version",
     "dev": "pnpm run generate && hugo server",
     "format:prettier": "prettier --write .",
     "format": "pnpm run format:prettier",

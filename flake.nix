@@ -23,7 +23,9 @@
           default = pkgs.mkShell {
             packages = [
               pkgs.curl
+              pkgs.git
               pkgs.hugo
+              pkgs.jq
               pkgs.nodejs
               pkgs.pnpm
               pkgs.unzip
@@ -38,7 +40,9 @@
           ci = pkgs.mkShell {
             packages = [
               pkgs.curl
+              pkgs.git
               pkgs.hugo
+              pkgs.jq
               pkgs.nodejs
               pkgs.pnpm
               pkgs.unzip
