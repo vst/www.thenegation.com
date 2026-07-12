@@ -117,7 +117,9 @@
 
 body {
   @apply flex min-h-screen flex-col;
-  @apply bg-ctp-base text-ctp-text mx-2 lg:mx-0;
+  @apply bg-ctp-base text-ctp-text;
+  width: min(calc(100% - 2rem), 60ch);
+  margin-inline: auto;
 }
 
 /**********/
@@ -125,8 +127,8 @@ body {
 /**********/
 
 body > header {
-  @apply flex w-full shrink flex-row items-center justify-between;
-  @apply mx-auto mt-4 mb-8 max-w-2xl;
+  @apply flex shrink flex-row items-center justify-between;
+  @apply mt-4 mb-8;
 }
 
 body > header > a {
@@ -157,10 +159,18 @@ body > header > nav > ul > li > a.active {
 
 /* mantle instead of base so the code block reads as a distinct panel
    rather than blending into the page background; wins over the chroma
-   stylesheets' own `.chroma` background by specificity, no `!` needed. */
+   stylesheets' own `.chroma` background by specificity, no `!` needed.
+   Deliberately wider than the 60ch prose column above (85ch) so code has
+   more room */
 div.highlight > pre {
-  @apply relative py-5;
+  @apply relative px-4 py-5;
   @apply bg-ctp-mantle;
+  box-sizing: border-box;
+  width: min(calc(100vw - 2rem), 85ch);
+  max-width: none;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+  overflow-x: auto;
 }
 
 div.highlight > pre > .copy-button {
@@ -206,7 +216,7 @@ div.highlight > pre > .copy-button {
 
 body > main {
   @apply flex grow flex-col;
-  @apply mx-auto mb-8 w-full max-w-2xl;
+  @apply mb-8;
 }
 
 /**********/
@@ -214,8 +224,7 @@ body > main {
 /**********/
 
 body > footer {
-  @apply flex w-full shrink flex-col;
-  @apply mx-auto max-w-2xl;
+  @apply flex shrink flex-col;
   @apply border-ctp-surface0 text-ctp-subtext0 space-y-2 border-t border-dashed py-3 text-xs;
 }
 
