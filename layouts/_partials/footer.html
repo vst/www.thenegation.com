@@ -18,7 +18,7 @@
     rel="license noopener noreferrer"
     class="text-nowrap hover:underline"
     property="dct:title"
-    content="{{ .Site.Title }}"
+    content="{{ .Site.Title | markdownify | plainify | htmlUnescape | strings.TrimSpace }}"
     >CC BY-SA 4.0</a
   >
   (unless otherwise noted).
