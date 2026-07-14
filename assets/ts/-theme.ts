@@ -44,11 +44,6 @@ export function setupTheme() {
     // instead of relying on the `dark` variant to flip it; latte remains
     // the plain `:root` default for light mode.
     document.documentElement.classList.toggle("mocha", isDark);
-
-    // Set the data-pf-theme for pagefind component theme:
-    document
-      .querySelector("[data-pf-theme]")
-      ?.setAttribute("data-pf-theme", isDark ? "dark" : "light");
   }
 
   /**

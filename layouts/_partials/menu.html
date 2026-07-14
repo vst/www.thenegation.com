@@ -8,6 +8,18 @@
     </ul>
 
     <div class="tn-nav-controls">
+      <div>
+        <button
+          data-search-trigger
+          type="button"
+          title="Search"
+          class="cursor-pointer">
+          <span class="sr-only">Search</span>
+          <i class="bi bi-search contrast-25"></i>
+        </button>
+        <pagefind-modal id="search-modal"></pagefind-modal>
+      </div>
+
       {{- with site.Home.OutputFormats.Get "rss" -}}
         <a
           href="{{ .RelPermalink }}"
@@ -40,14 +52,6 @@
         </span>
       </button>
 
-      <div
-        id="pf-theme-container"
-        data-pf-theme="dark"
-        class="flex items-center">
-        <pagefind-modal-trigger compact hide-shortcut></pagefind-modal-trigger>
-        <pagefind-modal></pagefind-modal>
-      </div>
-
       <button
         data-nav-toggle
         type="button"
@@ -55,7 +59,7 @@
         aria-expanded="false"
         aria-controls="primary-navigation">
         <span class="sr-only">Menu</span>
-        <i data-nav-toggle-icon class="bi bi-list contrast-25"></i>
+        <i data-nav-toggle-icon class="bi bi-list text-xl contrast-25"></i>
       </button>
     </div>
   </nav>

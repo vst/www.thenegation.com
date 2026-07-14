@@ -154,11 +154,12 @@ body > header > nav > ul > li > a.active {
 }
 
 body > header > nav > .tn-nav-controls {
-  @apply flex items-center gap-2;
+  @apply flex items-center gap-3;
 }
 
 .tn-nav-toggle {
   @apply flex items-center justify-center;
+  @apply cursor-pointer;
   @apply md:hidden;
 }
 
@@ -271,4 +272,45 @@ div.highlight > pre > .copy-button {
   @apply text-xs;
   @apply text-ctp-overlay1 hover:text-ctp-text;
   @apply transition-colors duration-200 ease-in-out;
+}
+
+/*
+ * Pagefind Component UI theme. See:
+ *
+ *   https://pagefind.app/docs/css-variables/
+ *
+ * ctp-* tokens already flip with the .dark/.mocha classes, so one
+ * rule covers both light and dark themes. Also note that `html:root`
+ * outranks Pagefind's plain `:root` regardless of stylesheet order.
+ */
+html:root {
+  --pf-font: var(--font-mono);
+  --pf-background: var(--color-ctp-mantle);
+  --pf-text: var(--color-ctp-text);
+  --pf-text-secondary: var(--color-ctp-subtext1);
+  --pf-text-muted: var(--color-ctp-subtext0);
+  --pf-border: var(--color-ctp-surface0);
+  --pf-border-focus: var(--color-ctp-overlay0);
+  --pf-hover: var(--color-ctp-surface1);
+  --pf-mark: var(--color-ctp-yellow);
+  --pf-outline-focus: var(--color-ctp-blue);
+  --pf-skeleton: var(--color-ctp-surface0);
+  --pf-skeleton-shine: var(--color-ctp-surface1);
+  --pf-modal-backdrop: color-mix(
+    in oklab,
+    var(--color-ctp-crust) 70%,
+    transparent
+  );
+  --pf-error-bg: color-mix(
+    in oklab,
+    var(--color-ctp-red) 12%,
+    var(--color-ctp-base)
+  );
+  --pf-error-border: color-mix(
+    in oklab,
+    var(--color-ctp-red) 40%,
+    var(--color-ctp-base)
+  );
+  --pf-error-text: var(--color-ctp-red);
+  --pf-error-text-secondary: var(--color-ctp-maroon);
 }
