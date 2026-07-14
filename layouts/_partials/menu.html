@@ -2,46 +2,61 @@
 {{- $menuID := .menuID -}}
 
 {{- with index site.Menus $menuID -}}
-  <nav class="gap-1">
-    <ul>
+  <nav>
+    <ul id="primary-navigation">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
     </ul>
 
-    {{- with site.Home.OutputFormats.Get "rss" -}}
-      <a
-        href="{{ .RelPermalink }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="{{ site.Title | markdownify }}">
-        <i class="bi bi-rss-fill contrast-25"></i>
-      </a>
-    {{- end -}}
+    <div class="tn-nav-controls">
+      {{- with site.Home.OutputFormats.Get "rss" -}}
+        <a
+          href="{{ .RelPermalink }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="{{ site.Title | markdownify }}">
+          <i class="bi bi-rss-fill contrast-25"></i>
+        </a>
+      {{- end -}}
 
 
-    <button
-      data-theme-toggle
-      type="button"
-      class="tn-theme-switch"
-      role="switch"
-      aria-checked="false">
-      <span class="sr-only">Dark mode</span>
-      <span class="tn-theme-switch-thumb">
-        <span
-          class="tn-theme-switch-icon tn-theme-switch-icon-light"
-          aria-hidden="true">
-          <i class="bi bi-sun contrast-25"></i>
+      <button
+        data-theme-toggle
+        type="button"
+        class="tn-theme-switch"
+        role="switch"
+        aria-checked="false">
+        <span class="sr-only">Dark mode</span>
+        <span class="tn-theme-switch-thumb">
+          <span
+            class="tn-theme-switch-icon tn-theme-switch-icon-light"
+            aria-hidden="true">
+            <i class="bi bi-sun contrast-25"></i>
+          </span>
+          <span
+            class="tn-theme-switch-icon tn-theme-switch-icon-dark"
+            aria-hidden="true">
+            <i class="bi bi-moon contrast-25"></i>
+          </span>
         </span>
-        <span
-          class="tn-theme-switch-icon tn-theme-switch-icon-dark"
-          aria-hidden="true">
-          <i class="bi bi-moon contrast-25"></i>
-        </span>
-      </span>
-    </button>
+      </button>
 
-    <div id="pf-theme-container" data-pf-theme="dark" class="flex items-center">
-      <pagefind-modal-trigger compact hide-shortcut></pagefind-modal-trigger>
-      <pagefind-modal></pagefind-modal>
+      <div
+        id="pf-theme-container"
+        data-pf-theme="dark"
+        class="flex items-center">
+        <pagefind-modal-trigger compact hide-shortcut></pagefind-modal-trigger>
+        <pagefind-modal></pagefind-modal>
+      </div>
+
+      <button
+        data-nav-toggle
+        type="button"
+        class="tn-nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <i data-nav-toggle-icon class="bi bi-list contrast-25"></i>
+      </button>
     </div>
   </nav>
 {{- end -}}

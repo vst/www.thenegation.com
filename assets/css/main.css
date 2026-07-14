@@ -116,7 +116,7 @@ body {
 }
 
 body > header {
-  @apply flex shrink flex-row items-center justify-between;
+  @apply relative flex shrink flex-row items-center justify-between;
   @apply mt-4 mb-8;
 }
 
@@ -126,11 +126,18 @@ body > header > a {
 }
 
 body > header > nav {
-  @apply flex shrink flex-row items-center space-x-2;
+  @apply flex flex-row items-center gap-2;
 }
 
+/* Mobile dropdown, collapsed by default, toggled open by -nav-toggle.ts */
 body > header > nav > ul {
-  @apply flex flex-row;
+  @apply absolute inset-x-0 top-full z-10 mt-2 hidden flex-col gap-1;
+  @apply bg-ctp-mantle rounded-lg p-4 shadow-lg;
+  @apply md:static md:z-auto md:mt-0 md:flex md:w-auto md:flex-row md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none;
+}
+
+body > header > nav > ul.is-open {
+  @apply flex;
 }
 
 body > header > nav > ul > li {
@@ -144,6 +151,15 @@ body > header > nav > ul > li > a.active {
   @apply text-ctp-text;
   @apply decoration-ctp-overlay0;
   @apply underline decoration-solid decoration-1 underline-offset-4;
+}
+
+body > header > nav > .tn-nav-controls {
+  @apply flex items-center gap-2;
+}
+
+.tn-nav-toggle {
+  @apply flex items-center justify-center;
+  @apply md:hidden;
 }
 
 body > main {
