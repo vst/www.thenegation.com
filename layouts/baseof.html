@@ -7,6 +7,20 @@
   {{- $htmlLang = lower (index $langParts 0) -}}
 {{- end -}}
 {{- $htmlLangDir := site.Language.Direction | default "ltr" -}}
+{{- /*
+  Force content, and therefore any shortcodes within it.
+
+  This is necessary because we want shortcodes to perform their side-effects
+  such as registering capabilities (via .Store).
+
+  An example is the leaflet_world shortcode, which registers a capability
+  flag for including vendor assets in head.html.
+
+  Also note that the .Content variable is memoized, so we can safely render
+  it here and then reuse later.
+  */
+-}}
+{{- $__forceContentRender := .Content -}}
 <!doctype html>
 <html lang="{{ $htmlLang }}" dir="{{ $htmlLangDir }}">
   <head>

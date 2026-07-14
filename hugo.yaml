@@ -56,6 +56,18 @@ module:
   mounts:
     - source: "assets"
       target: "assets"
+    - source: "static"
+      target: "static"
     - disableWatch: true
       source: "hugo_stats.json"
       target: "assets/notwatching/hugo_stats.json"
+    - source: "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+      target: "static/vendor/bootstrap-icons/bootstrap-icons.min.css"
+    - source: "node_modules/bootstrap-icons/font/fonts"
+      target: "static/vendor/bootstrap-icons/fonts"
+    - source: "node_modules/leaflet/dist/leaflet.js"
+      target: "static/vendor/leaflet/leaflet.js"
+    - source: "node_modules/leaflet/dist/leaflet.css"
+      target: "static/vendor/leaflet/leaflet.css"
+    - source: "node_modules/leaflet/dist/images"
+      target: "static/vendor/leaflet/images"
