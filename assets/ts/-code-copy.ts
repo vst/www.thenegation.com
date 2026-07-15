@@ -17,6 +17,17 @@ export function setupCodeCopy() {
       button.className = "copy-button";
       button.textContent = "Copy";
 
+      const pre = block.parentElement;
+      if (!pre || !pre.parentNode) {
+        return;
+      }
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "code-block";
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.append(pre);
+      wrapper.append(button);
+
       button.addEventListener("click", () => {
         navigator.clipboard.writeText(content).then(() => {
           button.textContent = "Copied!";
@@ -25,8 +36,6 @@ export function setupCodeCopy() {
           }, 2000);
         });
       });
-
-      block.parentNode?.insertBefore(button, block);
     }
   });
 }
