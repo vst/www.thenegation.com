@@ -94,14 +94,6 @@
   {{- $robots = "noindex, nofollow" -}}
 {{- end -}}
 
-{{- $parsedBase := urls.Parse $baseURL -}}
-{{- $domain := "thenegation.com" -}}
-{{- with $parsedBase }}
-  {{- with .Host }}
-    {{- $domain = . -}}
-  {{- end }}
-{{- end -}}
-
 {{- $imageAlt := printf "%s — %s" $pageTitle $siteTitle -}}
 {{- if eq $pageTitle $siteTitle -}}
   {{- $imageAlt = printf "%s social preview" $siteTitle -}}
@@ -330,11 +322,22 @@
 <!-- ANALYTICS -->
 <!--------------->
 
-<script
-  defer
-  src="/vendor/p/js/script.js"
-  data-api="/vendor/p/api/event"
-  data-domain="{{ $domain }}"></script>
+<script async src="/r/v1/s.js?v=pa" data-api="/r/v1/e"></script>
+<script>
+  ((window.plausible =
+    window.plausible ||
+    function () {
+      (plausible.q = plausible.q || []).push(arguments);
+    }),
+    (plausible.init =
+      plausible.init ||
+      function (i) {
+        plausible.o = i || {};
+      }));
+  plausible.init({
+    endpoint: "/r/v1/e",
+  });
+</script>
 
 <!----------->
 <!-- FEEDS -->

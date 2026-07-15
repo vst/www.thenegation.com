@@ -30,6 +30,7 @@
               pkgs.pnpm
               pkgs.unzip
               pkgs.vscode-langservers-extracted
+              pkgs.wrangler
 
               dev-md-format
               (pkgs.callPackage ./var/tools/dev-cross-post-devto { inherit dev-md-format; })

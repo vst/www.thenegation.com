@@ -20,6 +20,10 @@ hugo_stats.json
 ## Node.js ignores:
 /node_modules
 
+## Cloudflare Wrangler local dev cache and secrets (see package.json's dev-serve script):
+/.dev.vars
+/.wrangler
+
 ## Content ignores:
 /content/posts/**/*.hi
 /content/posts/**/*.o

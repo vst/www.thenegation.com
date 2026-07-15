@@ -19,6 +19,7 @@
     "generate:version": "./scripts/generate-version.sh",
     "generate": "pnpm run generate:chroma && pnpm run generate:fonts && pnpm run generate:version",
     "dev": "pnpm run generate && hugo server",
+    "dev-serve": "pnpm run build && wrangler pages dev public/ --compatibility-date=2026-05-25",
     "format:prettier": "prettier --write .",
     "format": "pnpm run format:prettier",
     "check:format:prettier": "prettier --check .",

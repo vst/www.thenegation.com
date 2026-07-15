@@ -7,15 +7,11 @@ set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
-version="$(jq '.version' package.json)"
 commit="$(git rev-parse --short HEAD 2>/dev/null || echo unknown)"
 buildTime="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 
-jq \
-  --null-input \
-  --compact-output \
-  --arg version "$version" \
-  --arg commit "$commit" \
-  --arg buildTime "$buildTime" \
-  '{version: $version, commit: $commit, buildTime: $buildTime}' \
-  >static/version.json
+node -e '
+  const { version } = require("./package.json");
+  const [, commit, buildTime] = process.argv;
+  process.stdout.write(JSON.stringify({ version, commit, buildTime }));
+' "$commit" "$buildTime" >static/version.json

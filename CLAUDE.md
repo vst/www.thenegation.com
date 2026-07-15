@@ -8,7 +8,7 @@ code in this repository.
 This is a personal website built with **Hugo** (static site generator) and
 **Tailwind CSS v4** (styling framework). The site features a blog with search
 functionality powered by Pagefind, dark mode support via custom JS, and is
-deployed on Vercel.
+deployed on Cloudflare Pages.
 
 ## Development Environment
 
@@ -150,8 +150,9 @@ Hugo renders the site.
 **External dependencies:**
 
 - **Pagefind** - Client-side search library (self-hosted at `/pagefind/`)
-- **Plausible Analytics** - Privacy-friendly analytics (self-hosted at
-  `/vendor/p/`)
+- **Plausible Analytics** - Privacy-friendly analytics, proxied through
+  Cloudflare Pages Functions (`functions/r/v1/e.ts` and
+  `functions/r/v1/s.js.ts`) rather than loaded directly from plausible.io
 
 ### Template Patterns
 
@@ -168,8 +169,9 @@ Hugo templates follow a hierarchical structure:
 
 Two shells defined in `flake.nix`:
 
-1. **default** - Full development environment with Hugo, Node.js, pnpm, and
-   custom cross-posting tools
+1. **default** - Full development environment with Hugo, Node.js, pnpm, Wrangler
+   (for testing Cloudflare Pages Functions locally), and custom cross-posting
+   tools
 2. **ci** - Minimal CI environment with just Hugo, Node.js, and pnpm
 
 ## CI/CD
@@ -180,7 +182,17 @@ GitHub Actions workflow (`.github/workflows/check.yaml`):
 - Uses Nix CI shell: `nix develop .#ci`
 - Executes: `pnpm install --frozen-lockfile && pnpm run check && pnpm run build`
 
-Deployment happens automatically via Vercel (configured in `vercel.json`).
+Deployment happens automatically via Cloudflare Pages. Build command
+`./deploy.sh`, output directory `public`.
+
+- `deploy.sh` sets `HUGO_BASEURL` based on `CF_PAGES_BRANCH`/`CF_PAGES_URL`: the
+  `main` branch deploys to `https://www.thenegation.com/`, other branches use
+  the preview URL Cloudflare provides, and an explicitly-set `HUGO_BASEURL` is
+  always left untouched.
+- The Plausible Analytics proxy (`functions/r/v1/`) requires a
+  `PLAUSIBLE_SCRIPT_ID` environment variable set in the Cloudflare Pages project
+  settings — the site-specific part of the Plausible script URL, e.g. `abc123`
+  for `https://plausible.io/js/pa-abc123.js`.
 
 ## Content Guidelines
 
