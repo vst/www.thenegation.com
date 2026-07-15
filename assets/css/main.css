@@ -170,11 +170,11 @@ body > main {
 
 body > footer {
   @apply flex shrink flex-col;
-  @apply border-ctp-surface0 text-ctp-subtext0 space-y-2 border-t border-dashed py-3 text-xs;
+  @apply border-ctp-surface0 text-ctp-subtext1 space-y-2 border-t border-dashed py-3 text-xs;
 }
 
 body > footer > p > a {
-  @apply text-ctp-subtext1/80 font-medium underline;
+  @apply font-medium text-nowrap underline;
 }
 
 /**************/
