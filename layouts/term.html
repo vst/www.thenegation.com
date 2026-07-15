@@ -1,19 +1,19 @@
 {{- define "main" -}}
   {{- $page := . -}}
   <article class="prose prose-catppuccin max-w-none">
-    <h1 class="flex flex-row items-center gap-2">
+    <h1 class="flex flex-col items-start gap-2 md:flex-row md:items-baseline">
       <a href="{{ .Parent.RelPermalink }}" class="font-bold">Tags</a>
       <span>&raquo;</span>
       <span>{{ .Title | markdownify }}</span>
       {{- with .OutputFormats.Get "rss" -}}
         <a
           href="{{ .RelPermalink }}"
-          class="not-prose"
+          class="not-prose font-mono text-sm underline"
           target="_blank"
           rel="noopener noreferrer"
           title="RSS Feed for {{ page.Title }}"
-          ><i class="bi bi-rss-fill text-xl contrast-50"></i
-        ></a>
+          >[RSS]</a
+        >
       {{- end -}}
     </h1>
 
