@@ -11,9 +11,9 @@
         {{- range .Pages.ByDate.Reverse -}}
           <li>
             <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
-            <span class="font-mono text-xs">
+            <div class="font-mono text-xs">
               [{{ .Date.Format "2 Jan 2006" }}]
-            </span>
+            </div>
           </li>
         {{- end -}}
       </ul>
