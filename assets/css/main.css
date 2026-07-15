@@ -127,8 +127,8 @@ body > header {
 }
 
 body > header > a {
-  @apply flex grow flex-row;
-  @apply text-ctp-subtext0;
+  @apply flex flex-row;
+  @apply text-ctp-subtext1;
 }
 
 body > header > nav {
@@ -150,13 +150,17 @@ body > header > nav > ul > li {
   @apply block;
   @apply px-2 py-1;
   @apply text-sm;
-  @apply text-ctp-subtext0;
+  @apply text-ctp-subtext1;
 }
 
 body > header > nav > ul > li > a.active {
   @apply text-ctp-text;
   @apply decoration-ctp-overlay0;
   @apply underline decoration-solid decoration-1 underline-offset-4;
+}
+
+body > header > nav > ul > li > a {
+  @apply inline-flex items-center px-1 py-2;
 }
 
 body > header > nav > .tn-nav-controls {

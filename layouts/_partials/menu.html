@@ -6,35 +6,32 @@
     <ul id="primary-navigation">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
 
-
-      <li>
-        <div>
-          <button
-            data-search-trigger
-            type="button"
-            title="Search"
-            class="text-ctp-subtext0 cursor-pointer text-sm">
-            Search
-          </button>
-          <pagefind-modal id="search-modal"></pagefind-modal>
-        </div>
-      </li>
-
-      {{- with site.Home.OutputFormats.Get "rss" -}}
-        <li>
-          <a
-            href="{{ .RelPermalink }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="{{ site.Title | markdownify }}"
-            class="text-ctp-subtext0 text-sm"
-            >RSS</a
-          >
-        </li>
-      {{- end -}}
     </ul>
 
     <div class="tn-nav-controls">
+      <div>
+        <button
+          data-search-trigger
+          type="button"
+          title="Search"
+          class="text-ctp-subtext1 inline-flex cursor-pointer items-center justify-center px-1 py-2 text-sm">
+          Search
+        </button>
+        <pagefind-modal id="search-modal"></pagefind-modal>
+      </div>
+
+      {{- with site.Home.OutputFormats.Get "rss" -}}
+        <a
+          href="{{ .RelPermalink }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="{{ site.Title | markdownify }}"
+          class="text-ctp-subtext1 inline-flex items-center justify-center px-1 py-2 text-sm"
+          >RSS</a
+        >
+      {{- end -}}
+
+
       <button
         data-theme-toggle
         type="button"
@@ -78,7 +75,7 @@
       <button
         data-nav-toggle
         type="button"
-        class="tn-nav-toggle"
+        class="tn-nav-toggle px-1 py-2"
         aria-expanded="false"
         aria-controls="primary-navigation">
         <span class="sr-only">Menu</span>
