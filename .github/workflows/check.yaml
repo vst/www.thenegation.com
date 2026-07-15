@@ -10,11 +10,23 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout main"
-        uses: "actions/checkout@v5"
+        uses: "actions/checkout@v7"
 
       - name: "Install Nix"
-        uses: "DeterminateSystems/nix-installer-action@v20"
+        uses: "DeterminateSystems/nix-installer-action@v22"
 
-      - name: "Test and Build Website"
+      - name: "Install Nix Dependencies"
         run: |
-          nix develop .#ci --command bash -c "npm ci && npm run check && npm run build"
+          nix develop .#ci --command true
+
+      - name: "Install Node Dependencies"
+        run: |
+          nix develop .#ci --command bash -c "pnpm install --frozen-lockfile"
+
+      - name: "Test Website"
+        run: |
+          nix develop .#ci --command bash -c "pnpm run check"
+
+      - name: "Build Website"
+        run: |
+          nix develop .#ci --command bash -c "pnpm run build"

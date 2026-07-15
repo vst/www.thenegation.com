@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=https://www.schemastore.org/hugo.json
+
+title: "The Negation"
+locale: "en-us"
+baseURL: "https://www.thenegation.com"
+enableEmoji: true
+
+params:
+  tn:
+    description: "Personal Website of Vehbi Sinan Tunalioglu"
+    author:
+      name: "Vehbi Sinan Tunalioglu"
+      website: "https://github.com/vst"
+
+menus:
+  main:
+    - name: "Home"
+      pageRef: "/"
+      weight: 10
+    - name: "Blog"
+      pageRef: "/posts"
+      weight: 20
+    - name: "About"
+      pageRef: "/about"
+      weight: 30
+
+taxonomies:
+  tag: "tags"
+
+markup:
+  highlight:
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: false
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: false
+    noClasses: false
+    style: "catppuccin-mocha"
+    tabWidth: 4
+    wrapperClass: "highlight"
+
+build:
+  noJSConfigInAssets: true
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: "assets/notwatching/hugo_stats\\.json"
+      target: "css"
+    - source: "(postcss|tailwind)\\.config\\.js"
+      target: "css"
+
+module:
+  mounts:
+    - source: "assets"
+      target: "assets"
+    - source: "static"
+      target: "static"
+    - disableWatch: true
+      source: "hugo_stats.json"
+      target: "assets/notwatching/hugo_stats.json"
+    - source: "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+      target: "static/vendor/bootstrap-icons/bootstrap-icons.min.css"
+    - source: "node_modules/bootstrap-icons/font/fonts"
+      target: "static/vendor/bootstrap-icons/fonts"
+    - source: "node_modules/leaflet/dist/leaflet.js"
+      target: "static/vendor/leaflet/leaflet.js"
+    - source: "node_modules/leaflet/dist/leaflet.css"
+      target: "static/vendor/leaflet/leaflet.css"
+    - source: "node_modules/leaflet/dist/images"
+      target: "static/vendor/leaflet/images"

@@ -52,9 +52,7 @@ We will encode these results in a new type called `ParseResult`:
 
 ```typescript
 export type ParseResult =
-  | ParseResultSuccess
-  | ParseResultError
-  | ParseResultNotApplicable;
+  ParseResultSuccess | ParseResultError | ParseResultNotApplicable;
 
 export type ParseResultSuccess = {
   status: "success";

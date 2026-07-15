@@ -2,21 +2,66 @@
 {{- $menuID := .menuID -}}
 
 {{- with index site.Menus $menuID -}}
-  <nav class="gap-1">
-    <ul>
+  <nav>
+    <ul id="primary-navigation">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
     </ul>
-    {{- partial "components/search.html" -}}
-    {{- with site.Home.OutputFormats.Get "rss" -}}
-      <a
-        href="{{ .RelPermalink }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="{{ site.Title | markdownify }}">
-        <i class="bi bi-rss-fill contrast-25"></i>
-      </a>
-    {{- end -}}
-    {{- partial "components/light-switch.html" -}}
+
+    <div class="tn-nav-controls">
+      <div>
+        <button
+          data-search-trigger
+          type="button"
+          title="Search"
+          class="cursor-pointer">
+          <span class="sr-only">Search</span>
+          <i class="bi bi-search contrast-25"></i>
+        </button>
+        <pagefind-modal id="search-modal"></pagefind-modal>
+      </div>
+
+      {{- with site.Home.OutputFormats.Get "rss" -}}
+        <a
+          href="{{ .RelPermalink }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="{{ site.Title | markdownify }}">
+          <i class="bi bi-rss-fill contrast-25"></i>
+        </a>
+      {{- end -}}
+
+
+      <button
+        data-theme-toggle
+        type="button"
+        class="tn-theme-switch"
+        role="switch"
+        aria-checked="false">
+        <span class="sr-only">Dark mode</span>
+        <span class="tn-theme-switch-thumb">
+          <span
+            class="tn-theme-switch-icon tn-theme-switch-icon-light"
+            aria-hidden="true">
+            <i class="bi bi-sun contrast-25"></i>
+          </span>
+          <span
+            class="tn-theme-switch-icon tn-theme-switch-icon-dark"
+            aria-hidden="true">
+            <i class="bi bi-moon contrast-25"></i>
+          </span>
+        </span>
+      </button>
+
+      <button
+        data-nav-toggle
+        type="button"
+        class="tn-nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <i data-nav-toggle-icon class="bi bi-list text-xl contrast-25"></i>
+      </button>
+    </div>
   </nav>
 {{- end -}}
 

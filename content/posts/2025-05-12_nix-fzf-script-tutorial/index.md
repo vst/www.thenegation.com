@@ -311,7 +311,7 @@ of the `mkDerivation` function.
 
 <!-- REFERENCES -->
 
-[yesterday]: https://thenegation.com/posts/wayland-app-launchers-rofi/
+[yesterday]: https://www.thenegation.com/posts/wayland-app-launchers-rofi/
 [GitHub Emojis]:
   https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#using-emojis
 [github/gemoji]: https://github.com/github/gemoji

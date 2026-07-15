@@ -118,6 +118,6 @@ than you expect.
 
 <!-- REFERENCES -->
 
-[August]: https://thenegation.com/posts/blogging-challenge/
+[August]: https://www.thenegation.com/posts/blogging-challenge/
 [dev.to]: https://dev.to/vst
 [Hashnode]: https://thenegation.hashnode.dev

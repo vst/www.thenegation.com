@@ -1,0 +1,71 @@
+{{- $authorEmail := "" }}
+{{- with site.Params.author }}
+	{{- if reflect.IsMap . }}
+		{{- with .email }}
+			{{- $authorEmail = . }}
+		{{- end }}
+	{{- end }}
+{{- end }}
+
+{{- $authorNameRaw := "" }}
+{{- with site.Params.author }}
+	{{- if reflect.IsMap . }}
+		{{- with .name }}
+			{{- $authorNameRaw = . }}
+		{{- end }}
+	{{- else }}
+		{{- $authorNameRaw = . }}
+	{{- end }}
+{{- end }}
+{{- $authorName := $authorNameRaw | markdownify | plainify | htmlUnescape | strings.TrimSpace }}
+
+{{- $pctx := . }}
+{{- if .IsHome }}{{ $pctx = .Site }}{{ end }}
+{{- $pages := slice }}
+{{- if or $.IsHome $.IsSection }}
+	{{- $pages = $pctx.RegularPages }}
+{{- else }}
+	{{- $pages = $pctx.Pages }}
+{{- end }}
+{{- $limit := .Site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+	{{- $pages = $pages | first $limit }}
+{{- end }}
+{{- $siteTitle := .Site.Title | markdownify | plainify | htmlUnescape | strings.TrimSpace }}
+{{- $pageTitle := .Title | markdownify | plainify | htmlUnescape | strings.TrimSpace }}
+{{- $copyright := .Site.Copyright | markdownify | plainify | htmlUnescape | strings.TrimSpace }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ if eq $pageTitle $siteTitle }}{{ $siteTitle }}{{ else }}{{ with $pageTitle }}{{ . }} on {{ end }}{{ $siteTitle }}{{ end }}</title>
+		<link>{{ .Permalink }}</link>
+		<description>Recent content {{ if ne $pageTitle $siteTitle }}{{ with $pageTitle }}in {{ . }} {{ end }}{{ end }}on {{ $siteTitle }}</description>
+		<generator>Hugo</generator>
+		<language>{{ site.Language.Locale }}</language>
+		{{ with $authorEmail }}
+			<managingEditor>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</managingEditor>
+		{{ end }}
+		{{ with $authorEmail }}
+			<webMaster>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</webMaster>
+		{{ end }}
+		{{ with $copyright }}
+			<copyright>{{ . }}</copyright>
+		{{ end }}
+		{{ if not .Date.IsZero }}
+			<lastBuildDate>{{ (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+		{{ end }}
+		{{- with .OutputFormats.Get "RSS" }}
+			{{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+		{{- end }}
+		{{- range $pages }}
+			<item>
+				<title>{{ .Title | markdownify | plainify | htmlUnescape | strings.TrimSpace }}</title>
+				<link>{{ .Permalink }}</link>
+				<pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+				{{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
+				<guid>{{ .Permalink }}</guid>
+				<description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+			</item>
+		{{- end }}
+	</channel>
+</rss>

@@ -8,7 +8,7 @@ code in this repository.
 This is a personal website built with **Hugo** (static site generator) and
 **Tailwind CSS v4** (styling framework). The site features a blog with search
 functionality powered by Pagefind, dark mode support via custom JS, and is
-deployed on Vercel.
+deployed on Cloudflare Pages.
 
 ## Development Environment
 
@@ -30,7 +30,7 @@ This project uses **Nix flakes** for reproducible development environments.
 
 3. Install Node.js dependencies:
    ```sh
-   npm install
+   pnpm install
    ```
 
 ### Common Commands
@@ -38,7 +38,7 @@ This project uses **Nix flakes** for reproducible development environments.
 **Development server:**
 
 ```sh
-npm run dev
+pnpm run dev
 ```
 
 Runs Hugo server with live reload at http://localhost:1313
@@ -46,38 +46,29 @@ Runs Hugo server with live reload at http://localhost:1313
 **Build for production:**
 
 ```sh
-npm run build
+pnpm run build
 ```
 
 This runs two steps:
 
-1. `npm run build:hugo` - Builds the Hugo site with GC and minification
-2. `npm run build:pagefind` - Generates the search index using Pagefind
+1. `pnpm run build:hugo` - Builds the Hugo site with GC and minification
+2. `pnpm run build:pagefind` - Generates the search index using Pagefind
 
 **Formatting:**
 
 ```sh
-npm run format
+pnpm run format
 ```
 
-Formats code using Prettier (with Go template and Tailwind plugins) and Taplo
-(TOML)
-
-**Linting:**
-
-```sh
-npm run lint
-```
-
-Runs Taplo linting for TOML files
+Formats code using Prettier with Go template and Tailwind plugins.
 
 **Check everything:**
 
 ```sh
-npm run check
+pnpm run check
 ```
 
-Runs format checks, linting, and builds the site (used in CI)
+Runs format checks and builds the site (used in CI)
 
 ## Architecture
 
@@ -102,7 +93,6 @@ Runs format checks, linting, and builds the site (used in CI)
   - `assets/ts/` - Modular TypeScript codebase
     - `main.ts` - Entry point that initializes all modules
     - `-theme.ts` - Dark mode toggle functionality
-    - `-search.ts` - Search modal with Pagefind integration
     - `-code-copy.ts` - Copy buttons for code blocks
 
 - **`static/`** - Static files copied as-is to output
@@ -116,7 +106,7 @@ Runs format checks, linting, and builds the site (used in CI)
 
 ### Hugo Configuration
 
-Configuration is in `hugo.toml`:
+Configuration is in `hugo.yaml`:
 
 - Site metadata (title, baseURL, language)
 - Menu structure (Home, Blog, About)
@@ -145,12 +135,7 @@ The site uses a modular TypeScript architecture in `assets/ts/`:
   - Respects system color scheme preference
   - Syncs with OS theme changes
   - Toggles `.dark` class on `<body>` element
-
-- **`-search.ts`** - Search functionality
-  - Modal overlay with Pagefind UI integration
-  - Keyboard shortcuts (Ctrl/Cmd+K to open, Escape to close)
-  - Click-outside-to-close behavior
-  - Auto-focus on search input
+  - Syncs Pagefind Component UI theme via `data-pf-theme`
 
 - **`-code-copy.ts`** - Code block enhancements
   - Adds copy buttons to code blocks
@@ -158,11 +143,16 @@ The site uses a modular TypeScript architecture in `assets/ts/`:
 
 - **`main.ts`** - Entry point that initializes all modules on DOMContentLoaded
 
+Search is provided by Pagefind's Component UI web components in the Hugo
+templates. The build generates the static `/pagefind/` assets and index after
+Hugo renders the site.
+
 **External dependencies:**
 
 - **Pagefind** - Client-side search library (self-hosted at `/pagefind/`)
-- **Plausible Analytics** - Privacy-friendly analytics (self-hosted at
-  `/vendor/p/`)
+- **Plausible Analytics** - Privacy-friendly analytics, proxied through
+  Cloudflare Pages Functions (`functions/r/v1/e.ts` and
+  `functions/r/v1/s.js.ts`) rather than loaded directly from plausible.io
 
 ### Template Patterns
 
@@ -179,9 +169,10 @@ Hugo templates follow a hierarchical structure:
 
 Two shells defined in `flake.nix`:
 
-1. **default** - Full development environment with Hugo, Node.js, Taplo, and
-   custom cross-posting tools
-2. **ci** - Minimal CI environment with just Hugo, Node.js, and Taplo
+1. **default** - Full development environment with Hugo, Node.js, pnpm, Wrangler
+   (for testing Cloudflare Pages Functions locally), and custom cross-posting
+   tools
+2. **ci** - Minimal CI environment with just Hugo, Node.js, and pnpm
 
 ## CI/CD
 
@@ -189,9 +180,19 @@ GitHub Actions workflow (`.github/workflows/check.yaml`):
 
 - Runs on PRs and manual dispatch
 - Uses Nix CI shell: `nix develop .#ci`
-- Executes: `npm ci && npm run check && npm run build`
+- Executes: `pnpm install --frozen-lockfile && pnpm run check && pnpm run build`
 
-Deployment happens automatically via Vercel (configured in `vercel.json`).
+Deployment happens automatically via Cloudflare Pages. Build command
+`./deploy.sh`, output directory `public`.
+
+- `deploy.sh` sets `HUGO_BASEURL` based on `CF_PAGES_BRANCH`/`CF_PAGES_URL`: the
+  `main` branch deploys to `https://www.thenegation.com/`, other branches use
+  the preview URL Cloudflare provides, and an explicitly-set `HUGO_BASEURL` is
+  always left untouched.
+- The Plausible Analytics proxy (`functions/r/v1/`) requires a
+  `PLAUSIBLE_SCRIPT_ID` environment variable set in the Cloudflare Pages project
+  settings — the site-specific part of the Plausible script URL, e.g. `abc123`
+  for `https://plausible.io/js/pa-abc123.js`.
 
 ## Content Guidelines
 

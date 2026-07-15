@@ -7,8 +7,22 @@
 .hugo_build.lock
 hugo_stats.json
 
+## Generated Chroma stylesheets (see package.json's generate:chroma script):
+/assets/css/chroma-latte.css
+/assets/css/chroma-mocha.css
+
+## Self-hosted webfonts (see scripts/fetch-fonts.sh):
+/static/fonts
+
+## Generated version info (see scripts/generate-version.sh):
+/static/version.json
+
 ## Node.js ignores:
 /node_modules
+
+## Cloudflare Wrangler local dev cache and secrets (see package.json's dev-serve script):
+/.dev.vars
+/.wrangler
 
 ## Content ignores:
 /content/posts/**/*.hi

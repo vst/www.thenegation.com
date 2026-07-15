@@ -1,0 +1,8 @@
+nodeLinker: hoisted
+preferSymlinkedExecutables: true
+allowBuilds:
+  "@parcel/watcher": true
+minimumReleaseAgeExclude:
+  - prettier@3.9.5
+onlyBuiltDependencies:
+  - "@parcel/watcher"

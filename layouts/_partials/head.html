@@ -5,9 +5,10 @@
 {{- $site := .Site -}}
 {{- $baseURL := $site.BaseURL -}}
 {{- $siteTitleRaw := $site.Title -}}
-{{- $siteTitle := $siteTitleRaw | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- $siteTitle := $siteTitleRaw | markdownify | plainify | htmlUnescape | strings.TrimSpace -}}
 {{- $siteDescriptionRaw := default "" $site.Params.tn.description -}}
 {{- $siteDescription := $siteDescriptionRaw
+  | markdownify
   | plainify
   | htmlUnescape
   | replaceRE "\\s+"
@@ -18,9 +19,10 @@
 {{- $author := $authorRaw | plainify | htmlUnescape | strings.TrimSpace -}}
 
 {{- $pageTitleRaw := default $siteTitleRaw .Title -}}
-{{- $pageTitle := $pageTitleRaw | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- $pageTitle := $pageTitleRaw | markdownify | plainify | htmlUnescape | strings.TrimSpace -}}
 {{- $pageDescriptionRaw := default $siteDescriptionRaw .Params.description -}}
 {{- $pageDescriptionPlain := $pageDescriptionRaw
+  | markdownify
   | plainify
   | htmlUnescape
   | replaceRE "\\s+"
@@ -30,11 +32,11 @@
 {{- $pageDescription := truncate 160 $pageDescriptionPlain -}}
 
 {{- $browserTitle := $pageTitle -}}
-{{- if and (not .IsHome) (ne $pageTitle $siteTitle) -}}
-  {{- $browserTitle = printf "%s — %s" $pageTitle $siteTitle -}}
+{{- if ne $pageTitle $siteTitle -}}
+  {{- $browserTitle = printf "%s | %s" $pageTitle $siteTitle -}}
 {{- end -}}
 
-{{- $languageCodeRaw := replace (default "en-US" $site.LanguageCode) "_" "-" -}}
+{{- $languageCodeRaw := replace (default "en-US" $site.Language.Locale) "_" "-" -}}
 {{- $languageParts := split $languageCodeRaw "-" -}}
 {{- $languageCode := "en-US" -}}
 {{- if gt (len $languageParts) 1 -}}
@@ -67,13 +69,10 @@
 {{- $pageTwitterImage = default $pageOgImage $pageTwitterImage -}}
 
 {{- $permalink := .Permalink -}}
-{{- $isListing := or .IsHome .IsSection -}}
+{{- $isListing := or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
 {{- $isPost := and .IsPage (eq .Section "posts") -}}
 
-{{- $ogType := "article" -}}
-{{- if $isListing -}}
-  {{- $ogType = "website" -}}
-{{- end }}
+{{- $ogType := cond $isPost "article" "website" -}}
 {{- with .Params.seo }}
   {{- with .og }}
     {{- with .type }}
@@ -93,14 +92,6 @@
 {{- end }}
 {{- if or .Draft (.Params.noindex) }}
   {{- $robots = "noindex, nofollow" -}}
-{{- end -}}
-
-{{- $parsedBase := urls.Parse $baseURL -}}
-{{- $domain := "thenegation.com" -}}
-{{- with $parsedBase }}
-  {{- with .Host }}
-    {{- $domain = . -}}
-  {{- end }}
 {{- end -}}
 
 {{- $imageAlt := printf "%s — %s" $pageTitle $siteTitle -}}
@@ -142,7 +133,10 @@
 <!-- ICONS & MANIFEST -->
 <!---------------------->
 
-<link rel="icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 
 <!--------------------->
@@ -172,7 +166,7 @@
 {{- with $permalink }}
   <meta property="og:url" content="{{ . }}" />
 {{- end }}
-{{- if eq $ogType "article" }}
+{{- if $isPost }}
   {{- with .Date }}
     <meta
       property="article:published_time"
@@ -304,26 +298,46 @@
 <!-- VENDOR: BOOTSTRAP ICONS -->
 <!----------------------------->
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+<link rel="stylesheet" href="/vendor/bootstrap-icons/bootstrap-icons.min.css" />
+
+<!----------------------->
+<!-- VENDOR: LEAFLET   -->
+<!----------------------->
+
+{{- $needsLeaflet := or (.Store.Get "capability.leaflet") (.Param "capability.leaflet") -}}
+{{- if $needsLeaflet }}
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
+  <script src="/vendor/leaflet/leaflet.js" defer></script>
+{{- end }}
+
 
 <!---------------------->
 <!-- VENDOR: PAGEFIND -->
 <!---------------------->
 
-<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
-<script defer src="/pagefind/pagefind-ui.js"></script>
+<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" />
+<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 
 <!--------------->
 <!-- ANALYTICS -->
 <!--------------->
 
-<script
-  defer
-  src="/vendor/p/js/script.js"
-  data-api="/vendor/p/api/event"
-  data-domain="{{ $domain }}"></script>
+<script async src="/r/v1/s.js?v=pa" data-api="/r/v1/e"></script>
+<script>
+  ((window.plausible =
+    window.plausible ||
+    function () {
+      (plausible.q = plausible.q || []).push(arguments);
+    }),
+    (plausible.init =
+      plausible.init ||
+      function (i) {
+        plausible.o = i || {};
+      }));
+  plausible.init({
+    endpoint: "/r/v1/e",
+  });
+</script>
 
 <!----------->
 <!-- FEEDS -->
@@ -335,7 +349,7 @@
     .Rel
     .MediaType.Type
     .Permalink
-    site.Title
+    $siteTitle
     | safeHTML
   -}}
 {{- end -}}

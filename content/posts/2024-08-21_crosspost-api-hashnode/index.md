@@ -129,7 +129,7 @@ _filename=$(basename -- "${_path}")
 _slug="$(echo "${_filename%.*}" | cut -f 2- -d "_")"
 
 ## Build the URL for the post:
-_url="https://thenegation.com/posts/${_slug}/"
+_url="https://www.thenegation.com/posts/${_slug}/"
 
 ## Build the payload for the API request:
 _payload="$(jq \

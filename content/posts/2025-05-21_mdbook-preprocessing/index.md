@@ -258,7 +258,8 @@ power tools, such as [jq], [yq], and [mustache]. No need to mention Nix, right?
 [Nix]: https://nixos.org/
 [Rust Book]: https://doc.rust-lang.org/book/
 [Zola]: https://www.getzola.org/
-[wrote a blog post]: https://thenegation.com/posts/migrate-from-zola-to-hugo/
+[wrote a blog post]:
+  https://www.thenegation.com/posts/migrate-from-zola-to-hugo/
 [frontmatter]: https://pypi.org/project/python-frontmatter/
 [jq]: https://jqlang.org/
 [mdBook]: https://rust-lang.github.io/mdBook/

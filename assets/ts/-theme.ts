@@ -23,22 +23,34 @@ export function setupTheme() {
   }
 
   /**
-   * Apply dark mode class to body and update button aria-checked
+   * Apply dark mode class to the root element and update button aria-checked
    */
   function applyTheme(isDark: boolean) {
-    if (isDark) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
+    // Update aria-checked attribute for setting the toggle state:
     toggleButton.setAttribute("aria-checked", String(isDark));
+
+    // Add or remove the dark class on the root element. This must be the
+    // root element (not body) because @catppuccin/tailwindcss scopes its
+    // palette override to `:root`, which our `dark` variant only matches
+    // when `.dark` is on `:root` itself or an ancestor of it:
+    document.documentElement.classList.toggle("dark", isDark);
+
+    // @catppuccin/tailwindcss's automatic light/dark flavor switch is
+    // broken by a known upstream bug (a Sass compilation quirk nests
+    // `:root` a second time inside its `@variant dark` block, producing
+    // a selector that can never match — see
+    // https://github.com/catppuccin/tailwindcss/issues/37). As a
+    // workaround, force the mocha flavor directly via its scoped class
+    // instead of relying on the `dark` variant to flip it; latte remains
+    // the plain `:root` default for light mode.
+    document.documentElement.classList.toggle("mocha", isDark);
   }
 
   /**
    * Toggle dark mode and persist to localStorage
    */
   function toggleTheme() {
-    const isDark = !document.body.classList.contains("dark");
+    const isDark = !document.documentElement.classList.contains("dark");
     applyTheme(isDark);
     localStorage.setItem(STORAGE_KEY, String(isDark));
   }
