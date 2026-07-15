@@ -90,7 +90,7 @@
     {{- $robots = . -}}
   {{- end }}
 {{- end }}
-{{- if or .Draft (.Params.noindex) }}
+{{- if or .Draft (.Params.noindex) (eq .Kind "404") }}
   {{- $robots = "noindex, nofollow" -}}
 {{- end -}}
 
