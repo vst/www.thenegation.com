@@ -1,0 +1,12 @@
+{{/* prettier-ignore-start */}}
+<script>
+  (() => {
+    try {
+      const stored = localStorage.getItem("darkMode");
+      if (stored === "true" || (stored === null && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark", "mocha");
+      }
+    } catch { } // Keep the default light theme when storage or media queries are blocked.
+  })();
+</script>
+{{/* prettier-ignore-end */}}

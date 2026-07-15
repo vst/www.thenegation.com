@@ -121,7 +121,7 @@
   content="#1e1e2e"
   media="(prefers-color-scheme: dark)" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-
+{{- partial "head/theme.html" . -}}
 <title>{{ $browserTitle }}</title>
 <meta name="description" content="{{ $pageDescription }}" />
 {{- with $author }}
@@ -310,7 +310,7 @@
 <!---------------------->
 
 <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" />
-<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+<script src="/pagefind/pagefind-component-ui.js" type="module" defer></script>
 
 <!--------------->
 <!-- ANALYTICS -->
