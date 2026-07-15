@@ -1,5 +1,37 @@
 # Changelog
 
+## [2.2.0](https://github.com/vst/www.thenegation.com/compare/v2.1.0...v2.2.0) (2026-07-15)
+
+
+### Features
+
+* **hosting:** migrate from Vercel to Cloudflare ([9f6ad6a](https://github.com/vst/www.thenegation.com/commit/9f6ad6a345065025f08101c332ce1fde4eb5b5c5))
+* **style:** adopt catppuccin colours ([037874f](https://github.com/vst/www.thenegation.com/commit/037874fca0ea4b8fdd43b4acd8045259a45285ca))
+* **style:** change prose font to serif ([1b89cb7](https://github.com/vst/www.thenegation.com/commit/1b89cb766a43d069a6ebcaa2acd61191d1977720))
+
+
+### Bug Fixes
+
+* **footer:** simplify footer and add copyright notice to about page ([820dde3](https://github.com/vst/www.thenegation.com/commit/820dde329b88c4c0a86ed9c8abd7cd4ff8e6a70b))
+* **js:** do not block rendering while waiting for loading script ([2c693c2](https://github.com/vst/www.thenegation.com/commit/2c693c238c9436afe4db0a91643457c45e5b74fd))
+* **layout:** add 404 page ([1371e7d](https://github.com/vst/www.thenegation.com/commit/1371e7d584962d59928bd875112e8f4d043c5563))
+* **layout:** fix copy button position on code snippets ([57a7232](https://github.com/vst/www.thenegation.com/commit/57a723266122a238187d4a9332a23f7cecafe1c0))
+* **layout:** fix page load time issues ([a3deffb](https://github.com/vst/www.thenegation.com/commit/a3deffb15f1186fe5a1b366f6bb281a02f503e32))
+* **layout:** fix tag page header ([6ac22a5](https://github.com/vst/www.thenegation.com/commit/6ac22a564cde436aefc3bc39bc7509e106cd6550))
+* **layout:** make navigation mobile friendly ([b341128](https://github.com/vst/www.thenegation.com/commit/b3411281c2dd0425f4b50e68b2ca29685ede0a75))
+* **layout:** revisit home and section pages layouts ([3178364](https://github.com/vst/www.thenegation.com/commit/317836470b601c64635d9e1bf8a104accce2e6cc))
+* **layout:** revisit navigation ([2cff8b7](https://github.com/vst/www.thenegation.com/commit/2cff8b7cad088d33ba3198ddb6311187957d7fa5))
+* **meta:** fix canonical URLs ([0e6b043](https://github.com/vst/www.thenegation.com/commit/0e6b04313ad0196440d3547be743485f01c428ca))
+* **meta:** fix Website metadata ([e61b5eb](https://github.com/vst/www.thenegation.com/commit/e61b5ebe654eeef42816ce19fad66b027e88a427))
+* **meta:** revisit titles and home page description ([e69e0ae](https://github.com/vst/www.thenegation.com/commit/e69e0ae96a40b85304cb6ad2b4a4eb3aa1f1461d))
+* **meta:** track version, commit and build-time under version.json ([e29aa4e](https://github.com/vst/www.thenegation.com/commit/e29aa4e940e7a857fc2e60d40782e344aef77980))
+* **search:** replace custom pagefind search with new stock component UI ([e0f27a6](https://github.com/vst/www.thenegation.com/commit/e0f27a6b9b8971943cee551a045bb036a614e10e))
+* **search:** restyle pagefind search trigger component ([824dd8d](https://github.com/vst/www.thenegation.com/commit/824dd8d67372305c9c09c361d3c0a94f4a34d00c))
+* **style:** fix various text-related color and size issues ([375cece](https://github.com/vst/www.thenegation.com/commit/375cece54be7188a4f25f9eef05b54c9531adc36))
+* **style:** make the page width narrower ([9851cb2](https://github.com/vst/www.thenegation.com/commit/9851cb2909a23e8cd880b2d3a1bd1a368f0c072a))
+* **style:** replace Bootstrap icons and improve mobile term headings ([da4cb2d](https://github.com/vst/www.thenegation.com/commit/da4cb2d0958d68599adfecb577f7c24eefeef94b))
+* **typography:** change font sizes, make them adaptive via media queries ([d29dec2](https://github.com/vst/www.thenegation.com/commit/d29dec2b13593cfac9d6086d9bc3164c6fb86805))
+
 ## [2.1.0](https://github.com/vst/www.thenegation.com/compare/v2.0.0...v2.1.0) (2025-11-06)
 
 
