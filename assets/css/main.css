@@ -97,13 +97,19 @@
   --tw-prose-td-borders: var(--color-ctp-surface0);
 }
 
+@utility tn-prose {
+  @apply prose prose-base prose-catppuccin max-w-none;
+  @apply sm:prose-lg;
+  @apply lg:prose-xl;
+}
+
 /**********/
 /* LAYOUT */
 /**********/
 
 @layer base {
   html {
-    @apply text-xl;
+    @apply text-lg;
   }
 }
 
