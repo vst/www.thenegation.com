@@ -97,13 +97,19 @@
   --tw-prose-td-borders: var(--color-ctp-surface0);
 }
 
+@utility tn-prose {
+  @apply prose prose-base prose-catppuccin max-w-none;
+  @apply sm:prose-lg;
+  @apply lg:prose-xl;
+}
+
 /**********/
 /* LAYOUT */
 /**********/
 
 @layer base {
   html {
-    @apply text-xl;
+    @apply text-lg;
   }
 }
 
@@ -121,8 +127,8 @@ body > header {
 }
 
 body > header > a {
-  @apply flex grow flex-row;
-  @apply text-ctp-subtext0;
+  @apply flex flex-row;
+  @apply text-ctp-subtext1;
 }
 
 body > header > nav {
@@ -144,13 +150,17 @@ body > header > nav > ul > li {
   @apply block;
   @apply px-2 py-1;
   @apply text-sm;
-  @apply text-ctp-subtext0;
+  @apply text-ctp-subtext1;
 }
 
 body > header > nav > ul > li > a.active {
   @apply text-ctp-text;
   @apply decoration-ctp-overlay0;
   @apply underline decoration-solid decoration-1 underline-offset-4;
+}
+
+body > header > nav > ul > li > a {
+  @apply inline-flex items-center px-1 py-2;
 }
 
 body > header > nav > .tn-nav-controls {
@@ -170,11 +180,11 @@ body > main {
 
 body > footer {
   @apply flex shrink flex-col;
-  @apply border-ctp-surface0 text-ctp-subtext0 space-y-2 border-t border-dashed py-3 text-xs;
+  @apply border-ctp-surface0 text-ctp-subtext1 space-y-2 border-t border-dashed py-3 text-xs;
 }
 
 body > footer > p > a {
-  @apply text-ctp-subtext1/80 font-medium underline;
+  @apply font-medium text-nowrap underline;
 }
 
 /**************/
@@ -252,24 +262,30 @@ body > footer > p > a {
 /* UNLAYERED RULES */
 /*******************/
 
-div.highlight > pre {
-  @apply relative px-4 py-5;
-  @apply bg-ctp-mantle;
+div.highlight > .code-block {
+  @apply relative;
   box-sizing: border-box;
   width: min(calc(100vw - 2rem), 85ch);
   max-width: none;
   margin-inline: 50%;
   transform: translateX(-50%);
+}
+
+div.highlight > .code-block > pre {
+  @apply relative px-4 py-5;
+  @apply bg-ctp-mantle;
+  width: 100%;
+  max-width: none;
   overflow-x: auto;
 }
 
-div.highlight > pre > .copy-button {
+div.highlight > .code-block > .copy-button {
   @apply absolute top-0 right-0;
-  @apply border-ctp-overlay0 rounded-bl-md border-b border-l;
+  @apply border-ctp-surface0 rounded-tr-md rounded-bl-md border-b border-l;
   @apply bg-ctp-crust;
   @apply cursor-pointer;
   @apply px-1.5 py-0.5;
-  @apply text-xs;
+  @apply font-mono text-xs;
   @apply text-ctp-overlay1 hover:text-ctp-text;
   @apply transition-colors duration-200 ease-in-out;
 }

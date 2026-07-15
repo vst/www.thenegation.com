@@ -5,6 +5,7 @@
   <nav>
     <ul id="primary-navigation">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
+
     </ul>
 
     <div class="tn-nav-controls">
@@ -13,9 +14,8 @@
           data-search-trigger
           type="button"
           title="Search"
-          class="cursor-pointer">
-          <span class="sr-only">Search</span>
-          <i class="bi bi-search contrast-25"></i>
+          class="text-ctp-subtext1 inline-flex cursor-pointer items-center justify-center px-1 py-2 text-sm">
+          Search
         </button>
         <pagefind-modal id="search-modal"></pagefind-modal>
       </div>
@@ -25,9 +25,10 @@
           href="{{ .RelPermalink }}"
           target="_blank"
           rel="noopener noreferrer"
-          title="{{ site.Title | markdownify }}">
-          <i class="bi bi-rss-fill contrast-25"></i>
-        </a>
+          title="{{ site.Title | markdownify }}"
+          class="text-ctp-subtext1 inline-flex items-center justify-center px-1 py-2 text-sm"
+          >RSS</a
+        >
       {{- end -}}
 
 
@@ -42,12 +43,31 @@
           <span
             class="tn-theme-switch-icon tn-theme-switch-icon-light"
             aria-hidden="true">
-            <i class="bi bi-sun contrast-25"></i>
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
           </span>
           <span
             class="tn-theme-switch-icon tn-theme-switch-icon-dark"
             aria-hidden="true">
-            <i class="bi bi-moon contrast-25"></i>
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true">
+              <path
+                d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z" />
+            </svg>
           </span>
         </span>
       </button>
@@ -55,11 +75,30 @@
       <button
         data-nav-toggle
         type="button"
-        class="tn-nav-toggle"
+        class="tn-nav-toggle px-1 py-2"
         aria-expanded="false"
         aria-controls="primary-navigation">
         <span class="sr-only">Menu</span>
-        <i data-nav-toggle-icon class="bi bi-list text-xl contrast-25"></i>
+        <svg
+          data-nav-menu-icon
+          class="text-ctp-subtext0 h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg
+          data-nav-close-icon
+          class="text-ctp-subtext0 hidden h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
       </button>
     </div>
   </nav>

@@ -6,7 +6,8 @@ export function setupNavToggle() {
     "[data-nav-toggle]",
   ) as HTMLButtonElement;
   const menu = document.getElementById("primary-navigation");
-  const icon = document.querySelector("[data-nav-toggle-icon]");
+  const menuIcon = document.querySelector("[data-nav-menu-icon]");
+  const closeIcon = document.querySelector("[data-nav-close-icon]");
 
   if (!toggleButton || !menu) {
     return;
@@ -15,8 +16,8 @@ export function setupNavToggle() {
   function setOpen(isOpen: boolean) {
     toggleButton.setAttribute("aria-expanded", String(isOpen));
     menu?.classList.toggle("is-open", isOpen);
-    icon?.classList.toggle("bi-list", !isOpen);
-    icon?.classList.toggle("bi-x-lg", isOpen);
+    menuIcon?.classList.toggle("hidden", isOpen);
+    closeIcon?.classList.toggle("hidden", !isOpen);
   }
 
   toggleButton.addEventListener("click", () => {

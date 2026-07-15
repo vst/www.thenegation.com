@@ -1,5 +1,5 @@
 {{- define "main" -}}
-  <article class="prose prose-catppuccin max-w-none">
+  <article class="tn-prose">
     <h1>{{ .Title | markdownify }}</h1>
 
     {{ .Content }}
@@ -11,21 +11,20 @@
     <ol>
       {{- range $recentPosts -}}
         <li>
-          <p class="text-lg">
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
-            <span class="text-xs italic contrast-50">
-              ({{ .Date | time.Format "2 Jan 2006" }})
-            </span>
-          </p>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
 
           {{- if .Summary -}}
-            <div class="border-ctp-surface0 border-l-4 pl-4 text-sm">
+            <div
+              class="border-ctp-overlay0 border-l-4 pl-4 text-base md:text-lg">
               {{ .Summary }}
             </div>
 
-            <a href="{{ .RelPermalink }}" class="text-sm contrast-50">
-              Read more &raquo;
-            </a>
+            <div class="flex items-center gap-6 font-mono text-sm">
+              <span class="text-ctp-subtext1"
+                >{{ .Date | time.Format "2 Jan 2006" }}</span
+              >
+              <a href="{{ .RelPermalink }}">Read more &raquo;</a>
+            </div>
           {{- end -}}
         </li>
       {{- end -}}

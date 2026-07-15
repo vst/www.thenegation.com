@@ -1,5 +1,5 @@
 {{- define "main" -}}
-  <div class="prose prose-catppuccin max-w-none">
+  <div class="tn-prose">
     <h1>{{ .Title | markdownify }}</h1>
 
     {{ .Content }}
@@ -9,7 +9,7 @@
       {{- range .Pages.ByTitle -}}
         <li>
           <a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
-          <span class="text-xs italic contrast-50">({{ len .Pages }})</span>
+          <span class="font-mono text-xs">[{{ len .Pages }}]</span>
         </li>
       {{- end -}}
     </ul>
